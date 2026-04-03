@@ -1,7 +1,7 @@
 AI Agent
 ========
 
-**Link-Up AI Agent** is a local LLM-powered AI assistant that runs directly
+**Linkup AI Agent** is a local LLM-powered AI assistant that runs directly
 inside your Odoo instance. It connects to `Ollama <https://ollama.com>`_ for
 on-premise inference — no data leaves your server.
 

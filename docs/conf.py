@@ -1,7 +1,7 @@
 # -- Project information -------------------------------------------------------
-project = "Link-Up Docs"
-copyright = "2026, Link-Up Co., Ltd."
-author = "Link-Up Team"
+project = "Linkup Infotech Docs"
+copyright = "2026, Linkup Infotech Co., Ltd."
+author = "Linkup Infotech Team"
 release = "1.0.0"
 
 # -- General configuration -----------------------------------------------------
@@ -39,7 +39,7 @@ source_suffix = {
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_css_files = ["css/custom.css"]
-# html_logo = "_static/img/logo.svg"      # TODO: add Link-Up logo
+# html_logo = "_static/img/logo.svg"      # TODO: add Linkup Infotech logo
 # html_favicon = "_static/img/favicon.ico"  # TODO: add favicon
 
 html_theme_options = {

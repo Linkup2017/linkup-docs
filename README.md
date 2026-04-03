@@ -1,6 +1,6 @@
-# Link-Up Docs
+# Linkup Infotech Docs
 
-Official documentation for Link-Up Odoo packages.
+Official documentation for Linkup Infotech Odoo packages.
 
 **Live site:** [docs.link-up.co.kr](https://docs.link-up.co.kr)
 

@@ -1,6 +1,6 @@
 # Configuration
 
-Detailed configuration guide for Link-Up AI Agent modules.
+Detailed configuration guide for Linkup AI Agent modules.
 
 ```{note}
 This page is a placeholder. Full content will be written in W3–W4.

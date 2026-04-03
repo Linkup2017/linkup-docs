@@ -12,9 +12,9 @@ Get an AI assistant running in your Odoo instance in under 10 minutes.
 
 Install the following modules from the Odoo Apps Store:
 
-1. **Link-Up AI Ollama** (`lu_ai_ollama`)
-2. **Link-Up AI Orchestrator** (`lu_ai_orchestrator`)
-3. **Link-Up AI UI** (`lu_ai_ui`)
+1. **Linkup AI Ollama** (`lu_ai_ollama`)
+2. **Linkup AI Orchestrator** (`lu_ai_orchestrator`)
+3. **Linkup AI UI** (`lu_ai_ui`)
 
 ```{tip}
 Install `lu_ai_ollama` first — the other modules depend on it.
@@ -22,13 +22,13 @@ Install `lu_ai_ollama` first — the other modules depend on it.
 
 ## Step 2: Configure Ollama Connection
 
-1. Go to **Settings → Link-Up AI → Ollama Configuration**
+1. Go to **Settings → Linkup AI → Ollama Configuration**
 2. Set the **Ollama URL** (default: `http://localhost:11434`)
 3. Click **Test Connection** to verify
 
 ## Step 3: Select a Model
 
-1. Go to **Settings → Link-Up AI → Models**
+1. Go to **Settings → Linkup AI → Models**
 2. Click **Sync Models** to fetch available models from Ollama
 3. Select your default model (recommended: `llama3.2` or `mistral`)
 

@@ -1,7 +1,7 @@
-Link-Up Docs
-============
+Linkup Infotech Docs
+====================
 
-Welcome to the official documentation for **Link-Up Odoo Packages** — a suite of
+Welcome to the official documentation for **Linkup Infotech Odoo Packages** — a suite of
 modules that extend Odoo with AI assistants, Korean localization, messaging
 integrations, commerce connectors, and more.
 
