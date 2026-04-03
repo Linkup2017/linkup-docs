@@ -1,0 +1,48 @@
+/* Link-Up branding overrides for sphinx-rtd-theme */
+
+:root {
+    --linkup-primary: #1a73e8;
+    --linkup-primary-dark: #1557b0;
+    --linkup-bg-light: #f8f9fa;
+}
+
+/* Sidebar */
+.wy-side-nav-search {
+    background-color: var(--linkup-primary) !important;
+}
+
+.wy-side-nav-search a {
+    color: #fff !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-color: var(--linkup-primary-dark) !important;
+}
+
+/* Navigation active item */
+.wy-menu-vertical li.current > a {
+    border-left: 3px solid var(--linkup-primary);
+}
+
+/* Links */
+a {
+    color: var(--linkup-primary);
+}
+
+a:hover {
+    color: var(--linkup-primary-dark);
+}
+
+/* Inline code */
+code.literal {
+    background-color: var(--linkup-bg-light);
+    border: 1px solid #e1e4e8;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 85%;
+}
+
+/* Admonition tip */
+.admonition.tip {
+    border-left-color: var(--linkup-primary);
+}
