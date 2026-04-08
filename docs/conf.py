@@ -20,6 +20,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 language = "en"
 locale_dirs = ["locale/"]
 gettext_compact = False
+gettext_additional_targets = ["literal_block", "image"]
 
 # -- MyST Parser ---------------------------------------------------------------
 myst_enable_extensions = [
@@ -60,6 +61,11 @@ html_context = {
     "github_repo": "linkup-docs",
     "github_version": "main",
     "conf_py_path": "/docs/",
+    # i18n language switcher
+    "languages": [
+        ("en", "/en/"),
+        ("ko", "/ko/"),
+    ],
 }
 
 # -- Mermaid -------------------------------------------------------------------

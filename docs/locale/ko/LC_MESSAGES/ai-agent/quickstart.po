@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-08 13:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../ai-agent/quickstart.md:1
+msgid "Quick Start"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:3
+msgid "Get an AI assistant running in your Odoo instance in under 10 minutes."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:5
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:7
+msgid "Odoo 17.0 or 18.0"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:8
+msgid ""
+"[Ollama](https://ollama.com) installed on your server (or accessible via "
+"network)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:9
+msgid "At least one LLM model pulled (e.g., `ollama pull llama3.2`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:11
+msgid "Step 1: Install Modules"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:13
+msgid "Install the following modules from the Odoo Apps Store:"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:15
+msgid "**Linkup AI Ollama** (`lu_ai_ollama`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:16
+msgid "**Linkup AI Orchestrator** (`lu_ai_orchestrator`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:17
+msgid "**Linkup AI UI** (`lu_ai_ui`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:20
+msgid "Install `lu_ai_ollama` first — the other modules depend on it."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:23
+msgid "Step 2: Configure Ollama Connection"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:25
+msgid "Go to **Settings → Linkup AI → Ollama Configuration**"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:26
+msgid "Set the **Ollama URL** (default: `http://localhost:11434`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:27
+msgid "Click **Test Connection** to verify"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:29
+msgid "Step 3: Select a Model"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:31
+msgid "Go to **Settings → Linkup AI → Models**"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:32
+msgid "Click **Sync Models** to fetch available models from Ollama"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:33
+msgid "Select your default model (recommended: `llama3.2` or `mistral`)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:35
+msgid "Step 4: Start Chatting"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:37
+msgid ""
+"Open any Odoo view and click the **AI Assistant** icon in the top-right "
+"corner. Type your first message — the assistant is ready!"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:41
+msgid ""
+"Content for this page is a placeholder. Full content will be written in "
+"W3."
+msgstr ""
+

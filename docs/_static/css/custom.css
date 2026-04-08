@@ -46,3 +46,10 @@ code.literal {
 .admonition.tip {
     border-left-color: var(--linkup-primary);
 }
+
+/* Language switcher */
+.lang-switcher {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}

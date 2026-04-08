@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-08 13:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../ai-agent/configuration.md:1
+msgid "Configuration"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:3
+msgid "Detailed configuration guide for Linkup AI Agent modules."
+msgstr ""
+
+#: ../../ai-agent/configuration.md:6
+msgid "This page is a placeholder. Full content will be written in W3–W4."
+msgstr ""
+
+#: ../../ai-agent/configuration.md:9
+msgid "Topics (Planned)"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:11
+msgid "Ollama connection settings"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:12
+msgid "Model selection and parameters"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:13
+msgid "System prompt customization"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:14
+msgid "Security and access control"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:15
+msgid "Token limits and rate limiting"
+msgstr ""
+
+#: ../../ai-agent/configuration.md:16
+msgid "Multi-model configuration"
+msgstr ""
+

@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-08 13:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../ai-agent/index.rst:2
+msgid "AI Agent"
+msgstr ""
+
+#: ../../ai-agent/index.rst:4
+msgid ""
+"**Linkup AI Agent** is a local LLM-powered AI assistant that runs "
+"directly inside your Odoo instance. It connects to `Ollama "
+"<https://ollama.com>`_ for on-premise inference — no data leaves your "
+"server."
+msgstr ""
+
+#: ../../ai-agent/index.rst:9
+msgid "Modules"
+msgstr ""
+
+#: ../../ai-agent/index.rst:15
+msgid "Module"
+msgstr ""
+
+#: ../../ai-agent/index.rst:16
+msgid "Description"
+msgstr ""
+
+#: ../../ai-agent/index.rst:17
+msgid "Apps Store"
+msgstr ""
+
+#: ../../ai-agent/index.rst:18
+msgid "``lu_ai_ollama``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:19
+msgid "Ollama connector — model management, health checks, streaming"
+msgstr ""
+
+#: ../../ai-agent/index.rst:20 ../../ai-agent/index.rst:23
+#: ../../ai-agent/index.rst:26 ../../ai-agent/index.rst:29
+#: ../../ai-agent/index.rst:32 ../../ai-agent/index.rst:35
+msgid "|check|"
+msgstr ""
+
+#: ../../ai-agent/index.rst:21
+msgid "``lu_ai_orchestrator``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:22
+msgid "Orchestrator — domain routing, system prompts, context injection"
+msgstr ""
+
+#: ../../ai-agent/index.rst:24
+msgid "``lu_ai_ui``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:25
+msgid "Chat UI — web client integration, message threading"
+msgstr ""
+
+#: ../../ai-agent/index.rst:27
+msgid "``lu_ai_workflow``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:28
+msgid "Workflow engine — multi-step automation, triggers, conditions"
+msgstr ""
+
+#: ../../ai-agent/index.rst:30
+msgid "``lu_ai_proactive``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:31
+msgid "Proactive alerts — scheduled checks, threshold notifications"
+msgstr ""
+
+#: ../../ai-agent/index.rst:33
+msgid "``lu_ai_admin``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:34
+msgid "Admin dashboard — usage analytics, model monitoring"
+msgstr ""
+
+#: ../../ai-agent/index.rst:36
+msgid "``lu_ai_edge``"
+msgstr ""
+
+#: ../../ai-agent/index.rst:37
+msgid "Enterprise extension — advanced hooks, custom step types"
+msgstr ""
+
+#: ../../ai-agent/index.rst:38
+msgid "Enterprise"
+msgstr ""
+
+#: ../../ai-agent/index.rst:43
+msgid "Getting Started"
+msgstr ""
+
