@@ -1,0 +1,11 @@
+# Force LF line endings for all text files (important for GitHub Actions / Linux builds)
+* text=auto eol=lf
+
+# Explicitly binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.pdf binary

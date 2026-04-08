@@ -1,9 +1,11 @@
 AI Agent
 ========
 
-**Linkup AI Agent** is a local LLM-powered AI assistant that runs directly
-inside your Odoo instance. It connects to `Ollama <https://ollama.com>`_ for
-on-premise inference — no data leaves your server.
+**Linkup AI Agent** is a hybrid LLM-powered AI assistant that runs directly
+inside your Odoo 19.0 Enterprise instance. It supports both local inference via
+`Ollama <https://ollama.com>`_ and cloud inference via Anthropic Claude —
+letting you assign a different LLM provider to each agent for cost and
+performance flexibility.
 
 Modules
 -------
@@ -32,6 +34,9 @@ Modules
      - |check|
    * - ``lu_ai_admin``
      - Admin dashboard — usage analytics, model monitoring
+     - |check|
+   * - ``lu_ai_claude``
+     - Anthropic Claude connector (Opus / Sonnet / Haiku)
      - |check|
    * - ``lu_ai_edge``
      - Enterprise extension — advanced hooks, custom step types
