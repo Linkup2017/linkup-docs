@@ -17,7 +17,10 @@ Thumbs.db
 .idea/
 
 # Compiled translation files
-docs/locale/*/LC_MESSAGES/*.mo
+docs/locale/**/*.mo
+
+# Claude Code internal
+.claude/
 
 # Claude Code
 CLAUDE.md
