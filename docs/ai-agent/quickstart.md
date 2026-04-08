@@ -3,7 +3,7 @@
 Get an AI assistant running in your Odoo instance in under 10 minutes.
 
 Linkup AI Agent connects Odoo to a local Ollama LLM, an Anthropic Claude cloud LLM,
-or both simultaneously — giving you a VS Code-style side panel that can query your ERP
+or both simultaneously — giving you a slide-out side panel that can query your ERP
 data using natural language. Complete Steps 1–4 below to finish your first conversation.
 
 :::{warning}
@@ -167,7 +167,7 @@ Frequently asked questions bypass the LLM entirely for faster responses.
 |-----------|------|
 | **Ollama** or **Claude API** | LLM inference engine (local or cloud) |
 | **`lu_ai_ollama`** / **`lu_ai_claude`** | Odoo ↔ LLM provider connector |
-| **`lu_ai_ui`** | VS Code-style side panel chat UI |
+| **`lu_ai_ui`** | Slide-out side panel chat UI |
 | **AI Agent** | Configuration unit that binds provider, model, and prompt |
 
 In a hybrid setup, each agent can use a different provider — run latency-sensitive

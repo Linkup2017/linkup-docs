@@ -28,12 +28,12 @@ msgstr "10분 안에 Odoo 인스턴스에 AI 어시스턴트를 실행해 보세
 #: ../../ai-agent/quickstart.md:5
 msgid ""
 "Linkup AI Agent connects Odoo to a local Ollama LLM, an Anthropic Claude "
-"cloud LLM, or both simultaneously — giving you a VS Code-style side panel"
+"cloud LLM, or both simultaneously — giving you a slide-out side panel"
 " that can query your ERP data using natural language. Complete Steps 1–4 "
 "below to finish your first conversation."
 msgstr ""
 "Linkup AI Agent는 Odoo를 로컬 Ollama LLM, Anthropic Claude 클라우드 LLM 또는 두 가지 모두에 "
-"동시에 연결합니다. VS Code 스타일의 사이드 패널에서 자연어로 ERP 데이터를 조회할 수 있습니다. "
+"동시에 연결합니다. 슬라이드 아웃 사이드 패널에서 자연어로 ERP 데이터를 조회할 수 있습니다. "
 "아래 1~4단계를 따라 첫 번째 대화를 완료하세요."
 
 #: ../../ai-agent/quickstart.md:10
