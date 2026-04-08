@@ -1,19 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — AI Agent Quick Start
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
-# This file is distributed under the same license as the Linkup Infotech
-# Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-04-09 05:22+0900\n"
+"PO-Revision-Date: 2026-04-09 00:00+0900\n"
+"Last-Translator: Linkup Infotech Team\n"
 "Language: ko\n"
-"Language-Team: ko <LL@li.org>\n"
+"Language-Team: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -22,99 +19,480 @@ msgstr ""
 
 #: ../../ai-agent/quickstart.md:1
 msgid "Quick Start"
-msgstr ""
+msgstr "빠른 시작"
 
 #: ../../ai-agent/quickstart.md:3
 msgid "Get an AI assistant running in your Odoo instance in under 10 minutes."
-msgstr ""
+msgstr "10분 안에 Odoo 인스턴스에 AI 어시스턴트를 실행해 보세요."
 
 #: ../../ai-agent/quickstart.md:5
-msgid "Prerequisites"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:7
-msgid "Odoo 17.0 or 18.0"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:8
 msgid ""
-"[Ollama](https://ollama.com) installed on your server (or accessible via "
-"network)"
+"Linkup AI Agent connects Odoo to a local Ollama LLM, an Anthropic Claude "
+"cloud LLM, or both simultaneously — giving you a VS Code-style side panel"
+" that can query your ERP data using natural language. Complete Steps 1–4 "
+"below to finish your first conversation."
 msgstr ""
+"Linkup AI Agent는 Odoo를 로컬 Ollama LLM, Anthropic Claude 클라우드 LLM 또는 두 가지 모두에 "
+"동시에 연결합니다. VS Code 스타일의 사이드 패널에서 자연어로 ERP 데이터를 조회할 수 있습니다. "
+"아래 1~4단계를 따라 첫 번째 대화를 완료하세요."
 
-#: ../../ai-agent/quickstart.md:9
-msgid "At least one LLM model pulled (e.g., `ollama pull llama3.2`)"
+#: ../../ai-agent/quickstart.md:10
+msgid ""
+"Odoo 19.0 **Enterprise** edition is required. The `ai_app` module is not "
+"available in Community edition, and installation will fail without it."
 msgstr ""
+"Odoo 19.0 **Enterprise** 에디션이 필요합니다. `ai_app` 모듈은 Community 에디션에서 "
+"제공되지 않아 설치 자체가 불가능합니다."
 
-#: ../../ai-agent/quickstart.md:11
-msgid "Step 1: Install Modules"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:13
-msgid "Install the following modules from the Odoo Apps Store:"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:15
-msgid "**Linkup AI Ollama** (`lu_ai_ollama`)"
-msgstr ""
+#: ../../ai-agent/quickstart.md:14
+msgid "Prerequisites"
+msgstr "사전 준비 사항"
 
 #: ../../ai-agent/quickstart.md:16
-msgid "**Linkup AI Orchestrator** (`lu_ai_orchestrator`)"
-msgstr ""
+msgid "Odoo 19.0 Enterprise"
+msgstr "Odoo 19.0 Enterprise"
 
 #: ../../ai-agent/quickstart.md:17
-msgid "**Linkup AI UI** (`lu_ai_ui`)"
-msgstr ""
+msgid "A running instance with administrator access."
+msgstr "관리자 계정으로 로그인된 실행 중인 인스턴스."
+
+#: ../../ai-agent/quickstart.md:19
+msgid "Ollama (for local LLM)"
+msgstr "Ollama (로컬 LLM 사용 시)"
 
 #: ../../ai-agent/quickstart.md:20
-msgid "Install `lu_ai_ollama` first — the other modules depend on it."
+msgid ""
+"Install and start Ollama from "
+"[ollama.com/download](https://ollama.com/download), then pull a model:"
 msgstr ""
+"`ollama.com/download <https://ollama.com/download>`_ 에서 Ollama를 설치하고 실행한 뒤 "
+"모델을 다운로드합니다:"
 
-#: ../../ai-agent/quickstart.md:23
-msgid "Step 2: Configure Ollama Connection"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:25
-msgid "Go to **Settings → Linkup AI → Ollama Configuration**"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:26
-msgid "Set the **Ollama URL** (default: `http://localhost:11434`)"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:27
-msgid "Click **Test Connection** to verify"
-msgstr ""
+#: ../../ai-agent/quickstart.md:28
+msgid "Anthropic API key (for Claude)"
+msgstr "Anthropic API 키 (Claude 사용 시)"
 
 #: ../../ai-agent/quickstart.md:29
-msgid "Step 3: Select a Model"
-msgstr ""
+msgid "Generate one at <https://console.anthropic.com/>."
+msgstr "<https://console.anthropic.com/> 에서 발급하세요."
 
 #: ../../ai-agent/quickstart.md:31
-msgid "Go to **Settings → Linkup AI → Models**"
-msgstr ""
+msgid "Administrator account"
+msgstr "관리자 계정"
 
 #: ../../ai-agent/quickstart.md:32
-msgid "Click **Sync Models** to fetch available models from Ollama"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:33
-msgid "Select your default model (recommended: `llama3.2` or `mistral`)"
-msgstr ""
+msgid "Required to access the Settings menu."
+msgstr "Settings 메뉴 접근에 필요합니다."
 
 #: ../../ai-agent/quickstart.md:35
-msgid "Step 4: Start Chatting"
-msgstr ""
-
-#: ../../ai-agent/quickstart.md:37
 msgid ""
-"Open any Odoo view and click the **AI Assistant** icon in the top-right "
-"corner. Type your first message — the assistant is ready!"
+"You can configure both Ollama and Claude at the same time and assign a "
+"different provider to each agent (hybrid setup)."
 msgstr ""
+"Ollama와 Claude를 동시에 설정하고 에이전트별로 다른 Provider를 지정할 수 있습니다 (하이브리드 구성)."
+
+#: ../../ai-agent/quickstart.md:39
+msgid "Step 1 — Install the Modules"
+msgstr "1단계 — 모듈 설치"
 
 #: ../../ai-agent/quickstart.md:41
+msgid "Go to the **Apps** menu."
+msgstr "**Apps** 메뉴로 이동합니다."
+
+#: ../../ai-agent/quickstart.md:42
+msgid "Search for **\"Linkup AI\"**."
+msgstr "검색창에 **\"Linkup AI\"** 를 입력합니다."
+
+#: ../../ai-agent/quickstart.md:43
 msgid ""
-"Content for this page is a placeholder. Full content will be written in "
-"W3."
+"Install **Linkup AI Side Panel** (`lu_ai_ui`). Dependent modules "
+"(`lu_ai_ollama`, `ai`, `ai_app`, `web_enterprise`) are installed "
+"automatically."
+msgstr ""
+"**Linkup AI Side Panel** (`lu_ai_ui`) 을 설치합니다. "
+"의존 모듈 (`lu_ai_ollama`, `ai`, `ai_app`, `web_enterprise`) 이 자동으로 함께 설치됩니다."
+
+#: ../../ai-agent/quickstart.md:46
+msgid ""
+"To use Claude as well, install **Linkup AI Claude** (`lu_ai_claude`) "
+"separately."
+msgstr ""
+"Claude도 사용하려면 **Linkup AI Claude** (`lu_ai_claude`) 를 추가로 설치합니다."
+
+#: ../../ai-agent/quickstart.md:49
+msgid ""
+"Installing **Linkup AI Side Panel** alone is enough to get all modules "
+"required for Ollama integration."
+msgstr ""
+"**Linkup AI Side Panel** 하나만 설치해도 Ollama 연동에 필요한 모든 모듈이 자동으로 설치됩니다."
+
+#: ../../ai-agent/quickstart.md:53
+msgid "Linkup AI Side Panel and Linkup AI Claude in the Apps list"
+msgstr "Apps 목록에서 Linkup AI Side Panel과 Linkup AI Claude"
+
+#: ../../ai-agent/quickstart.md:53
+msgid ".. image:: /_static/img/ai-agent/qs-install-modules.png"
 msgstr ""
 
+#: ../../ai-agent/quickstart.md:58
+msgid "Step 2 — Configure Your LLM Provider"
+msgstr "2단계 — LLM Provider 설정"
+
+#: ../../ai-agent/quickstart.md:61
+msgid ""
+"Ollama and Claude are configured on **separate Settings pages**. Setting "
+"up both providers lets you choose a provider per agent in Step 3."
+msgstr ""
+"Ollama와 Claude 설정은 **서로 다른 Settings 페이지**에 있습니다. "
+"두 Provider를 모두 설정하면 3단계에서 에이전트별로 Provider를 선택할 수 있습니다."
+
+#: ../../ai-agent/quickstart.md:65
+msgid "Option A: Ollama (Local LLM)"
+msgstr "옵션 A: Ollama (로컬 LLM)"
+
+#: ../../ai-agent/quickstart.md:67
+msgid "Go to **Settings → Integrations**."
+msgstr "**Settings → Integrations** 으로 이동합니다."
+
+#: ../../ai-agent/quickstart.md:68
+msgid "Enable the **\"Use local Ollama models\"** toggle."
+msgstr "**\"Use local Ollama models\"** 토글을 활성화합니다."
+
+#: ../../ai-agent/quickstart.md:69
+msgid ""
+"Enter your Ollama server address in the URL field (placeholder: "
+"`http://localhost:11434`). If Ollama is running locally, leave the "
+"default value as-is."
+msgstr ""
+"URL 입력 필드 (placeholder: `http://localhost:11434`) 에 Ollama 서버 주소를 입력합니다. "
+"로컬 설치라면 기본값을 그대로 유지하세요."
+
+#: ../../ai-agent/quickstart.md:71
+msgid ""
+"*(Optional)* API key field (placeholder: `API Key (optional for local "
+"setup)`) — only required for remote or authenticated endpoints. Leave "
+"blank for local installs."
+msgstr ""
+"*(선택)* API 키 입력 필드 (placeholder: `API Key (optional for local setup)`) — "
+"원격/인증 엔드포인트 사용 시에만 필요합니다. 로컬 설치에서는 비워둡니다."
+
+#: ../../ai-agent/quickstart.md:73 ../../ai-agent/quickstart.md:93
+#: ../../ai-agent/quickstart.md:119
+msgid "Click **Save**."
+msgstr "**Save** 를 클릭합니다."
+
+#: ../../ai-agent/quickstart.md:76
+msgid ""
+"The fields have no visible labels — only placeholder text. Refer to the "
+"screenshot below to locate them."
+msgstr ""
+"필드에 별도 라벨이 표시되지 않고 placeholder 텍스트만 보입니다. 위치를 확인하려면 아래 스크린샷을 참고하세요."
+
+#: ../../ai-agent/quickstart.md:80
+msgid "Settings → Integrations — \"Use local Ollama models\" section"
+msgstr "Settings → Integrations — \"Use local Ollama models\" 섹션"
+
+#: ../../ai-agent/quickstart.md:80
+msgid ".. image:: /_static/img/ai-agent/qs-settings-ollama.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:85
+msgid "Option B: Claude (Cloud LLM)"
+msgstr "옵션 B: Claude (클라우드 LLM)"
+
+#: ../../ai-agent/quickstart.md:87
+msgid "Go to **Settings → AI** (Providers section)."
+msgstr "**Settings → AI** 로 이동합니다 (Providers 섹션)."
+
+#: ../../ai-agent/quickstart.md:88
+msgid ""
+"Find the **\"Use your own Anthropic Claude account\"** section and enter "
+"your API key. The provider is activated automatically once a key is "
+"entered."
+msgstr ""
+"**\"Use your own Anthropic Claude account\"** 섹션을 찾아 API 키 입력 필드에 키를 입력합니다. "
+"키를 입력하면 설정이 자동으로 활성화됩니다."
+
+#: ../../ai-agent/quickstart.md:90
+msgid ""
+"*(Optional)* **Max Output Tokens** — default 16,384. The Odoo UI accepts "
+"up to 128,000, but actual limits depend on the model (Opus: 128k, "
+"Sonnet/Haiku: 64k). Values above the model limit are automatically capped"
+" at the API level."
+msgstr ""
+"*(선택)* **Max Output Tokens** — 기본값 16,384. Odoo UI에서는 최대 128,000까지 입력 가능하지만 "
+"실제 한도는 모델에 따라 다릅니다 (Opus: 128k, Sonnet/Haiku: 64k). "
+"모델 한도를 초과하면 API 레벨에서 자동 조정됩니다."
+
+#: ../../ai-agent/quickstart.md:96
+msgid ""
+"The settings page may display RAG/embedding-related options. These are "
+"outside the scope of Quick Start and are covered in the "
+"[Configuration](configuration.md) guide."
+msgstr ""
+"설정 화면에 RAG/임베딩 관련 옵션이 표시될 수 있습니다. "
+"이 기능은 Quick Start 범위 밖이며 [Configuration](configuration.md) 가이드에서 다룹니다."
+
+#: ../../ai-agent/quickstart.md:100
+msgid "Settings → AI — \"Use your own Anthropic Claude account\" section"
+msgstr "Settings → AI — \"Use your own Anthropic Claude account\" 섹션"
+
+#: ../../ai-agent/quickstart.md:100
+msgid ".. image:: /_static/img/ai-agent/qs-settings-claude.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:106
+msgid ""
+"For advanced parameter tuning and RAG (document retrieval) setup, see the"
+" [Configuration](configuration.md) guide."
+msgstr ""
+"고급 파라미터 튜닝 및 RAG(문서 검색) 설정은 [Configuration](configuration.md) 가이드를 참조하세요."
+
+#: ../../ai-agent/quickstart.md:110
+msgid "Step 3 — Create an AI Agent"
+msgstr "3단계 — AI 에이전트 만들기"
+
+#: ../../ai-agent/quickstart.md:112
+msgid "Go to **AI → Agents → Agents** (Kanban view by default)."
+msgstr "**AI → Agents → Agents** 로 이동합니다 (기본값: 칸반 뷰)."
+
+#: ../../ai-agent/quickstart.md:113
+msgid "Click **Create**."
+msgstr "**Create** 를 클릭합니다."
+
+#: ../../ai-agent/quickstart.md:114
+msgid "Enter an agent name (e.g., `Sales Assistant`)."
+msgstr "에이전트 이름을 입력합니다 (예: `Sales Assistant`)."
+
+#: ../../ai-agent/quickstart.md:115
+msgid "Select a model from the **LLM Model** dropdown:"
+msgstr "**LLM Model** 드롭다운에서 모델을 선택합니다:"
+
+#: ../../ai-agent/quickstart.md:116
+msgid "Ollama: `qwen3.5:9b` (recommended) or `qwen3.5:35b` (high performance)"
+msgstr "Ollama: `qwen3.5:9b` (운영 권장) 또는 `qwen3.5:35b` (고성능)"
+
+#: ../../ai-agent/quickstart.md:117
+msgid ""
+"Claude: `Claude Sonnet 4.6` (balanced) or `Claude Opus 4.6` (highest "
+"capability)"
+msgstr ""
+"Claude: `Claude Sonnet 4.6` (균형) 또는 `Claude Opus 4.6` (최고 성능)"
+
+#: ../../ai-agent/quickstart.md:118
+msgid ""
+"*(Optional)* Configure System Prompt, Topics, etc. — keep the defaults "
+"for Quick Start."
+msgstr ""
+"*(선택)* System Prompt, Topics 등 — Quick Start에서는 기본값을 유지합니다."
+
+#: ../../ai-agent/quickstart.md:122
+msgid ""
+"For testing, `qwen3.5:9b` (local, free) or `Claude Haiku 4.5` (cloud, low"
+" cost) are good starting points. For production, `qwen3.5:35b` or `Claude"
+" Sonnet 4.6` provide higher tool-call accuracy. The available model list "
+"is populated automatically based on your provider configuration."
+msgstr ""
+"테스트용으로는 `qwen3.5:9b` (로컬, 무료) 또는 `Claude Haiku 4.5` (클라우드, 저비용) 를 추천합니다. "
+"운영 환경에서는 `qwen3.5:35b` 또는 `Claude Sonnet 4.6` 이 도구 호출 정확도가 높습니다. "
+"사용 가능한 모델 목록은 Provider 설정에 따라 자동으로 반영됩니다."
+
+#: ../../ai-agent/quickstart.md:128
+msgid "AI → Agents → Agents — agent creation form with LLM Model selector"
+msgstr "AI → Agents → Agents — LLM Model 선택기가 포함된 에이전트 생성 폼"
+
+#: ../../ai-agent/quickstart.md:128
+msgid ".. image:: /_static/img/ai-agent/qs-create-agent.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:133
+msgid "Step 4 — Start Your First Chat"
+msgstr "4단계 — 첫 번째 대화 시작"
+
+#: ../../ai-agent/quickstart.md:135
+msgid "Click the **AI button** in the Odoo **systray** (top-right)."
+msgstr "Odoo 우측 상단 **systray** 에서 **AI 버튼** 을 클릭합니다."
+
+#: ../../ai-agent/quickstart.md:136
+msgid ""
+"A **side panel** opens on the right side of the screen (purple header, "
+"240–480 px, resizable)."
+msgstr ""
+"화면 우측에 **사이드 패널** 이 열립니다 (보라색 헤더, 240–480 px, 리사이즈 가능)."
+
+#: ../../ai-agent/quickstart.md:138
+msgid ""
+"If you have multiple agents, select one from the **agent selector** in "
+"the header."
+msgstr "에이전트가 여러 개라면 헤더의 **에이전트 선택기** 에서 원하는 에이전트를 선택합니다."
+
+#: ../../ai-agent/quickstart.md:139
+msgid "Click **\"+\"** to start a new conversation."
+msgstr "**\"+\"** 버튼으로 새 대화를 시작합니다."
+
+#: ../../ai-agent/quickstart.md:140
+msgid "Type a message in the input field at the bottom and press **Enter**."
+msgstr "하단 입력창에 메시지를 입력한 뒤 **Enter** 를 누릅니다."
+
+#: ../../ai-agent/quickstart.md:142
+msgid "The AI Agent supports both English and Korean:"
+msgstr "AI Agent는 한국어와 영어를 모두 지원합니다:"
+
+#: ../../ai-agent/quickstart.md:144
+msgid "Example (full LLM tool-calling — queries live ERP data):"
+msgstr "예시 (full LLM tool-calling — ERP 데이터 실시간 조회):"
+
+#: ../../ai-agent/quickstart.md:145
+msgid "*\"Show me the top 5 products by revenue this month\"*"
+msgstr "*\"이번 달 매출 상위 5개 제품을 보여줘\"*"
+
+#: ../../ai-agent/quickstart.md:146
+msgid "Example (shortcut — instant response):"
+msgstr "예시 (shortcut — 즉각 응답):"
+
+#: ../../ai-agent/quickstart.md:147
+msgid "*\"이번 달 매출 총액은?\"*"
+msgstr "*\"이번 달 매출 총액은?\"*"
+
+#: ../../ai-agent/quickstart.md:149
+msgid ""
+"Conversation names are set automatically from the first message. Previous"
+" conversations are accessible via the **history button** in the header "
+"(up to 50 recent conversations)."
+msgstr ""
+"대화 이름은 첫 메시지를 기준으로 자동 지정됩니다. "
+"이전 대화는 헤더의 **히스토리 버튼** 으로 확인할 수 있습니다 (최근 대화 최대 50개 표시)."
+
+#: ../../ai-agent/quickstart.md:154
+msgid ""
+"Built-in shortcut queries cover major domains: Sales, Finance, Inventory,"
+" HR, and CRM. Frequently asked questions bypass the LLM entirely for "
+"faster responses."
+msgstr ""
+"내장 shortcut 쿼리가 Sales, Finance, Inventory, HR, CRM 등 주요 도메인을 지원합니다. "
+"자주 묻는 질문은 LLM을 거치지 않고 즉시 응답하여 속도가 빠릅니다."
+
+#: ../../ai-agent/quickstart.md:158
+msgid "Side panel showing a sample conversation"
+msgstr "사이드 패널 대화 예시 화면"
+
+#: ../../ai-agent/quickstart.md:158
+msgid ".. image:: /_static/img/ai-agent/qs-first-chat.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:163
+msgid "What You Just Set Up"
+msgstr "설정 요약"
+
+#: ../../ai-agent/quickstart.md:173
+msgid ""
+"In a hybrid setup, each agent can use a different provider — run latency-"
+"sensitive agents on local Ollama and complex analysis on Claude."
+msgstr ""
+"하이브리드 구성에서는 에이전트별로 다른 Provider를 지정할 수 있습니다. "
+"빠른 응답이 필요한 에이전트는 로컬 Ollama, 복잡한 분석은 Claude로 분리 운영이 가능합니다."
+
+#: ../../ai-agent/quickstart.md:177
+msgid "Troubleshooting"
+msgstr "문제 해결"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Symptom"
+msgstr "증상"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Cause"
+msgstr "원인"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Fix"
+msgstr "해결 방법"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "\"Module not found: ai_app\" during install"
+msgstr "설치 중 \"Module not found: ai_app\""
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Community edition in use"
+msgstr "Community 에디션 사용"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Switch to Enterprise edition"
+msgstr "Enterprise 에디션으로 전환"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "\"Connection refused\" or no response"
+msgstr "\"Connection refused\" 또는 응답 없음"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Ollama server not running"
+msgstr "Ollama 서버 미실행"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Run `ollama serve`; verify the Base URL"
+msgstr "`ollama serve` 실행 확인, Base URL 확인"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "\"No API key set for Anthropic Claude\""
+msgstr "\"No API key set for Anthropic Claude\""
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Claude API key not configured"
+msgstr "Claude API 키 미설정"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Enter the key at **Settings → AI → Providers**"
+msgstr "**Settings → AI → Providers** 에서 키 입력"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "\"429 Too Many Requests\" or \"Invalid API key\""
+msgstr "\"429 Too Many Requests\" 또는 \"Invalid API key\""
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Claude rate limit exceeded or wrong key"
+msgstr "Claude API 요율 초과 또는 키 오류"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Check limits at console.anthropic.com; regenerate key"
+msgstr "console.anthropic.com 에서 요율 한도 확인, 키 재발급"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Side panel does not appear"
+msgstr "사이드 패널이 나타나지 않음"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Browser cache"
+msgstr "브라우저 캐시"
+
+#: ../../ai-agent/quickstart.md:165
+msgid "Hard-refresh with Ctrl+Shift+R"
+msgstr "하드 리프레시 (Ctrl+Shift+R) 후 재시도"
+
+#: ../../ai-agent/quickstart.md:187
+msgid "Next Steps"
+msgstr "다음 단계"
+
+#: ../../ai-agent/quickstart.md:189
+msgid ""
+"**[Configuration](configuration.md)** — Ollama parameter tuning "
+"(`num_ctx`, `num_predict`, `keep_alive`), Claude token limits, RAG setup,"
+" multi-model configuration"
+msgstr ""
+"**[Configuration](configuration.md)** — Ollama 파라미터 튜닝 (`num_ctx`, `num_predict`, `keep_alive`), "
+"Claude 토큰 한도, RAG 설정, 멀티모델 구성"
+
+#: ../../ai-agent/quickstart.md:191
+msgid ""
+"**Domain Routing** — per-domain agent routing (Sales, HR, Finance, and "
+"more)"
+msgstr "**Domain Routing** — 도메인별 에이전트 라우팅 (Sales, HR, Finance 등 자동 분기)"
+
+#: ../../ai-agent/quickstart.md:192
+msgid "**Workflows** — AI-driven multi-step automation"
+msgstr "**Workflows** — AI 기반 멀티스텝 자동화"
+
+#: ../../ai-agent/quickstart.md:193
+msgid ""
+"**Proactive Alerts** — automatic detection of ERP anomalies such as low "
+"stock or overdue receivables"
+msgstr "**Proactive Alerts** — 재고 부족, 미수금 초과 등 ERP 이상 징후 자동 감지 및 알림"
