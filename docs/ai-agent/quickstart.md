@@ -190,7 +190,7 @@ agents on local Ollama and complex analysis on Claude.
 
 - **[Configuration](configuration.md)** — Ollama parameter tuning (`num_ctx`,
   `num_predict`, `keep_alive`), Claude token limits, RAG setup, multi-model configuration
-- **Domain Routing** — per-domain agent routing (Sales, HR, Finance, and more)
+- **[Domain Routing](domain-routing.md)** — per-domain agent routing (Sales, HR, Finance, and more)
 - **Workflows** — AI-driven multi-step automation
 - **Proactive Alerts** — automatic detection of ERP anomalies such as low stock or
   overdue receivables
