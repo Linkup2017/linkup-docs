@@ -105,26 +105,37 @@ msgstr "검색창에 **\"Linkup AI\"** 를 입력합니다."
 
 #: ../../ai-agent/quickstart.md:43
 msgid ""
-"Install **Linkup AI Side Panel** (`lu_ai_ui`). Dependent modules "
-"(`lu_ai_ollama`, `ai`, `ai_app`, `web_enterprise`) are installed "
-"automatically."
+"Install **Linkup AI Side Panel** (`lu_ai_ui`). The required base modules "
+"(`ai_app`, `web_enterprise`) are installed automatically."
 msgstr ""
 "**Linkup AI Side Panel** (`lu_ai_ui`) 을 설치합니다. "
-"의존 모듈 (`lu_ai_ollama`, `ai`, `ai_app`, `web_enterprise`) 이 자동으로 함께 설치됩니다."
+"필수 기본 모듈 (`ai_app`, `web_enterprise`) 이 자동으로 함께 설치됩니다."
+
+#: ../../ai-agent/quickstart.md:44
+msgid "Install at least one **provider connector**:"
+msgstr "**프로바이더 커넥터** 를 하나 이상 설치합니다:"
+
+#: ../../ai-agent/quickstart.md:45
+msgid "**Linkup AI Ollama** (`lu_ai_ollama`) — local LLM via Ollama"
+msgstr "**Linkup AI Ollama** (`lu_ai_ollama`) — Ollama를 통한 로컬 LLM"
 
 #: ../../ai-agent/quickstart.md:46
-msgid ""
-"To use Claude as well, install **Linkup AI Claude** (`lu_ai_claude`) "
-"separately."
-msgstr ""
-"Claude도 사용하려면 **Linkup AI Claude** (`lu_ai_claude`) 를 추가로 설치합니다."
+msgid "**Linkup AI Claude** (`lu_ai_claude`) — cloud LLM via Anthropic Claude"
+msgstr "**Linkup AI Claude** (`lu_ai_claude`) — Anthropic Claude 클라우드 LLM"
 
-#: ../../ai-agent/quickstart.md:49
+#: ../../ai-agent/quickstart.md:47
+msgid "Both can be installed simultaneously for a hybrid setup."
+msgstr "두 모듈을 동시에 설치하면 하이브리드 구성이 가능합니다."
+
+#: ../../ai-agent/quickstart.md:50
 msgid ""
-"Installing **Linkup AI Side Panel** alone is enough to get all modules "
-"required for Ollama integration."
+"`lu_ai_ui` auto-installs `ai_app` and `web_enterprise`. The provider "
+"connectors (`lu_ai_ollama`, `lu_ai_claude`) must be installed separately "
+"— install one or both."
 msgstr ""
-"**Linkup AI Side Panel** 하나만 설치해도 Ollama 연동에 필요한 모든 모듈이 자동으로 설치됩니다."
+"`lu_ai_ui` 설치 시 `ai_app`, `web_enterprise` 가 자동으로 설치됩니다. "
+"프로바이더 커넥터 (`lu_ai_ollama`, `lu_ai_claude`) 는 별도로 설치해야 합니다 "
+"— 하나 또는 둘 다 설치하세요."
 
 #: ../../ai-agent/quickstart.md:53
 msgid "Linkup AI Side Panel and Linkup AI Claude in the Apps list"

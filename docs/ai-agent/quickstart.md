@@ -41,13 +41,15 @@ to each agent (hybrid setup).
 1. Go to the **Apps** menu.
 2. Search for **"Linkup AI"**.
 3. Install **Linkup AI Side Panel** (`lu_ai_ui`).
-   Dependent modules (`lu_ai_ollama`, `ai`, `ai_app`, `web_enterprise`) are installed
-   automatically.
-4. To use Claude as well, install **Linkup AI Claude** (`lu_ai_claude`) separately.
+   The required base modules (`ai_app`, `web_enterprise`) are installed automatically.
+4. Install at least one **provider connector**:
+   - **Linkup AI Ollama** (`lu_ai_ollama`) — local LLM via Ollama
+   - **Linkup AI Claude** (`lu_ai_claude`) — cloud LLM via Anthropic Claude
+   - Both can be installed simultaneously for a hybrid setup.
 
 :::{tip}
-Installing **Linkup AI Side Panel** alone is enough to get all modules required for
-Ollama integration.
+`lu_ai_ui` auto-installs `ai_app` and `web_enterprise`. The provider connectors
+(`lu_ai_ollama`, `lu_ai_claude`) must be installed separately — install one or both.
 :::
 
 ```{image} /_static/img/ai-agent/qs-install-modules.png
