@@ -1,17 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# Kim Jiyeon <jiyeon@link-up.co.kr>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-04-09 13:25+0900\n"
+"PO-Revision-Date: 2026-04-09 13:30+0900\n"
+"Last-Translator: Kim Jiyeon <jiyeon@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,41 +21,1232 @@ msgstr ""
 
 #: ../../ai-agent/configuration.md:1
 msgid "Configuration"
-msgstr ""
+msgstr "환경 설정"
 
 #: ../../ai-agent/configuration.md:3
-msgid "Detailed configuration guide for Linkup AI Agent modules."
+msgid ""
+"This guide covers deep configuration for Linkup AI Agent — Ollama "
+"connection tuning, model parameters, Claude API setup, agent "
+"customization, RAG (document retrieval), access control, and multi-model "
+"setup."
 msgstr ""
+"이 가이드는 Linkup AI Agent의 심화 설정을 다룹니다. Ollama 연결 튜닝, 모델 "
+"파라미터, Claude API 설정, 에이전트 커스터마이징, RAG(문서 검색), 접근 제어, "
+"다중 모델 구성을 설명합니다."
 
-#: ../../ai-agent/configuration.md:6
-msgid "This page is a placeholder. Full content will be written in W3–W4."
+#: ../../ai-agent/configuration.md:7
+msgid ""
+"For initial installation and getting a first chat running, see the [Quick"
+" Start](quickstart.md) guide."
 msgstr ""
-
-#: ../../ai-agent/configuration.md:9
-msgid "Topics (Planned)"
-msgstr ""
-
-#: ../../ai-agent/configuration.md:11
-msgid "Ollama connection settings"
-msgstr ""
+"초기 설치 및 첫 번째 채팅 실행 방법은 [빠른 시작](quickstart.md) 가이드를 참조하세요."
 
 #: ../../ai-agent/configuration.md:12
-msgid "Model selection and parameters"
-msgstr ""
+msgid "1. Ollama Provider Settings"
+msgstr "1. Ollama 공급자 설정"
 
-#: ../../ai-agent/configuration.md:13
-msgid "System prompt customization"
-msgstr ""
+#: ../../ai-agent/configuration.md:14 ../../ai-agent/configuration.md:58
+msgid "**Module:** `lu_ai_ollama`"
+msgstr "**모듈:** `lu_ai_ollama`"
 
-#: ../../ai-agent/configuration.md:14
-msgid "Security and access control"
-msgstr ""
+#: ../../ai-agent/configuration.md:16 ../../ai-agent/configuration.md:126
+msgid "Accessing the settings"
+msgstr "설정 화면 열기"
 
-#: ../../ai-agent/configuration.md:15
-msgid "Token limits and rate limiting"
-msgstr ""
+#: ../../ai-agent/configuration.md:18
+msgid "Go to **Settings → Integrations**."
+msgstr "**설정 → 연동**으로 이동합니다."
 
-#: ../../ai-agent/configuration.md:16
-msgid "Multi-model configuration"
-msgstr ""
+#: ../../ai-agent/configuration.md:19
+msgid "Enable the **\"Use local Ollama models\"** toggle if it is not already on."
+msgstr "**\"로컬 Ollama 모델 사용\"** 토글이 꺼져 있으면 활성화합니다."
 
+#: ../../ai-agent/configuration.md:21
+msgid ""
+"The Ollama configuration block becomes visible immediately after enabling"
+" the toggle."
+msgstr "토글을 활성화하면 Ollama 설정 블록이 즉시 표시됩니다."
+
+#: ../../ai-agent/configuration.md:23 ../../ai-agent/configuration.md:131
+msgid "Fields"
+msgstr "필드"
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:114
+#: ../../ai-agent/configuration.md:174
+msgid "Field"
+msgstr "필드"
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:49
+#: ../../ai-agent/configuration.md:114
+msgid "Default"
+msgstr "기본값"
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:114
+#: ../../ai-agent/configuration.md:174 ../../ai-agent/configuration.md:230
+msgid "Description"
+msgstr "설명"
+
+#: ../../ai-agent/configuration.md
+msgid "**Base URL**"
+msgstr "**기본 URL**"
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:36
+msgid "`http://localhost:11434`"
+msgstr "`http://localhost:11434`"
+
+#: ../../ai-agent/configuration.md
+msgid ""
+"Address of the Ollama HTTP server. Change this if Ollama runs on a remote"
+" host or a non-default port."
+msgstr ""
+"Ollama HTTP 서버 주소입니다. Ollama가 원격 호스트나 기본 포트가 아닌 곳에서 실행 중이면 변경하세요."
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:114
+msgid "**API Key**"
+msgstr "**API 키**"
+
+#: ../../ai-agent/configuration.md ../../ai-agent/configuration.md:114
+msgid "*(empty)*"
+msgstr "*(없음)*"
+
+#: ../../ai-agent/configuration.md
+msgid ""
+"Optional. Required only for remote or authenticated endpoints (e.g., a "
+"shared Ollama server behind a reverse proxy). Leave blank for local "
+"installs."
+msgstr ""
+"선택 사항. 원격 또는 인증이 필요한 엔드포인트(예: 리버스 프록시 뒤의 공유 Ollama 서버)에만 필요합니다. "
+"로컬 설치의 경우 비워 두세요."
+
+#: ../../ai-agent/configuration.md:30
+msgid "Testing the connection"
+msgstr "연결 테스트"
+
+#: ../../ai-agent/configuration.md:32
+msgid ""
+"Click **Test Connection** after saving. A green banner confirms that Odoo"
+" can reach the Ollama server and retrieve its model list. A red banner "
+"with an error message indicates a network or authentication issue."
+msgstr ""
+"저장 후 **연결 테스트**를 클릭하세요. 녹색 배너가 표시되면 Odoo가 Ollama 서버에 접근하여 "
+"모델 목록을 가져오는 데 성공한 것입니다. 빨간색 배너와 오류 메시지는 네트워크 또는 인증 문제를 나타냅니다."
+
+#: ../../ai-agent/configuration.md:36
+msgid "Settings → Integrations — Ollama configuration block"
+msgstr "설정 → 연동 — Ollama 설정 블록"
+
+#: ../../ai-agent/configuration.md:36
+msgid ".. image:: /_static/img/ai-agent/cfg-ollama-settings.png"
+msgstr ".. image:: /_static/img/ai-agent/cfg-ollama-settings.png"
+
+#: ../../ai-agent/configuration.md:41
+msgid "Network setup recommendations"
+msgstr "네트워크 설정 권장 사항"
+
+#: ../../ai-agent/configuration.md:36
+msgid "Scenario"
+msgstr "시나리오"
+
+#: ../../ai-agent/configuration.md:36
+msgid "Base URL"
+msgstr "기본 URL"
+
+#: ../../ai-agent/configuration.md:36
+msgid "Ollama on the same machine as Odoo"
+msgstr "Odoo와 같은 머신에서 Ollama 실행"
+
+#: ../../ai-agent/configuration.md:36
+msgid "Ollama on a separate LAN host"
+msgstr "별도의 LAN 호스트에서 Ollama 실행"
+
+#: ../../ai-agent/configuration.md:36
+msgid "`http://192.168.x.x:11434`"
+msgstr "`http://192.168.x.x:11434`"
+
+#: ../../ai-agent/configuration.md:36
+msgid "Ollama behind a reverse proxy with TLS"
+msgstr "TLS 리버스 프록시 뒤에서 Ollama 실행"
+
+#: ../../ai-agent/configuration.md:36
+msgid "`https://ollama.example.com`"
+msgstr "`https://ollama.example.com`"
+
+#: ../../ai-agent/configuration.md:50
+msgid ""
+"Do **not** expose the Ollama port directly to the internet without "
+"authentication. Use a reverse proxy with API key enforcement or restrict "
+"access at the firewall level."
+msgstr ""
+"인증 없이 Ollama 포트를 인터넷에 직접 노출하지 **마세요**. "
+"API 키 인증을 적용한 리버스 프록시를 사용하거나 방화벽에서 접근을 제한하세요."
+
+#: ../../ai-agent/configuration.md:56
+msgid "2. Model Management"
+msgstr "2. 모델 관리"
+
+#: ../../ai-agent/configuration.md:60
+msgid "Viewing installed models"
+msgstr "설치된 모델 확인"
+
+#: ../../ai-agent/configuration.md:62
+msgid ""
+"Go to **AI → Configuration → Ollama Models**. The list is populated "
+"automatically by querying the Ollama server's `/api/tags` endpoint. Each "
+"row shows the model name, size on disk, and last modified date."
+msgstr ""
+"**AI → 구성 → Ollama 모델**로 이동하세요. 목록은 Ollama 서버의 `/api/tags` 엔드포인트를 "
+"조회하여 자동으로 채워집니다. 각 행에는 모델 이름, 디스크 크기, 마지막 수정일이 표시됩니다."
+
+#: ../../ai-agent/configuration.md:66
+msgid ""
+"Click **Refresh Models** to sync the list after pulling a new model in "
+"Ollama."
+msgstr "Ollama에서 새 모델을 내려받은 후 **모델 새로 고침**을 클릭하여 목록을 동기화하세요."
+
+#: ../../ai-agent/configuration.md:68
+msgid "Pulling models from the UI"
+msgstr "UI에서 모델 가져오기"
+
+#: ../../ai-agent/configuration.md:70
+msgid "In the model list, click **Pull Model**."
+msgstr "모델 목록에서 **모델 가져오기**를 클릭합니다."
+
+#: ../../ai-agent/configuration.md:71
+msgid "Enter the model tag (e.g., `qwen3.5:9b`)."
+msgstr "모델 태그를 입력합니다(예: `qwen3.5:9b`)."
+
+#: ../../ai-agent/configuration.md:72
+msgid ""
+"Odoo calls Ollama's `/api/pull` endpoint in the background. Progress is "
+"shown in the chatter."
+msgstr "Odoo가 백그라운드에서 Ollama의 `/api/pull` 엔드포인트를 호출합니다. 진행 상황은 채터에 표시됩니다."
+
+#: ../../ai-agent/configuration.md:75
+msgid "Alternatively, pull models directly on the host:"
+msgstr "또는 호스트에서 직접 모델을 가져올 수도 있습니다."
+
+#: ../../ai-agent/configuration.md:82
+msgid "Then click **Refresh Models** in Odoo to make them available."
+msgstr "이후 Odoo에서 **모델 새로 고침**을 클릭하면 해당 모델을 사용할 수 있게 됩니다."
+
+#: ../../ai-agent/configuration.md:84
+msgid "Model parameters"
+msgstr "모델 파라미터"
+
+#: ../../ai-agent/configuration.md:86
+msgid ""
+"Each AI Agent can override the following Ollama parameters. Leave a field"
+" blank to use the Ollama server default."
+msgstr ""
+"각 AI 에이전트는 아래 Ollama 파라미터를 재정의할 수 있습니다. "
+"Ollama 서버 기본값을 사용하려면 해당 필드를 비워 두세요."
+
+#: ../../ai-agent/configuration.md:49
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../ai-agent/configuration.md:49
+msgid "Accepted range"
+msgstr "허용 범위"
+
+#: ../../ai-agent/configuration.md:49
+msgid "Effect"
+msgstr "효과"
+
+#: ../../ai-agent/configuration.md:49
+msgid "`num_ctx`"
+msgstr "`num_ctx`"
+
+#: ../../ai-agent/configuration.md:49
+msgid "4096"
+msgstr "4096"
+
+#: ../../ai-agent/configuration.md:49
+msgid "512 – 128 000"
+msgstr "512 – 128,000"
+
+#: ../../ai-agent/configuration.md:49
+msgid ""
+"Context window in tokens. Higher values let the model see more "
+"conversation history and injected context."
+msgstr "토큰 단위 컨텍스트 창. 값이 클수록 모델이 더 많은 대화 이력과 주입된 컨텍스트를 볼 수 있습니다."
+
+#: ../../ai-agent/configuration.md:49
+msgid "`num_predict`"
+msgstr "`num_predict`"
+
+#: ../../ai-agent/configuration.md:49
+msgid "512"
+msgstr "512"
+
+#: ../../ai-agent/configuration.md:49
+msgid "1 – 4096"
+msgstr "1 – 4096"
+
+#: ../../ai-agent/configuration.md:49
+msgid "Maximum tokens the model generates per response."
+msgstr "모델이 응답 1회에 생성하는 최대 토큰 수."
+
+#: ../../ai-agent/configuration.md:49
+msgid "`keep_alive`"
+msgstr "`keep_alive`"
+
+#: ../../ai-agent/configuration.md:49
+msgid "`5m`"
+msgstr "`5m`"
+
+#: ../../ai-agent/configuration.md:49
+msgid "`0` – unlimited"
+msgstr "`0` – 무제한"
+
+#: ../../ai-agent/configuration.md:49
+msgid ""
+"How long the model stays loaded in VRAM between requests. `0` unloads "
+"immediately; `-1` keeps it loaded indefinitely."
+msgstr ""
+"요청 사이에 모델이 VRAM에 유지되는 시간. `0`이면 즉시 언로드되고, `-1`이면 무한정 유지됩니다."
+
+#: ../../ai-agent/configuration.md:96
+msgid ""
+"Setting `num_ctx` above your GPU's available VRAM causes Ollama to fall "
+"back to CPU inference or crash. A 9B model at `num_ctx=4096` needs ~6 GB "
+"VRAM; at `num_ctx=32768` it needs ~14 GB. Start conservatively and "
+"increase as needed."
+msgstr ""
+"`num_ctx`를 GPU의 가용 VRAM보다 크게 설정하면 Ollama가 CPU 추론으로 폴백하거나 충돌할 수 있습니다. "
+"9B 모델 기준으로 `num_ctx=4096`은 약 6 GB VRAM이 필요하고, `num_ctx=32768`은 약 14 GB가 필요합니다. "
+"보수적인 값으로 시작하여 필요에 따라 높이세요."
+
+#: ../../ai-agent/configuration.md:101
+msgid ""
+"These parameters are set per agent at **AI → Agents → Agents → (open "
+"agent) → Advanced** tab."
+msgstr ""
+"이 파라미터는 **AI → 에이전트 → 에이전트 → (에이전트 열기) → 고급** 탭에서 에이전트별로 설정합니다."
+
+#: ../../ai-agent/configuration.md:104
+msgid "Recommended models by use case"
+msgstr "용도별 권장 모델"
+
+#: ../../ai-agent/configuration.md:95 ../../ai-agent/configuration.md:275
+msgid "Use case"
+msgstr "용도"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Recommended model"
+msgstr "권장 모델"
+
+#: ../../ai-agent/configuration.md:95 ../../ai-agent/configuration.md:230
+msgid "Notes"
+msgstr "비고"
+
+#: ../../ai-agent/configuration.md:95
+msgid "General assistant / quick replies"
+msgstr "범용 어시스턴트 / 빠른 답변"
+
+#: ../../ai-agent/configuration.md:95 ../../ai-agent/configuration.md:338
+msgid "`qwen3.5:9b`"
+msgstr "`qwen3.5:9b`"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Best balance of speed and quality for 8–12 GB VRAM"
+msgstr "8–12 GB VRAM 환경에서 속도와 품질의 최적 균형"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Complex analysis, multi-step tool calls"
+msgstr "복잡한 분석, 다단계 도구 호출"
+
+#: ../../ai-agent/configuration.md:95
+msgid "`qwen3.5:35b`"
+msgstr "`qwen3.5:35b`"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Requires 24+ GB VRAM"
+msgstr "24 GB 이상의 VRAM 필요"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Coding and structured output"
+msgstr "코딩 및 구조화된 출력"
+
+#: ../../ai-agent/configuration.md:95
+msgid "`llama3.1:8b`"
+msgstr "`llama3.1:8b`"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Strong at JSON/function output"
+msgstr "JSON/함수 출력에 강점"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Korean language tasks"
+msgstr "한국어 작업"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Good Korean support out of the box"
+msgstr "기본적으로 우수한 한국어 지원"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Low-resource environments"
+msgstr "저사양 환경"
+
+#: ../../ai-agent/configuration.md:95
+msgid "`qwen3.5:3b`"
+msgstr "`qwen3.5:3b`"
+
+#: ../../ai-agent/configuration.md:95
+msgid "Runs on 4 GB VRAM"
+msgstr "4 GB VRAM에서 실행 가능"
+
+#: ../../ai-agent/configuration.md:115
+msgid ""
+"The available model list in the agent form is populated automatically "
+"from the Ollama server. If a model you just pulled is not visible, click "
+"**Refresh Models**."
+msgstr ""
+"에이전트 폼의 사용 가능한 모델 목록은 Ollama 서버에서 자동으로 채워집니다. "
+"방금 가져온 모델이 보이지 않으면 **모델 새로 고침**을 클릭하세요."
+
+#: ../../ai-agent/configuration.md:122
+msgid "3. Claude Provider Settings"
+msgstr "3. Claude 공급자 설정"
+
+#: ../../ai-agent/configuration.md:124
+msgid "**Module:** `lu_ai_claude`"
+msgstr "**모듈:** `lu_ai_claude`"
+
+#: ../../ai-agent/configuration.md:128
+msgid ""
+"Go to **Settings → AI** (Providers section). Find the **\"Use your own "
+"Anthropic Claude account\"** block."
+msgstr ""
+"**설정 → AI**(공급자 섹션)로 이동하여 **\"Anthropic Claude 계정 사용\"** 블록을 찾으세요."
+
+#: ../../ai-agent/configuration.md:114
+msgid ""
+"Your Anthropic API key. Stored encrypted in `ir.config_parameter`. Never "
+"logged in plain text."
+msgstr ""
+"Anthropic API 키. `ir.config_parameter`에 암호화되어 저장됩니다. 평문으로 로그에 기록되지 않습니다."
+
+#: ../../ai-agent/configuration.md:114
+msgid "**Max Output Tokens**"
+msgstr "**최대 출력 토큰**"
+
+#: ../../ai-agent/configuration.md:114
+msgid "16 384"
+msgstr "16,384"
+
+#: ../../ai-agent/configuration.md:114
+msgid ""
+"Per-request token cap. Actual limit is enforced by the model (see table "
+"below)."
+msgstr "요청당 토큰 상한. 실제 한도는 모델에 따라 결정됩니다(아래 표 참조)."
+
+#: ../../ai-agent/configuration.md:139
+msgid ""
+"Anthropic API keys are billed per token. Set **Max Output Tokens** "
+"conservatively in production to avoid unexpectedly large charges on long "
+"conversations."
+msgstr ""
+"Anthropic API 키는 토큰당 과금됩니다. 긴 대화에서 예기치 않은 요금이 발생하지 않도록 "
+"운영 환경에서는 **최대 출력 토큰**을 보수적으로 설정하세요."
+
+#: ../../ai-agent/configuration.md:143
+msgid "Model selection"
+msgstr "모델 선택"
+
+#: ../../ai-agent/configuration.md:145
+msgid ""
+"Select a model per agent at **AI → Agents → Agents → (open agent) → LLM "
+"Model** dropdown. The list is populated from the Claude connector's "
+"built-in model catalogue."
+msgstr ""
+"**AI → 에이전트 → 에이전트 → (에이전트 열기) → LLM 모델** 드롭다운에서 에이전트별로 모델을 선택합니다. "
+"목록은 Claude 커넥터의 내장 모델 카탈로그에서 채워집니다."
+
+#: ../../ai-agent/configuration.md:138 ../../ai-agent/configuration.md:338
+msgid "Model"
+msgstr "모델"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Context"
+msgstr "컨텍스트"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Max output"
+msgstr "최대 출력"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Best for"
+msgstr "적합한 용도"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Claude Opus 4.6"
+msgstr "Claude Opus 4.6"
+
+#: ../../ai-agent/configuration.md:138
+msgid "200 000"
+msgstr "200,000"
+
+#: ../../ai-agent/configuration.md:138
+msgid "128 000"
+msgstr "128,000"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Highest capability, complex reasoning"
+msgstr "최고 성능, 복잡한 추론"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Claude Sonnet 4.6"
+msgstr "Claude Sonnet 4.6"
+
+#: ../../ai-agent/configuration.md:138
+msgid "64 000"
+msgstr "64,000"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Balanced — recommended for production"
+msgstr "균형 — 운영 환경 권장"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Claude Haiku 4.5"
+msgstr "Claude Haiku 4.5"
+
+#: ../../ai-agent/configuration.md:138
+msgid "Lowest cost, fastest response"
+msgstr "최저 비용, 최고 속도"
+
+#: ../../ai-agent/configuration.md:156
+msgid ""
+"Anthropic releases new model versions regularly. The dropdown in the "
+"agent form always reflects the current catalogue — use it as the "
+"authoritative source rather than the table above."
+msgstr ""
+"Anthropic은 새 모델 버전을 정기적으로 출시합니다. 에이전트 폼의 드롭다운은 항상 현재 카탈로그를 반영하므로 "
+"위 표보다 드롭다운을 기준으로 삼으세요."
+
+#: ../../ai-agent/configuration.md:161
+msgid "Verifying your API key"
+msgstr "API 키 확인"
+
+#: ../../ai-agent/configuration.md:163
+msgid ""
+"There is no dedicated \"Test Connection\" button for the Claude provider."
+" To verify the key:"
+msgstr "Claude 공급자에는 전용 \"연결 테스트\" 버튼이 없습니다. 키를 확인하려면 다음을 수행하세요."
+
+#: ../../ai-agent/configuration.md:166
+msgid "Save the Settings page."
+msgstr "설정 페이지를 저장합니다."
+
+#: ../../ai-agent/configuration.md:167
+msgid "Open any agent that uses a Claude model."
+msgstr "Claude 모델을 사용하는 에이전트를 엽니다."
+
+#: ../../ai-agent/configuration.md:168
+msgid "Start a new conversation and send a short message (e.g., `ping`)."
+msgstr "새 대화를 시작하고 짧은 메시지(예: `ping`)를 전송합니다."
+
+#: ../../ai-agent/configuration.md:170
+msgid ""
+"A successful response confirms the key is valid. An error banner with "
+"`\"401 Unauthorized\"` or `\"Invalid API key\"` indicates the key needs "
+"to be regenerated at "
+"[console.anthropic.com](https://console.anthropic.com/)."
+msgstr ""
+"정상 응답이 오면 키가 유효한 것입니다. `\"401 Unauthorized\"` 또는 `\"Invalid API key\"` "
+"오류 배너가 표시되면 [console.anthropic.com](https://console.anthropic.com/)에서 "
+"키를 재발급해야 합니다."
+
+#: ../../ai-agent/configuration.md:174
+msgid "Settings → AI — Claude provider configuration block"
+msgstr "설정 → AI — Claude 공급자 설정 블록"
+
+#: ../../ai-agent/configuration.md:174
+msgid ".. image:: /_static/img/ai-agent/cfg-claude-settings.png"
+msgstr ".. image:: /_static/img/ai-agent/cfg-claude-settings.png"
+
+#: ../../ai-agent/configuration.md:181
+msgid "4. AI Agent Configuration"
+msgstr "4. AI 에이전트 설정"
+
+#: ../../ai-agent/configuration.md:183 ../../ai-agent/configuration.md:239
+msgid "**Module:** `lu_ai_orchestrator`"
+msgstr "**모듈:** `lu_ai_orchestrator`"
+
+#: ../../ai-agent/configuration.md:185
+msgid "Creating an agent"
+msgstr "에이전트 생성"
+
+#: ../../ai-agent/configuration.md:187
+msgid "Go to **AI → Agents → Agents**."
+msgstr "**AI → 에이전트 → 에이전트**로 이동합니다."
+
+#: ../../ai-agent/configuration.md:188
+msgid "Click **New**."
+msgstr "**신규**를 클릭합니다."
+
+#: ../../ai-agent/configuration.md:189
+msgid "Fill in the fields described below."
+msgstr "아래에 설명된 필드를 입력합니다."
+
+#: ../../ai-agent/configuration.md:190
+msgid "Click **Save**."
+msgstr "**저장**을 클릭합니다."
+
+#: ../../ai-agent/configuration.md:192
+msgid "Agent fields"
+msgstr "에이전트 필드"
+
+#: ../../ai-agent/configuration.md:174
+msgid "**Name**"
+msgstr "**이름**"
+
+#: ../../ai-agent/configuration.md:174
+msgid "Display name shown in the side panel agent selector."
+msgstr "사이드 패널 에이전트 선택기에 표시되는 이름."
+
+#: ../../ai-agent/configuration.md:174
+msgid "**LLM Model**"
+msgstr "**LLM 모델**"
+
+#: ../../ai-agent/configuration.md:174
+msgid "Provider and model combination (e.g., `Ollama / qwen3.5:9b`)."
+msgstr "공급자와 모델의 조합(예: `Ollama / qwen3.5:9b`)."
+
+#: ../../ai-agent/configuration.md:174
+msgid "**Temperature**"
+msgstr "**Temperature**"
+
+#: ../../ai-agent/configuration.md:174
+msgid ""
+"Randomness of responses. Range 0.0–2.0. Lower = more deterministic; "
+"higher = more creative. Default 0.7."
+msgstr ""
+"응답의 무작위성. 범위 0.0–2.0. 낮을수록 결정적, 높을수록 창의적. 기본값 0.7."
+
+#: ../../ai-agent/configuration.md:174
+msgid "**Max Tokens**"
+msgstr "**최대 토큰**"
+
+#: ../../ai-agent/configuration.md:174
+msgid ""
+"Upper bound on response length for this agent. Overrides the provider-"
+"level default."
+msgstr "이 에이전트의 응답 길이 상한. 공급자 수준 기본값을 재정의합니다."
+
+#: ../../ai-agent/configuration.md:174
+msgid "**Active**"
+msgstr "**활성**"
+
+#: ../../ai-agent/configuration.md:174
+msgid "Uncheck to hide the agent from the side panel without deleting it."
+msgstr "체크 해제 시 에이전트를 삭제하지 않고 사이드 패널에서 숨깁니다."
+
+#: ../../ai-agent/configuration.md:202 ../../ai-agent/configuration.md:275
+msgid "System prompt"
+msgstr "시스템 프롬프트"
+
+#: ../../ai-agent/configuration.md:204
+msgid ""
+"The system prompt is the persistent instruction prepended to every "
+"conversation with this agent. It defines the agent's role, tone, and "
+"constraints."
+msgstr ""
+"시스템 프롬프트는 이 에이전트의 모든 대화 앞에 고정적으로 추가되는 지침입니다. "
+"에이전트의 역할, 어조, 제약 조건을 정의합니다."
+
+#: ../../ai-agent/configuration.md:207
+msgid "**Best practices:**"
+msgstr "**작성 권장 사항:**"
+
+#: ../../ai-agent/configuration.md:209
+msgid ""
+"State the agent's role in the first sentence: `\"You are a Sales "
+"Assistant for Linkup Infotech's Odoo ERP system.\"`"
+msgstr ""
+"첫 문장에 에이전트 역할을 명시하세요: `\"당신은 Linkup Infotech Odoo ERP 시스템의 영업 어시스턴트입니다.\"`"
+
+#: ../../ai-agent/configuration.md:211
+msgid ""
+"Specify the language if needed: `\"Always respond in Korean unless the "
+"user writes in English.\"`"
+msgstr ""
+"필요하면 언어를 지정하세요: `\"사용자가 영어로 작성하지 않는 한 항상 한국어로 답변하세요.\"`"
+
+#: ../../ai-agent/configuration.md:213
+msgid ""
+"Add output format constraints for tool-heavy agents: `\"When presenting "
+"tabular data, always use a Markdown table.\"`"
+msgstr ""
+"도구 호출이 많은 에이전트에는 출력 형식 제약을 추가하세요: `\"표 형식 데이터를 제시할 때는 항상 Markdown 표를 사용하세요.\"`"
+
+#: ../../ai-agent/configuration.md:215
+msgid ""
+"Keep it under 500 tokens. Longer prompts increase latency and cost "
+"without proportional benefit."
+msgstr ""
+"500 토큰 이내로 유지하세요. 더 긴 프롬프트는 그에 비례하는 효과 없이 지연과 비용만 증가시킵니다."
+
+#: ../../ai-agent/configuration.md:219
+msgid ""
+"Test your system prompt with a few representative questions before "
+"deploying to users. The side panel shows the exact model output, making "
+"iteration fast."
+msgstr ""
+"사용자에게 배포하기 전에 대표적인 질문 몇 가지로 시스템 프롬프트를 테스트하세요. "
+"사이드 패널에서 모델의 정확한 출력을 바로 확인할 수 있어 반복 수정이 빠릅니다."
+
+#: ../../ai-agent/configuration.md:223
+msgid "Context injection"
+msgstr "컨텍스트 주입"
+
+#: ../../ai-agent/configuration.md:225
+msgid ""
+"Domain-specific Odoo record fields are automatically injected into the "
+"conversation context at query time (e.g., the current Sales Order when "
+"the user asks from the Sales module). For details on which fields are "
+"injected per domain and how to customise routing, see [Domain Routing"
+"](domain-routing.md)."
+msgstr ""
+"도메인별 Odoo 레코드 필드는 쿼리 시점에 대화 컨텍스트에 자동으로 주입됩니다 "
+"(예: 사용자가 영업 모듈에서 질문할 때 현재 영업 주문 정보가 주입됨). "
+"도메인별로 어떤 필드가 주입되는지, 라우팅을 커스터마이징하는 방법은 [도메인 라우팅](domain-routing.md)을 참조하세요."
+
+#: ../../ai-agent/configuration.md:230
+msgid "AI Agent form — General tab"
+msgstr "AI 에이전트 폼 — 일반 탭"
+
+#: ../../ai-agent/configuration.md:230
+msgid ".. image:: /_static/img/ai-agent/cfg-agent-form.png"
+msgstr ".. image:: /_static/img/ai-agent/cfg-agent-form.png"
+
+#: ../../ai-agent/configuration.md:237
+msgid "5. Document Retrieval (RAG)"
+msgstr "5. 문서 검색 (RAG)"
+
+#: ../../ai-agent/configuration.md:241
+msgid ""
+"RAG (Retrieval-Augmented Generation) attaches relevant documents to the "
+"prompt at query time, letting the agent answer questions about your "
+"company's internal knowledge base without retraining the model."
+msgstr ""
+"RAG(검색 증강 생성)는 쿼리 시점에 관련 문서를 프롬프트에 첨부하여, "
+"모델을 재학습하지 않고도 에이전트가 회사 내부 지식베이스에 대한 질문에 답할 수 있게 합니다."
+
+#: ../../ai-agent/configuration.md:245
+msgid "How it works"
+msgstr "동작 방식"
+
+#: ../../ai-agent/configuration.md:247
+msgid ""
+"Documents are chunked and embedded into a vector index when a knowledge "
+"source is attached to an agent."
+msgstr "에이전트에 지식 소스를 연결하면 문서가 청크로 분할되어 벡터 인덱스에 임베딩됩니다."
+
+#: ../../ai-agent/configuration.md:249
+msgid ""
+"At query time, the user's message is embedded and the top-N most similar "
+"chunks are retrieved."
+msgstr "쿼리 시점에 사용자의 메시지가 임베딩되고 가장 유사한 상위 N개 청크가 검색됩니다."
+
+#: ../../ai-agent/configuration.md:251
+msgid ""
+"The retrieved chunks are injected into the prompt before the LLM "
+"generates a response."
+msgstr "검색된 청크는 LLM이 응답을 생성하기 전에 프롬프트에 주입됩니다."
+
+#: ../../ai-agent/configuration.md:254
+msgid "Accessing knowledge source settings"
+msgstr "지식 소스 설정 열기"
+
+#: ../../ai-agent/configuration.md:256
+msgid "Go to **AI → Configuration → Knowledge Sources**."
+msgstr "**AI → 구성 → 지식 소스**로 이동합니다."
+
+#: ../../ai-agent/configuration.md:258
+msgid "Supported source types"
+msgstr "지원 소스 유형"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Type"
+msgstr "유형"
+
+#: ../../ai-agent/configuration.md:230
+msgid "**Odoo Attachments**"
+msgstr "**Odoo 첨부 파일**"
+
+#: ../../ai-agent/configuration.md:230
+msgid "PDF, DOCX, TXT files attached to any Odoo record."
+msgstr "Odoo 레코드에 첨부된 PDF, DOCX, TXT 파일."
+
+#: ../../ai-agent/configuration.md:230
+msgid "**External URL**"
+msgstr "**외부 URL**"
+
+#: ../../ai-agent/configuration.md:230
+msgid ""
+"Publicly accessible URL (HTML page or plain text). Fetched and indexed at"
+" setup time."
+msgstr "공개적으로 접근 가능한 URL(HTML 페이지 또는 일반 텍스트). 설정 시 가져와서 인덱싱됩니다."
+
+#: ../../ai-agent/configuration.md:265
+msgid "Embedding model selection"
+msgstr "임베딩 모델 선택"
+
+#: ../../ai-agent/configuration.md:267
+msgid "Go to **Settings → AI → Embedding Model**. Supported options:"
+msgstr "**설정 → AI → 임베딩 모델**로 이동합니다. 지원 옵션:"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Option"
+msgstr "옵션"
+
+#: ../../ai-agent/configuration.md:230 ../../ai-agent/configuration.md:338
+msgid "Provider"
+msgstr "공급자"
+
+#: ../../ai-agent/configuration.md:230
+msgid "`nomic-embed-text`"
+msgstr "`nomic-embed-text`"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Ollama (local)"
+msgstr "Ollama (로컬)"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Free, runs on CPU, ~270 MB"
+msgstr "무료, CPU 실행, 약 270 MB"
+
+#: ../../ai-agent/configuration.md:230
+msgid "`mxbai-embed-large`"
+msgstr "`mxbai-embed-large`"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Higher accuracy, ~670 MB"
+msgstr "더 높은 정확도, 약 670 MB"
+
+#: ../../ai-agent/configuration.md:230
+msgid "`text-embedding-3-small`"
+msgstr "`text-embedding-3-small`"
+
+#: ../../ai-agent/configuration.md:230
+msgid "OpenAI"
+msgstr "OpenAI"
+
+#: ../../ai-agent/configuration.md:230
+msgid "Requires OpenAI API key"
+msgstr "OpenAI API 키 필요"
+
+#: ../../ai-agent/configuration.md:276
+msgid ""
+"For fully on-premise deployments, use an Ollama embedding model. The "
+"local options produce comparable retrieval quality to cloud models for "
+"most business document types."
+msgstr ""
+"완전한 온프레미스 배포에는 Ollama 임베딩 모델을 사용하세요. "
+"로컬 옵션은 대부분의 비즈니스 문서 유형에서 클라우드 모델과 유사한 검색 품질을 제공합니다."
+
+#: ../../ai-agent/configuration.md:281
+msgid "Attaching a knowledge source to an agent"
+msgstr "에이전트에 지식 소스 연결"
+
+#: ../../ai-agent/configuration.md:283
+msgid "Open the agent form (**AI → Agents → Agents → (open agent)**)."
+msgstr "에이전트 폼을 엽니다(**AI → 에이전트 → 에이전트 → (에이전트 열기)**)."
+
+#: ../../ai-agent/configuration.md:284
+msgid "Go to the **Knowledge** tab."
+msgstr "**지식** 탭으로 이동합니다."
+
+#: ../../ai-agent/configuration.md:285
+msgid ""
+"Click **Add a line** and select an existing knowledge source, or click "
+"**Create and edit** to define a new one."
+msgstr ""
+"**줄 추가**를 클릭하여 기존 지식 소스를 선택하거나, **만들고 편집**을 클릭하여 새로 정의합니다."
+
+#: ../../ai-agent/configuration.md:287
+msgid ""
+"Save the agent. The knowledge source index is built automatically in the "
+"background (progress visible in the chatter)."
+msgstr ""
+"에이전트를 저장합니다. 지식 소스 인덱스는 백그라운드에서 자동으로 빌드됩니다(채터에서 진행 상황 확인 가능)."
+
+#: ../../ai-agent/configuration.md:290
+msgid "When to use RAG vs. system prompt"
+msgstr "RAG vs. 시스템 프롬프트 사용 기준"
+
+#: ../../ai-agent/configuration.md:275
+msgid "Recommendation"
+msgstr "권장 방법"
+
+#: ../../ai-agent/configuration.md:275
+msgid "Static instructions, persona, output format"
+msgstr "정적 지침, 페르소나, 출력 형식"
+
+#: ../../ai-agent/configuration.md:275
+msgid "Company policies, product catalogues, FAQs (updated periodically)"
+msgstr "회사 정책, 제품 카탈로그, FAQ(주기적으로 업데이트됨)"
+
+#: ../../ai-agent/configuration.md:275
+msgid "RAG knowledge source"
+msgstr "RAG 지식 소스"
+
+#: ../../ai-agent/configuration.md:275
+msgid "Real-time ERP data (orders, inventory, HR records)"
+msgstr "실시간 ERP 데이터 (주문, 재고, 인사 레코드)"
+
+#: ../../ai-agent/configuration.md:275
+msgid "Domain context injection (see [Domain Routing](domain-routing.md))"
+msgstr "도메인 컨텍스트 주입(참조: [도메인 라우팅](domain-routing.md))"
+
+#: ../../ai-agent/configuration.md:299
+msgid ""
+"RAG is most effective when documents are well-structured (clear headings,"
+" consistent terminology). Scanned PDFs without OCR produce poor retrieval"
+" quality."
+msgstr ""
+"RAG는 문서 구조가 잘 잡혀 있을 때(명확한 제목, 일관된 용어) 가장 효과적입니다. "
+"OCR 없이 스캔된 PDF는 검색 품질이 낮습니다."
+
+#: ../../ai-agent/configuration.md:305
+msgid "6. Security & Access Control"
+msgstr "6. 보안 및 접근 제어"
+
+#: ../../ai-agent/configuration.md:307
+msgid "User groups"
+msgstr "사용자 그룹"
+
+#: ../../ai-agent/configuration.md:309
+msgid ""
+"Linkup AI Agent defines the following security groups. Assign them at "
+"**Settings → Users & Companies → Users → (open user) → Access Rights**."
+msgstr ""
+"Linkup AI Agent는 다음 보안 그룹을 정의합니다. "
+"**설정 → 사용자 및 회사 → 사용자 → (사용자 열기) → 접근 권한**에서 할당하세요."
+
+#: ../../ai-agent/configuration.md:298
+msgid "Group"
+msgstr "그룹"
+
+#: ../../ai-agent/configuration.md:298
+msgid "Access"
+msgstr "접근 권한"
+
+#: ../../ai-agent/configuration.md:298
+msgid "**AI User**"
+msgstr "**AI 사용자**"
+
+#: ../../ai-agent/configuration.md:298
+msgid "Can use the side panel chat. Cannot create or modify agents."
+msgstr "사이드 패널 채팅 사용 가능. 에이전트 생성 또는 수정 불가."
+
+#: ../../ai-agent/configuration.md:298
+msgid "**AI Manager**"
+msgstr "**AI 매니저**"
+
+#: ../../ai-agent/configuration.md:298
+msgid ""
+"Can create, edit, and delete agents and knowledge sources. Can view usage"
+" logs."
+msgstr "에이전트 및 지식 소스 생성, 편집, 삭제 가능. 사용 로그 조회 가능."
+
+#: ../../ai-agent/configuration.md:298
+msgid "**AI Admin**"
+msgstr "**AI 관리자**"
+
+#: ../../ai-agent/configuration.md:298
+msgid ""
+"Full access including provider settings, API key management, and audit "
+"logs."
+msgstr "공급자 설정, API 키 관리, 감사 로그를 포함한 전체 접근 권한."
+
+#: ../../ai-agent/configuration.md:319
+msgid ""
+"The **AI Admin** group grants access to API keys stored in "
+"`ir.config_parameter`. Assign it only to system administrators."
+msgstr ""
+"**AI 관리자** 그룹은 `ir.config_parameter`에 저장된 API 키에 접근 권한을 부여합니다. "
+"시스템 관리자에게만 할당하세요."
+
+#: ../../ai-agent/configuration.md:323
+msgid "Restricting an agent to specific users"
+msgstr "에이전트를 특정 사용자로 제한"
+
+#: ../../ai-agent/configuration.md:325
+msgid "Open the agent form."
+msgstr "에이전트 폼을 엽니다."
+
+#: ../../ai-agent/configuration.md:326
+msgid "In the **Allowed Groups** field, select one or more security groups."
+msgstr "**허용 그룹** 필드에서 하나 이상의 보안 그룹을 선택합니다."
+
+#: ../../ai-agent/configuration.md:327
+msgid "Save. The agent is now visible only to users in those groups."
+msgstr "저장합니다. 이제 에이전트는 해당 그룹의 사용자에게만 표시됩니다."
+
+#: ../../ai-agent/configuration.md:329
+msgid ""
+"If **Allowed Groups** is left empty, the agent is accessible to all users"
+" with at least the **AI User** group."
+msgstr ""
+"**허용 그룹**을 비워 두면 최소 **AI 사용자** 그룹에 속한 모든 사용자가 에이전트에 접근할 수 있습니다."
+
+#: ../../ai-agent/configuration.md:332
+msgid "API key storage"
+msgstr "API 키 저장"
+
+#: ../../ai-agent/configuration.md:334
+msgid ""
+"Provider API keys (Anthropic, OpenAI) are stored as encrypted values in "
+"Odoo's `ir.config_parameter` table. They are never written to server logs"
+" or returned in API responses."
+msgstr ""
+"공급자 API 키(Anthropic, OpenAI)는 Odoo의 `ir.config_parameter` 테이블에 암호화된 값으로 저장됩니다. "
+"서버 로그에 기록되거나 API 응답으로 반환되지 않습니다."
+
+#: ../../ai-agent/configuration.md:339
+msgid ""
+"Do not hard-code API keys in system prompts or agent names — these fields"
+" are visible to **AI User** level accounts and may appear in exported "
+"logs."
+msgstr ""
+"시스템 프롬프트나 에이전트 이름에 API 키를 하드코딩하지 마세요. 해당 필드는 **AI 사용자** 수준 계정에 표시되며 "
+"내보낸 로그에 나타날 수 있습니다."
+
+#: ../../ai-agent/configuration.md:345
+msgid "7. Multi-Model Setup"
+msgstr "7. 다중 모델 구성"
+
+#: ../../ai-agent/configuration.md:347
+msgid ""
+"Running multiple agents with different providers lets you optimise for "
+"cost, latency, and capability simultaneously."
+msgstr "서로 다른 공급자의 에이전트를 여러 개 운영하면 비용, 지연 시간, 성능을 동시에 최적화할 수 있습니다."
+
+#: ../../ai-agent/configuration.md:350
+msgid "Example: Ollama for Sales, Claude for Finance"
+msgstr "예시: 영업에는 Ollama, 재무에는 Claude"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Agent"
+msgstr "에이전트"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Rationale"
+msgstr "선택 이유"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Sales Assistant"
+msgstr "영업 어시스턴트"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Ollama"
+msgstr "Ollama"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Fast, free, handles routine queries"
+msgstr "빠르고 무료, 일상적인 쿼리 처리에 적합"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Finance Analyst"
+msgstr "재무 분석가"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Claude"
+msgstr "Claude"
+
+#: ../../ai-agent/configuration.md:338
+msgid "`claude-sonnet-4-6`"
+msgstr "`claude-sonnet-4-6`"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Complex reasoning over large reports"
+msgstr "대용량 보고서에 대한 복잡한 추론"
+
+#: ../../ai-agent/configuration.md:338
+msgid "HR Helper"
+msgstr "HR 도우미"
+
+#: ../../ai-agent/configuration.md:338
+msgid "Sensitive data stays on-premise"
+msgstr "민감한 데이터를 온프레미스에 유지"
+
+#: ../../ai-agent/configuration.md:358
+msgid "To configure this:"
+msgstr "구성 방법:"
+
+#: ../../ai-agent/configuration.md:360
+msgid "Ensure both `lu_ai_ollama` and `lu_ai_claude` are installed."
+msgstr "`lu_ai_ollama`와 `lu_ai_claude`가 모두 설치되어 있는지 확인합니다."
+
+#: ../../ai-agent/configuration.md:361
+msgid "Configure both providers as described in sections 1–3 above."
+msgstr "위의 1–3 섹션에 설명된 대로 두 공급자를 설정합니다."
+
+#: ../../ai-agent/configuration.md:362
+msgid ""
+"Create a separate agent for each use case and select the appropriate "
+"model."
+msgstr "각 용도에 맞는 에이전트를 별도로 생성하고 적절한 모델을 선택합니다."
+
+#: ../../ai-agent/configuration.md:364
+msgid "Switching an agent's provider"
+msgstr "에이전트의 공급자 전환"
+
+#: ../../ai-agent/configuration.md:366
+msgid ""
+"Open the agent form and change the **LLM Model** dropdown. The change "
+"takes effect immediately — existing conversations are not affected."
+msgstr ""
+"에이전트 폼을 열고 **LLM 모델** 드롭다운을 변경합니다. 변경 사항은 즉시 적용되며 기존 대화에는 영향을 주지 않습니다."
+
+#: ../../ai-agent/configuration.md:370
+msgid ""
+"Fallback behaviour (e.g., automatically switching from Ollama to Claude "
+"when the local server is unavailable) and cross-domain routing logic are "
+"covered in [Domain Routing](domain-routing.md)."
+msgstr ""
+"폴백 동작(예: 로컬 서버를 사용할 수 없을 때 Ollama에서 Claude로 자동 전환)과 "
+"크로스 도메인 라우팅 로직은 [도메인 라우팅](domain-routing.md)에서 다룹니다."
+
+#: ../../ai-agent/configuration.md:377
+msgid "Troubleshooting"
+msgstr "문제 해결"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Symptom"
+msgstr "증상"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Likely cause"
+msgstr "예상 원인"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Fix"
+msgstr "해결 방법"
+
+#: ../../ai-agent/configuration.md:369
+msgid "\"Connection refused\" on Test Connection"
+msgstr "연결 테스트에서 \"Connection refused\" 오류"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Ollama not running or wrong port"
+msgstr "Ollama가 실행 중이지 않거나 포트가 잘못됨"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Run `ollama serve`; verify Base URL"
+msgstr "`ollama serve` 실행; 기본 URL 확인"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Model list is empty after enabling Ollama"
+msgstr "Ollama 활성화 후 모델 목록이 비어 있음"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Ollama running but no models pulled"
+msgstr "Ollama가 실행 중이지만 모델을 가져오지 않음"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Run `ollama pull <model>`, then **Refresh Models**"
+msgstr "`ollama pull <model>` 실행 후 **모델 새로 고침**"
+
+#: ../../ai-agent/configuration.md:369
+msgid "`num_ctx` increase causes slow responses"
+msgstr "`num_ctx` 증가 후 응답이 느려짐"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Model reloaded with larger context"
+msgstr "더 큰 컨텍스트로 모델이 재로드됨"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Expected — first request after change reloads the model into VRAM"
+msgstr "정상 동작 — 변경 후 첫 번째 요청 시 모델이 VRAM에 재로드됨"
+
+#: ../../ai-agent/configuration.md:369
+msgid "\"OOM\" error or Ollama crashes"
+msgstr "\"OOM\" 오류 또는 Ollama 충돌"
+
+#: ../../ai-agent/configuration.md:369
+msgid "`num_ctx` exceeds available VRAM"
+msgstr "`num_ctx`가 가용 VRAM을 초과함"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Reduce `num_ctx` or use a smaller model"
+msgstr "`num_ctx` 축소 또는 더 작은 모델 사용"
+
+#: ../../ai-agent/configuration.md:369
+msgid "\"401 Unauthorized\" (Claude)"
+msgstr "\"401 Unauthorized\" (Claude)"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Invalid or expired API key"
+msgstr "유효하지 않거나 만료된 API 키"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Regenerate key at console.anthropic.com"
+msgstr "console.anthropic.com에서 키 재발급"
+
+#: ../../ai-agent/configuration.md:369
+msgid "\"429 Too Many Requests\" (Claude)"
+msgstr "\"429 Too Many Requests\" (Claude)"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Rate limit or quota exceeded"
+msgstr "속도 제한 또는 할당량 초과"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Check usage limits at console.anthropic.com"
+msgstr "console.anthropic.com에서 사용 한도 확인"
+
+#: ../../ai-agent/configuration.md:369
+msgid "RAG returns irrelevant chunks"
+msgstr "RAG가 관련 없는 청크를 반환함"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Poor document structure or wrong embedding model"
+msgstr "문서 구조 불량 또는 잘못된 임베딩 모델"
+
+#: ../../ai-agent/configuration.md:369
+msgid ""
+"Re-index after improving document formatting; try a different embedding "
+"model"
+msgstr "문서 형식 개선 후 재인덱싱; 다른 임베딩 모델 시도"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Agent not visible in side panel"
+msgstr "사이드 패널에 에이전트가 표시되지 않음"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Agent marked inactive or group restriction"
+msgstr "에이전트가 비활성 상태이거나 그룹 제한이 있음"
+
+#: ../../ai-agent/configuration.md:369
+msgid "Check **Active** checkbox and **Allowed Groups** on the agent form"
+msgstr "에이전트 폼에서 **활성** 체크박스와 **허용 그룹** 확인"
+
+#~ msgid "Detailed configuration guide for Linkup AI Agent modules."
+#~ msgstr ""
+
+#~ msgid "This page is a placeholder. Full content will be written in W3–W4."
+#~ msgstr ""
+
+#~ msgid "Topics (Planned)"
+#~ msgstr ""
+
+#~ msgid "Ollama connection settings"
+#~ msgstr ""
+
+#~ msgid "Model selection and parameters"
+#~ msgstr ""
+
+#~ msgid "System prompt customization"
+#~ msgstr ""
+
+#~ msgid "Security and access control"
+#~ msgstr ""
+
+#~ msgid "Token limits and rate limiting"
+#~ msgstr ""
+
+#~ msgid "Multi-model configuration"
+#~ msgstr ""

@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-09 13:25+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../ai-agent/domain-routing.md:1
+msgid "Domain Routing"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:3
+msgid "Per-domain agent routing for Linkup AI Agent."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:6
+msgid ""
+"This page is a placeholder. Full content will be written in a future "
+"release."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:9
+msgid "Topics (Planned)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:11
+msgid "Domain definitions (Sales, HR, Finance, Inventory, CRM)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:12
+msgid "Routing rules and priority"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:13
+msgid "Context injection per domain"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:14
+msgid "Fallback and default agent configuration"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:15
+msgid "Multi-agent routing diagram"
+msgstr ""
+
