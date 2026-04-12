@@ -236,7 +236,7 @@ domain and how to customise routing, see [Domain Routing](domain-routing.md).
 
 ## 5. Document Retrieval (RAG)
 
-**Module:** `lu_ai_orchestrator`
+**Module:** `lu_ai_rag`
 
 RAG (Retrieval-Augmented Generation) attaches relevant documents to the prompt
 at query time, letting the agent answer questions about your company's internal
