@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 10:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../commerce/index.rst:2
+msgid "Commerce"
+msgstr ""
+
+#: ../../commerce/index.rst:4
+msgid "E-commerce platform connectors and delivery service integrations for Odoo."
+msgstr ""
+
+#: ../../commerce/index.rst:10
+msgid "Repository"
+msgstr ""
+
+#: ../../commerce/index.rst:11
+msgid "Description"
+msgstr ""
+
+#: ../../commerce/index.rst:12
+msgid "``lu_commerce``"
+msgstr ""
+
+#: ../../commerce/index.rst:13
+msgid "Coupang, Naver Smart Store, and marketplace connectors"
+msgstr ""
+
+#: ../../commerce/index.rst:14
+msgid "``lu_delivery``"
+msgstr ""
+
+#: ../../commerce/index.rst:15
+msgid "Delivery service integrations (CJ, Hanjin, Lotte, etc.)"
+msgstr ""
+
+#: ../../commerce/index.rst:19
+msgid "Detailed documentation for Commerce modules is planned for Phase 2 (W11+)."
+msgstr ""
