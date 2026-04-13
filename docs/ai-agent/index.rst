@@ -23,7 +23,7 @@ Modules
    * - ``lu_ai_orchestrator``
      - Orchestrator — domain routing, system prompts, context injection
      - |check|
-   * - ``lu_ai_ui``
+   * - ``lu_ai_sidepanel``
      - Chat UI — web client integration, message threading
      - |check|
    * - ``lu_ai_workflow``

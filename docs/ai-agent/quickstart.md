@@ -40,7 +40,7 @@ to each agent (hybrid setup).
 
 1. Go to the **Apps** menu.
 2. Search for **"Linkup AI"**.
-3. Install **Linkup AI Side Panel** (`lu_ai_ui`).
+3. Install **Linkup AI Side Panel** (`lu_ai_sidepanel`).
    The required base modules (`ai_app`, `web_enterprise`) are installed automatically.
 4. Install at least one **provider connector**:
    - **Linkup AI Ollama** (`lu_ai_ollama`) — local LLM via Ollama
@@ -48,7 +48,7 @@ to each agent (hybrid setup).
    - Both can be installed simultaneously for a hybrid setup.
 
 :::{tip}
-`lu_ai_ui` auto-installs `ai_app` and `web_enterprise`. The provider connectors
+`lu_ai_sidepanel` auto-installs `ai_app` and `web_enterprise`. The provider connectors
 (`lu_ai_ollama`, `lu_ai_claude`) must be installed separately — install one or both.
 :::
 
@@ -169,7 +169,7 @@ Frequently asked questions bypass the LLM entirely for faster responses.
 |-----------|------|
 | **Ollama** or **Claude API** | LLM inference engine (local or cloud) |
 | **`lu_ai_ollama`** / **`lu_ai_claude`** | Odoo ↔ LLM provider connector |
-| **`lu_ai_ui`** | Slide-out side panel chat UI |
+| **`lu_ai_sidepanel`** | Slide-out side panel chat UI |
 | **AI Agent** | Configuration unit that binds provider, model, and prompt |
 
 In a hybrid setup, each agent can use a different provider — run latency-sensitive

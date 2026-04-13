@@ -74,8 +74,8 @@ msgid "Orchestrator — domain routing, system prompts, context injection"
 msgstr "오케스트레이터 — 도메인 라우팅, 시스템 프롬프트, 컨텍스트 주입"
 
 #: ../../ai-agent/index.rst:26
-msgid "``lu_ai_ui``"
-msgstr "``lu_ai_ui``"
+msgid "``lu_ai_sidepanel``"
+msgstr "``lu_ai_sidepanel``"
 
 #: ../../ai-agent/index.rst:27
 msgid "Chat UI — web client integration, message threading"

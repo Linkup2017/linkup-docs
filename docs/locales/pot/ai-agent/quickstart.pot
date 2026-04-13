@@ -85,7 +85,7 @@ msgid "Search for **\"Linkup AI\"**."
 msgstr ""
 
 #: ../../ai-agent/quickstart.md:43
-msgid "Install **Linkup AI Side Panel** (`lu_ai_ui`). The required base modules (`ai_app`, `web_enterprise`) are installed automatically."
+msgid "Install **Linkup AI Side Panel** (`lu_ai_sidepanel`). The required base modules (`ai_app`, `web_enterprise`) are installed automatically."
 msgstr ""
 
 #: ../../ai-agent/quickstart.md:45
@@ -105,7 +105,7 @@ msgid "Both can be installed simultaneously for a hybrid setup."
 msgstr ""
 
 #: ../../ai-agent/quickstart.md:51
-msgid "`lu_ai_ui` auto-installs `ai_app` and `web_enterprise`. The provider connectors (`lu_ai_ollama`, `lu_ai_claude`) must be installed separately — install one or both."
+msgid "`lu_ai_sidepanel` auto-installs `ai_app` and `web_enterprise`. The provider connectors (`lu_ai_ollama`, `lu_ai_claude`) must be installed separately — install one or both."
 msgstr ""
 
 #: ../../ai-agent/quickstart.md:55

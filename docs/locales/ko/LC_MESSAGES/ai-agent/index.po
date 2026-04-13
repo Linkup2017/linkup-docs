@@ -73,7 +73,7 @@ msgid "Orchestrator — domain routing, system prompts, context injection"
 msgstr ""
 
 #: ../../ai-agent/index.rst:26
-msgid "``lu_ai_ui``"
+msgid "``lu_ai_sidepanel``"
 msgstr ""
 
 #: ../../ai-agent/index.rst:27
