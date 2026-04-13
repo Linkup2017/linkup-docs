@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/contact.md:1
+msgid "Contacts (`lu_mcp_contact`)"
+msgstr "Contacts (`lu_mcp_contact`)"
+
+#: ../../mcp/reference/contact.md:3
+msgid "**6 tools** for Odoo `res.partner` (contacts and companies) management."
+msgstr "Odoo 담당자(``res.partner``) 관리를 위한 **6가지 도구**입니다."
+
+#: ../../mcp/reference/contact.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `contacts` app (base)."
+msgstr "필수: `lu_mcp_server`, Odoo `contacts` 앱(기본)."
+
+#: ../../mcp/reference/contact.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/contact.md:11
+msgid ""
+"These tools let an AI client search, read, create, and update Odoo "
+"contacts and companies, list sub-contacts (individuals under a company), "
+"and post internal notes."
+msgstr ""
+"이 도구들을 통해 AI 클라이언트는 Odoo 담당자 및 회사를 검색, 읽기, 생성 및 업데이트하고, "
+"하위 담당자(회사 하위 개인)를 나열하고, 내부 메모를 게시할 수 있습니다."
+
+#: ../../mcp/reference/contact.md:16
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/contact.md:18
+msgid "`contact_search_contacts`"
+msgstr "`contact_search_contacts`"
+
+#: ../../mcp/reference/contact.md:20
+msgid "Search contacts and companies."
+msgstr "담당자 및 회사를 검색합니다."
+
+#: ../../mcp/reference/contact.md
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/contact.md
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/contact.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/contact.md
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/contact.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/contact.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/contact.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/contact.md
+msgid "Keyword search across name, email, and phone."
+msgstr "이름, 이메일 및 전화번호에서 키워드 검색."
+
+#: ../../mcp/reference/contact.md
+msgid "`is_company`"
+msgstr "`is_company`"
+
+#: ../../mcp/reference/contact.md
+msgid "boolean"
+msgstr "boolean"
+
+#: ../../mcp/reference/contact.md
+msgid "`true` for companies only, `false` for individuals only."
+msgstr "회사만: `true`, 개인만: `false`."
+
+#: ../../mcp/reference/contact.md
+msgid "`customer_rank`"
+msgstr "`customer_rank`"
+
+#: ../../mcp/reference/contact.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/contact.md
+msgid "Minimum customer rank (1 = is a customer)."
+msgstr "최소 고객 등급(1 = 고객임)."
+
+#: ../../mcp/reference/contact.md
+msgid "`supplier_rank`"
+msgstr "`supplier_rank`"
+
+#: ../../mcp/reference/contact.md
+msgid "Minimum supplier rank (1 = is a supplier)."
+msgstr "최소 공급업체 등급(1 = 공급업체임)."
+
+#: ../../mcp/reference/contact.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/contact.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/contact.md:30 ../../mcp/reference/contact.md:44
+#: ../../mcp/reference/contact.md:64 ../../mcp/reference/contact.md:83
+#: ../../mcp/reference/contact.md:96 ../../mcp/reference/contact.md:110
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/contact.md:31
+msgid "*\"Search for all customers named 'Kim'.\"*"
+msgstr "*\"'Kim'이라는 이름의 모든 고객을 검색하세요.\"*"
+
+#: ../../mcp/reference/contact.md:35
+msgid "`contact_read_contact`"
+msgstr "`contact_read_contact`"
+
+#: ../../mcp/reference/contact.md:37
+msgid ""
+"Get full details of a contact or company: address, VAT, ranks, sub-"
+"contacts, tags, and internal notes."
+msgstr "담당자의 전체 상세 정보를 가져옵니다: 주소, VAT, 등급, 하위 담당자, 태그 및 내부 메모."
+
+#: ../../mcp/reference/contact.md
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/contact.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/contact.md
+msgid "Partner ID."
+msgstr "파트너 ID."
+
+#: ../../mcp/reference/contact.md:45
+msgid "*\"Show me full details for contact #42.\"*"
+msgstr "*\"담당자 #42의 전체 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/contact.md:49
+msgid "`contact_create_contact`"
+msgstr "`contact_create_contact`"
+
+#: ../../mcp/reference/contact.md:51
+msgid "Create a new contact or company."
+msgstr "새 담당자 또는 회사를 생성합니다."
+
+#: ../../mcp/reference/contact.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/contact.md
+msgid "Contact or company name."
+msgstr "담당자 또는 회사 이름."
+
+#: ../../mcp/reference/contact.md
+msgid "`true` to create a company, `false` for an individual."
+msgstr "회사 생성: `true`, 개인 생성: `false`."
+
+#: ../../mcp/reference/contact.md
+msgid "`parent_id`"
+msgstr "`parent_id`"
+
+#: ../../mcp/reference/contact.md
+msgid "Parent company ID (creates the contact under a company)."
+msgstr "모회사 ID(담당자를 회사 아래 생성합니다)."
+
+#: ../../mcp/reference/contact.md
+msgid "`email`"
+msgstr "`email`"
+
+#: ../../mcp/reference/contact.md
+msgid "Email address."
+msgstr "이메일 주소."
+
+#: ../../mcp/reference/contact.md
+msgid "`phone`"
+msgstr "`phone`"
+
+#: ../../mcp/reference/contact.md
+msgid "Phone number."
+msgstr "전화번호."
+
+#: ../../mcp/reference/contact.md
+msgid "`street`"
+msgstr "`street`"
+
+#: ../../mcp/reference/contact.md
+msgid "Street address."
+msgstr "도로명 주소."
+
+#: ../../mcp/reference/contact.md
+msgid "`city`"
+msgstr "`city`"
+
+#: ../../mcp/reference/contact.md
+msgid "City."
+msgstr "도시."
+
+#: ../../mcp/reference/contact.md
+msgid "`country_id`"
+msgstr "`country_id`"
+
+#: ../../mcp/reference/contact.md
+msgid "Country ID (Odoo `res.country` ID)."
+msgstr "국가 ID(Odoo `res.country` ID)."
+
+#: ../../mcp/reference/contact.md:65
+msgid ""
+"*\"Create a company contact named 'Seoul Tech Co.' with email "
+"info@seoultech.kr.\"*"
+msgstr ""
+"*\"'Seoul Tech Co.'라는 이름의 회사 담당자를 생성하고 이메일을 info@seoultech.kr로 설정하세요.\"*"
+
+#: ../../mcp/reference/contact.md:69
+msgid "`contact_update_contact`"
+msgstr "`contact_update_contact`"
+
+#: ../../mcp/reference/contact.md:71
+msgid "Update an existing contact or company."
+msgstr "기존 담당자를 업데이트합니다."
+
+#: ../../mcp/reference/contact.md
+msgid "New name."
+msgstr "새 이름."
+
+#: ../../mcp/reference/contact.md
+msgid "New email."
+msgstr "새 이메일."
+
+#: ../../mcp/reference/contact.md
+msgid "New phone number."
+msgstr "새 전화번호."
+
+#: ../../mcp/reference/contact.md
+msgid "New street address."
+msgstr "새 도로명 주소."
+
+#: ../../mcp/reference/contact.md
+msgid "New city."
+msgstr "새 도시."
+
+#: ../../mcp/reference/contact.md
+msgid "New country ID."
+msgstr "새 국가 ID."
+
+#: ../../mcp/reference/contact.md:84
+msgid "*\"Update contact #42 — set email to new@example.com and city to Busan.\"*"
+msgstr "*\"담당자 #42 업데이트 — 이메일을 new@example.com으로, 도시를 Busan으로 설정.\"*"
+
+#: ../../mcp/reference/contact.md:88
+msgid "`contact_list_children`"
+msgstr "`contact_list_children`"
+
+#: ../../mcp/reference/contact.md:90
+msgid "List individual contacts (employees, contacts) under a company."
+msgstr "회사 파트너의 직접 하위 담당자를 나열합니다."
+
+#: ../../mcp/reference/contact.md
+msgid "Company partner ID."
+msgstr "회사 파트너 ID."
+
+#: ../../mcp/reference/contact.md:97
+msgid "*\"List all contacts under company #10 (Acme Corp).\"*"
+msgstr "*\"회사 #10(Acme Corp) 아래의 모든 담당자를 나열하세요.\"*"
+
+#: ../../mcp/reference/contact.md:101
+msgid "`contact_log_note`"
+msgstr "`contact_log_note`"
+
+#: ../../mcp/reference/contact.md:103
+msgid "Post an internal note on a contact record (not visible externally)."
+msgstr "담당자 레코드에 내부 메모를 게시합니다(외부에 표시되지 않음)."
+
+#: ../../mcp/reference/contact.md
+msgid "`body`"
+msgstr "`body`"
+
+#: ../../mcp/reference/contact.md
+msgid "Note body (Markdown)."
+msgstr "메모 본문(Markdown)."
+
+#: ../../mcp/reference/contact.md:111
+msgid ""
+"*\"Log a note on contact #42: 'Spoke at KCD 2026 — interested in "
+"enterprise plan.'\"*"
+msgstr ""
+"*\"담당자 #42에 메모 기록: 'KCD 2026에서 발표함 — 엔터프라이즈 플랜에 관심 있음.'\"*"
+

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/index.rst:2
+msgid "Tool Reference"
+msgstr "도구 레퍼런스"
+
+#: ../../mcp/reference/index.rst:4
+msgid ""
+"**74 tools** across 10 plugin modules, each independently installable. "
+"Install only the modules that match the Odoo apps deployed in your "
+"instance."
+msgstr ""
+"10개 플러그인 모듈에 걸친 **74가지 도구**로, 각각 독립적으로 설치 가능합니다. "
+"인스턴스에 배포된 Odoo 앱에 맞는 모듈만 설치하세요."
+
+#: ../../mcp/reference/index.rst:11
+msgid "Module"
+msgstr "모듈"
+
+#: ../../mcp/reference/index.rst:12
+msgid "Odoo App"
+msgstr "Odoo 앱"
+
+#: ../../mcp/reference/index.rst:13
+msgid "Tools"
+msgstr "도구 수"
+
+#: ../../mcp/reference/index.rst:14
+msgid "Key Capabilities"
+msgstr "주요 기능"
+
+#: ../../mcp/reference/index.rst:15
+msgid "``lu_mcp_knowledge``"
+msgstr "``lu_mcp_knowledge``"
+
+#: ../../mcp/reference/index.rst:16
+msgid "Knowledge"
+msgstr "Knowledge"
+
+#: ../../mcp/reference/index.rst:17
+msgid "9"
+msgstr "9"
+
+#: ../../mcp/reference/index.rst:18
+msgid ""
+"Browse workspaces, read / search / create / update / move / delete "
+"articles, partial edits via ``content_updates``"
+msgstr ""
+"워크스페이스 탐색, 아티클 읽기/검색/생성/업데이트/이동/삭제, ``content_updates``를 통한 부분 편집"
+
+#: ../../mcp/reference/index.rst:20
+msgid "``lu_mcp_project``"
+msgstr "``lu_mcp_project``"
+
+#: ../../mcp/reference/index.rst:21
+msgid "Project"
+msgstr "Project"
+
+#: ../../mcp/reference/index.rst:22
+msgid "7"
+msgstr "7"
+
+#: ../../mcp/reference/index.rst:23
+msgid ""
+"List projects and stages, search / read / create / update tasks, link "
+"Knowledge articles"
+msgstr ""
+"프로젝트 및 스테이지 나열, 작업 검색/읽기/생성/업데이트, Knowledge 아티클 연결"
+
+#: ../../mcp/reference/index.rst:25
+msgid "``lu_mcp_helpdesk``"
+msgstr "``lu_mcp_helpdesk``"
+
+#: ../../mcp/reference/index.rst:26
+msgid "Helpdesk"
+msgstr "Helpdesk"
+
+#: ../../mcp/reference/index.rst:27
+msgid "12"
+msgstr "12"
+
+#: ../../mcp/reference/index.rst:28
+msgid ""
+"Full ticket lifecycle — create, reply, escalate, close, SLA status, "
+"customer history, link Knowledge articles"
+msgstr ""
+"전체 티켓 생명 주기 — 생성, 회신, 에스컬레이션, 종료, SLA 상태, 고객 이력, Knowledge 아티클 연결"
+
+#: ../../mcp/reference/index.rst:30
+msgid "``lu_mcp_crm``"
+msgstr "``lu_mcp_crm``"
+
+#: ../../mcp/reference/index.rst:31
+msgid "CRM"
+msgstr "CRM"
+
+#: ../../mcp/reference/index.rst:32
+msgid "8"
+msgstr "8"
+
+#: ../../mcp/reference/index.rst:33
+msgid ""
+"Pipeline summary, leads / opportunities — create, update, convert, stage "
+"list, internal notes"
+msgstr ""
+"파이프라인 요약, 리드/영업 기회 — 생성, 업데이트, 전환, 스테이지 목록, 내부 메모"
+
+#: ../../mcp/reference/index.rst:35
+msgid "``lu_mcp_contact``"
+msgstr "``lu_mcp_contact``"
+
+#: ../../mcp/reference/index.rst:36
+msgid "Contacts"
+msgstr "Contacts"
+
+#: ../../mcp/reference/index.rst:37 ../../mcp/reference/index.rst:46
+#: ../../mcp/reference/index.rst:51 ../../mcp/reference/index.rst:56
+#: ../../mcp/reference/index.rst:60
+msgid "6"
+msgstr "6"
+
+#: ../../mcp/reference/index.rst:38
+msgid ""
+"Search, read, create, update contacts and companies, list sub-contacts, "
+"log internal notes"
+msgstr ""
+"담당자 및 회사 검색, 읽기, 생성, 업데이트, 하위 담당자 나열, 내부 메모 기록"
+
+#: ../../mcp/reference/index.rst:40
+msgid "``lu_mcp_calendar``"
+msgstr "``lu_mcp_calendar``"
+
+#: ../../mcp/reference/index.rst:41
+msgid "Calendar"
+msgstr "Calendar"
+
+#: ../../mcp/reference/index.rst:42
+msgid "5"
+msgstr "5"
+
+#: ../../mcp/reference/index.rst:43
+msgid "List, read, create, update, delete events; recurring event guard"
+msgstr "이벤트 나열, 읽기, 생성, 업데이트, 삭제; 반복 이벤트 보호"
+
+#: ../../mcp/reference/index.rst:44
+msgid "``lu_mcp_sale``"
+msgstr "``lu_mcp_sale``"
+
+#: ../../mcp/reference/index.rst:45
+msgid "Sales"
+msgstr "Sales"
+
+#: ../../mcp/reference/index.rst:47
+msgid ""
+"Search, read, create, update, confirm sales quotations and orders, log "
+"notes"
+msgstr ""
+"판매 견적 및 주문 검색, 읽기, 생성, 업데이트, 확정, 메모 기록"
+
+#: ../../mcp/reference/index.rst:49
+msgid "``lu_mcp_purchase``"
+msgstr "``lu_mcp_purchase``"
+
+#: ../../mcp/reference/index.rst:50
+msgid "Purchase"
+msgstr "Purchase"
+
+#: ../../mcp/reference/index.rst:52
+msgid "Search, read, create, update, confirm purchase orders / RFQs, log notes"
+msgstr ""
+"구매 주문/RFQ 검색, 읽기, 생성, 업데이트, 확정, 메모 기록"
+
+#: ../../mcp/reference/index.rst:54
+msgid "``lu_mcp_timesheet``"
+msgstr "``lu_mcp_timesheet``"
+
+#: ../../mcp/reference/index.rst:55
+msgid "Timesheets"
+msgstr "Timesheets"
+
+#: ../../mcp/reference/index.rst:57
+msgid "Log / read / update / delete timesheet entries, project summary"
+msgstr ""
+"타임시트 항목 기록/읽기/업데이트/삭제, 프로젝트 요약"
+
+#: ../../mcp/reference/index.rst:58
+msgid "``lu_mcp_survey``"
+msgstr "``lu_mcp_survey``"
+
+#: ../../mcp/reference/index.rst:59
+msgid "Surveys"
+msgstr "Surveys"
+
+#: ../../mcp/reference/index.rst:61
+msgid ""
+"List / read / create surveys, add questions (9 types), view responses, "
+"generate from Knowledge articles"
+msgstr ""
+"설문 나열/읽기/생성, 질문 추가(9가지 유형), 응답 보기, Knowledge 아티클에서 생성"
+

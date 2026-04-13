@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 09:41+0900\n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -20,27 +20,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../index.rst:21 ../../index.rst:60
+#: ../../index.rst:21 ../../index.rst:66
 msgid "AI Agent"
 msgstr ""
 
-#: ../../index.rst:28 ../../index.rst:67
+#: ../../index.rst:28 ../../index.rst:73
+msgid "MCP Server"
+msgstr ""
+
+#: ../../index.rst:35 ../../index.rst:80
 msgid "Localization (KR)"
 msgstr ""
 
-#: ../../index.rst:35 ../../index.rst:74
+#: ../../index.rst:42 ../../index.rst:87
 msgid "Messaging"
 msgstr ""
 
-#: ../../index.rst:41 ../../index.rst:81
+#: ../../index.rst:48 ../../index.rst:94
 msgid "Commerce"
 msgstr ""
 
-#: ../../index.rst:47 ../../index.rst:88
+#: ../../index.rst:54 ../../index.rst:101
 msgid "Marketing"
 msgstr ""
 
-#: ../../index.rst:53 ../../index.rst:95
+#: ../../index.rst:60 ../../index.rst:108
 msgid "Integrations"
 msgstr ""
 
@@ -74,23 +78,29 @@ msgstr ""
 
 #: ../../index.rst:32
 msgid ""
+"Model Context Protocol server — 74 tools exposing Odoo data to Claude "
+"Desktop, claude.ai, and any MCP-compatible AI client."
+msgstr ""
+
+#: ../../index.rst:39
+msgid ""
 "Korean tax invoices, payroll, social insurance, and regulatory compliance"
 " modules."
 msgstr ""
 
-#: ../../index.rst:39
+#: ../../index.rst:46
 msgid "KakaoTalk, Alimtalk, and SMS integrations for Odoo."
 msgstr ""
 
-#: ../../index.rst:45
+#: ../../index.rst:52
 msgid "Coupang, Naver Smart Store, and delivery service connectors."
 msgstr ""
 
-#: ../../index.rst:51
+#: ../../index.rst:58
 msgid "Email and SMS marketing campaign tools."
 msgstr ""
 
-#: ../../index.rst:57
+#: ../../index.rst:64
 msgid "PG payment gateways and external API connectors."
 msgstr ""
 

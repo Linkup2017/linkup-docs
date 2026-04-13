@@ -1,0 +1,324 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/sale.md:1
+msgid "Sales (`lu_mcp_sale`)"
+msgstr "Sales (`lu_mcp_sale`)"
+
+#: ../../mcp/reference/sale.md:3
+msgid "**6 tools** for Odoo sales quotations and orders."
+msgstr "Odoo 판매 견적 및 주문을 위한 **6가지 도구**입니다."
+
+#: ../../mcp/reference/sale.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `sale` app."
+msgstr "필수: `lu_mcp_server`, Odoo `sale` 앱."
+
+#: ../../mcp/reference/sale.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/sale.md:11
+msgid ""
+"These tools cover the sales order lifecycle: search, read, create, "
+"update, confirm, and log notes. Quotations (state `draft` or `sent`) can "
+"be edited; confirmed orders (state `sale`) are locked for editing in "
+"Odoo."
+msgstr ""
+"이 도구들은 판매 주문 생명 주기를 다룹니다: 검색, 읽기, 생성, 업데이트, 확정, 메모 기록. "
+"견적(`draft` 또는 `sent` 상태)은 편집 가능하고, 확정 주문(`sale` 상태)은 Odoo에서 편집이 잠깁니다."
+
+#: ../../mcp/reference/sale.md:15
+msgid ""
+"**Order states**: `draft` (Quotation), `sent` (Quotation Sent), `sale` "
+"(Sales Order), `done` (Locked), `cancel` (Cancelled)."
+msgstr ""
+"**주문 상태**: `draft`(견적), `sent`(견적 발송), `sale`(판매 주문), `done`(잠금), `cancel`(취소)."
+
+#: ../../mcp/reference/sale.md:20
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/sale.md:22
+msgid "`sale_search_orders`"
+msgstr "`sale_search_orders`"
+
+#: ../../mcp/reference/sale.md:24
+msgid "Search sales quotations and orders."
+msgstr "판매 주문 및 견적을 검색합니다."
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/sale.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/sale.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/sale.md
+msgid "Keyword search in order name or customer name."
+msgstr "주문명 또는 고객명에서 키워드 검색."
+
+#: ../../mcp/reference/sale.md
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../mcp/reference/sale.md
+msgid "Filter by state: `draft`, `sent`, `sale`, `done`, `cancel`."
+msgstr "상태별 필터링: `draft`, `sent`, `sale`, `done`, `cancel`."
+
+#: ../../mcp/reference/sale.md
+msgid "`partner_id`"
+msgstr "`partner_id`"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/sale.md
+msgid "Filter by customer."
+msgstr "고객별 필터링."
+
+#: ../../mcp/reference/sale.md
+msgid "`user_id`"
+msgstr "`user_id`"
+
+#: ../../mcp/reference/sale.md
+msgid "Filter by salesperson."
+msgstr "영업담당자별 필터링."
+
+#: ../../mcp/reference/sale.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/sale.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/sale.md:34 ../../mcp/reference/sale.md:47
+#: ../../mcp/reference/sale.md:72 ../../mcp/reference/sale.md:87
+#: ../../mcp/reference/sale.md:105 ../../mcp/reference/sale.md:119
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/sale.md:35
+msgid "*\"Show all confirmed sales orders for customer #10.\"*"
+msgstr "*\"고객 #10의 모든 확정된 판매 주문을 보여주세요.\"*"
+
+#: ../../mcp/reference/sale.md:39
+msgid "`sale_read_order`"
+msgstr "`sale_read_order`"
+
+#: ../../mcp/reference/sale.md:41
+msgid "Get full details of a sales quotation or order, including order lines."
+msgstr "판매 주문의 전체 상세 정보(주문 라인 포함)를 가져옵니다."
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/sale.md ../../mcp/reference/sale.md:100
+msgid "Sale order ID."
+msgstr "판매 주문 ID."
+
+#: ../../mcp/reference/sale.md:48
+msgid "*\"Show me the details of sales order #55.\"*"
+msgstr "*\"판매 주문 #55의 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/sale.md:52
+msgid "`sale_create_order`"
+msgstr "`sale_create_order`"
+
+#: ../../mcp/reference/sale.md:54
+msgid "Create a new sales quotation."
+msgstr "새 견적을 생성합니다."
+
+#: ../../mcp/reference/sale.md
+msgid "Customer partner ID."
+msgstr "고객 파트너 ID."
+
+#: ../../mcp/reference/sale.md
+msgid "`validity_date`"
+msgstr "`validity_date`"
+
+#: ../../mcp/reference/sale.md
+msgid "Quotation expiry date (`YYYY-MM-DD`)."
+msgstr "견적 만료일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/sale.md
+msgid "`note`"
+msgstr "`note`"
+
+#: ../../mcp/reference/sale.md
+msgid "Internal note (Markdown)."
+msgstr "내부 메모(Markdown)."
+
+#: ../../mcp/reference/sale.md
+msgid "`order_line`"
+msgstr "`order_line`"
+
+#: ../../mcp/reference/sale.md
+msgid "array"
+msgstr "array"
+
+#: ../../mcp/reference/sale.md
+msgid "List of order lines (see below)."
+msgstr "주문 라인 목록(아래 참조)."
+
+#: ../../mcp/reference/sale.md:63
+msgid "**`order_line` items**"
+msgstr "**`order_line` 항목**"
+
+#: ../../mcp/reference/sale.md
+msgid "Field"
+msgstr "필드"
+
+#: ../../mcp/reference/sale.md
+msgid "`product_id`"
+msgstr "`product_id`"
+
+#: ../../mcp/reference/sale.md
+msgid "Product ID."
+msgstr "상품 ID."
+
+#: ../../mcp/reference/sale.md
+msgid "`product_uom_qty`"
+msgstr "`product_uom_qty`"
+
+#: ../../mcp/reference/sale.md
+msgid "number"
+msgstr "number"
+
+#: ../../mcp/reference/sale.md
+msgid "Quantity (default 1)."
+msgstr "수량(기본값 1)."
+
+#: ../../mcp/reference/sale.md
+msgid "`price_unit`"
+msgstr "`price_unit`"
+
+#: ../../mcp/reference/sale.md
+msgid "Unit price (uses product default if omitted)."
+msgstr "단가(생략하면 상품 기본값 사용)."
+
+#: ../../mcp/reference/sale.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/sale.md
+msgid "Line description override."
+msgstr "라인 설명 재정의."
+
+#: ../../mcp/reference/sale.md:73
+msgid "*\"Create a quotation for customer #10 with 2 units of product #5.\"*"
+msgstr "*\"고객 #10을 위해 상품 #5 2개 단위로 견적을 생성하세요.\"*"
+
+#: ../../mcp/reference/sale.md:77
+msgid "`sale_update_order`"
+msgstr "`sale_update_order`"
+
+#: ../../mcp/reference/sale.md:79
+msgid "Update a quotation (only allowed while in `draft` or `sent` state)."
+msgstr "견적을 업데이트합니다(`draft` 또는 `sent` 상태에서만 허용)."
+
+#: ../../mcp/reference/sale.md
+msgid "New expiry date (`YYYY-MM-DD`)."
+msgstr "새 만료일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/sale.md
+msgid "New internal note (Markdown)."
+msgstr "새 내부 메모(Markdown)."
+
+#: ../../mcp/reference/sale.md:88
+msgid "*\"Update quotation #55 — extend the validity date to 2026-10-31.\"*"
+msgstr "*\"견적 #55 업데이트 — 유효 기간을 2026-10-31로 연장.\"*"
+
+#: ../../mcp/reference/sale.md:92
+msgid "`sale_confirm_order`"
+msgstr "`sale_confirm_order`"
+
+#: ../../mcp/reference/sale.md:94
+msgid "Confirm a quotation, converting it to a Sales Order (state `sale`)."
+msgstr "견적을 확정하여 판매 주문으로 전환합니다(상태: `sale`)."
+
+#: ../../mcp/reference/sale.md
+msgid "Sale order ID to confirm."
+msgstr "확정할 판매 주문 ID."
+
+#: ../../mcp/reference/sale.md:101
+msgid ""
+"Confirmation is **irreversible** via this tool. Once confirmed, the order"
+" is locked and line items cannot be changed through MCP tools. Use the "
+"Odoo UI to cancel if needed."
+msgstr ""
+"이 도구를 통한 확정은 **취소 불가**합니다. 확정 후 주문은 판매 주문으로 잠깁니다. "
+"취소가 필요한 경우 Odoo UI를 사용하세요."
+
+#: ../../mcp/reference/sale.md:106
+msgid "*\"Confirm quotation #55.\"*"
+msgstr "*\"견적 #55을 확정하세요.\"*"
+
+#: ../../mcp/reference/sale.md:110
+msgid "`sale_log_note`"
+msgstr "`sale_log_note`"
+
+#: ../../mcp/reference/sale.md:112
+msgid "Post an internal note on a sales order (not visible to the customer)."
+msgstr "판매 주문에 내부 메모를 게시합니다(고객에게 표시되지 않음)."
+
+#: ../../mcp/reference/sale.md:100
+msgid "`body`"
+msgstr "`body`"
+
+#: ../../mcp/reference/sale.md:100
+msgid "Note body (Markdown)."
+msgstr "메모 본문(Markdown)."
+
+#: ../../mcp/reference/sale.md:120
+msgid ""
+"*\"Add a note to sales order #55: 'Customer requested delivery before end"
+" of quarter.'\"*"
+msgstr ""
+"*\"판매 주문 #55에 메모 추가: '고객이 분기 말 이전 배송을 요청했습니다.'\"*"
+

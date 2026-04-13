@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/authentication.md:1
+msgid "Authentication"
+msgstr "인증"
+
+#: ../../mcp/authentication.md:3
+msgid ""
+"Linkup MCP Server supports two authentication methods depending on your "
+"AI client."
+msgstr "Linkup MCP Server는 AI 클라이언트에 따라 두 가지 인증 방식을 지원합니다."
+
+#: ../../mcp/authentication.md
+msgid "Client"
+msgstr "클라이언트"
+
+#: ../../mcp/authentication.md
+msgid "Method"
+msgstr "방식"
+
+#: ../../mcp/authentication.md
+msgid "Token lifetime"
+msgstr "토큰 수명"
+
+#: ../../mcp/authentication.md
+msgid "Claude Desktop"
+msgstr "Claude Desktop"
+
+#: ../../mcp/authentication.md
+msgid "Static Bearer token (Odoo API key)"
+msgstr "정적 Bearer 토큰 (Odoo API 키)"
+
+#: ../../mcp/authentication.md
+msgid "Never expires"
+msgstr "만료되지 않음"
+
+#: ../../mcp/authentication.md
+msgid "claude.ai"
+msgstr "claude.ai"
+
+#: ../../mcp/authentication.md
+msgid "OAuth 2.0 PKCE + dynamic client registration"
+msgstr "OAuth 2.0 PKCE + 동적 클라이언트 등록"
+
+#: ../../mcp/authentication.md
+msgid "90 days"
+msgstr "90일"
+
+#: ../../mcp/authentication.md
+msgid "Any MCP client"
+msgstr "모든 MCP 클라이언트"
+
+#: ../../mcp/authentication.md
+msgid "Bearer token in `Authorization` header"
+msgstr "`Authorization` 헤더의 Bearer 토큰"
+
+#: ../../mcp/authentication.md
+msgid "Depends on method"
+msgstr "방식에 따라 다름"
+
+#: ../../mcp/authentication.md:13
+msgid "Bearer Token (API Key)"
+msgstr "Bearer 토큰 (API 키)"
+
+#: ../../mcp/authentication.md:15
+msgid ""
+"The simplest method. Generate an Odoo API key and include it in every "
+"request."
+msgstr "가장 간단한 방식입니다. Odoo API 키를 생성하여 모든 요청에 포함시키세요."
+
+#: ../../mcp/authentication.md:17
+msgid "**Generate a key**"
+msgstr "**키 생성하기**"
+
+#: ../../mcp/authentication.md:19
+msgid "Enable developer mode (**Settings → Activate the developer mode**)."
+msgstr "개발자 모드 활성화 (**설정 → 개발자 모드 활성화**)."
+
+#: ../../mcp/authentication.md:20
+msgid "Go to **Settings → Technical → API Keys**."
+msgstr "**설정 → 기술 → API 키**로 이동하세요."
+
+#: ../../mcp/authentication.md:21
+msgid ""
+"Click **New**, enter a description, and save. Copy the key — it is shown "
+"only once."
+msgstr "**새로 만들기**를 클릭하고 설명을 입력한 후 저장하세요. 키를 복사하세요. 한 번만 표시됩니다."
+
+#: ../../mcp/authentication.md:23
+msgid "**Use the key**"
+msgstr "**키 사용하기**"
+
+#: ../../mcp/authentication.md:25
+msgid "Include the key in the `Authorization` request header:"
+msgstr "`Authorization` 요청 헤더에 키를 포함시키세요:"
+
+#: ../../mcp/authentication.md:34
+msgid "In Claude Desktop's `claude_desktop_config.json`:"
+msgstr "Claude Desktop의 `claude_desktop_config.json`에서:"
+
+#: ../../mcp/authentication.md:51
+msgid "OAuth 2.0 PKCE (claude.ai)"
+msgstr "OAuth 2.0 PKCE (claude.ai)"
+
+#: ../../mcp/authentication.md:53
+msgid ""
+"For browser-based AI clients, Linkup MCP Server implements the full OAuth"
+" 2.0 Authorization Code flow with PKCE (Proof Key for Code Exchange) and "
+"dynamic client registration, as required by the MCP 2025-03-26 "
+"specification."
+msgstr ""
+"브라우저 기반 AI 클라이언트의 경우, Linkup MCP Server는 MCP 2025-03-26 "
+"사양에서 요구하는 PKCE (Proof Key for Code Exchange)를 포함한 완전한 OAuth 2.0 "
+"인증 코드 흐름과 동적 클라이언트 등록을 구현합니다."
+
+#: ../../mcp/authentication.md:57
+msgid "Discovery"
+msgstr "디스커버리"
+
+#: ../../mcp/authentication.md:59
+msgid "The server publishes its OAuth metadata at the standard well-known URL:"
+msgstr "서버는 OAuth 메타데이터를 표준 잘 알려진 URL에 게시합니다:"
+
+#: ../../mcp/authentication.md:65
+msgid "Response example:"
+msgstr "응답 예시:"
+
+#: ../../mcp/authentication.md:79
+msgid "Flow Overview"
+msgstr "흐름 개요"
+
+#: ../../mcp/authentication.md:105
+msgid "Dynamic Client Registration"
+msgstr "동적 클라이언트 등록"
+
+#: ../../mcp/authentication.md:107
+msgid ""
+"Clients that do not have a pre-registered `client_id` must register "
+"dynamically before initiating the authorization flow."
+msgstr ""
+"사전에 등록된 `client_id`가 없는 클라이언트는 인증 흐름을 시작하기 전에 "
+"동적으로 등록해야 합니다."
+
+#: ../../mcp/authentication.md:110
+msgid "**Request**"
+msgstr "**요청**"
+
+#: ../../mcp/authentication.md:125 ../../mcp/authentication.md:173
+msgid "**Response**"
+msgstr "**응답**"
+
+#: ../../mcp/authentication.md:138
+msgid ""
+"Dynamic client registration is enabled by default. Restrict it to "
+"administrators only in production by setting the **MCP → Registration "
+"policy** option in Odoo Settings."
+msgstr ""
+"동적 클라이언트 등록은 기본적으로 활성화되어 있습니다. 프로덕션 환경에서는 "
+"Odoo 설정의 **MCP → 등록 정책** 옵션을 설정하여 관리자만 사용할 수 있도록 제한하세요."
+
+#: ../../mcp/authentication.md:142
+msgid "Authorization Request"
+msgstr "인증 요청"
+
+#: ../../mcp/authentication.md:144
+msgid ""
+"The client redirects the user to the authorization endpoint with a PKCE "
+"challenge:"
+msgstr "클라이언트는 사용자를 PKCE 챌린지와 함께 인증 끝점으로 리다이렉트합니다:"
+
+#: ../../mcp/authentication.md:156
+msgid ""
+"The user sees the Odoo consent page and logs in if needed. After "
+"approval, Odoo redirects to `redirect_uri` with `?code=<auth-"
+"code>&state=<state>`."
+msgstr ""
+"사용자는 Odoo 동의 페이지를 보고 필요하면 로그인합니다. 승인 후, Odoo는 "
+"`?code=<auth-code>&state=<state>`와 함께 `redirect_uri`로 리다이렉트합니다."
+
+#: ../../mcp/authentication.md:159
+msgid "Token Exchange"
+msgstr "토큰 교환"
+
+#: ../../mcp/authentication.md:183
+msgid "The access token is valid for **90 days** (7 776 000 seconds)."
+msgstr "액세스 토큰은 **90일**(7,776,000초) 동안 유효합니다."
+
+#: ../../mcp/authentication.md:187
+msgid "Session Tracking"
+msgstr "세션 추적"
+
+#: ../../mcp/authentication.md:189
+msgid ""
+"Every MCP connection creates a server-sent events (SSE) session. The "
+"server tracks:"
+msgstr ""
+"모든 MCP 연결은 서버 전송 이벤트 (SSE) 세션을 생성합니다. 서버는 다음을 추적합니다:"
+
+#: ../../mcp/authentication.md:191
+msgid "Session ID (random UUID, returned in the `Mcp-Session-Id` response header)"
+msgstr "세션 ID (`Mcp-Session-Id` 응답 헤더에 반환되는 무작위 UUID)"
+
+#: ../../mcp/authentication.md:192 ../../mcp/authentication.md:218
+msgid "Authenticated user"
+msgstr "인증된 사용자"
+
+#: ../../mcp/authentication.md:193
+msgid "Connection start time"
+msgstr "연결 시작 시간"
+
+#: ../../mcp/authentication.md:194
+msgid "Last activity timestamp"
+msgstr "마지막 활동 타임스탬프"
+
+#: ../../mcp/authentication.md:196
+msgid ""
+"Sessions are accessible in Odoo at **Settings → Technical → MCP → "
+"Sessions**."
+msgstr "세션은 Odoo의 **설정 → 기술 → MCP → 세션**에서 확인할 수 있습니다."
+
+#: ../../mcp/authentication.md:198
+msgid ""
+"On reconnect, clients may include the `Mcp-Session-Id` header to replay "
+"missed events via the SSE endpoint:"
+msgstr ""
+"재연결할 때, 클라이언트는 `Mcp-Session-Id` 헤더를 포함하여 SSE 끝점을 통해 "
+"놓친 이벤트를 재생할 수 있습니다:"
+
+#: ../../mcp/authentication.md:209
+msgid "Audit Log"
+msgstr "감사 로그"
+
+#: ../../mcp/authentication.md:211
+msgid ""
+"All tool calls are written to the MCP audit log regardless of success or "
+"failure."
+msgstr "모든 도구 호출은 성공 여부와 관계없이 MCP 감사 로그에 기록됩니다."
+
+#: ../../mcp/authentication.md:213
+msgid "**View the log**: **Settings → Technical → MCP → Audit Log**"
+msgstr "**로그 보기**: **설정 → 기술 → MCP → 감사 로그**"
+
+#: ../../mcp/authentication.md:215
+msgid "Each entry records:"
+msgstr "각 항목은 다음을 기록합니다:"
+
+#: ../../mcp/authentication.md:217
+msgid "Timestamp"
+msgstr "타임스탬프"
+
+#: ../../mcp/authentication.md:219
+msgid "Tool name (e.g. `knowledge_read_article`)"
+msgstr "도구 이름 (예: `knowledge_read_article`)"
+
+#: ../../mcp/authentication.md:220
+msgid "Input parameters (JSON)"
+msgstr "입력 매개변수 (JSON)"
+
+#: ../../mcp/authentication.md:221
+msgid "Response status"
+msgstr "응답 상태"
+
+#: ../../mcp/authentication.md:222
+msgid "Duration (ms)"
+msgstr "소요 시간 (ms)"
+
+#: ../../mcp/authentication.md:224
+msgid ""
+"The audit log cannot be deleted by regular users. It is retained for the "
+"period configured under **Settings → Technical → MCP → Log Retention**."
+msgstr ""
+"감사 로그는 일반 사용자가 삭제할 수 없습니다. **설정 → 기술 → MCP → 로그 "
+"보존**에서 설정된 기간 동안 보관됩니다."
+
+#: ../../mcp/authentication.md:229
+msgid "Security Best Practices"
+msgstr "보안 권장 사항"
+
+#: ../../mcp/authentication.md:231
+msgid "**Require HTTPS**"
+msgstr "**HTTPS 필수**"
+
+#: ../../mcp/authentication.md:232
+msgid ""
+"The MCP endpoint must be served over HTTPS. Odoo will not start the MCP "
+"server on plain HTTP in production mode. Use a reverse proxy (nginx, "
+"Caddy) with a valid TLS certificate."
+msgstr ""
+"MCP 끝점은 HTTPS를 통해 제공되어야 합니다. Odoo는 프로덕션 모드에서 일반 "
+"HTTP로 MCP 서버를 시작하지 않습니다. 유효한 TLS 인증서가 있는 역방향 프록시 "
+"(nginx, Caddy)를 사용하세요."
+
+#: ../../mcp/authentication.md:235
+msgid "**Restrict client registration**"
+msgstr "**클라이언트 등록 제한**"
+
+#: ../../mcp/authentication.md:236
+msgid ""
+"In production, set the registration policy to **Admin only** so arbitrary"
+" clients cannot register without authorization. This prevents "
+"unauthorized tools from being listed."
+msgstr ""
+"프로덕션 환경에서는 등록 정책을 **관리자만**으로 설정하여 임의의 클라이언트가 "
+"승인 없이 등록할 수 없도록 하세요. 이렇게 하면 허가되지 않은 도구가 나열되는 "
+"것을 방지할 수 있습니다."
+
+#: ../../mcp/authentication.md:239
+msgid "**Rotate API keys regularly**"
+msgstr "**API 키 주기적으로 교체**"
+
+#: ../../mcp/authentication.md:240
+msgid ""
+"For Claude Desktop connections (Bearer token), rotate the Odoo API key "
+"every 90 days or whenever team membership changes. Revoke old keys in "
+"**Settings → Technical → API Keys**."
+msgstr ""
+"Claude Desktop 연결 (Bearer 토큰)의 경우, Odoo API 키를 90일마다 또는 팀 "
+"멤버십이 변경될 때마다 교체하세요. **설정 → 기술 → API 키**에서 이전 키를 "
+"취소하세요."
+
+#: ../../mcp/authentication.md:243
+msgid "**Scope access by Odoo user**"
+msgstr "**Odoo 사용자별 액세스 범위 지정**"
+
+#: ../../mcp/authentication.md:244
+msgid ""
+"The Bearer token (or OAuth token) authenticates as a specific Odoo user. "
+"Tools only expose data that the authenticated user can access via normal "
+"Odoo record rules and access rights. Create a dedicated *MCP Service "
+"User* with only the necessary groups rather than using an administrator "
+"account."
+msgstr ""
+"Bearer 토큰 (또는 OAuth 토큰)은 특정 Odoo 사용자로 인증합니다. 도구는 인증된 "
+"사용자가 일반 Odoo 레코드 규칙 및 액세스 권한을 통해 액세스할 수 있는 데이터만 "
+"노출합니다. 관리자 계정을 사용하는 대신 필요한 그룹만 있는 전담 *MCP 서비스 "
+"사용자*를 만드세요."
+
+#: ../../mcp/authentication.md:249
+msgid "**Monitor the audit log**"
+msgstr "**감사 로그 모니터링**"
+
+#: ../../mcp/authentication.md:250
+msgid ""
+"Review the audit log periodically for unexpected tool calls or high-"
+"volume requests that may indicate misuse."
+msgstr ""
+"예상치 못한 도구 호출이나 오용을 나타낼 수 있는 대량 요청이 없는지 감사 로그를 "
+"주기적으로 검토하세요."

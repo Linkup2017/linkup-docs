@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/crm.md:1
+msgid "CRM (`lu_mcp_crm`)"
+msgstr "CRM (`lu_mcp_crm`)"
+
+#: ../../mcp/reference/crm.md:3
+msgid "**8 tools** for Odoo CRM lead and opportunity management."
+msgstr "Odoo CRM 리드 및 영업 기회 관리를 위한 **8가지 도구**입니다."
+
+#: ../../mcp/reference/crm.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `crm` app."
+msgstr "필수: `lu_mcp_server`, Odoo `crm` 앱."
+
+#: ../../mcp/reference/crm.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/crm.md:11
+msgid ""
+"These tools cover the CRM pipeline: browse stages, search leads and "
+"opportunities, view the pipeline summary table, read full record details,"
+" create and update leads, convert a lead to an opportunity, and post "
+"internal notes."
+msgstr ""
+"이 도구들은 CRM 파이프라인을 다룹니다: 스테이지 탐색, 리드 및 영업 기회 검색, "
+"파이프라인 요약 테이블 보기, 전체 레코드 상세 정보 읽기, 리드 생성 및 업데이트, "
+"리드를 영업 기회로 전환, 내부 메모 게시."
+
+#: ../../mcp/reference/crm.md:17
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/crm.md:19
+msgid "`crm_list_stages`"
+msgstr "`crm_list_stages`"
+
+#: ../../mcp/reference/crm.md:21
+msgid "List all CRM pipeline stages in sequence order."
+msgstr "모든 CRM 파이프라인 스테이지를 순서대로 나열합니다."
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/crm.md
+msgid "*(none)*"
+msgstr "*(없음)*"
+
+#: ../../mcp/reference/crm.md:27 ../../mcp/reference/crm.md:51
+#: ../../mcp/reference/crm.md:68 ../../mcp/reference/crm.md:81
+#: ../../mcp/reference/crm.md:100 ../../mcp/reference/crm.md:119
+#: ../../mcp/reference/crm.md:134 ../../mcp/reference/crm.md:153
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/crm.md:28
+msgid "*\"What are the CRM pipeline stages?\"*"
+msgstr "*\"CRM 파이프라인 스테이지가 무엇입니까?\"*"
+
+#: ../../mcp/reference/crm.md:32
+msgid "`crm_list_pipeline`"
+msgstr "`crm_list_pipeline`"
+
+#: ../../mcp/reference/crm.md:34
+msgid ""
+"Show the CRM pipeline as a summary table grouped by stage (count + "
+"expected revenue per stage). Use `crm_search_leads` to get individual "
+"records."
+msgstr ""
+"CRM 파이프라인의 Markdown 요약 테이블을 스테이지별로 가져옵니다: 스테이지 | 건수 | 예상 매출. "
+"개별 레코드를 가져오려면 `crm_search_leads`를 사용하세요."
+
+#: ../../mcp/reference/crm.md
+msgid "`user_id`"
+msgstr "`user_id`"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/crm.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/crm.md
+msgid "Filter by salesperson."
+msgstr "영업담당자별 필터링."
+
+#: ../../mcp/reference/crm.md
+msgid "`stage_id`"
+msgstr "`stage_id`"
+
+#: ../../mcp/reference/crm.md
+msgid "Filter to a specific stage."
+msgstr "특정 스테이지로 필터링."
+
+#: ../../mcp/reference/crm.md:42
+msgid "Returns a Markdown table:"
+msgstr "Markdown 테이블을 반환합니다:"
+
+#: ../../mcp/reference/crm.md:52
+msgid "*\"Give me a summary of the CRM pipeline for salesperson #5.\"*"
+msgstr "*\"영업담당자 #5의 CRM 파이프라인 요약을 보여주세요.\"*"
+
+#: ../../mcp/reference/crm.md:56
+msgid "`crm_search_leads`"
+msgstr "`crm_search_leads`"
+
+#: ../../mcp/reference/crm.md:58
+msgid "Search CRM leads and opportunities as individual records."
+msgstr "리드 및 영업 기회를 검색합니다."
+
+#: ../../mcp/reference/crm.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/crm.md
+msgid "Keyword search in name or description."
+msgstr "이름 또는 설명에서 키워드 검색."
+
+#: ../../mcp/reference/crm.md
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../mcp/reference/crm.md
+msgid "`'lead'` or `'opportunity'`."
+msgstr "`'lead'` 또는 `'opportunity'`."
+
+#: ../../mcp/reference/crm.md
+msgid "Filter by stage."
+msgstr "스테이지별 필터링."
+
+#: ../../mcp/reference/crm.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/crm.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/crm.md:69
+msgid "*\"Find all opportunities in the 'Proposal' stage.\"*"
+msgstr "*\"'Proposal' 스테이지의 모든 영업 기회를 찾으세요.\"*"
+
+#: ../../mcp/reference/crm.md:73
+msgid "`crm_read_lead`"
+msgstr "`crm_read_lead`"
+
+#: ../../mcp/reference/crm.md:75
+msgid "Get full details of a CRM lead or opportunity."
+msgstr "리드 또는 영업 기회의 전체 상세 정보를 가져옵니다."
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/crm.md
+msgid "Lead or opportunity ID."
+msgstr "리드 또는 영업 기회 ID."
+
+#: ../../mcp/reference/crm.md:82
+msgid "*\"Show me the details for lead #88.\"*"
+msgstr "*\"리드 #88의 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/crm.md:86
+msgid "`crm_create_lead`"
+msgstr "`crm_create_lead`"
+
+#: ../../mcp/reference/crm.md:88
+msgid "Create a new CRM lead."
+msgstr "새 리드를 생성합니다."
+
+#: ../../mcp/reference/crm.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/crm.md
+msgid "Lead title."
+msgstr "리드 제목."
+
+#: ../../mcp/reference/crm.md
+msgid "`partner_id`"
+msgstr "`partner_id`"
+
+#: ../../mcp/reference/crm.md
+msgid "Customer partner ID."
+msgstr "고객 파트너 ID."
+
+#: ../../mcp/reference/crm.md
+msgid "`'lead'` (default) or `'opportunity'`."
+msgstr "`'lead'`(기본값) 또는 `'opportunity'`."
+
+#: ../../mcp/reference/crm.md
+msgid "Initial pipeline stage."
+msgstr "초기 파이프라인 스테이지."
+
+#: ../../mcp/reference/crm.md
+msgid "Salesperson user ID."
+msgstr "영업담당자 사용자 ID."
+
+#: ../../mcp/reference/crm.md
+msgid "`expected_revenue`"
+msgstr "`expected_revenue`"
+
+#: ../../mcp/reference/crm.md
+msgid "number"
+msgstr "number"
+
+#: ../../mcp/reference/crm.md
+msgid "Expected revenue amount."
+msgstr "예상 매출 금액."
+
+#: ../../mcp/reference/crm.md
+msgid "`description`"
+msgstr "`description`"
+
+#: ../../mcp/reference/crm.md
+msgid "Lead description (Markdown)."
+msgstr "리드 설명(Markdown)."
+
+#: ../../mcp/reference/crm.md:101
+msgid ""
+"*\"Create an opportunity titled 'Enterprise contract — Acme Corp' with "
+"expected revenue $50,000, assigned to salesperson #3.\"*"
+msgstr ""
+"*\"'Enterprise contract — Acme Corp'이라는 제목의 영업 기회를 생성하고 예상 매출 "
+"$50,000으로 영업담당자 #3에 할당하세요.\"*"
+
+#: ../../mcp/reference/crm.md:105
+msgid "`crm_update_lead`"
+msgstr "`crm_update_lead`"
+
+#: ../../mcp/reference/crm.md:107
+msgid "Update an existing lead or opportunity."
+msgstr "기존 리드 또는 영업 기회를 업데이트합니다."
+
+#: ../../mcp/reference/crm.md ../../mcp/reference/crm.md:137
+msgid "Lead/opportunity ID."
+msgstr "리드/영업 기회 ID."
+
+#: ../../mcp/reference/crm.md
+msgid "New stage."
+msgstr "새 스테이지."
+
+#: ../../mcp/reference/crm.md
+msgid "New salesperson."
+msgstr "새 영업담당자."
+
+#: ../../mcp/reference/crm.md
+msgid "`probability`"
+msgstr "`probability`"
+
+#: ../../mcp/reference/crm.md
+msgid "Win probability (0–100)."
+msgstr "성약 확률(0~100)."
+
+#: ../../mcp/reference/crm.md
+msgid "Updated expected revenue."
+msgstr "업데이트된 예상 매출."
+
+#: ../../mcp/reference/crm.md
+msgid "`date_deadline`"
+msgstr "`date_deadline`"
+
+#: ../../mcp/reference/crm.md
+msgid "New deadline (`YYYY-MM-DD`)."
+msgstr "새 마감일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/crm.md
+msgid "New description (Markdown)."
+msgstr "새 설명(Markdown)."
+
+#: ../../mcp/reference/crm.md:120
+msgid "*\"Update lead #88 — move to 'Won' stage and set probability to 100.\"*"
+msgstr "*\"리드 #88 업데이트 — 'Won' 스테이지로 이동하고 확률을 100으로 설정.\"*"
+
+#: ../../mcp/reference/crm.md:124
+msgid "`crm_convert_to_opportunity`"
+msgstr "`crm_convert_to_opportunity`"
+
+#: ../../mcp/reference/crm.md:126
+msgid ""
+"Convert a lead into an opportunity. Sets the type to `opportunity` and "
+"optionally links a customer partner."
+msgstr ""
+"리드를 영업 기회로 전환합니다. 유형을 `opportunity`로 설정하고 선택적으로 고객 파트너를 연결합니다."
+
+#: ../../mcp/reference/crm.md
+msgid "Lead ID to convert."
+msgstr "전환할 리드 ID."
+
+#: ../../mcp/reference/crm.md
+msgid "Customer partner ID to link."
+msgstr "연결할 고객 파트너 ID."
+
+#: ../../mcp/reference/crm.md:135
+msgid ""
+"*\"Convert lead #88 to an opportunity and link it to partner #15 (Acme "
+"Corp).\"*"
+msgstr ""
+"*\"리드 #88을 영업 기회로 전환하고 파트너 #15(Acme Corp)에 연결하세요.\"*"
+
+#: ../../mcp/reference/crm.md:138
+msgid ""
+"If the lead is already an opportunity, the tool returns a message "
+"indicating no action was taken."
+msgstr ""
+"리드가 이미 영업 기회인 경우, 도구는 조치가 취해지지 않았음을 나타내는 메시지를 반환합니다."
+
+#: ../../mcp/reference/crm.md:144
+msgid "`crm_log_note`"
+msgstr "`crm_log_note`"
+
+#: ../../mcp/reference/crm.md:146
+msgid ""
+"Post an internal note on a lead or opportunity (not visible to the "
+"customer)."
+msgstr "리드 또는 영업 기회에 내부 메모를 게시합니다(고객에게 표시되지 않음)."
+
+#: ../../mcp/reference/crm.md:137
+msgid "`body`"
+msgstr "`body`"
+
+#: ../../mcp/reference/crm.md:137
+msgid "Note body (Markdown)."
+msgstr "메모 본문(Markdown)."
+
+#: ../../mcp/reference/crm.md:154
+msgid ""
+"*\"Add an internal note to opportunity #88: 'Called the procurement lead "
+"— decision expected by end of month.'\"*"
+msgstr ""
+"*\"영업 기회 #88에 내부 메모 추가: 'Procurement lead에 전화함 — 월말까지 결정 예상.'\"*"
+

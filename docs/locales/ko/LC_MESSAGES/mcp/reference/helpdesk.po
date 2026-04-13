@@ -1,0 +1,551 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/helpdesk.md:1
+msgid "Helpdesk (`lu_mcp_helpdesk`)"
+msgstr "Helpdesk (`lu_mcp_helpdesk`)"
+
+#: ../../mcp/reference/helpdesk.md:3
+msgid "**12 tools** for the full Odoo Helpdesk ticket lifecycle."
+msgstr "Odoo 헬프데스크 티켓 라이프사이클 전체를 위한 **12가지 도구**입니다."
+
+#: ../../mcp/reference/helpdesk.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `helpdesk` app."
+msgstr "필요 조건: `lu_mcp_server`, Odoo `helpdesk` 앱."
+
+#: ../../mcp/reference/helpdesk.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/helpdesk.md:11
+msgid ""
+"These tools cover everything from ticket creation to closure: list teams "
+"and stages, search and read tickets, create and update tickets, reply "
+"(public or internal), escalate, close, check SLA status, view customer "
+"history, and link Knowledge articles."
+msgstr "이 도구들은 티켓 생성부터 종료까지의 모든 과정을 다룹니다: 팀과 스테이지 나열, 티켓 검색 및 읽기, 티켓 생성 및 업데이트, 답글 작성(공개 또는 내부), 에스컬레이션, 종료, SLA 상태 확인, 고객 이력 보기, Knowledge 아티클 연결."
+
+#: ../../mcp/reference/helpdesk.md:15
+msgid ""
+"**Priority values**: `'0'` = Low, `'1'` = Medium, `'2'` = High, `'3'` = "
+"Urgent."
+msgstr "**우선순위 값**: `'0'` = Low, `'1'` = Medium, `'2'` = High, `'3'` = Urgent."
+
+#: ../../mcp/reference/helpdesk.md:19
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/helpdesk.md:21
+msgid "`helpdesk_list_teams`"
+msgstr "`helpdesk_list_teams`"
+
+#: ../../mcp/reference/helpdesk.md:23
+msgid ""
+"List all helpdesk teams with open/unassigned/urgent ticket counts and SLA"
+" success rate."
+msgstr "모든 헬프데스크 팀의 열린/미할당/긴급 티켓 수 및 SLA 성공률을 나열합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "*(none)*"
+msgstr "*(없음)*"
+
+#: ../../mcp/reference/helpdesk.md:29 ../../mcp/reference/helpdesk.md:42
+#: ../../mcp/reference/helpdesk.md:63 ../../mcp/reference/helpdesk.md:77
+#: ../../mcp/reference/helpdesk.md:98 ../../mcp/reference/helpdesk.md:119
+#: ../../mcp/reference/helpdesk.md:152 ../../mcp/reference/helpdesk.md:168
+#: ../../mcp/reference/helpdesk.md:184 ../../mcp/reference/helpdesk.md:199
+#: ../../mcp/reference/helpdesk.md:215
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/helpdesk.md:30
+msgid "*\"Show all helpdesk teams and how many open tickets each has.\"*"
+msgstr "*\"모든 헬프데스크 팀과 각 팀이 보유한 열린 티켓 수를 표시하세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:34
+msgid "`helpdesk_list_stages`"
+msgstr "`helpdesk_list_stages`"
+
+#: ../../mcp/reference/helpdesk.md:36
+msgid "List helpdesk ticket stages, optionally filtered to a team."
+msgstr "헬프데스크 티켓 스테이지를 나열하며, 팀별로 필터링할 수 있습니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`team_id`"
+msgstr "`team_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Filter stages to a specific team. Omit for all stages."
+msgstr "특정 팀의 스테이지만 필터링합니다. 전체 스테이지를 보려면 생략하세요."
+
+#: ../../mcp/reference/helpdesk.md:43
+msgid "*\"What stages does the Support team (id=2) use?\"*"
+msgstr "*\"Support 팀(id=2)은 어떤 스테이지를 사용하나요?\"*"
+
+#: ../../mcp/reference/helpdesk.md:47
+msgid "`helpdesk_search_tickets`"
+msgstr "`helpdesk_search_tickets`"
+
+#: ../../mcp/reference/helpdesk.md:49
+msgid "Search tickets with multiple filters."
+msgstr "여러 필터를 사용하여 티켓을 검색합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Keyword search in ticket name or description."
+msgstr "티켓 이름 또는 설명에서 검색할 키워드."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Filter by team."
+msgstr "팀별 필터링."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`stage_id`"
+msgstr "`stage_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Filter by stage."
+msgstr "스테이지별 필터링."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`assignee_id`"
+msgstr "`assignee_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Filter by assignee (user ID)."
+msgstr "담당자별 필터링(사용자 ID)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`partner_id`"
+msgstr "`partner_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Filter by customer partner."
+msgstr "고객 파트너별 필터링."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`priority`"
+msgstr "`priority`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`'0'` Low, `'1'` Medium, `'2'` High, `'3'` Urgent."
+msgstr "`'0'` Low, `'1'` Medium, `'2'` High, `'3'` Urgent."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`sla_failed`"
+msgstr "`sla_failed`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "boolean"
+msgstr "boolean"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "If `true`, return only SLA-failed tickets."
+msgstr "값이 `true`이면 SLA 실패 티켓만 반환합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`include_closed`"
+msgstr "`include_closed`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "If `true`, include tickets in closed (folded) stages. Default `false`."
+msgstr "값이 `true`이면 폐쇄(폴드된) 스테이지의 티켓을 포함합니다. 기본값은 `false`입니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/helpdesk.md:64
+msgid ""
+"*\"Show me all urgent tickets in the Support team that have failed their "
+"SLA.\"*"
+msgstr "*\"Support 팀의 모든 긴급 티켓 중 SLA를 놓친 것들을 보여주세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:68
+msgid "`helpdesk_read_ticket`"
+msgstr "`helpdesk_read_ticket`"
+
+#: ../../mcp/reference/helpdesk.md:70
+msgid ""
+"Get full details of a ticket: team, stage, priority, assignee, customer, "
+"SLA status, timing metrics, and description."
+msgstr "티켓의 전체 상세 정보(팀, 스테이지, 우선순위, 담당자, 고객, SLA 상태, 시간 측정값, 설명)를 가져옵니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`ticket_id`"
+msgstr "`ticket_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Ticket ID."
+msgstr "티켓 ID."
+
+#: ../../mcp/reference/helpdesk.md:78
+msgid "*\"Show me all details for ticket #305.\"*"
+msgstr "*\"티켓 #305의 모든 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:82
+msgid "`helpdesk_create_ticket`"
+msgstr "`helpdesk_create_ticket`"
+
+#: ../../mcp/reference/helpdesk.md:84
+msgid "Create a new helpdesk ticket."
+msgstr "새 헬프데스크 티켓을 생성합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Ticket subject."
+msgstr "티켓 제목."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Team to assign the ticket to."
+msgstr "티켓을 할당할 팀."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`description`"
+msgstr "`description`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Ticket description (Markdown)."
+msgstr "티켓 설명(Markdown)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Customer partner ID (links to existing contact)."
+msgstr "고객 파트너 ID(기존 연락처에 연결)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`partner_email`"
+msgstr "`partner_email`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Customer email (used if `partner_id` not provided)."
+msgstr "고객 이메일(`partner_id`를 제공하지 않은 경우 사용)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`partner_name`"
+msgstr "`partner_name`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Customer name (used if `partner_id` not provided)."
+msgstr "고객 이름(`partner_id`를 제공하지 않은 경우 사용)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`'0'`–`'3'` (default `'0'` Low)."
+msgstr "`'0'`~`'3'`(기본값 `'0'` Low)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "User ID of the agent to assign."
+msgstr "할당할 담당자의 사용자 ID."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`tag_ids`"
+msgstr "`tag_ids`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "array of integer"
+msgstr "array of integer"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Tag IDs to apply."
+msgstr "적용할 태그 ID."
+
+#: ../../mcp/reference/helpdesk.md:99
+msgid ""
+"*\"Create a high-priority helpdesk ticket titled 'Login broken for user "
+"jsmith@acme.com' in the IT Support team.\"*"
+msgstr "*\"IT Support 팀에서 'Login broken for user jsmith@acme.com'이라는 제목의 높은 우선순위 헬프데스크 티켓을 생성하세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:103
+msgid "`helpdesk_update_ticket`"
+msgstr "`helpdesk_update_ticket`"
+
+#: ../../mcp/reference/helpdesk.md:105
+msgid "Update an existing ticket's fields."
+msgstr "기존 티켓의 필드를 업데이트합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Ticket ID to update."
+msgstr "업데이트할 티켓 ID."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "New subject."
+msgstr "새 제목."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "New description (Markdown)."
+msgstr "새 설명(Markdown)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Move to a different stage."
+msgstr "다른 스테이지로 이동."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Move to a different team."
+msgstr "다른 팀으로 이동."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Reassign to a different agent."
+msgstr "다른 담당자에게 재할당."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "New priority (`'0'`–`'3'`)."
+msgstr "새 우선순위(`'0'`~`'3'`)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Replace tag set (pass empty array to clear)."
+msgstr "태그 세트 교체(비우려면 빈 배열 전달)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`kanban_state`"
+msgstr "`kanban_state`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`normal`, `done`, or `blocked`."
+msgstr "`normal`, `done`, `blocked` 중 하나."
+
+#: ../../mcp/reference/helpdesk.md:120
+msgid "*\"Reassign ticket #305 to user #7 and set priority to Urgent.\"*"
+msgstr "*\"티켓 #305를 사용자 #7에게 재할당하고 우선순위를 Urgent로 설정하세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:124
+msgid "`helpdesk_ticket_reply`"
+msgstr "`helpdesk_ticket_reply`"
+
+#: ../../mcp/reference/helpdesk.md:126
+msgid "Post a reply or internal note on a ticket."
+msgstr "티켓에 답글 또는 내부 메모를 작성합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`body`"
+msgstr "`body`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Reply body (Markdown)."
+msgstr "답글 본문(Markdown)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`internal`"
+msgstr "`internal`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid ""
+"If `true`, post as internal note (not visible to customer). Default "
+"`false`."
+msgstr "값이 `true`이면 내부 메모로 작성됩니다(고객에게 보이지 않음). 기본값은 `false`입니다."
+
+#: ../../mcp/reference/helpdesk.md:134
+msgid "**Example prompt — customer reply**"
+msgstr "**예제 프롬프트 — 고객 답글**"
+
+#: ../../mcp/reference/helpdesk.md:135
+msgid ""
+"*\"Reply to ticket #305: 'We have identified the issue and will deploy a "
+"fix by EOD tomorrow.'\"*"
+msgstr "*\"티켓 #305에 답글: 'We have identified the issue and will deploy a fix by EOD tomorrow.'\"*"
+
+#: ../../mcp/reference/helpdesk.md:137
+msgid "**Example prompt — internal note**"
+msgstr "**예제 프롬프트 — 내부 메모**"
+
+#: ../../mcp/reference/helpdesk.md:138
+msgid ""
+"*\"Add an internal note to ticket #305: 'Root cause was a misconfigured "
+"nginx rule on server A.'\"*"
+msgstr "*\"티켓 #305에 내부 메모 추가: 'Root cause was a misconfigured nginx rule on server A.'\"*"
+
+#: ../../mcp/reference/helpdesk.md:142
+msgid "`helpdesk_ticket_close`"
+msgstr "`helpdesk_ticket_close`"
+
+#: ../../mcp/reference/helpdesk.md:144
+msgid ""
+"Close a ticket by moving it to the first closed (folded) stage. "
+"Optionally posts a resolution message."
+msgstr "첫 번째 폐쇄(폴드된) 스테이지로 이동하여 티켓을 종료합니다. 선택적으로 해결 메시지를 작성할 수 있습니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Resolution summary to post as a customer message (Markdown)."
+msgstr "고객 메시지로 작성할 해결 요약(Markdown)."
+
+#: ../../mcp/reference/helpdesk.md:153
+msgid ""
+"*\"Close ticket #305 with the message: 'Issue resolved. The fix has been "
+"deployed.'\"*"
+msgstr "*\"티켓 #305를 메시지와 함께 종료: 'Issue resolved. The fix has been deployed.'\"*"
+
+#: ../../mcp/reference/helpdesk.md:157
+msgid "`helpdesk_ticket_escalate`"
+msgstr "`helpdesk_ticket_escalate`"
+
+#: ../../mcp/reference/helpdesk.md:159
+msgid "Raise the priority of a ticket by one level and optionally reassign it."
+msgstr "티켓의 우선순위를 한 단계 올리고 선택적으로 재할당합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid ""
+"Target priority (`'0'`–`'3'`). If omitted, increments by one (max `'3'` "
+"Urgent)."
+msgstr "대상 우선순위(`'0'`~`'3'`). 생략하면 1씩 증가합니다(최대 `'3'` Urgent)."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Move to escalation team."
+msgstr "에스컬레이션 팀으로 이동."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Assign to escalation agent."
+msgstr "에스컬레이션 담당자에게 할당."
+
+#: ../../mcp/reference/helpdesk.md:169
+msgid ""
+"*\"Escalate ticket #305 to the Tier 2 team (id=4) and assign to agent "
+"#9.\"*"
+msgstr "*\"티켓 #305를 Tier 2 팀(id=4)으로 에스컬레이션하고 담당자 #9에게 할당하세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:173
+msgid "`helpdesk_get_sla_status`"
+msgstr "`helpdesk_get_sla_status`"
+
+#: ../../mcp/reference/helpdesk.md:175
+msgid ""
+"Get SLA policies for a team, or detailed SLA compliance status for a "
+"specific ticket."
+msgstr "팀의 SLA 정책을 조회하거나 특정 티켓의 자세한 SLA 준수 상태를 가져옵니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "List SLA policies for this team."
+msgstr "이 팀의 SLA 정책을 나열합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Get per-policy SLA status for a specific ticket."
+msgstr "특정 티켓의 정책별 SLA 상태를 가져옵니다."
+
+#: ../../mcp/reference/helpdesk.md:182
+msgid ""
+"Pass either `team_id` (to see configured policies) or `ticket_id` (to see"
+" compliance)."
+msgstr "`team_id`(설정된 정책을 보기 위해) 또는 `ticket_id`(준수 상황을 보기 위해) 중 하나를 전달하세요."
+
+#: ../../mcp/reference/helpdesk.md:185
+msgid "*\"What is the SLA status for ticket #305?\"*"
+msgstr "*\"티켓 #305의 SLA 상태는 무엇입니까?\"*"
+
+#: ../../mcp/reference/helpdesk.md:189
+msgid "`helpdesk_customer_history`"
+msgstr "`helpdesk_customer_history`"
+
+#: ../../mcp/reference/helpdesk.md:191
+msgid "Get ticket history and satisfaction ratings for a customer."
+msgstr "고객의 티켓 이력 및 만족도 평가를 가져옵니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Customer partner ID. At least one of `partner_id` or `email` required."
+msgstr "고객 파트너 ID. `partner_id` 또는 `email` 중 최소 하나는 필수입니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`email`"
+msgstr "`email`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Customer email address."
+msgstr "고객 이메일 주소."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Maximum tickets to return (default 20, max 80)."
+msgstr "반환할 최대 티켓 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/helpdesk.md:200
+msgid "*\"Show the helpdesk history for customer john@acme.com.\"*"
+msgstr "*\"고객 john@acme.com의 헬프데스크 이력을 보여주세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:204
+msgid "`helpdesk_link_knowledge_article`"
+msgstr "`helpdesk_link_knowledge_article`"
+
+#: ../../mcp/reference/helpdesk.md:206
+msgid ""
+"Link a Knowledge article to a ticket by appending its URL to the ticket "
+"description."
+msgstr "티켓 설명에 URL을 추가하여 Knowledge 아티클을 티켓에 연결합니다."
+
+#: ../../mcp/reference/helpdesk.md:208
+msgid "Requires: Odoo `knowledge` app installed."
+msgstr "필요 조건: Odoo `knowledge` 앱이 설치되어 있어야 합니다."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Helpdesk ticket ID."
+msgstr "헬프데스크 티켓 ID."
+
+#: ../../mcp/reference/helpdesk.md
+msgid "`article_id`"
+msgstr "`article_id`"
+
+#: ../../mcp/reference/helpdesk.md
+msgid "Knowledge article ID to link."
+msgstr "연결할 Knowledge 아티클 ID."
+
+#: ../../mcp/reference/helpdesk.md:216
+msgid "*\"Link Knowledge article #77 (Troubleshooting Guide) to ticket #305.\"*"
+msgstr "*\"Knowledge 아티클 #77(Troubleshooting Guide)을 티켓 #305에 연결하세요.\"*"
+
+#: ../../mcp/reference/helpdesk.md:219
+msgid "This tool is only registered when the `knowledge` Odoo app is installed."
+msgstr "이 도구는 Odoo `knowledge` 앱이 설치된 경우에만 등록됩니다."

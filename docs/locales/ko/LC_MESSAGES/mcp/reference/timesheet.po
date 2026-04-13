@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/timesheet.md:1
+msgid "Timesheets (`lu_mcp_timesheet`)"
+msgstr "Timesheets (`lu_mcp_timesheet`)"
+
+#: ../../mcp/reference/timesheet.md:3
+msgid "**6 tools** for Odoo timesheet entry management."
+msgstr "Odoo 타임시트 항목을 위한 **6가지 도구**입니다."
+
+#: ../../mcp/reference/timesheet.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `hr_timesheet` app."
+msgstr "필수: `lu_mcp_server`, Odoo `hr_timesheet` 앱."
+
+#: ../../mcp/reference/timesheet.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/timesheet.md:11
+msgid ""
+"These tools let an AI client list, read, log, update, delete timesheet "
+"entries, and view a project-level summary. All entries are stored on "
+"`account.analytic.line` and must be associated with a project."
+msgstr ""
+"이 도구들을 통해 AI 클라이언트는 타임시트 항목을 나열, 읽기, 기록, 업데이트, 삭제하고, "
+"프로젝트 수준 요약을 볼 수 있습니다. 모든 항목은 `account.analytic.line`에 저장되며 프로젝트와 연결되어야 합니다."
+
+#: ../../mcp/reference/timesheet.md:17
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/timesheet.md:19
+msgid "`timesheet_list_timesheets`"
+msgstr "`timesheet_list_timesheets`"
+
+#: ../../mcp/reference/timesheet.md:21
+msgid "List timesheet entries with optional filters."
+msgstr "선택적 필터를 사용하여 타임시트 항목을 나열합니다."
+
+#: ../../mcp/reference/timesheet.md
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/timesheet.md
+msgid "`project_id`"
+msgstr "`project_id`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/timesheet.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Filter by project."
+msgstr "프로젝트별 필터링."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`task_id`"
+msgstr "`task_id`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Filter by task."
+msgstr "작업별 필터링."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`employee_id`"
+msgstr "`employee_id`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Filter by employee."
+msgstr "직원별 필터링."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`date_from`"
+msgstr "`date_from`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Start date (`YYYY-MM-DD`)."
+msgstr "시작일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`date_to`"
+msgstr "`date_to`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "End date (`YYYY-MM-DD`)."
+msgstr "종료일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/timesheet.md:32 ../../mcp/reference/timesheet.md:45
+#: ../../mcp/reference/timesheet.md:63 ../../mcp/reference/timesheet.md:79
+#: ../../mcp/reference/timesheet.md:92 ../../mcp/reference/timesheet.md:109
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/timesheet.md:33
+msgid "*\"Show all timesheets for project #5 this week.\"*"
+msgstr "*\"이번 주 프로젝트 #5의 모든 타임시트를 보여주세요.\"*"
+
+#: ../../mcp/reference/timesheet.md:37
+msgid "`timesheet_read_timesheet`"
+msgstr "`timesheet_read_timesheet`"
+
+#: ../../mcp/reference/timesheet.md:39
+msgid "Get full details of a timesheet entry."
+msgstr "타임시트 항목의 전체 상세 정보를 가져옵니다."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Timesheet entry ID (`account.analytic.line` ID)."
+msgstr "타임시트 항목 ID(`account.analytic.line` ID)."
+
+#: ../../mcp/reference/timesheet.md:46
+msgid "*\"Show me timesheet entry #201.\"*"
+msgstr "*\"타임시트 항목 #201을 보여주세요.\"*"
+
+#: ../../mcp/reference/timesheet.md:50
+msgid "`timesheet_log_time`"
+msgstr "`timesheet_log_time`"
+
+#: ../../mcp/reference/timesheet.md:52
+msgid "Log a new timesheet entry."
+msgstr "새 타임시트 항목을 기록합니다."
+
+#: ../../mcp/reference/timesheet.md
+msgid "Project to log time against."
+msgstr "시간을 기록할 프로젝트."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`unit_amount`"
+msgstr "`unit_amount`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "number"
+msgstr "number"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Hours to log (e.g. `1.5` for 1h 30m)."
+msgstr "기록할 시간(예: 1시간 30분은 `1.5`)."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Description of the work done."
+msgstr "수행한 작업 설명."
+
+#: ../../mcp/reference/timesheet.md
+msgid "Task to associate the entry with."
+msgstr "항목을 연결할 작업."
+
+#: ../../mcp/reference/timesheet.md
+msgid "`date`"
+msgstr "`date`"
+
+#: ../../mcp/reference/timesheet.md
+msgid "Date (`YYYY-MM-DD`). Defaults to today."
+msgstr "날짜(`YYYY-MM-DD`). 기본값은 오늘입니다."
+
+#: ../../mcp/reference/timesheet.md
+msgid "Employee ID. Defaults to the authenticated user's employee."
+msgstr "직원 ID. 기본값은 인증된 사용자의 직원입니다."
+
+#: ../../mcp/reference/timesheet.md:64
+msgid "*\"Log 2 hours on project #5, task #42 — 'Code review and feedback'.\"*"
+msgstr "*\"프로젝트 #5, 작업 #42에서 2시간 기록 — 'Code review and feedback'.\"*"
+
+#: ../../mcp/reference/timesheet.md:68
+msgid "`timesheet_update_timesheet`"
+msgstr "`timesheet_update_timesheet`"
+
+#: ../../mcp/reference/timesheet.md:70
+msgid "Update an existing timesheet entry."
+msgstr "기존 타임시트 항목을 업데이트합니다."
+
+#: ../../mcp/reference/timesheet.md
+msgid "Timesheet entry ID."
+msgstr "타임시트 항목 ID."
+
+#: ../../mcp/reference/timesheet.md
+msgid "New duration in hours."
+msgstr "새 소요 시간(시간)."
+
+#: ../../mcp/reference/timesheet.md
+msgid "New description."
+msgstr "새 설명."
+
+#: ../../mcp/reference/timesheet.md
+msgid "New date (`YYYY-MM-DD`)."
+msgstr "새 날짜(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/timesheet.md:80
+msgid "*\"Update timesheet #201 — change hours from 2 to 2.5.\"*"
+msgstr "*\"타임시트 #201 업데이트 — 시간을 2에서 2.5로 변경.\"*"
+
+#: ../../mcp/reference/timesheet.md:84
+msgid "`timesheet_delete_timesheet`"
+msgstr "`timesheet_delete_timesheet`"
+
+#: ../../mcp/reference/timesheet.md:86
+msgid "Delete a timesheet entry."
+msgstr "타임시트 항목을 삭제합니다."
+
+#: ../../mcp/reference/timesheet.md:93
+msgid "*\"Delete timesheet entry #201.\"*"
+msgstr "*\"타임시트 항목 #201을 삭제하세요.\"*"
+
+#: ../../mcp/reference/timesheet.md:97
+msgid "`timesheet_summary_by_project`"
+msgstr "`timesheet_summary_by_project`"
+
+#: ../../mcp/reference/timesheet.md:99
+msgid "Show total hours logged per project, grouped by project and employee."
+msgstr "프로젝트별로 그룹화된 타임시트 시간 요약을 가져옵니다."
+
+#: ../../mcp/reference/timesheet.md:107
+msgid "Returns a Markdown table with project, employee, and total hours."
+msgstr "프로젝트, 직원 및 총 시간이 포함된 Markdown 테이블을 반환합니다."
+
+#: ../../mcp/reference/timesheet.md:110
+msgid "*\"Summarize all timesheet hours logged this month, grouped by project.\"*"
+msgstr "*\"이 달에 기록된 모든 타임시트 시간을 프로젝트별로 그룹화하여 요약하세요.\"*"
+

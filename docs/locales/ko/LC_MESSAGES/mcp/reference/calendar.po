@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/calendar.md:1
+msgid "Calendar (`lu_mcp_calendar`)"
+msgstr "Calendar (`lu_mcp_calendar`)"
+
+#: ../../mcp/reference/calendar.md:3
+msgid "**5 tools** for Odoo calendar event management."
+msgstr "Odoo 캘린더 이벤트 관리를 위한 **5가지 도구**입니다."
+
+#: ../../mcp/reference/calendar.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `calendar` app."
+msgstr "필수: `lu_mcp_server`, Odoo `calendar` 앱."
+
+#: ../../mcp/reference/calendar.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/calendar.md:11
+msgid ""
+"These tools let an AI client list, read, create, update, and delete "
+"calendar events. Recurring events are read-only — update and delete "
+"operations on recurring events are blocked with an explanatory error."
+msgstr ""
+"이 도구들을 통해 AI 클라이언트는 캘린더 이벤트를 나열, 읽기, 생성, 업데이트 및 삭제할 수 있습니다. "
+"반복 이벤트는 읽기 전용입니다 — 반복 이벤트에 대한 업데이트 및 삭제 작업은 설명 오류로 차단됩니다."
+
+#: ../../mcp/reference/calendar.md:17
+msgid "Date / Time Format"
+msgstr "날짜/시간 형식"
+
+#: ../../mcp/reference/calendar.md:19
+msgid "All datetime values use one of these formats:"
+msgstr "모든 날짜/시간 값은 다음 형식 중 하나를 사용합니다:"
+
+#: ../../mcp/reference/calendar.md
+msgid "Format"
+msgstr "형식"
+
+#: ../../mcp/reference/calendar.md
+msgid "Example"
+msgstr "예시"
+
+#: ../../mcp/reference/calendar.md
+msgid "`YYYY-MM-DD HH:MM:SS`"
+msgstr "`YYYY-MM-DD HH:MM:SS`"
+
+#: ../../mcp/reference/calendar.md
+msgid "`2026-09-15 09:00:00`"
+msgstr "`2026-09-15 09:00:00`"
+
+#: ../../mcp/reference/calendar.md
+msgid "ISO 8601"
+msgstr "ISO 8601"
+
+#: ../../mcp/reference/calendar.md
+msgid "`2026-09-15T09:00:00`"
+msgstr "`2026-09-15T09:00:00`"
+
+#: ../../mcp/reference/calendar.md
+msgid "`YYYY-MM-DD HH:MM`"
+msgstr "`YYYY-MM-DD HH:MM`"
+
+#: ../../mcp/reference/calendar.md
+msgid "`2026-09-15 09:00`"
+msgstr "`2026-09-15 09:00`"
+
+#: ../../mcp/reference/calendar.md
+msgid "`YYYY-MM-DD` (all-day)"
+msgstr "`YYYY-MM-DD`(종일)"
+
+#: ../../mcp/reference/calendar.md
+msgid "`2026-09-15`"
+msgstr "`2026-09-15`"
+
+#: ../../mcp/reference/calendar.md:30
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/calendar.md:32
+msgid "`calendar_list_events`"
+msgstr "`calendar_list_events`"
+
+#: ../../mcp/reference/calendar.md:34
+msgid "List calendar events within an optional date range, filtered by attendee."
+msgstr "선택적 필터를 사용하여 캘린더 이벤트를 나열합니다."
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/calendar.md
+msgid "`start_date`"
+msgstr "`start_date`"
+
+#: ../../mcp/reference/calendar.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/calendar.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/calendar.md
+msgid "Return events starting from this date/datetime."
+msgstr "이 날짜/시간부터 시작하는 이벤트를 반환합니다."
+
+#: ../../mcp/reference/calendar.md
+msgid "`end_date`"
+msgstr "`end_date`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Return events ending before this date/datetime."
+msgstr "이 날짜/시간 이전에 끝나는 이벤트를 반환합니다."
+
+#: ../../mcp/reference/calendar.md
+msgid "`partner_id`"
+msgstr "`partner_id`"
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/calendar.md
+msgid "Filter by attendee (partner ID)."
+msgstr "참석자별 필터링(파트너 ID)."
+
+#: ../../mcp/reference/calendar.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/calendar.md:43 ../../mcp/reference/calendar.md:56
+#: ../../mcp/reference/calendar.md:75 ../../mcp/reference/calendar.md:98
+#: ../../mcp/reference/calendar.md:116
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/calendar.md:44
+msgid "*\"Show my calendar events for next week.\"*"
+msgstr "*\"다음 주의 내 캘린더 이벤트를 보여주세요.\"*"
+
+#: ../../mcp/reference/calendar.md:48
+msgid "`calendar_read_event`"
+msgstr "`calendar_read_event`"
+
+#: ../../mcp/reference/calendar.md:50
+msgid "Get full details of a calendar event."
+msgstr "캘린더 이벤트의 전체 상세 정보를 가져옵니다."
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/calendar.md
+msgid "Calendar event ID."
+msgstr "캘린더 이벤트 ID."
+
+#: ../../mcp/reference/calendar.md:57
+msgid "*\"Show the details of calendar event #123.\"*"
+msgstr "*\"캘린더 이벤트 #123의 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/calendar.md:61
+msgid "`calendar_create_event`"
+msgstr "`calendar_create_event`"
+
+#: ../../mcp/reference/calendar.md:63
+msgid "Create a new calendar event."
+msgstr "새 캘린더 이벤트를 생성합니다."
+
+#: ../../mcp/reference/calendar.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Event title."
+msgstr "이벤트 제목."
+
+#: ../../mcp/reference/calendar.md
+msgid "`start`"
+msgstr "`start`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Start datetime."
+msgstr "시작 날짜/시간."
+
+#: ../../mcp/reference/calendar.md
+msgid "`stop`"
+msgstr "`stop`"
+
+#: ../../mcp/reference/calendar.md
+msgid "End datetime."
+msgstr "종료 날짜/시간."
+
+#: ../../mcp/reference/calendar.md
+msgid "`partner_ids`"
+msgstr "`partner_ids`"
+
+#: ../../mcp/reference/calendar.md
+msgid "array of integer"
+msgstr "array of integer"
+
+#: ../../mcp/reference/calendar.md
+msgid "Attendee partner IDs."
+msgstr "참석자 파트너 ID."
+
+#: ../../mcp/reference/calendar.md
+msgid "`location`"
+msgstr "`location`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Location string."
+msgstr "위치 문자열."
+
+#: ../../mcp/reference/calendar.md
+msgid "`description`"
+msgstr "`description`"
+
+#: ../../mcp/reference/calendar.md
+msgid "Event description (Markdown)."
+msgstr "이벤트 설명(Markdown)."
+
+#: ../../mcp/reference/calendar.md
+msgid "`allday`"
+msgstr "`allday`"
+
+#: ../../mcp/reference/calendar.md
+msgid "boolean"
+msgstr "boolean"
+
+#: ../../mcp/reference/calendar.md
+msgid "`true` for an all-day event."
+msgstr "종일 이벤트의 경우 `true`."
+
+#: ../../mcp/reference/calendar.md:76
+msgid ""
+"*\"Create a calendar event 'Q3 Review' on 2026-09-30 from 10:00 to 12:00 "
+"and invite partners #5 and #8.\"*"
+msgstr ""
+"*\"2026-09-30 10:00~12:00에 'Q3 Review' 캘린더 이벤트를 생성하고 파트너 #5 및 #8을 초대하세요.\"*"
+
+#: ../../mcp/reference/calendar.md:80
+msgid "`calendar_update_event`"
+msgstr "`calendar_update_event`"
+
+#: ../../mcp/reference/calendar.md:82
+msgid "Update an existing calendar event."
+msgstr "기존 캘린더 이벤트를 업데이트합니다."
+
+#: ../../mcp/reference/calendar.md ../../mcp/reference/calendar.md:93
+msgid "Event ID."
+msgstr "이벤트 ID."
+
+#: ../../mcp/reference/calendar.md
+msgid "New title."
+msgstr "새 제목."
+
+#: ../../mcp/reference/calendar.md
+msgid "New start datetime."
+msgstr "새 시작 날짜/시간."
+
+#: ../../mcp/reference/calendar.md
+msgid "New end datetime."
+msgstr "새 종료 날짜/시간."
+
+#: ../../mcp/reference/calendar.md
+msgid "New location."
+msgstr "새 위치."
+
+#: ../../mcp/reference/calendar.md
+msgid "New description (Markdown)."
+msgstr "새 설명(Markdown)."
+
+#: ../../mcp/reference/calendar.md:94
+msgid ""
+"Recurring events cannot be updated via this tool. If the event is part of"
+" a recurrence, the tool returns an error: *\"Recurring events are read-"
+"only via MCP. Edit in Odoo.\"*"
+msgstr ""
+"반복 이벤트는 이 도구를 통해 업데이트할 수 없습니다. 이벤트가 반복의 일부인 경우, 도구는 오류를 반환합니다: "
+"*\"반복 이벤트는 MCP를 통해 읽기 전용입니다. Odoo에서 편집하세요.\"*"
+
+#: ../../mcp/reference/calendar.md:99
+msgid "*\"Update event #123 — change the location to 'Conference Room B'.\"*"
+msgstr "*\"이벤트 #123 업데이트 — 위치를 'Conference Room B'로 변경.\"*"
+
+#: ../../mcp/reference/calendar.md:103
+msgid "`calendar_delete_event`"
+msgstr "`calendar_delete_event`"
+
+#: ../../mcp/reference/calendar.md:105
+msgid "Delete a calendar event."
+msgstr "캘린더 이벤트를 삭제합니다."
+
+#: ../../mcp/reference/calendar.md:112
+msgid ""
+"Recurring events cannot be deleted via this tool. If the event is part of"
+" a recurrence, the tool returns an error and no changes are made."
+msgstr ""
+"반복 이벤트는 이 도구를 통해 삭제할 수 없습니다. 이벤트가 반복의 일부인 경우, 도구는 오류를 반환하고 "
+"변경 사항이 없습니다."
+
+#: ../../mcp/reference/calendar.md:117
+msgid "*\"Delete calendar event #123.\"*"
+msgstr "*\"캘린더 이벤트 #123을 삭제하세요.\"*"
+

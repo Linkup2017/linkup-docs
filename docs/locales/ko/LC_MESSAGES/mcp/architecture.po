@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/architecture.md:1
+msgid "Architecture"
+msgstr "아키텍처"
+
+#: ../../mcp/architecture.md:3
+msgid "System Overview"
+msgstr "시스템 개요"
+
+#: ../../mcp/architecture.md:5
+msgid ""
+"Linkup MCP Server is a set of Odoo 19 modules that embed a full [Model "
+"Context Protocol](https://modelcontextprotocol.io) (MCP 2025-03-26 "
+"Streamable HTTP) server directly into Odoo's HTTP stack. No external "
+"middleware, proxy, or sidecar process is required."
+msgstr ""
+"Linkup MCP Server는 Odoo 19 모듈의 모음으로, Odoo의 HTTP 스택에 완전한 "
+"[Model Context Protocol](https://modelcontextprotocol.io) (MCP 2025-03-26 "
+"Streamable HTTP) 서버를 직접 포함합니다. 외부 미들웨어, 프록시 또는 사이드카 "
+"프로세스가 필요하지 않습니다."
+
+#: ../../mcp/architecture.md:55
+msgid "Request Lifecycle"
+msgstr "요청 라이프사이클"
+
+#: ../../mcp/architecture.md:57
+msgid "A single MCP tool call follows this path:"
+msgstr "단일 MCP 도구 호출은 다음 경로를 따릅니다:"
+
+#: ../../mcp/architecture.md:59
+msgid ""
+"**Transport**: Client sends `POST /mcp/message` with a JSON-RPC 2.0 body "
+"and an `Authorization: Bearer <token>` header."
+msgstr ""
+"**전송**: 클라이언트는 JSON-RPC 2.0 본문과 `Authorization: Bearer <token>` "
+"헤더를 포함하여 `POST /mcp/message`를 전송합니다."
+
+#: ../../mcp/architecture.md:62
+msgid ""
+"**Auth**: Odoo's built-in `ir.http` bearer auth validates the token "
+"against `res.users.apikeys` (API key) or the OAuth token table. The Odoo "
+"environment (`request.env.user`) is set to the authenticated user before "
+"the controller runs."
+msgstr ""
+"**인증**: Odoo의 내장 `ir.http` Bearer 인증이 `res.users.apikeys` (API 키) 또는 "
+"OAuth 토큰 테이블에 대해 토큰을 검증합니다. 컨트롤러 실행 전에 Odoo 환경 "
+"(`request.env.user`)이 인증된 사용자로 설정됩니다."
+
+#: ../../mcp/architecture.md:66
+msgid ""
+"**Session**: `MCPController` reads the `mcp-session-id` request header. "
+"On `initialize`, a new UUID4 session is created and returned. Subsequent "
+"calls must include the session ID."
+msgstr ""
+"**세션**: `MCPController`가 `mcp-session-id` 요청 헤더를 읽습니다. `initialize`에서 "
+"새로운 UUID4 세션이 생성되고 반환됩니다. 후속 호출은 세션 ID를 포함해야 합니다."
+
+#: ../../mcp/architecture.md:70
+msgid ""
+"**Dispatch**: The controller calls "
+"`lu.mcp.plugin._dispatch_tool(tool_name, params)`. Longest-prefix "
+"matching finds the correct plugin namespace (e.g. `knowledge` for "
+"`knowledge_search_articles`)."
+msgstr ""
+"**디스패치**: 컨트롤러가 `lu.mcp.plugin._dispatch_tool(tool_name, params)`을 "
+"호출합니다. 최장 접두사 매칭으로 올바른 플러그인 네임스페이스를 찾습니다 "
+"(예: `knowledge_search_articles`의 경우 `knowledge`)."
+
+#: ../../mcp/architecture.md:74
+msgid ""
+"**Execution**: The plugin's `execute_tool()` method dispatches to "
+"`_<local_name>(params)` (e.g. `_search_articles`). All tool methods run "
+"within a normal Odoo transaction with the authenticated user's access "
+"rights."
+msgstr ""
+"**실행**: 플러그인의 `execute_tool()` 메서드가 `_<local_name>(params)`로 디스패치됩니다 "
+"(예: `_search_articles`). 모든 도구 메서드는 인증된 사용자의 액세스 권한을 가진 "
+"일반 Odoo 트랜잭션 내에서 실행됩니다."
+
+#: ../../mcp/architecture.md:78
+msgid ""
+"**Result**: The tool returns a Markdown string. The controller wraps it "
+"in a JSON-RPC 2.0 response and writes an audit log entry."
+msgstr ""
+"**결과**: 도구가 Markdown 문자열을 반환합니다. 컨트롤러가 이를 JSON-RPC 2.0 응답으로 "
+"래핑하고 감사 로그 항목을 작성합니다."
+
+#: ../../mcp/architecture.md:81
+msgid ""
+"**Response**: The response is sent as `Content-Type: application/json` "
+"with the `mcp-session-id` header included."
+msgstr ""
+"**응답**: 응답은 `Content-Type: application/json`으로 `mcp-session-id` 헤더를 "
+"포함하여 전송됩니다."
+
+#: ../../mcp/architecture.md:86
+msgid "Plugin Registry"
+msgstr "플러그인 레지스트리"
+
+#: ../../mcp/architecture.md:88
+msgid ""
+"The plugin registry uses Odoo's model inheritance to auto-discover "
+"plugins at server startup — no registration calls or config files are "
+"needed."
+msgstr ""
+"플러그인 레지스트리는 Odoo의 모델 상속을 사용하여 서버 시작 시 플러그인을 "
+"자동으로 발견합니다. 등록 호출이나 설정 파일이 필요하지 않습니다."
+
+#: ../../mcp/architecture.md:91
+msgid "Defining a Plugin"
+msgstr "플러그인 정의"
+
+#: ../../mcp/architecture.md:93
+msgid "Every plugin module inherits `lu.mcp.plugin` and sets `_mcp_namespace`:"
+msgstr "모든 플러그인 모듈은 `lu.mcp.plugin`을 상속하고 `_mcp_namespace`을 설정합니다:"
+
+#: ../../mcp/architecture.md:116
+msgid "Auto-Discovery"
+msgstr "자동 발견"
+
+#: ../../mcp/architecture.md:118
+msgid ""
+"On first request after module load, `_get_namespace_map()` scans the Odoo"
+" model registry for any model that has a non-empty `_mcp_namespace` "
+"attribute. The result is cached on the registry object and lives for the "
+"same lifetime as a module install cycle."
+msgstr ""
+"모듈 로드 후 첫 요청에서 `_get_namespace_map()`은 Odoo 모델 레지스트리에서 "
+"비어있지 않은 `_mcp_namespace` 속성을 가진 모든 모델을 스캔합니다. 결과는 "
+"레지스트리 객체에 캐시되며 모듈 설치 사이클과 동일한 수명을 갖습니다."
+
+#: ../../mcp/architecture.md:122
+msgid ""
+"Installing a new plugin module and restarting Odoo is sufficient for its "
+"tools to appear in `tools/list` responses — no additional wiring "
+"required."
+msgstr ""
+"새로운 플러그인 모듈을 설치하고 Odoo를 다시 시작하는 것만으로 도구가 `tools/list` "
+"응답에 표시되기에 충분합니다. 추가 구성이 필요하지 않습니다."
+
+#: ../../mcp/architecture.md:125
+msgid "Tool Naming"
+msgstr "도구 명명 규칙"
+
+#: ../../mcp/architecture.md:127
+msgid ""
+"Tool names are automatically prefixed with the namespace using an "
+"underscore separator, producing the final MCP tool name:"
+msgstr ""
+"도구 이름은 자동으로 네임스페이스가 접두사로 붙고 언더스코어 구분자를 사용하여 "
+"최종 MCP 도구 이름이 생성됩니다:"
+
+#: ../../mcp/architecture.md:134
+msgid ""
+"Examples: `knowledge_search_articles`, `project_create_task`, "
+"`helpdesk_ticket_reply`."
+msgstr ""
+"예: `knowledge_search_articles`, `project_create_task`, `helpdesk_ticket_reply`."
+
+#: ../../mcp/architecture.md:136
+#, python-brace-format
+msgid "All tool names comply with the MCP name pattern `^[a-zA-Z0-9_-]{1,64}$`."
+msgstr "모든 도구 이름은 MCP 이름 패턴 `^[a-zA-Z0-9_-]{1,64}$`를 준수합니다."
+
+#: ../../mcp/architecture.md:138
+msgid "Dispatch"
+msgstr "디스패치"
+
+#: ../../mcp/architecture.md:140
+msgid ""
+"`_dispatch_tool()` splits the tool name using longest-prefix matching. "
+"This prevents a short namespace (e.g. `sale`) from accidentally capturing"
+" tools belonging to a longer one (e.g. `sale_subscription`, if added in "
+"the future)."
+msgstr ""
+"`_dispatch_tool()`은 최장 접두사 매칭을 사용하여 도구 이름을 분할합니다. 이렇게 하면 "
+"짧은 네임스페이스 (예: `sale`)가 더 긴 네임스페이스 (예: 향후 추가될 "
+"`sale_subscription`)에 속한 도구를 실수로 캡처하는 것을 방지합니다."
+
+#: ../../mcp/architecture.md:152
+msgid "Module Dependency Tree"
+msgstr "모듈 의존성 트리"
+
+#: ../../mcp/architecture.md:187
+msgid ""
+"`lu_mcp_server` depends only on `base` and `web`. Each plugin module adds"
+" a dependency on the corresponding Odoo app. `lu_mcp_server_website` is a"
+" thin bridge module that auto-installs when `website` is present, "
+"resolving controller routing conflicts."
+msgstr ""
+"`lu_mcp_server`는 `base`와 `web`에만 의존합니다. 각 플러그인 모듈은 해당 Odoo 앱에 "
+"대한 의존성을 추가합니다. `lu_mcp_server_website`는 `website`가 있을 때 자동으로 "
+"설치되는 얇은 브리지 모듈이며, 컨트롤러 라우팅 충돌을 해결합니다."
+
+#: ../../mcp/architecture.md:193
+msgid "HTML ↔ Markdown Conversion"
+msgstr "HTML ↔ Markdown 변환"
+
+#: ../../mcp/architecture.md:195
+msgid ""
+"All plugins that accept or return rich text use shared utilities from "
+"`lu_mcp_server.utils.convert`:"
+msgstr ""
+"리치 텍스트를 수락하거나 반환하는 모든 플러그인은 `lu_mcp_server.utils.convert`의 "
+"공유 유틸리티를 사용합니다:"
+
+#: ../../mcp/architecture.md:198
+msgid ""
+"`md_to_html(markdown: str) → str` — converts Markdown input from the AI "
+"client to Odoo-compatible HTML before writing to the database."
+msgstr ""
+"`md_to_html(markdown: str) → str` — AI 클라이언트에서 Markdown 입력을 데이터베이스에 "
+"쓰기 전에 Odoo 호환 HTML로 변환합니다."
+
+#: ../../mcp/architecture.md:200
+msgid ""
+"`html_to_md(html: str) → str` — converts Odoo HTML field values to "
+"Markdown before returning them to the AI client."
+msgstr ""
+"`html_to_md(html: str) → str` — Odoo HTML 필드 값을 AI 클라이언트에 반환하기 전에 "
+"Markdown으로 변환합니다."
+
+#: ../../mcp/architecture.md:203
+msgid ""
+"This ensures that tool descriptions, notes, and article bodies are "
+"presented to the LLM as clean Markdown rather than raw HTML."
+msgstr ""
+"이렇게 하면 도구 설명, 노트 및 기사 본문이 원본 HTML이 아닌 깔끔한 Markdown으로 "
+"LLM에 표시됩니다."
+
+#: ../../mcp/architecture.md:208
+msgid "Shared Chatter Utility"
+msgstr "공유 Chatter 유틸리티"
+
+#: ../../mcp/architecture.md:210
+msgid ""
+"Tools that post internal notes on Odoo records (e.g. `contact_log_note`, "
+"`helpdesk_ticket_reply`) use "
+"`lu_mcp_server.utils.chatter.post_internal_note(record, body)`. This "
+"utility converts the Markdown body to HTML and calls "
+"`record.message_post()` with `subtype_xmlid='mail.mt_note'`, ensuring the"
+" note is internal (not sent to customers)."
+msgstr ""
+"Odoo 레코드에 내부 노트를 게시하는 도구 (예: `contact_log_note`, "
+"`helpdesk_ticket_reply`)는 `lu_mcp_server.utils.chatter.post_internal_note(record, body)`"
+"를 사용합니다. 이 유틸리티는 Markdown 본문을 HTML로 변환하고 `subtype_xmlid='mail.mt_note'`"
+"과 함께 `record.message_post()`를 호출하여 노트가 내부 (고객에게 전송되지 않음)임을 "
+"보장합니다."
+
+#: ../../mcp/architecture.md:217
+msgid "MCP Protocol Implementation"
+msgstr "MCP 프로토콜 구현"
+
+#: ../../mcp/architecture.md:154
+msgid "Feature"
+msgstr "기능"
+
+#: ../../mcp/architecture.md:154
+msgid "Implementation"
+msgstr "구현"
+
+#: ../../mcp/architecture.md:154
+msgid "Transport"
+msgstr "전송"
+
+#: ../../mcp/architecture.md:154
+msgid "Streamable HTTP (MCP 2025-03-26)"
+msgstr "Streamable HTTP (MCP 2025-03-26)"
+
+#: ../../mcp/architecture.md:154
+msgid "Encoding"
+msgstr "인코딩"
+
+#: ../../mcp/architecture.md:154
+msgid "JSON-RPC 2.0 over HTTP POST"
+msgstr "HTTP POST를 통한 JSON-RPC 2.0"
+
+#: ../../mcp/architecture.md:154
+msgid "Auth"
+msgstr "인증"
+
+#: ../../mcp/architecture.md:154
+msgid "Bearer token via Odoo `ir.http`"
+msgstr "Odoo `ir.http`를 통한 Bearer 토큰"
+
+#: ../../mcp/architecture.md:154
+msgid "OAuth"
+msgstr "OAuth"
+
+#: ../../mcp/architecture.md:154
+msgid "PKCE + dynamic client registration"
+msgstr "PKCE + 동적 클라이언트 등록"
+
+#: ../../mcp/architecture.md:154
+msgid "SSE replay"
+msgstr "SSE 재생"
+
+#: ../../mcp/architecture.md:154
+msgid "`GET /mcp/sse` with `mcp-session-id` header"
+msgstr "`mcp-session-id` 헤더를 포함한 `GET /mcp/sse`"
+
+#: ../../mcp/architecture.md:154
+msgid "CORS"
+msgstr "CORS"
+
+#: ../../mcp/architecture.md:154
+msgid "`cors='*'` on the route (Odoo handles OPTIONS preflight)"
+msgstr "경로의 `cors='*'` (Odoo가 OPTIONS preflight 처리)"
+
+#: ../../mcp/architecture.md:154
+msgid "Session"
+msgstr "세션"
+
+#: ../../mcp/architecture.md:154
+msgid "UUID4 per `initialize`, tracked in `lu.mcp.session`"
+msgstr "`initialize`당 UUID4, `lu.mcp.session`에서 추적됨"
+
+#: ../../mcp/architecture.md:154
+msgid "Audit"
+msgstr "감사"
+
+#: ../../mcp/architecture.md:154
+msgid "Every call → `lu.mcp.audit.log` entry"
+msgstr "모든 호출 → `lu.mcp.audit.log` 항목"
+
+#: ../../mcp/architecture.md:154
+msgid "Tool naming"
+msgstr "도구 명명"
+
+#: ../../mcp/architecture.md:154
+#, python-brace-format
+msgid "`^[a-zA-Z0-9_-]{1,64}$`, underscore namespace separator"
+msgstr "`^[a-zA-Z0-9_-]{1,64}$`, 언더스코어 네임스페이스 구분자"

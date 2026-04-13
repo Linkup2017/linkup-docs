@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/purchase.md:1
+msgid "Purchase (`lu_mcp_purchase`)"
+msgstr "Purchase (`lu_mcp_purchase`)"
+
+#: ../../mcp/reference/purchase.md:3
+msgid "**6 tools** for Odoo purchase orders and RFQs (Requests for Quotation)."
+msgstr "Odoo 구매 주문 및 RFQ(견적 요청)를 위한 **6가지 도구**입니다."
+
+#: ../../mcp/reference/purchase.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `purchase` app."
+msgstr "필수: `lu_mcp_server`, Odoo `purchase` 앱."
+
+#: ../../mcp/reference/purchase.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/purchase.md:11
+msgid ""
+"These tools cover the purchase order lifecycle: search, read, create, "
+"update, confirm, and log notes. RFQs in `draft` or `sent` state can be "
+"edited; confirmed Purchase Orders (`purchase`) are locked."
+msgstr ""
+"이 도구들은 구매 주문 생명 주기를 다룹니다: 검색, 읽기, 생성, 업데이트, 확정, 메모 기록. "
+"`draft` 또는 `sent` 상태의 RFQ는 편집 가능하고, 확정된 구매 주문(`purchase`)은 잠깁니다."
+
+#: ../../mcp/reference/purchase.md:15
+msgid ""
+"**Order states**: `draft` (RFQ), `sent` (RFQ Sent), `purchase` (Purchase "
+"Order), `done` (Locked), `cancel` (Cancelled)."
+msgstr ""
+"**주문 상태**: `draft`(RFQ), `sent`(RFQ 발송), `purchase`(구매 주문), `done`(잠금), `cancel`(취소)."
+
+#: ../../mcp/reference/purchase.md:20
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/purchase.md:22
+msgid "`purchase_search_orders`"
+msgstr "`purchase_search_orders`"
+
+#: ../../mcp/reference/purchase.md:24
+msgid "Search purchase orders and RFQs."
+msgstr "구매 주문 및 RFQ를 검색합니다."
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/purchase.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/purchase.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/purchase.md
+msgid "Keyword search in order name or vendor name."
+msgstr "주문명 또는 공급업체명에서 키워드 검색."
+
+#: ../../mcp/reference/purchase.md
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Filter by state: `draft`, `sent`, `purchase`, `done`, `cancel`."
+msgstr "상태별 필터링: `draft`, `sent`, `purchase`, `done`, `cancel`."
+
+#: ../../mcp/reference/purchase.md
+msgid "`partner_id`"
+msgstr "`partner_id`"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/purchase.md
+msgid "Filter by vendor."
+msgstr "공급업체별 필터링."
+
+#: ../../mcp/reference/purchase.md
+msgid "`user_id`"
+msgstr "`user_id`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Filter by purchase representative."
+msgstr "구매 담당자별 필터링."
+
+#: ../../mcp/reference/purchase.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/purchase.md:34 ../../mcp/reference/purchase.md:47
+#: ../../mcp/reference/purchase.md:73 ../../mcp/reference/purchase.md:88
+#: ../../mcp/reference/purchase.md:106 ../../mcp/reference/purchase.md:120
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/purchase.md:35
+msgid "*\"Show all open RFQs from vendor #7.\"*"
+msgstr "*\"공급업체 #7의 모든 미처리 RFQ를 보여주세요.\"*"
+
+#: ../../mcp/reference/purchase.md:39
+msgid "`purchase_read_order`"
+msgstr "`purchase_read_order`"
+
+#: ../../mcp/reference/purchase.md:41
+msgid "Get full details of a purchase order or RFQ, including order lines."
+msgstr "구매 주문 또는 RFQ의 전체 상세 정보(주문 라인 포함)를 가져옵니다."
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "`id`"
+msgstr "`id`"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/purchase.md ../../mcp/reference/purchase.md:101
+msgid "Purchase order ID."
+msgstr "구매 주문 ID."
+
+#: ../../mcp/reference/purchase.md:48
+msgid "*\"Show me the details of purchase order #33.\"*"
+msgstr "*\"구매 주문 #33의 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/purchase.md:52
+msgid "`purchase_create_order`"
+msgstr "`purchase_create_order`"
+
+#: ../../mcp/reference/purchase.md:54
+msgid "Create a new RFQ (Request for Quotation)."
+msgstr "새 RFQ(견적 요청)를 생성합니다."
+
+#: ../../mcp/reference/purchase.md
+msgid "Vendor partner ID."
+msgstr "공급업체 파트너 ID."
+
+#: ../../mcp/reference/purchase.md
+msgid "`date_order`"
+msgstr "`date_order`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Order date (`YYYY-MM-DD`). Defaults to today."
+msgstr "주문일(`YYYY-MM-DD`). 기본값은 오늘입니다."
+
+#: ../../mcp/reference/purchase.md
+msgid "`note`"
+msgstr "`note`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Internal note (Markdown)."
+msgstr "내부 메모(Markdown)."
+
+#: ../../mcp/reference/purchase.md
+msgid "`order_line`"
+msgstr "`order_line`"
+
+#: ../../mcp/reference/purchase.md
+msgid "array"
+msgstr "array"
+
+#: ../../mcp/reference/purchase.md
+msgid "List of order lines (see below)."
+msgstr "주문 라인 목록(아래 참조)."
+
+#: ../../mcp/reference/purchase.md:63
+msgid "**`order_line` items**"
+msgstr "**`order_line` 항목**"
+
+#: ../../mcp/reference/purchase.md
+msgid "Field"
+msgstr "필드"
+
+#: ../../mcp/reference/purchase.md
+msgid "`product_id`"
+msgstr "`product_id`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Product ID."
+msgstr "상품 ID."
+
+#: ../../mcp/reference/purchase.md
+msgid "`product_qty`"
+msgstr "`product_qty`"
+
+#: ../../mcp/reference/purchase.md
+msgid "number"
+msgstr "number"
+
+#: ../../mcp/reference/purchase.md
+msgid "Quantity (default 1)."
+msgstr "수량(기본값 1)."
+
+#: ../../mcp/reference/purchase.md
+msgid "`price_unit`"
+msgstr "`price_unit`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Unit price."
+msgstr "단가."
+
+#: ../../mcp/reference/purchase.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Line description override."
+msgstr "라인 설명 재정의."
+
+#: ../../mcp/reference/purchase.md
+msgid "`date_planned`"
+msgstr "`date_planned`"
+
+#: ../../mcp/reference/purchase.md
+msgid "Scheduled delivery date (`YYYY-MM-DD`)."
+msgstr "예정된 배송일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/purchase.md:74
+msgid "*\"Create an RFQ for vendor #7 with 10 units of product #12.\"*"
+msgstr "*\"공급업체 #7을 위해 상품 #12 10개 단위로 RFQ를 생성하세요.\"*"
+
+#: ../../mcp/reference/purchase.md:78
+msgid "`purchase_update_order`"
+msgstr "`purchase_update_order`"
+
+#: ../../mcp/reference/purchase.md:80
+msgid "Update an RFQ (only allowed while in `draft` or `sent` state)."
+msgstr "RFQ를 업데이트합니다(`draft` 또는 `sent` 상태에서만 허용)."
+
+#: ../../mcp/reference/purchase.md
+msgid "New order date (`YYYY-MM-DD`)."
+msgstr "새 주문일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/purchase.md
+msgid "New internal note (Markdown)."
+msgstr "새 내부 메모(Markdown)."
+
+#: ../../mcp/reference/purchase.md:89
+msgid "*\"Update RFQ #33 — set the order date to 2026-10-01.\"*"
+msgstr "*\"RFQ #33 업데이트 — 주문일을 2026-10-01로 설정.\"*"
+
+#: ../../mcp/reference/purchase.md:93
+msgid "`purchase_confirm_order`"
+msgstr "`purchase_confirm_order`"
+
+#: ../../mcp/reference/purchase.md:95
+msgid "Confirm an RFQ, converting it to a Purchase Order (state `purchase`)."
+msgstr "RFQ를 확정하여 구매 주문(상태: `purchase`)으로 전환합니다."
+
+#: ../../mcp/reference/purchase.md
+msgid "Purchase order ID to confirm."
+msgstr "확정할 구매 주문 ID."
+
+#: ../../mcp/reference/purchase.md:102
+msgid ""
+"Confirmation is **irreversible** via this tool. Once confirmed, the order"
+" is locked as a Purchase Order. Use the Odoo UI to cancel if needed."
+msgstr ""
+"이 도구를 통한 확정은 **취소 불가**합니다. 확정 후 주문은 구매 주문으로 잠깁니다. "
+"취소가 필요한 경우 Odoo UI를 사용하세요."
+
+#: ../../mcp/reference/purchase.md:107
+msgid "*\"Confirm RFQ #33.\"*"
+msgstr "*\"RFQ #33을 확정하세요.\"*"
+
+#: ../../mcp/reference/purchase.md:111
+msgid "`purchase_log_note`"
+msgstr "`purchase_log_note`"
+
+#: ../../mcp/reference/purchase.md:113
+msgid "Post an internal note on a purchase order."
+msgstr "구매 주문에 내부 메모를 게시합니다."
+
+#: ../../mcp/reference/purchase.md:101
+msgid "`body`"
+msgstr "`body`"
+
+#: ../../mcp/reference/purchase.md:101
+msgid "Note body (Markdown)."
+msgstr "메모 본문(Markdown)."
+
+#: ../../mcp/reference/purchase.md:121
+msgid ""
+"*\"Add a note to purchase order #33: 'Vendor confirmed delivery in 2 "
+"weeks.'\"*"
+msgstr ""
+"*\"구매 주문 #33에 메모 추가: '공급업체가 2주 후 배송을 확정했습니다.'\"*"
+

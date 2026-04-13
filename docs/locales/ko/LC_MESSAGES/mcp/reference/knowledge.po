@@ -1,0 +1,432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/knowledge.md:1
+msgid "Knowledge (`lu_mcp_knowledge`)"
+msgstr "Knowledge (`lu_mcp_knowledge`)"
+
+#: ../../mcp/reference/knowledge.md:3
+msgid "**9 tools** for Odoo Knowledge article CRUD."
+msgstr "Odoo Knowledge 아티클 CRUD를 위한 **9가지 도구**입니다."
+
+#: ../../mcp/reference/knowledge.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `knowledge` app."
+msgstr "필요 조건: `lu_mcp_server`, Odoo `knowledge` 앱."
+
+#: ../../mcp/reference/knowledge.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/knowledge.md:11
+msgid ""
+"These tools let an AI client browse the Knowledge article hierarchy, read"
+" and search articles, and create, update, move, or soft-delete articles. "
+"Article bodies are exchanged as Markdown — the plugin converts to/from "
+"Odoo HTML automatically."
+msgstr "이 도구들은 AI 클라이언트가 Knowledge 아티클 계층을 탐색하고, 아티클을 읽고 검색하며, 생성·업데이트·이동·소프트 삭제할 수 있도록 합니다. 아티클 본문은 Markdown으로 교환되며, 플러그인이 Odoo HTML과 자동으로 변환합니다."
+
+#: ../../mcp/reference/knowledge.md:17
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/knowledge.md:19
+msgid "`knowledge_list_workspaces`"
+msgstr "`knowledge_list_workspaces`"
+
+#: ../../mcp/reference/knowledge.md:21
+msgid "List all top-level workspace articles."
+msgstr "모든 최상위 워크스페이스 아티클을 나열합니다."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/knowledge.md
+msgid "*(none)*"
+msgstr "*(없음)*"
+
+#: ../../mcp/reference/knowledge.md:27 ../../mcp/reference/knowledge.md:41
+#: ../../mcp/reference/knowledge.md:54 ../../mcp/reference/knowledge.md:68
+#: ../../mcp/reference/knowledge.md:82 ../../mcp/reference/knowledge.md:98
+#: ../../mcp/reference/knowledge.md:177 ../../mcp/reference/knowledge.md:190
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/knowledge.md:28
+msgid "*\"Show me all Knowledge workspaces.\"*"
+msgstr "*\"모든 Knowledge 워크스페이스를 보여주세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:32
+msgid "`knowledge_list_articles`"
+msgstr "`knowledge_list_articles`"
+
+#: ../../mcp/reference/knowledge.md:34
+msgid "List direct children of a parent article, or root articles of a category."
+msgstr "부모 아티클의 직접 하위 아티클 또는 카테고리의 루트 아티클을 나열합니다."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`parent_id`"
+msgstr "`parent_id`"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/knowledge.md
+msgid "ID of the parent article. Omit to list root articles."
+msgstr "부모 아티클의 ID. 루트 아티클을 나열하려면 생략하세요."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`category`"
+msgstr "`category`"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/knowledge.md
+msgid "`workspace`, `private`, or `shared`. Used when `parent_id` is omitted."
+msgstr "`workspace`, `private`, `shared` 중 하나. `parent_id`가 생략되었을 때 사용됩니다."
+
+#: ../../mcp/reference/knowledge.md:42
+msgid "*\"List the articles inside the HR Policies workspace (id=42).\"*"
+msgstr "*\"HR Policies 워크스페이스(id=42) 내의 아티클을 나열하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:46
+msgid "`knowledge_read_article`"
+msgstr "`knowledge_read_article`"
+
+#: ../../mcp/reference/knowledge.md:48
+msgid ""
+"Read the full content (title + body) of an article. Body is returned as "
+"Markdown."
+msgstr "아티클의 전체 내용(제목 + 본문)을 읽습니다. 본문은 Markdown으로 반환됩니다."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`article_id`"
+msgstr "`article_id`"
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Numeric ID of the article to read."
+msgstr "읽을 아티클의 숫자 ID."
+
+#: ../../mcp/reference/knowledge.md:55
+msgid "*\"Read Knowledge article #105.\"*"
+msgstr "*\"Knowledge 아티클 #105를 읽으세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:59
+msgid "`knowledge_search_articles`"
+msgstr "`knowledge_search_articles`"
+
+#: ../../mcp/reference/knowledge.md:61
+msgid "Search articles by keyword. Searches both title and body content."
+msgstr "키워드로 아티클을 검색합니다. 제목과 본문 내용 모두에서 검색합니다."
+
+#: ../../mcp/reference/knowledge.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Search keyword or phrase."
+msgstr "검색 키워드 또는 문구."
+
+#: ../../mcp/reference/knowledge.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/knowledge.md:69
+msgid "*\"Find Knowledge articles about 'onboarding'.\"*"
+msgstr "*\"'온보딩'에 관한 Knowledge 아티클을 찾으세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:73
+msgid "`knowledge_get_article_tree`"
+msgstr "`knowledge_get_article_tree`"
+
+#: ../../mcp/reference/knowledge.md:75
+msgid "Show the article hierarchy tree starting from a given article."
+msgstr "지정된 아티클에서 시작하는 아티클 계층 트리를 표시합니다."
+
+#: ../../mcp/reference/knowledge.md
+msgid "Root article ID for the tree view."
+msgstr "트리 뷰의 루트 아티클 ID."
+
+#: ../../mcp/reference/knowledge.md
+msgid "`depth`"
+msgstr "`depth`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "How many levels to expand (1–4, default 2)."
+msgstr "확장할 레벨 수(1~4, 기본값 2)."
+
+#: ../../mcp/reference/knowledge.md:83
+msgid "*\"Show the article tree under workspace #10, 3 levels deep.\"*"
+msgstr "*\"워크스페이스 #10 아래의 아티클 트리를 3단계까지 표시하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:87
+msgid "`knowledge_create_article`"
+msgstr "`knowledge_create_article`"
+
+#: ../../mcp/reference/knowledge.md:89
+msgid "Create a new Knowledge article."
+msgstr "새 Knowledge 아티클을 생성합니다."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Article title."
+msgstr "아티클 제목."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`body_markdown`"
+msgstr "`body_markdown`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Article body in Markdown."
+msgstr "Markdown 형식의 아티클 본문."
+
+#: ../../mcp/reference/knowledge.md
+msgid "Parent article ID. Omit to create a private article."
+msgstr "부모 아티클 ID. 비공개 아티클을 생성하려면 생략하세요."
+
+#: ../../mcp/reference/knowledge.md ../../mcp/reference/knowledge.md:101
+msgid "`icon`"
+msgstr "`icon`"
+
+#: ../../mcp/reference/knowledge.md
+msgid "Emoji icon (e.g. `📝`)."
+msgstr "이모지 아이콘(예: `📝`)."
+
+#: ../../mcp/reference/knowledge.md:99
+msgid ""
+"*\"Create a Knowledge article titled 'Q3 OKRs' under workspace #10 with "
+"the following content: ...\"*"
+msgstr "*\"워크스페이스 #10 아래에 'Q3 OKRs'라는 제목의 Knowledge 아티클을 다음 내용으로 생성하세요: ...\"*"
+
+#: ../../mcp/reference/knowledge.md:102
+msgid ""
+"Articles created without a `parent_id` are placed in the **private** "
+"category. To create a workspace article, supply the workspace article's "
+"ID as `parent_id`."
+msgstr "`parent_id` 없이 생성한 아티클은 **비공개** 카테고리에 배치됩니다. 워크스페이스 아티클을 생성하려면 워크스페이스 아티클의 ID를 `parent_id`로 지정하세요."
+
+#: ../../mcp/reference/knowledge.md:108
+msgid "`knowledge_update_article`"
+msgstr "`knowledge_update_article`"
+
+#: ../../mcp/reference/knowledge.md:110
+msgid ""
+"Update an existing article. Use `body_markdown` to replace the entire "
+"body, or `content_updates` for partial edits. The two are mutually "
+"exclusive."
+msgstr "기존 아티클을 업데이트합니다. `body_markdown`을 사용하여 본문 전체를 교체하거나 `content_updates`로 부분 편집할 수 있습니다. 둘은 상호 배타적입니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "ID of the article to update."
+msgstr "업데이트할 아티클의 ID."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "New title. Omit to keep existing."
+msgstr "새 제목. 기존 제목을 유지하려면 생략하세요."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Replace the entire body with this Markdown."
+msgstr "본문 전체를 이 Markdown으로 교체합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`content_updates`"
+msgstr "`content_updates`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "array"
+msgstr "array"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "List of partial update operations (see below)."
+msgstr "부분 업데이트 작업 목록(아래 참조)."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "New emoji icon."
+msgstr "새 이모지 아이콘."
+
+#: ../../mcp/reference/knowledge.md:121
+msgid "**`content_updates` operations**"
+msgstr "**`content_updates` 작업**"
+
+#: ../../mcp/reference/knowledge.md:123
+msgid "Each item is an object with:"
+msgstr "각 항목은 다음과 같은 객체입니다:"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Field"
+msgstr "필드"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Values"
+msgstr "값"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`type`"
+msgstr "`type`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`append`"
+msgstr "`append`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Add content at the end of the article."
+msgstr "아티클 끝에 내용을 추가합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`prepend`"
+msgstr "`prepend`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Add content at the beginning."
+msgstr "시작 부분에 내용을 추가합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`replace_section`"
+msgstr "`replace_section`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Replace a named Markdown section heading and its content."
+msgstr "지정된 Markdown 섹션 제목과 해당 내용을 교체합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`insert_after`"
+msgstr "`insert_after`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Insert content after a named Markdown section heading."
+msgstr "지정된 Markdown 섹션 제목 다음에 내용을 삽입합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`content`"
+msgstr "`content`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "Markdown text to insert or replace with."
+msgstr "삽입하거나 교체할 Markdown 텍스트."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "`target`"
+msgstr "`target`"
+
+#: ../../mcp/reference/knowledge.md:101
+msgid ""
+"Required for `replace_section` and `insert_after`. The exact section "
+"heading text."
+msgstr "`replace_section`과 `insert_after`에 필수. 정확한 섹션 제목 텍스트."
+
+#: ../../mcp/reference/knowledge.md:134
+msgid "**Example prompt — append**"
+msgstr "**예제 프롬프트 — 추가**"
+
+#: ../../mcp/reference/knowledge.md:135
+msgid ""
+"*\"Append a new section '## Action Items' with a task list to article "
+"#105.\"*"
+msgstr "*\"아티클 #105에 작업 목록이 있는 '## Action Items' 섹션을 추가하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:149
+msgid "**Example prompt — replace section**"
+msgstr "**예제 프롬프트 — 섹션 교체**"
+
+#: ../../mcp/reference/knowledge.md:150
+msgid "*\"Replace the 'Status' section in article #105 with 'Completed'.\"*"
+msgstr "*\"아티클 #105의 'Status' 섹션을 'Completed'로 교체하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:167
+msgid "`knowledge_move_article`"
+msgstr "`knowledge_move_article`"
+
+#: ../../mcp/reference/knowledge.md:169
+msgid "Move an article to a different location in the Knowledge hierarchy."
+msgstr "아티클을 Knowledge 계층의 다른 위치로 이동합니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "ID of the article to move."
+msgstr "이동할 아티클의 ID."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "New parent article ID. Omit to move to the workspace root."
+msgstr "새 부모 아티클 ID. 워크스페이스 루트로 이동하려면 생략하세요."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid ""
+"Target category: `workspace`, `private`, or `shared` (default "
+"`workspace`)."
+msgstr "대상 카테고리: `workspace`, `private`, `shared` 중 하나(기본값 `workspace`)."
+
+#: ../../mcp/reference/knowledge.md:178
+msgid "*\"Move article #88 to the root of the workspace.\"*"
+msgstr "*\"아티클 #88을 워크스페이스의 루트로 이동하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:182
+msgid "`knowledge_delete_article`"
+msgstr "`knowledge_delete_article`"
+
+#: ../../mcp/reference/knowledge.md:184
+msgid ""
+"Send an article to trash (soft delete). Trashed articles can be recovered"
+" within 30 days."
+msgstr "아티클을 휴지통으로 이동합니다(소프트 삭제). 삭제된 아티클은 30일 이내에 복구할 수 있습니다."
+
+#: ../../mcp/reference/knowledge.md:101
+msgid "ID of the article to trash."
+msgstr "휴지통으로 이동할 아티클의 ID."
+
+#: ../../mcp/reference/knowledge.md:191
+msgid "*\"Delete Knowledge article #88.\"*"
+msgstr "*\"Knowledge 아티클 #88을 삭제하세요.\"*"
+
+#: ../../mcp/reference/knowledge.md:194
+msgid ""
+"`knowledge_delete_article` performs a **soft delete** (moves to trash). "
+"The article is recoverable from the Odoo Knowledge trash for up to 30 "
+"days. This is not a permanent deletion."
+msgstr "`knowledge_delete_article`은 **소프트 삭제**(휴지통으로 이동)를 수행합니다. 아티클은 Odoo Knowledge 휴지통에서 최대 30일 이내에 복구할 수 있습니다. 영구 삭제가 아닙니다."

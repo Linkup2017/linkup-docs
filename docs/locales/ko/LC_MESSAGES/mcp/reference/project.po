@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/project.md:1
+msgid "Project (`lu_mcp_project`)"
+msgstr "Project (`lu_mcp_project`)"
+
+#: ../../mcp/reference/project.md:3
+msgid "**7 tools** for Odoo Project task management."
+msgstr "Odoo 프로젝트 태스크 관리를 위한 **7가지 도구**입니다."
+
+#: ../../mcp/reference/project.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `project` app."
+msgstr "필요 조건: `lu_mcp_server`, Odoo `project` 앱."
+
+#: ../../mcp/reference/project.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/project.md:11
+msgid ""
+"These tools cover the full task lifecycle: browse projects and stages, "
+"search tasks, read full task details, create and update tasks, and link "
+"Knowledge articles to tasks. Sub-tasks are supported via the `parent_id` "
+"parameter on `project_create_task`."
+msgstr "이 도구들은 전체 태스크 라이프사이클을 다룹니다: 프로젝트와 스테이지 탐색, 태스크 검색, 전체 태스크 상세 읽기, 생성 및 업데이트, Knowledge 아티클 연결. `project_create_task`의 `parent_id` 파라미터로 서브태스크도 지원합니다."
+
+#: ../../mcp/reference/project.md:17
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/project.md:19
+msgid "`project_list_projects`"
+msgstr "`project_list_projects`"
+
+#: ../../mcp/reference/project.md:21
+msgid "List all active Odoo projects."
+msgstr "모든 활성 Odoo 프로젝트를 나열합니다."
+
+#: ../../mcp/reference/project.md
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/project.md
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/project.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/project.md
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/project.md
+msgid "*(none)*"
+msgstr "*(없음)*"
+
+#: ../../mcp/reference/project.md:27 ../../mcp/reference/project.md:40
+#: ../../mcp/reference/project.md:57 ../../mcp/reference/project.md:71
+#: ../../mcp/reference/project.md:89 ../../mcp/reference/project.md:107
+#: ../../mcp/reference/project.md:121
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/project.md:28
+msgid "*\"What projects are active in Odoo?\"*"
+msgstr "*\"Odoo에서 활성 프로젝트는 어떤 것들이 있나요?\"*"
+
+#: ../../mcp/reference/project.md:32
+msgid "`project_list_stages`"
+msgstr "`project_list_stages`"
+
+#: ../../mcp/reference/project.md:34
+msgid "List task stages, optionally filtered to a specific project."
+msgstr "태스크 스테이지를 나열하며, 특정 프로젝트로 필터링할 수 있습니다."
+
+#: ../../mcp/reference/project.md
+msgid "`project_id`"
+msgstr "`project_id`"
+
+#: ../../mcp/reference/project.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/project.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/project.md
+msgid "Filter stages to a specific project. Omit for all stages."
+msgstr "특정 프로젝트의 스테이지만 필터링합니다. 전체 스테이지를 보려면 생략하세요."
+
+#: ../../mcp/reference/project.md:41
+msgid "*\"What stages does project #5 use?\"*"
+msgstr "*\"프로젝트 #5는 어떤 스테이지를 사용하나요?\"*"
+
+#: ../../mcp/reference/project.md:45
+msgid "`project_search_tasks`"
+msgstr "`project_search_tasks`"
+
+#: ../../mcp/reference/project.md:47
+msgid "Search tasks with optional filters."
+msgstr "선택적 필터를 사용하여 태스크를 검색합니다."
+
+#: ../../mcp/reference/project.md
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../mcp/reference/project.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/project.md
+msgid "Search keyword in task name or description."
+msgstr "태스크 이름 또는 설명에서 검색할 키워드."
+
+#: ../../mcp/reference/project.md
+msgid "Filter by project."
+msgstr "프로젝트별 필터링."
+
+#: ../../mcp/reference/project.md
+msgid "`stage_id`"
+msgstr "`stage_id`"
+
+#: ../../mcp/reference/project.md
+msgid "Filter by stage."
+msgstr "스테이지별 필터링."
+
+#: ../../mcp/reference/project.md
+msgid "`assignee_id`"
+msgstr "`assignee_id`"
+
+#: ../../mcp/reference/project.md
+msgid "Filter by assignee (user ID)."
+msgstr "담당자별 필터링(사용자 ID)."
+
+#: ../../mcp/reference/project.md
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../mcp/reference/project.md
+msgid "Maximum results (default 20, max 80)."
+msgstr "최대 결과 수(기본값 20, 최대 80)."
+
+#: ../../mcp/reference/project.md:58
+msgid "*\"Find all open tasks in the Marketing project assigned to user #3.\"*"
+msgstr "*\"마케팅 프로젝트에서 사용자 #3에게 할당된 모든 열린 태스크를 찾으세요.\"*"
+
+#: ../../mcp/reference/project.md:62
+msgid "`project_read_task`"
+msgstr "`project_read_task`"
+
+#: ../../mcp/reference/project.md:64
+msgid ""
+"Get full details of a task, including description, stage, assignees, "
+"deadline, and any linked Knowledge articles."
+msgstr "태스크의 전체 상세 정보(설명, 스테이지, 담당자, 마감일, 연결된 Knowledge 아티클 포함)를 가져옵니다."
+
+#: ../../mcp/reference/project.md
+msgid "`task_id`"
+msgstr "`task_id`"
+
+#: ../../mcp/reference/project.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/project.md
+msgid "Numeric task ID."
+msgstr "숫자 태스크 ID."
+
+#: ../../mcp/reference/project.md:72
+msgid "*\"Show me the details of task #201.\"*"
+msgstr "*\"태스크 #201의 상세 정보를 보여주세요.\"*"
+
+#: ../../mcp/reference/project.md:76
+msgid "`project_create_task`"
+msgstr "`project_create_task`"
+
+#: ../../mcp/reference/project.md:78
+msgid "Create a new task (or sub-task)."
+msgstr "새 태스크(또는 서브태스크)를 생성합니다."
+
+#: ../../mcp/reference/project.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../mcp/reference/project.md
+msgid "Task title."
+msgstr "태스크 제목."
+
+#: ../../mcp/reference/project.md
+msgid "Project to assign the task to."
+msgstr "태스크를 배정할 프로젝트."
+
+#: ../../mcp/reference/project.md
+msgid "`parent_id`"
+msgstr "`parent_id`"
+
+#: ../../mcp/reference/project.md
+msgid "Parent task ID — creates a sub-task."
+msgstr "부모 태스크 ID — 서브태스크를 생성합니다."
+
+#: ../../mcp/reference/project.md
+msgid "`description`"
+msgstr "`description`"
+
+#: ../../mcp/reference/project.md
+msgid "Task description (Markdown)."
+msgstr "태스크 설명(Markdown)."
+
+#: ../../mcp/reference/project.md
+msgid "User ID of the assignee."
+msgstr "담당자의 사용자 ID."
+
+#: ../../mcp/reference/project.md
+msgid "`deadline`"
+msgstr "`deadline`"
+
+#: ../../mcp/reference/project.md
+msgid "Deadline date (`YYYY-MM-DD`)."
+msgstr "마감일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/project.md:90
+msgid ""
+"*\"Create a task 'Prepare Q3 report' in project #5 assigned to user #8, "
+"due 2026-09-30.\"*"
+msgstr "*\"프로젝트 #5에서 'Q3 보고서 준비' 태스크를 생성하고, 사용자 #8에게 할당하며, 마감일을 2026-09-30으로 설정하세요.\"*"
+
+#: ../../mcp/reference/project.md:94
+msgid "`project_update_task`"
+msgstr "`project_update_task`"
+
+#: ../../mcp/reference/project.md:96
+msgid "Update an existing task."
+msgstr "기존 태스크를 업데이트합니다."
+
+#: ../../mcp/reference/project.md
+msgid "Task ID to update."
+msgstr "업데이트할 태스크 ID."
+
+#: ../../mcp/reference/project.md
+msgid "New task title."
+msgstr "새 태스크 제목."
+
+#: ../../mcp/reference/project.md
+msgid "Move to a different stage."
+msgstr "다른 스테이지로 이동."
+
+#: ../../mcp/reference/project.md
+msgid "Change the assignee."
+msgstr "담당자 변경."
+
+#: ../../mcp/reference/project.md
+msgid "New deadline (`YYYY-MM-DD`)."
+msgstr "새 마감일(`YYYY-MM-DD`)."
+
+#: ../../mcp/reference/project.md
+msgid "New description (Markdown)."
+msgstr "새 설명(Markdown)."
+
+#: ../../mcp/reference/project.md:108
+msgid "*\"Move task #201 to the 'Done' stage.\"*"
+msgstr "*\"태스크 #201을 'Done' 스테이지로 이동하세요.\"*"
+
+#: ../../mcp/reference/project.md:112
+msgid "`project_link_knowledge_article`"
+msgstr "`project_link_knowledge_article`"
+
+#: ../../mcp/reference/project.md:114
+msgid ""
+"Link a Knowledge article to a task. Requires the Odoo `knowledge` app to "
+"be installed."
+msgstr "태스크에 Knowledge 아티클을 연결합니다. Odoo `knowledge` 앱이 설치되어 있어야 합니다."
+
+#: ../../mcp/reference/project.md
+msgid "Task ID."
+msgstr "태스크 ID."
+
+#: ../../mcp/reference/project.md
+msgid "`article_id`"
+msgstr "`article_id`"
+
+#: ../../mcp/reference/project.md
+msgid "Knowledge article ID to link."
+msgstr "연결할 Knowledge 아티클 ID."
+
+#: ../../mcp/reference/project.md:122
+msgid "*\"Link Knowledge article #55 to task #201.\"*"
+msgstr "*\"Knowledge 아티클 #55를 태스크 #201에 연결하세요.\"*"
+
+#: ../../mcp/reference/project.md:125
+msgid ""
+"This tool is only registered when the `knowledge` Odoo app is installed. "
+"If Knowledge is not installed, the tool will not appear in `tools/list`."
+msgstr "이 도구는 Odoo `knowledge` 앱이 설치된 경우에만 등록됩니다. Knowledge가 설치되지 않은 경우 `tools/list`에 표시되지 않습니다."

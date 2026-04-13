@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../mcp/reference/survey.md:1
+msgid "Surveys (`lu_mcp_survey`)"
+msgstr "Surveys (`lu_mcp_survey`)"
+
+#: ../../mcp/reference/survey.md:3
+msgid "**6 tools** for Odoo survey creation and response analytics."
+msgstr "Odoo 설문 생성 및 응답 분석을 위한 **6가지 도구**입니다."
+
+#: ../../mcp/reference/survey.md:5
+msgid "Requires: `lu_mcp_server`, Odoo `survey` app."
+msgstr "필수: `lu_mcp_server`, Odoo `survey` 앱."
+
+#: ../../mcp/reference/survey.md:9
+msgid "Overview"
+msgstr "개요"
+
+#: ../../mcp/reference/survey.md:11
+msgid ""
+"These tools let an AI client list and read existing surveys, create new "
+"surveys, add questions (9 question types), view aggregated responses, and"
+" generate a survey automatically from a Knowledge article."
+msgstr ""
+"이 도구들을 통해 AI 클라이언트는 기존 설문을 나열 및 읽기, 새 설문 생성, 질문 추가(9가지 질문 유형), "
+"집계된 응답 보기, Knowledge 아티클에서 설문을 자동으로 생성할 수 있습니다."
+
+#: ../../mcp/reference/survey.md:17
+msgid "Tools"
+msgstr "도구"
+
+#: ../../mcp/reference/survey.md:19
+msgid "`survey_list_surveys`"
+msgstr "`survey_list_surveys`"
+
+#: ../../mcp/reference/survey.md:21
+msgid "List all surveys."
+msgstr "모든 설문을 나열합니다."
+
+#: ../../mcp/reference/survey.md
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../mcp/reference/survey.md
+msgid "Type"
+msgstr "유형"
+
+#: ../../mcp/reference/survey.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../mcp/reference/survey.md
+msgid "Description"
+msgstr "설명"
+
+#: ../../mcp/reference/survey.md
+msgid "*(none)*"
+msgstr "*(없음)*"
+
+#: ../../mcp/reference/survey.md:27 ../../mcp/reference/survey.md:40
+#: ../../mcp/reference/survey.md:54 ../../mcp/reference/survey.md:103
+#: ../../mcp/reference/survey.md:120
+msgid "**Example prompt**"
+msgstr "**예제 프롬프트**"
+
+#: ../../mcp/reference/survey.md:28
+msgid "*\"Show all available surveys.\"*"
+msgstr "*\"사용 가능한 모든 설문을 보여주세요.\"*"
+
+#: ../../mcp/reference/survey.md:32
+msgid "`survey_read_survey`"
+msgstr "`survey_read_survey`"
+
+#: ../../mcp/reference/survey.md:34
+msgid "Get full details of a survey, including its questions and options."
+msgstr "질문 및 옵션을 포함한 설문의 전체 상세 정보를 가져옵니다."
+
+#: ../../mcp/reference/survey.md
+msgid "`survey_id`"
+msgstr "`survey_id`"
+
+#: ../../mcp/reference/survey.md
+msgid "integer"
+msgstr "integer"
+
+#: ../../mcp/reference/survey.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../mcp/reference/survey.md
+msgid "Survey ID."
+msgstr "설문 ID."
+
+#: ../../mcp/reference/survey.md:41
+msgid "*\"Show me the questions in survey #10.\"*"
+msgstr "*\"설문 #10의 질문을 보여주세요.\"*"
+
+#: ../../mcp/reference/survey.md:45
+msgid "`survey_create_survey`"
+msgstr "`survey_create_survey`"
+
+#: ../../mcp/reference/survey.md:47
+msgid "Create a new survey."
+msgstr "새 설문을 생성합니다."
+
+#: ../../mcp/reference/survey.md
+msgid "`title`"
+msgstr "`title`"
+
+#: ../../mcp/reference/survey.md
+msgid "string"
+msgstr "string"
+
+#: ../../mcp/reference/survey.md
+msgid "Survey title."
+msgstr "설문 제목."
+
+#: ../../mcp/reference/survey.md
+msgid "`description`"
+msgstr "`description`"
+
+#: ../../mcp/reference/survey.md
+msgid "No"
+msgstr "아니요"
+
+#: ../../mcp/reference/survey.md
+msgid "Survey description (Markdown)."
+msgstr "설문 설명(Markdown)."
+
+#: ../../mcp/reference/survey.md:55
+msgid "*\"Create a survey titled 'Employee Satisfaction Q3 2026'.\"*"
+msgstr "*\"'Employee Satisfaction Q3 2026'이라는 제목의 설문을 생성하세요.\"*"
+
+#: ../../mcp/reference/survey.md:59
+msgid "`survey_add_question`"
+msgstr "`survey_add_question`"
+
+#: ../../mcp/reference/survey.md:61
+msgid "Add a question to an existing survey."
+msgstr "기존 설문에 질문을 추가합니다."
+
+#: ../../mcp/reference/survey.md
+msgid "Question text."
+msgstr "질문 텍스트."
+
+#: ../../mcp/reference/survey.md
+msgid "`question_type`"
+msgstr "`question_type`"
+
+#: ../../mcp/reference/survey.md
+msgid "Question type (default `simple_choice`). See below."
+msgstr "질문 유형(기본값 `simple_choice`). 아래 참조."
+
+#: ../../mcp/reference/survey.md
+msgid "`is_required`"
+msgstr "`is_required`"
+
+#: ../../mcp/reference/survey.md
+msgid "boolean"
+msgstr "boolean"
+
+#: ../../mcp/reference/survey.md
+msgid "Whether the question is mandatory (default `false`)."
+msgstr "질문이 필수인지 여부(기본값 `false`)."
+
+#: ../../mcp/reference/survey.md
+msgid "`answers`"
+msgstr "`answers`"
+
+#: ../../mcp/reference/survey.md
+msgid "array of string"
+msgstr "array of string"
+
+#: ../../mcp/reference/survey.md
+msgid ""
+"Answer choices for `simple_choice`, `multiple_choice`, `matrix`, or "
+"`scale`."
+msgstr ""
+"`simple_choice`, `multiple_choice`, `matrix`, 또는 `scale`의 응답 선택지."
+
+#: ../../mcp/reference/survey.md:71
+msgid "**Question types**"
+msgstr "**질문 유형**"
+
+#: ../../mcp/reference/survey.md
+msgid "`text_box`"
+msgstr "`text_box`"
+
+#: ../../mcp/reference/survey.md
+msgid "Long text (multi-line)"
+msgstr "장문 텍스트(여러 줄)"
+
+#: ../../mcp/reference/survey.md
+msgid "`char_box`"
+msgstr "`char_box`"
+
+#: ../../mcp/reference/survey.md
+msgid "Short text (single line)"
+msgstr "단문 텍스트(한 줄)"
+
+#: ../../mcp/reference/survey.md
+msgid "`numerical_box`"
+msgstr "`numerical_box`"
+
+#: ../../mcp/reference/survey.md
+msgid "Numeric input"
+msgstr "숫자 입력"
+
+#: ../../mcp/reference/survey.md
+msgid "`date`"
+msgstr "`date`"
+
+#: ../../mcp/reference/survey.md
+msgid "Date picker"
+msgstr "날짜 선택"
+
+#: ../../mcp/reference/survey.md
+msgid "`datetime`"
+msgstr "`datetime`"
+
+#: ../../mcp/reference/survey.md
+msgid "Date and time picker"
+msgstr "날짜/시간 선택"
+
+#: ../../mcp/reference/survey.md
+msgid "`simple_choice`"
+msgstr "`simple_choice`"
+
+#: ../../mcp/reference/survey.md
+msgid "Single-select (radio buttons)"
+msgstr "단일 선택(라디오 버튼)"
+
+#: ../../mcp/reference/survey.md
+msgid "`multiple_choice`"
+msgstr "`multiple_choice`"
+
+#: ../../mcp/reference/survey.md
+msgid "Multi-select (checkboxes)"
+msgstr "다중 선택(체크박스)"
+
+#: ../../mcp/reference/survey.md
+msgid "`matrix`"
+msgstr "`matrix`"
+
+#: ../../mcp/reference/survey.md
+msgid "Grid of rows × columns"
+msgstr "행 × 열 그리드"
+
+#: ../../mcp/reference/survey.md
+msgid "`scale`"
+msgstr "`scale`"
+
+#: ../../mcp/reference/survey.md
+msgid "Numeric scale (e.g. 1–5 rating)"
+msgstr "숫자 척도(예: 1~5점 평가)"
+
+#: ../../mcp/reference/survey.md:85
+msgid "**Example prompt — multiple choice**"
+msgstr "**예제 프롬프트 — 다중 선택**"
+
+#: ../../mcp/reference/survey.md:86
+msgid ""
+"*\"Add a multiple-choice question 'Which features do you use?' to survey "
+"#10 with options: Chat, Workflows, Alerts, Reports.\"*"
+msgstr ""
+"*\"'Which features do you use?' 다중 선택 질문을 설문 #10에 추가하고 옵션을 Chat, Workflows, Alerts, Reports로 설정하세요.\"*"
+
+#: ../../mcp/reference/survey.md:88
+msgid "**Example prompt — scale**"
+msgstr "**예제 프롬프트 — 척도**"
+
+#: ../../mcp/reference/survey.md:89
+msgid "*\"Add a scale question 'How satisfied are you overall?' to survey #10.\"*"
+msgstr "*\"'How satisfied are you overall?' 척도 질문을 설문 #10에 추가하세요.\"*"
+
+#: ../../mcp/reference/survey.md:93
+msgid "`survey_get_responses`"
+msgstr "`survey_get_responses`"
+
+#: ../../mcp/reference/survey.md:95
+msgid "Get aggregated response analytics for a survey."
+msgstr "설문의 집계된 응답 분석을 가져옵니다."
+
+#: ../../mcp/reference/survey.md:101
+msgid "Returns total responses, completion rate, and per-question answer counts."
+msgstr "총 응답 수, 완료율, 질문별 응답 수를 반환합니다."
+
+#: ../../mcp/reference/survey.md:104
+msgid "*\"Show the responses for survey #10.\"*"
+msgstr "*\"설문 #10의 응답을 보여주세요.\"*"
+
+#: ../../mcp/reference/survey.md:108
+msgid "`survey_generate_from_knowledge`"
+msgstr "`survey_generate_from_knowledge`"
+
+#: ../../mcp/reference/survey.md:110
+msgid ""
+"Generate a survey automatically from a Knowledge article. The LLM (Odoo "
+"AI) analyzes the article content and creates relevant questions."
+msgstr ""
+"Knowledge 아티클에서 설문을 자동으로 생성합니다. LLM(Odoo AI)이 아티클 내용을 분석하여 관련 질문을 생성합니다."
+
+#: ../../mcp/reference/survey.md:113
+msgid "Requires: Odoo `knowledge` app and an AI provider configured in Odoo."
+msgstr "필수: Odoo `knowledge` 앱 및 Odoo에서 구성된 AI 공급업체."
+
+#: ../../mcp/reference/survey.md
+msgid "`article_id`"
+msgstr "`article_id`"
+
+#: ../../mcp/reference/survey.md
+msgid "Knowledge article ID to generate from."
+msgstr "생성할 Knowledge 아티클 ID."
+
+#: ../../mcp/reference/survey.md
+msgid "`survey_title`"
+msgstr "`survey_title`"
+
+#: ../../mcp/reference/survey.md
+msgid "Title for the new survey. Defaults to the article title."
+msgstr "새 설문의 제목. 기본값은 아티클 제목입니다."
+
+#: ../../mcp/reference/survey.md:121
+msgid ""
+"*\"Generate a survey from Knowledge article #55 (Product Training "
+"Guide).\"*"
+msgstr ""
+"*\"Knowledge 아티클 #55(Product Training Guide)에서 설문을 생성하세요.\"*"
+
