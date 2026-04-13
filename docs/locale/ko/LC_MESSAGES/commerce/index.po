@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — Commerce index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,37 +20,36 @@ msgstr ""
 
 #: ../../commerce/index.rst:2
 msgid "Commerce"
-msgstr ""
+msgstr "커머스"
 
 #: ../../commerce/index.rst:4
 msgid "E-commerce platform connectors and delivery service integrations for Odoo."
-msgstr ""
+msgstr "Odoo용 이커머스 플랫폼 커넥터 및 배송 서비스 연동."
 
 #: ../../commerce/index.rst:10
 msgid "Repository"
-msgstr ""
+msgstr "모듈"
 
 #: ../../commerce/index.rst:11
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../commerce/index.rst:12
 msgid "``lu_commerce``"
-msgstr ""
+msgstr "``lu_commerce``"
 
 #: ../../commerce/index.rst:13
 msgid "Coupang, Naver Smart Store, and marketplace connectors"
-msgstr ""
+msgstr "쿠팡, 네이버 스마트스토어, 마켓플레이스 커넥터"
 
 #: ../../commerce/index.rst:14
 msgid "``lu_delivery``"
-msgstr ""
+msgstr "``lu_delivery``"
 
 #: ../../commerce/index.rst:15
 msgid "Delivery service integrations (CJ, Hanjin, Lotte, etc.)"
-msgstr ""
+msgstr "배송 서비스 연동 (CJ대한통운, 한진, 롯데 등)"
 
 #: ../../commerce/index.rst:19
 msgid "Detailed documentation for Commerce modules is planned for Phase 2 (W11+)."
-msgstr ""
-
+msgstr "커머스 모듈 상세 문서는 2단계 (W11+)에 작성될 예정입니다."

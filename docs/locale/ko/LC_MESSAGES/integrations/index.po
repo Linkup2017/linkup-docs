@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — Integrations index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,39 +20,38 @@ msgstr ""
 
 #: ../../integrations/index.rst:2
 msgid "Integrations"
-msgstr ""
+msgstr "연동"
 
 #: ../../integrations/index.rst:4
 msgid "PG payment gateways and external API connectors for Odoo."
-msgstr ""
+msgstr "Odoo용 PG 결제 게이트웨이 및 외부 API 커넥터."
 
 #: ../../integrations/index.rst:10
 msgid "Repository"
-msgstr ""
+msgstr "모듈"
 
 #: ../../integrations/index.rst:11
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../integrations/index.rst:12
 msgid "``lu_payment``"
-msgstr ""
+msgstr "``lu_payment``"
 
 #: ../../integrations/index.rst:13
 msgid "PG payment gateways (Toss, NHN KCP, Inicis, etc.)"
-msgstr ""
+msgstr "PG 결제 게이트웨이 (토스, NHN KCP, 이니시스 등)"
 
 #: ../../integrations/index.rst:14
 msgid "``lu_api``"
-msgstr ""
+msgstr "``lu_api``"
 
 #: ../../integrations/index.rst:15
 msgid "External API connectors and webhook management"
-msgstr ""
+msgstr "외부 API 커넥터 및 웹훅 관리"
 
 #: ../../integrations/index.rst:19
 msgid ""
 "Detailed documentation for Integration modules is planned for Phase 2 "
 "(W12+)."
-msgstr ""
-
+msgstr "연동 모듈 상세 문서는 2단계 (W12+)에 작성될 예정입니다."

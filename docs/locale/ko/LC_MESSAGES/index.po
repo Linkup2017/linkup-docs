@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — main index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-14 05:40+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -20,37 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../index.rst:21 ../../index.rst:66
-msgid "AI Agent"
-msgstr ""
-
-#: ../../index.rst:28 ../../index.rst:73
-msgid "MCP Server"
-msgstr ""
-
-#: ../../index.rst:35 ../../index.rst:80
-msgid "Localization (KR)"
-msgstr ""
-
-#: ../../index.rst:42 ../../index.rst:87
-msgid "Messaging"
-msgstr ""
-
-#: ../../index.rst:48 ../../index.rst:94
-msgid "Commerce"
-msgstr ""
-
-#: ../../index.rst:54 ../../index.rst:101
-msgid "Marketing"
-msgstr ""
-
-#: ../../index.rst:60 ../../index.rst:108
-msgid "Integrations"
-msgstr ""
-
 #: ../../index.rst:2
 msgid "Linkup Infotech Docs"
-msgstr ""
+msgstr "Linkup Infotech 문서"
 
 #: ../../index.rst:4
 msgid ""
@@ -59,48 +29,85 @@ msgid ""
 "Korean localization, messaging integrations, commerce connectors, and "
 "more."
 msgstr ""
+"**Linkup Infotech Odoo Packages** 공식 문서에 오신 것을 환영합니다. "
+"AI 어시스턴트, 한국 현지화, 메시징 연동, 커머스 커넥터 등 Odoo를 확장하는 "
+"모듈 모음입니다."
 
 #: ../../index.rst:10
 msgid ""
 "New here? Start with the :doc:`ai-agent/quickstart` guide to get an AI "
 "assistant running in your Odoo instance in under 10 minutes."
 msgstr ""
+"처음이신가요? :doc:`ai-agent/quickstart` 가이드를 따라 10분 이내에 "
+"Odoo 인스턴스에서 AI 어시스턴트를 실행해 보세요."
 
 #: ../../index.rst:16
 msgid "Package Categories"
-msgstr ""
+msgstr "패키지 카테고리"
+
+#: ../../index.rst:21 ../../index.rst:66
+msgid "AI Agent"
+msgstr "AI 에이전트"
 
 #: ../../index.rst:25
 msgid ""
 "Local LLM-powered AI assistant for Odoo — chat, domain routing, "
 "workflows, and proactive alerts."
 msgstr ""
+"Odoo용 로컬 LLM 기반 AI 어시스턴트 — 채팅, 도메인 라우팅, "
+"워크플로우, 프로액티브 알림."
+
+#: ../../index.rst:28 ../../index.rst:73
+msgid "MCP Server"
+msgstr "MCP 서버"
 
 #: ../../index.rst:32
 msgid ""
 "Model Context Protocol server — 74 tools exposing Odoo data to Claude "
 "Desktop, claude.ai, and any MCP-compatible AI client."
 msgstr ""
+"Model Context Protocol 서버 — Claude Desktop, claude.ai 등 MCP 호환 AI "
+"클라이언트에 Odoo 데이터를 제공하는 74가지 도구."
+
+#: ../../index.rst:35 ../../index.rst:80
+msgid "Localization (KR)"
+msgstr "현지화 (KR)"
 
 #: ../../index.rst:39
 msgid ""
 "Korean tax invoices, payroll, social insurance, and regulatory compliance"
 " modules."
 msgstr ""
+"한국 세금계산서, 급여, 사회보험, 법적 규정 준수 모듈."
+
+#: ../../index.rst:42 ../../index.rst:87
+msgid "Messaging"
+msgstr "메시징"
 
 #: ../../index.rst:46
 msgid "KakaoTalk, Alimtalk, and SMS integrations for Odoo."
-msgstr ""
+msgstr "Odoo용 카카오톡, 알림톡, SMS 연동."
+
+#: ../../index.rst:48 ../../index.rst:94
+msgid "Commerce"
+msgstr "커머스"
 
 #: ../../index.rst:52
 msgid "Coupang, Naver Smart Store, and delivery service connectors."
-msgstr ""
+msgstr "쿠팡, 네이버 스마트스토어, 배송 서비스 커넥터."
+
+#: ../../index.rst:54 ../../index.rst:101
+msgid "Marketing"
+msgstr "마케팅"
 
 #: ../../index.rst:58
 msgid "Email and SMS marketing campaign tools."
-msgstr ""
+msgstr "이메일 및 SMS 마케팅 캠페인 도구."
+
+#: ../../index.rst:60 ../../index.rst:108
+msgid "Integrations"
+msgstr "연동"
 
 #: ../../index.rst:64
 msgid "PG payment gateways and external API connectors."
-msgstr ""
-
+msgstr "PG 결제 게이트웨이 및 외부 API 커넥터."

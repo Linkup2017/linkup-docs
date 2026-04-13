@@ -67,6 +67,21 @@ out-of-scope message (e.g., *"This is outside my finance domain."*) rather than
 hallucinating an answer.
 
 ```{note}
+`crm.lead` appears in both the `sales` and `crm` domain prompts by design — each
+domain uses the model from a different perspective:
+
+- **`sales`** — treats `crm.lead` as a pipeline object: lead qualification,
+  opportunity conversion, revenue forecasting, and sales-stage progression.
+- **`crm`** — treats `crm.lead` as a customer-relationship artefact: interaction
+  history, partner linkage, and communication context.
+
+When a routing rule is named `sales`, the agent focuses on pipeline and
+conversion; when named `crm`, it focuses on the customer account and contact
+history.  Both are correct — the distinction is driven by the agent's domain
+scope, not by the underlying model.
+```
+
+```{note}
 The domain key is matched against the **Domain** field of the routing rule
 (case-insensitive).  Routing rules named `"Sales"`, `"sales"`, or `"SALES"` all
 resolve to the `sales` system prompt.  Custom rule names that do not match any

@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — Marketing index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,31 +20,30 @@ msgstr ""
 
 #: ../../marketing/index.rst:2
 msgid "Marketing"
-msgstr ""
+msgstr "마케팅"
 
 #: ../../marketing/index.rst:4
 msgid "Email and SMS marketing campaign tools for Odoo."
-msgstr ""
+msgstr "Odoo용 이메일 및 SMS 마케팅 캠페인 도구."
 
 #: ../../marketing/index.rst:10
 msgid "Repository"
-msgstr ""
+msgstr "모듈"
 
 #: ../../marketing/index.rst:11
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../marketing/index.rst:12
 msgid "``lu_marketing``"
-msgstr ""
+msgstr "``lu_marketing``"
 
 #: ../../marketing/index.rst:13
 msgid "Marketing automation — email campaigns, SMS blasts, audience segmentation"
-msgstr ""
+msgstr "마케팅 자동화 — 이메일 캠페인, SMS 발송, 타겟 고객 세분화"
 
 #: ../../marketing/index.rst:17
 msgid ""
 "Detailed documentation for Marketing modules is planned for Phase 2 "
 "(W11+)."
-msgstr ""
-
+msgstr "마케팅 모듈 상세 문서는 2단계 (W11+)에 작성될 예정입니다."

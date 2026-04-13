@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-09 05:22+0900\n"
-"PO-Revision-Date: 2026-04-09 00:00+0900\n"
-"Last-Translator: Linkup Infotech Team\n"
+"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
-"Language-Team: ko\n"
+"Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -29,8 +29,8 @@ msgid ""
 "via Anthropic Claude — letting you assign a different LLM provider to "
 "each agent for cost and performance flexibility."
 msgstr ""
-"**Linkup AI Agent** 는 Odoo 19.0 Enterprise 인스턴스 내에서 직접 실행되는 하이브리드 LLM "
-"AI 어시스턴트입니다. `Ollama <https://ollama.com>`_ 를 통한 온프레미스 추론과 "
+"**Linkup AI Agent**\ 는 Odoo 19.0 Enterprise 인스턴스 내에서 직접 실행되는 하이브리드 LLM "
+"AI 어시스턴트입니다. `Ollama <https://ollama.com>`_\ 를 통한 온프레미스 추론과 "
 "Anthropic Claude를 통한 클라우드 추론을 모두 지원하며, 비용과 성능에 맞게 에이전트별로 "
 "다른 LLM Provider를 지정할 수 있습니다."
 
@@ -61,17 +61,17 @@ msgstr "Ollama 커넥터 — 모델 관리, 헬스 체크, 스트리밍"
 #: ../../ai-agent/index.rst:22 ../../ai-agent/index.rst:25
 #: ../../ai-agent/index.rst:28 ../../ai-agent/index.rst:31
 #: ../../ai-agent/index.rst:34 ../../ai-agent/index.rst:37
-#: ../../ai-agent/index.rst:40
+#: ../../ai-agent/index.rst:40 ../../ai-agent/index.rst:43
 msgid "|check|"
-msgstr ""
+msgstr "|check|"
 
 #: ../../ai-agent/index.rst:23
-msgid "``lu_ai_orchestrator``"
-msgstr "``lu_ai_orchestrator``"
+msgid "``lu_ai_claude``"
+msgstr "``lu_ai_claude``"
 
 #: ../../ai-agent/index.rst:24
-msgid "Orchestrator — domain routing, system prompts, context injection"
-msgstr "오케스트레이터 — 도메인 라우팅, 시스템 프롬프트, 컨텍스트 주입"
+msgid "Anthropic Claude connector (Opus / Sonnet / Haiku)"
+msgstr "Anthropic Claude 커넥터 (Opus / Sonnet / Haiku)"
 
 #: ../../ai-agent/index.rst:26
 msgid "``lu_ai_sidepanel``"
@@ -82,49 +82,205 @@ msgid "Chat UI — web client integration, message threading"
 msgstr "채팅 UI — 웹 클라이언트 통합, 메시지 스레딩"
 
 #: ../../ai-agent/index.rst:29
+msgid "``lu_ai_rag``"
+msgstr "``lu_ai_rag``"
+
+#: ../../ai-agent/index.rst:30
+msgid "File-server RAG — local Ollama embeddings, zero external data transfer"
+msgstr "파일 서버 RAG — 로컬 Ollama 임베딩, 외부 데이터 전송 없음"
+
+#: ../../ai-agent/index.rst:32
+msgid "``lu_ai_orchestrator``"
+msgstr "``lu_ai_orchestrator``"
+
+#: ../../ai-agent/index.rst:33
+msgid "Orchestrator — domain routing, system prompts, context injection"
+msgstr "오케스트레이터 — 도메인 라우팅, 시스템 프롬프트, 컨텍스트 주입"
+
+#: ../../ai-agent/index.rst:35
 msgid "``lu_ai_workflow``"
 msgstr "``lu_ai_workflow``"
 
-#: ../../ai-agent/index.rst:30
+#: ../../ai-agent/index.rst:36
 msgid "Workflow engine — multi-step automation, triggers, conditions"
 msgstr "워크플로우 엔진 — 멀티스텝 자동화, 트리거, 조건"
 
-#: ../../ai-agent/index.rst:32
+#: ../../ai-agent/index.rst:38
 msgid "``lu_ai_proactive``"
 msgstr "``lu_ai_proactive``"
 
-#: ../../ai-agent/index.rst:33
+#: ../../ai-agent/index.rst:39
 msgid "Proactive alerts — scheduled checks, threshold notifications"
 msgstr "프로액티브 알림 — 스케줄 점검, 임계값 알림"
 
-#: ../../ai-agent/index.rst:35
+#: ../../ai-agent/index.rst:41
 msgid "``lu_ai_admin``"
 msgstr "``lu_ai_admin``"
 
-#: ../../ai-agent/index.rst:36
+#: ../../ai-agent/index.rst:42
 msgid "Admin dashboard — usage analytics, model monitoring"
 msgstr "관리자 대시보드 — 사용량 분석, 모델 모니터링"
 
-#: ../../ai-agent/index.rst:38
-msgid "``lu_ai_claude``"
-msgstr "``lu_ai_claude``"
-
-#: ../../ai-agent/index.rst:39
-msgid "Anthropic Claude connector (Opus / Sonnet / Haiku)"
-msgstr "Anthropic Claude 커넥터 (Opus / Sonnet / Haiku)"
-
-#: ../../ai-agent/index.rst:41
+#: ../../ai-agent/index.rst:44
 msgid "``lu_ai_edge``"
 msgstr "``lu_ai_edge``"
 
-#: ../../ai-agent/index.rst:42
+#: ../../ai-agent/index.rst:45
 msgid "Enterprise extension — advanced hooks, custom step types"
 msgstr "Enterprise 확장 — 고급 훅, 커스텀 스텝 타입"
 
-#: ../../ai-agent/index.rst:43
+#: ../../ai-agent/index.rst:46
 msgid "Enterprise"
 msgstr "Enterprise"
 
 #: ../../ai-agent/index.rst:48
+msgid "Domain Extension Modules"
+msgstr "도메인 익스텐션 모듈"
+
+#: ../../ai-agent/index.rst:55
+msgid "Base"
+msgstr "기반 모듈"
+
+#: ../../ai-agent/index.rst:58
+msgid "``lu_ai_rag_crm``"
+msgstr "``lu_ai_rag_crm``"
+
+#: ../../ai-agent/index.rst:59
+msgid "CRM domain RAG partitioning"
+msgstr "CRM 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:60
+msgid "rag"
+msgstr "rag"
+
+#: ../../ai-agent/index.rst:61
+msgid "``lu_ai_rag_finance``"
+msgstr "``lu_ai_rag_finance``"
+
+#: ../../ai-agent/index.rst:62
+msgid "Finance domain RAG partitioning"
+msgstr "재무 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:64
+msgid "``lu_ai_rag_helpdesk``"
+msgstr "``lu_ai_rag_helpdesk``"
+
+#: ../../ai-agent/index.rst:65
+msgid "Helpdesk domain RAG partitioning"
+msgstr "헬프데스크 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:67
+msgid "``lu_ai_rag_hr``"
+msgstr "``lu_ai_rag_hr``"
+
+#: ../../ai-agent/index.rst:68
+msgid "HR domain RAG partitioning"
+msgstr "인사 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:70
+msgid "``lu_ai_rag_inventory``"
+msgstr "``lu_ai_rag_inventory``"
+
+#: ../../ai-agent/index.rst:71
+msgid "Inventory domain RAG partitioning"
+msgstr "재고 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:73
+msgid "``lu_ai_rag_procurement``"
+msgstr "``lu_ai_rag_procurement``"
+
+#: ../../ai-agent/index.rst:74
+msgid "Procurement domain RAG partitioning"
+msgstr "구매 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:76
+msgid "``lu_ai_rag_sales``"
+msgstr "``lu_ai_rag_sales``"
+
+#: ../../ai-agent/index.rst:77
+msgid "Sales domain RAG partitioning"
+msgstr "영업 도메인 RAG 파티셔닝"
+
+#: ../../ai-agent/index.rst:79
+msgid "``lu_ai_orchestrator_account``"
+msgstr "``lu_ai_orchestrator_account``"
+
+#: ../../ai-agent/index.rst:80
+msgid "Finance/Accounting domain agent (invoices, payments, budgets)"
+msgstr "재무/회계 도메인 에이전트 (인보이스, 결제, 예산)"
+
+#: ../../ai-agent/index.rst:81
+msgid "orchestrator"
+msgstr "orchestrator"
+
+#: ../../ai-agent/index.rst:82
+msgid "``lu_ai_orchestrator_crm``"
+msgstr "``lu_ai_orchestrator_crm``"
+
+#: ../../ai-agent/index.rst:83
+msgid "CRM domain agent (leads, opportunities, pipeline)"
+msgstr "CRM 도메인 에이전트 (리드, 영업 기회, 파이프라인)"
+
+#: ../../ai-agent/index.rst:85
+msgid "``lu_ai_orchestrator_helpdesk``"
+msgstr "``lu_ai_orchestrator_helpdesk``"
+
+#: ../../ai-agent/index.rst:86
+msgid "Helpdesk domain agent (tickets, SLA, customer support)"
+msgstr "헬프데스크 도메인 에이전트 (티켓, SLA, 고객 지원)"
+
+#: ../../ai-agent/index.rst:88
+msgid "``lu_ai_orchestrator_hr``"
+msgstr "``lu_ai_orchestrator_hr``"
+
+#: ../../ai-agent/index.rst:89
+msgid "HR domain agent (employees, attendance, payroll, leaves)"
+msgstr "인사 도메인 에이전트 (직원, 근태, 급여, 휴가)"
+
+#: ../../ai-agent/index.rst:91
+msgid "``lu_ai_orchestrator_sale``"
+msgstr "``lu_ai_orchestrator_sale``"
+
+#: ../../ai-agent/index.rst:92
+msgid "Sales domain agent (sale orders, quotations, revenue)"
+msgstr "영업 도메인 에이전트 (판매 주문, 견적, 매출)"
+
+#: ../../ai-agent/index.rst:94
+msgid "``lu_ai_orchestrator_stock``"
+msgstr "``lu_ai_orchestrator_stock``"
+
+#: ../../ai-agent/index.rst:95
+msgid "Inventory domain agent (stock, transfers, purchase orders)"
+msgstr "재고 도메인 에이전트 (재고, 이전, 구매 주문)"
+
+#: ../../ai-agent/index.rst:97
+msgid "``lu_ai_proactive_crm``"
+msgstr "``lu_ai_proactive_crm``"
+
+#: ../../ai-agent/index.rst:98
+msgid "CRM proactive alerts — lead stagnation detection, at-risk scoring"
+msgstr "CRM 프로액티브 알림 — 리드 정체 감지, 위험 점수 산정"
+
+#: ../../ai-agent/index.rst:99
+msgid "proactive"
+msgstr "proactive"
+
+#: ../../ai-agent/index.rst:100
+msgid "``lu_ai_proactive_helpdesk``"
+msgstr "``lu_ai_proactive_helpdesk``"
+
+#: ../../ai-agent/index.rst:101
+msgid "Helpdesk proactive alerts — SLA breach detection, ticket nudge"
+msgstr "헬프데스크 프로액티브 알림 — SLA 위반 감지, 티켓 독촉"
+
+#: ../../ai-agent/index.rst:103
+msgid "``lu_ai_proactive_stock``"
+msgstr "``lu_ai_proactive_stock``"
+
+#: ../../ai-agent/index.rst:104
+msgid "Stock proactive alerts — shortage detection, autonomous PO suggestion"
+msgstr "재고 프로액티브 알림 — 부족 감지, 구매 주문 자동 제안"
+
+#: ../../ai-agent/index.rst:109
 msgid "Getting Started"
 msgstr "시작하기"

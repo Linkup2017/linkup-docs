@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for Linkup Infotech Docs — Localization index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
 # This file is distributed under the same license as the Linkup Infotech
 # Docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-08 13:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-04-14 09:00+0900\n"
+"Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
 "Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,45 +20,46 @@ msgstr ""
 
 #: ../../localization/index.rst:2
 msgid "Localization (KR)"
-msgstr ""
+msgstr "현지화 (KR)"
 
 #: ../../localization/index.rst:4
 msgid ""
 "Korean localization modules for Odoo — tax invoices, payroll, social "
 "insurance, and regulatory compliance."
 msgstr ""
+"Odoo 한국 현지화 모듈 — 세금계산서, 급여, 사회보험(4대보험), 법적 규정 준수."
 
 #: ../../localization/index.rst:11
 msgid "Repository"
-msgstr ""
+msgstr "모듈"
 
 #: ../../localization/index.rst:12
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../localization/index.rst:13
 msgid "``l10n_kr``"
-msgstr ""
+msgstr "``l10n_kr``"
 
 #: ../../localization/index.rst:14
 msgid "Korean chart of accounts and tax configuration"
-msgstr ""
+msgstr "한국 계정과목표 및 세금 설정"
 
 #: ../../localization/index.rst:15
 msgid "``lu_l10n_kr``"
-msgstr ""
+msgstr "``lu_l10n_kr``"
 
 #: ../../localization/index.rst:16
 msgid "Tax invoice (세금계산서), e-filing, social insurance (4대보험)"
-msgstr ""
+msgstr "세금계산서, 전자신고, 사회보험(4대보험)"
 
 #: ../../localization/index.rst:17
 msgid "``lu_l10n_kr_hr_payroll``"
-msgstr ""
+msgstr "``lu_l10n_kr_hr_payroll``"
 
 #: ../../localization/index.rst:18
 msgid "Korean payroll — income tax, deductions, pay slip templates"
-msgstr ""
+msgstr "한국 급여 — 소득세, 공제 항목, 급여명세서 템플릿"
 
 #: ../../localization/index.rst:22
 msgid ""
@@ -68,4 +67,5 @@ msgid ""
 "(W10+). This page will be expanded with installation guides, "
 "configuration steps, and usage examples."
 msgstr ""
-
+"현지화 모듈 상세 문서는 2단계 (W10+)에 작성될 예정입니다. "
+"이 페이지는 설치 가이드, 설정 단계, 사용 예시로 확장될 예정입니다."
