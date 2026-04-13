@@ -29,7 +29,7 @@ msgid ""
 "Install only the modules that match the Odoo apps deployed in your "
 "instance."
 msgstr ""
-"10개 플러그인 모듈에 걸친 **74가지 도구**로, 각각 독립적으로 설치 가능합니다. "
+"10개 플러그인 모듈에 걸친 **74가지 도구**\ 로, 각각 독립적으로 설치 가능합니다. "
 "인스턴스에 배포된 Odoo 앱에 맞는 모듈만 설치하세요."
 
 #: ../../mcp/reference/index.rst:11
@@ -65,7 +65,7 @@ msgid ""
 "Browse workspaces, read / search / create / update / move / delete "
 "articles, partial edits via ``content_updates``"
 msgstr ""
-"워크스페이스 탐색, 아티클 읽기/검색/생성/업데이트/이동/삭제, ``content_updates``를 통한 부분 편집"
+"워크스페이스 탐색, 아티클 읽기/검색/생성/업데이트/이동/삭제, ``content_updates``\ 를 통한 부분 편집"
 
 #: ../../mcp/reference/index.rst:20
 msgid "``lu_mcp_project``"
