@@ -26,6 +26,9 @@ Modules
    * - ``lu_ai_sidepanel``
      - Chat UI — web client integration, message threading
      - |check|
+   * - ``lu_ai_rag``
+     - File-server RAG — local Ollama embeddings, zero external data transfer
+     - |check|
    * - ``lu_ai_orchestrator``
      - Orchestrator — domain routing, system prompts, context injection
      - |check|
@@ -37,10 +40,7 @@ Modules
      - |check|
    * - ``lu_ai_admin``
      - Admin dashboard — usage analytics, model monitoring
-     - |check|
-   * - ``lu_ai_rag``
-     - File-server RAG — local Ollama embeddings, zero external data transfer
-     - |check|
+     - |check|   
    * - ``lu_ai_edge``
      - Enterprise extension — advanced hooks, custom step types
      - Enterprise
@@ -55,6 +55,27 @@ Domain Extension Modules
    * - Module
      - Description
      - Base
+   * - ``lu_ai_rag_crm``
+     - CRM domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_finance``
+     - Finance domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_helpdesk``
+     - Helpdesk domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_hr``
+     - HR domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_inventory``
+     - Inventory domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_procurement``
+     - Procurement domain RAG partitioning
+     - rag
+   * - ``lu_ai_rag_sales``
+     - Sales domain RAG partitioning
+     - rag
    * - ``lu_ai_orchestrator_account``
      - Finance/Accounting domain agent (invoices, payments, budgets)
      - orchestrator
@@ -82,27 +103,6 @@ Domain Extension Modules
    * - ``lu_ai_proactive_stock``
      - Stock proactive alerts — shortage detection, autonomous PO suggestion
      - proactive
-   * - ``lu_ai_rag_crm``
-     - CRM domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_finance``
-     - Finance domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_helpdesk``
-     - Helpdesk domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_hr``
-     - HR domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_inventory``
-     - Inventory domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_procurement``
-     - Procurement domain RAG partitioning
-     - rag
-   * - ``lu_ai_rag_sales``
-     - Sales domain RAG partitioning
-     - rag
 
 .. |check| unicode:: U+2705
 
