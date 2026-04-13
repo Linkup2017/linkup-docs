@@ -115,3 +115,4 @@ Getting Started
    quickstart
    configuration
    domain-routing
+   workflows

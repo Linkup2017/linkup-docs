@@ -1,0 +1,1216 @@
+# Korean translation for Linkup Infotech Docs — Workflows
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 13:52+0900\n"
+"PO-Revision-Date: 2026-04-13 14:00+0900\n"
+"Last-Translator: Linkup Infotech <dev@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../ai-agent/workflows.md:1
+msgid "Workflows"
+msgstr "워크플로"
+
+#: ../../ai-agent/workflows.md:3
+msgid "**Module:** `lu_ai_workflow`"
+msgstr "**모듈:** `lu_ai_workflow`"
+
+#: ../../ai-agent/workflows.md:5
+msgid ""
+"Workflows let you define multi-step automation sequences that AI agents "
+"execute inside Odoo — calling LLMs, running server actions, branching on "
+"conditions, requesting human approval, and sending notifications — all in"
+" a stateful, auditable loop."
+msgstr ""
+"워크플로는 AI 에이전트가 Odoo 내에서 실행하는 다단계 자동화 시퀀스를 정의합니다. "
+"LLM 호출, 서버 액션 실행, 조건 분기, 사람의 승인 요청, 알림 전송을 상태 추적이 가능한 "
+"감사 루프(auditable loop) 안에서 처리합니다."
+
+#: ../../ai-agent/workflows.md:10
+msgid ""
+"For agent and model setup, see [Configuration](configuration.md). For "
+"routing messages to domain agents, see [Domain Routing](domain-"
+"routing.md)."
+msgstr ""
+"에이전트 및 모델 설정은 [구성](configuration.md)을 참고하세요. "
+"도메인 에이전트로의 메시지 라우팅은 [도메인 라우팅](domain-routing.md)을 참고하세요."
+
+#: ../../ai-agent/workflows.md:15
+msgid "1. What Is a Workflow?"
+msgstr "1. 워크플로란?"
+
+#: ../../ai-agent/workflows.md:17
+msgid ""
+"A **workflow** is a sequence of typed steps executed by the "
+"`lu_ai_workflow` engine. The engine maintains a shared **context** (a "
+"JSON dictionary) across all steps — each step can read prior outputs and "
+"write its own result back, giving the workflow a persistent memory "
+"throughout the run."
+msgstr ""
+"**워크플로**는 `lu_ai_workflow` 엔진이 실행하는 타입별 스텝의 시퀀스입니다. "
+"엔진은 모든 스텝에 걸쳐 공유 **컨텍스트**(JSON 딕셔너리)를 유지합니다. "
+"각 스텝은 이전 출력을 읽고 자신의 결과를 다시 기록할 수 있어, "
+"워크플로 실행 전반에 걸쳐 지속적인 메모리가 유지됩니다."
+
+#: ../../ai-agent/workflows.md:39
+msgid "Core components"
+msgstr "핵심 구성 요소"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Model"
+msgstr "모델"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Purpose"
+msgstr "역할"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow`"
+msgstr "`lu.ai.workflow`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Workflow definition — trigger, agent, safety guards, steps"
+msgstr "워크플로 정의 — 트리거, 에이전트, 안전 제한, 스텝"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.step`"
+msgstr "`lu.ai.workflow.step`"
+
+#: ../../ai-agent/workflows.md:22
+msgid ""
+"Individual execution unit — LLM call, action, approval, condition, "
+"notification"
+msgstr "개별 실행 단위 — LLM 호출, 액션, 승인, 조건, 알림"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.state`"
+msgstr "`lu.ai.workflow.state`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Single run record — context, progress, step logs, final state"
+msgstr "단일 실행 기록 — 컨텍스트, 진행 상태, 스텝 로그, 최종 상태"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.hook`"
+msgstr "`lu.ai.workflow.hook`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Event trigger or lifecycle interceptor"
+msgstr "이벤트 트리거 또는 라이프사이클 인터셉터"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.llm.request`"
+msgstr "`lu.ai.llm.request`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Async LLM queue entry for background processing"
+msgstr "백그라운드 처리를 위한 비동기 LLM 큐 항목"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.security.sandbox`"
+msgstr "`lu.ai.security.sandbox`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Optional model/field access policy for execution"
+msgstr "실행 시 모델/필드 접근을 제한하는 선택적 보안 정책"
+
+#: ../../ai-agent/workflows.md:52
+msgid "2. Creating a Workflow"
+msgstr "2. 워크플로 생성"
+
+#: ../../ai-agent/workflows.md:54
+msgid "Navigate to **AI → Workflows → Workflows** and click **New**."
+msgstr "**AI → 워크플로 → 워크플로** 메뉴로 이동한 후 **신규**를 클릭합니다."
+
+#: ../../ai-agent/workflows.md:56
+msgid "Workflow fields"
+msgstr "워크플로 필드"
+
+#: ../../ai-agent/workflows.md:22 ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100 ../../ai-agent/workflows.md:124
+#: ../../ai-agent/workflows.md:145 ../../ai-agent/workflows.md:167
+msgid "Field"
+msgstr "필드"
+
+#: ../../ai-agent/workflows.md:22 ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100 ../../ai-agent/workflows.md:124
+#: ../../ai-agent/workflows.md:145 ../../ai-agent/workflows.md:167
+msgid "Description"
+msgstr "설명"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Name**"
+msgstr "**이름**"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Display name of the workflow"
+msgstr "워크플로 표시 이름"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**State**"
+msgstr "**상태**"
+
+#: ../../ai-agent/workflows.md:22
+msgid "`Draft` → `Active` → `Archived`.  Only Active workflows can be triggered."
+msgstr "`초안` → `활성` → `보관`. 활성 상태의 워크플로만 트리거할 수 있습니다."
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Trigger Type**"
+msgstr "**트리거 유형**"
+
+#: ../../ai-agent/workflows.md:22
+msgid ""
+"How the workflow is started — `Manual`, `Scheduled (Cron)`, or `Database "
+"Event`"
+msgstr "워크플로 시작 방식 — `수동`, `예약(Cron)`, `데이터베이스 이벤트`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Default Agent**"
+msgstr "**기본 에이전트**"
+
+#: ../../ai-agent/workflows.md:22
+msgid "LLM agent used by steps that do not override the agent individually"
+msgstr "개별적으로 에이전트를 재정의하지 않는 스텝에서 사용하는 LLM 에이전트"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Max Steps Guard**"
+msgstr "**최대 스텝 제한**"
+
+#: ../../ai-agent/workflows.md:22
+msgid ""
+"Hard cap on step iterations per run.  Prevents infinite loops in "
+"branching workflows. Default: `50`"
+msgstr "실행당 스텝 반복 횟수의 하드 상한선. 분기 워크플로의 무한 루프를 방지합니다. 기본값: `50`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Timeout (seconds)**"
+msgstr "**제한 시간(초)**"
+
+#: ../../ai-agent/workflows.md:22
+msgid ""
+"Wall-clock limit for the entire run.  The engine marks timed-out runs as "
+"`timeout`. Default: `300`"
+msgstr "전체 실행의 실시간 제한 시간. 엔진은 시간이 초과된 실행을 `timeout`으로 표시합니다. 기본값: `300`"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Max Concurrent Runs**"
+msgstr "**최대 동시 실행 수**"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Maximum number of simultaneous active runs.  `0` = unlimited."
+msgstr "동시에 활성화될 수 있는 최대 실행 수. `0` = 무제한."
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Security Sandbox**"
+msgstr "**보안 샌드박스**"
+
+#: ../../ai-agent/workflows.md:22
+msgid ""
+"Optional `lu.ai.security.sandbox` policy restricting which models and "
+"fields the workflow can access"
+msgstr "워크플로가 접근할 수 있는 모델 및 필드를 제한하는 선택적 `lu.ai.security.sandbox` 정책"
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Description**"
+msgstr "**설명**"
+
+#: ../../ai-agent/workflows.md:22
+msgid "Internal documentation — not used in execution"
+msgstr "내부 문서용 — 실행에는 사용되지 않음"
+
+#: ../../ai-agent/workflows.md:70
+msgid "Activating a workflow"
+msgstr "워크플로 활성화"
+
+#: ../../ai-agent/workflows.md:72
+msgid "Fill in all required fields and add at least one step."
+msgstr "필수 필드를 모두 입력하고 스텝을 최소 하나 이상 추가합니다."
+
+#: ../../ai-agent/workflows.md:73
+msgid "Click **Activate** — the state changes from `Draft` to `Active`."
+msgstr "**활성화**를 클릭합니다 — 상태가 `초안`에서 `활성`으로 변경됩니다."
+
+#: ../../ai-agent/workflows.md:74
+msgid "To disable without deleting, click **Archive**."
+msgstr "삭제하지 않고 비활성화하려면 **보관**을 클릭합니다."
+
+#: ../../ai-agent/workflows.md:77
+msgid ""
+"A workflow in `Draft` state cannot be triggered manually or by "
+"automation. Always activate before testing."
+msgstr "`초안` 상태의 워크플로는 수동으로도, 자동화로도 트리거할 수 없습니다. 테스트 전에 반드시 활성화하세요."
+
+#: ../../ai-agent/workflows.md:83
+msgid "3. Step Types"
+msgstr "3. 스텝 유형"
+
+#: ../../ai-agent/workflows.md:85
+msgid ""
+"Add steps in the **Steps** tab of the workflow form.  Steps execute in "
+"ascending **Sequence** order by default.  Set `Active = False` on a step "
+"to skip it without deleting it."
+msgstr ""
+"워크플로 폼의 **스텝** 탭에서 스텝을 추가합니다. 스텝은 기본적으로 **순서(Sequence)** 오름차순으로 실행됩니다. "
+"스텝을 삭제하지 않고 건너뛰려면 `Active = False`로 설정합니다."
+
+#: ../../ai-agent/workflows.md:89
+msgid "3.1 LLM Call (`llm_call`)"
+msgstr "3.1 LLM 호출 (`llm_call`)"
+
+#: ../../ai-agent/workflows.md:91
+msgid ""
+"Sends a prompt to an LLM agent and stores the response in the workflow "
+"context."
+msgstr "LLM 에이전트에 프롬프트를 전송하고 응답을 워크플로 컨텍스트에 저장합니다."
+
+#: ../../ai-agent/workflows.md:76
+msgid "**Prompt Template**"
+msgstr "**프롬프트 템플릿**"
+
+#: ../../ai-agent/workflows.md:76
+#, python-brace-format
+msgid ""
+"Text sent to the LLM.  Use `{key}` placeholders to inject values from the"
+" current context (e.g., `{customer_name}`, `{analysis}`)."
+msgstr ""
+"LLM에 전송할 텍스트. `{key}` 플레이스홀더를 사용해 현재 컨텍스트의 값을 주입합니다 "
+"(예: `{customer_name}`, `{analysis}`)."
+
+#: ../../ai-agent/workflows.md:76 ../../ai-agent/workflows.md:100
+msgid "**Save Output As**"
+msgstr "**출력 저장 키**"
+
+#: ../../ai-agent/workflows.md:76
+#, python-brace-format
+msgid ""
+"Context key under which the LLM response is stored.  Subsequent steps can"
+" reference it with `{key}`."
+msgstr "LLM 응답이 저장될 컨텍스트 키. 이후 스텝에서 `{key}`로 참조할 수 있습니다."
+
+#: ../../ai-agent/workflows.md:76 ../../ai-agent/workflows.md:100
+msgid "**Agent**"
+msgstr "**에이전트**"
+
+#: ../../ai-agent/workflows.md:76
+msgid "Override the workflow-level default agent for this step only."
+msgstr "이 스텝에 한해 워크플로 기본 에이전트를 재정의합니다."
+
+#: ../../ai-agent/workflows.md:76
+msgid "**Async LLM**"
+msgstr "**비동기 LLM**"
+
+#: ../../ai-agent/workflows.md:76
+msgid ""
+"If enabled, the LLM call is queued in the background and the run suspends"
+" until the worker processes it.  See [section 6](#6-async-llm)."
+msgstr ""
+"활성화하면 LLM 호출이 백그라운드 큐에 추가되고, 워커가 처리를 완료할 때까지 실행이 일시 중단됩니다. "
+"[6절](#6-async-llm)을 참고하세요."
+
+#: ../../ai-agent/workflows.md:101
+#, python-brace-format
+msgid ""
+"Output chaining example: a step with `Save Output As = \"analysis\"` "
+"stores the LLM response under the key `analysis`.  A later step can use "
+"`{analysis}` in its prompt template to include that output."
+msgstr ""
+"출력 연결 예시: `출력 저장 키 = \"analysis\"`로 설정된 스텝은 LLM 응답을 `analysis` 키에 저장합니다. "
+"이후 스텝의 프롬프트 템플릿에서 `{analysis}`를 사용해 해당 출력을 참조할 수 있습니다."
+
+#: ../../ai-agent/workflows.md:106
+msgid "3.2 Agent Delegate (`agent_delegate`)"
+msgstr "3.2 에이전트 위임 (`agent_delegate`)"
+
+#: ../../ai-agent/workflows.md:108
+msgid "Delegates the current context to a sub-agent and stores its response."
+msgstr "현재 컨텍스트를 서브 에이전트에 위임하고 응답을 저장합니다."
+
+#: ../../ai-agent/workflows.md:100
+msgid "The target sub-agent to delegate to."
+msgstr "위임 대상 서브 에이전트."
+
+#: ../../ai-agent/workflows.md:100
+msgid "**Delegate Context Keys**"
+msgstr "**위임 컨텍스트 키**"
+
+#: ../../ai-agent/workflows.md:100
+msgid ""
+"Comma-separated list of context keys to forward.  Leave blank to forward "
+"the full context."
+msgstr "전달할 컨텍스트 키의 쉼표 구분 목록. 비워두면 전체 컨텍스트를 전달합니다."
+
+#: ../../ai-agent/workflows.md:100
+msgid "Context key for the sub-agent response."
+msgstr "서브 에이전트 응답을 저장할 컨텍스트 키."
+
+#: ../../ai-agent/workflows.md:116
+msgid "3.3 Odoo Action (`odoo_action`)"
+msgstr "3.3 Odoo 액션 (`odoo_action`)"
+
+#: ../../ai-agent/workflows.md:118
+msgid "Executes an existing **Server Action** (`ir.actions.server`)."
+msgstr "기존 **서버 액션**(`ir.actions.server`)을 실행합니다."
+
+#: ../../ai-agent/workflows.md:100
+msgid "**Server Action**"
+msgstr "**서버 액션**"
+
+#: ../../ai-agent/workflows.md:100
+msgid "The `ir.actions.server` record to execute."
+msgstr "실행할 `ir.actions.server` 레코드."
+
+#: ../../ai-agent/workflows.md:125
+msgid ""
+"Use Odoo Action steps to write records, send emails, or call Python "
+"business logic without writing custom code in the workflow itself."
+msgstr ""
+"Odoo 액션 스텝을 사용하면 워크플로 자체에 커스텀 코드를 작성하지 않고도 "
+"레코드 저장, 이메일 발송, Python 비즈니스 로직 호출이 가능합니다."
+
+#: ../../ai-agent/workflows.md:129
+msgid "3.4 Human Approval (`approval`)"
+msgstr "3.4 사람의 승인 (`approval`)"
+
+#: ../../ai-agent/workflows.md:131
+msgid "Pauses the workflow and requests a human decision before continuing."
+msgstr "워크플로를 일시 중단하고 계속 진행하기 전에 사람의 결정을 요청합니다."
+
+#: ../../ai-agent/workflows.md:124
+msgid "**Approval Group**"
+msgstr "**승인 그룹**"
+
+#: ../../ai-agent/workflows.md:124
+msgid ""
+"User group notified when the workflow reaches this step.  Group members "
+"receive an activity in their inbox."
+msgstr "워크플로가 이 스텝에 도달했을 때 알림을 받는 사용자 그룹. 그룹 구성원의 받은 편지함에 활동이 생성됩니다."
+
+#: ../../ai-agent/workflows.md:124
+msgid "**Approval Timeout (hours)**"
+msgstr "**승인 제한 시간(시간)**"
+
+#: ../../ai-agent/workflows.md:124
+msgid "If no decision is made within this window, the run moves to `cancelled`."
+msgstr "이 시간 내에 결정이 없으면 실행이 `cancelled`로 전환됩니다."
+
+#: ../../ai-agent/workflows.md:138
+msgid "**Flow:**"
+msgstr "**흐름:**"
+
+#: ../../ai-agent/workflows.md:140
+msgid "Engine sets run state to `waiting_approval` and creates a `mail.activity`."
+msgstr "엔진이 실행 상태를 `waiting_approval`로 설정하고 `mail.activity`를 생성합니다."
+
+#: ../../ai-agent/workflows.md:141
+msgid "An authorised user opens the run and clicks **Approve** or **Reject**."
+msgstr "권한 있는 사용자가 실행 기록을 열고 **승인** 또는 **거부**를 클릭합니다."
+
+#: ../../ai-agent/workflows.md:142
+msgid "On **Approve** → execution continues from the next step."
+msgstr "**승인** 시 → 다음 스텝부터 실행이 계속됩니다."
+
+#: ../../ai-agent/workflows.md:143
+msgid ""
+"On **Reject** → run moves to `cancelled` with the rejection reason "
+"recorded."
+msgstr "**거부** 시 → 거부 이유가 기록되고 실행이 `cancelled`로 전환됩니다."
+
+#: ../../ai-agent/workflows.md:146
+msgid ""
+"If **Approval Timeout** elapses without a decision, the run is "
+"automatically cancelled by the `_cron_check_timeouts` scheduled action.  "
+"Ensure the group members are aware of pending approvals."
+msgstr ""
+"**승인 제한 시간** 내에 결정이 이루어지지 않으면 `_cron_check_timeouts` 예약 작업이 "
+"자동으로 실행을 취소합니다. 그룹 구성원이 대기 중인 승인을 인지하고 있는지 확인하세요."
+
+#: ../../ai-agent/workflows.md:151
+msgid "3.5 Condition Branch (`condition`)"
+msgstr "3.5 조건 분기 (`condition`)"
+
+#: ../../ai-agent/workflows.md:153
+msgid ""
+"Evaluates a Python expression and jumps to a different step based on the "
+"result."
+msgstr "Python 표현식을 평가하고 결과에 따라 다른 스텝으로 이동합니다."
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Condition Expression**"
+msgstr "**조건 표현식**"
+
+#: ../../ai-agent/workflows.md:145
+msgid ""
+"A Python expression evaluated with `safe_eval` against the current "
+"context dict.  Must return a truthy or falsy value (e.g., "
+"`context.get('score', 0) >= 80`)."
+msgstr ""
+"현재 컨텍스트 딕셔너리를 대상으로 `safe_eval`로 평가되는 Python 표현식. "
+"참(truthy) 또는 거짓(falsy) 값을 반환해야 합니다 (예: `context.get('score', 0) >= 80`)."
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Next Step if True**"
+msgstr "**참일 때 다음 스텝**"
+
+#: ../../ai-agent/workflows.md:145
+msgid "Sequence number of the step to execute when the expression is truthy."
+msgstr "표현식이 참일 때 실행할 스텝의 순서 번호."
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Next Step if False**"
+msgstr "**거짓일 때 다음 스텝**"
+
+#: ../../ai-agent/workflows.md:145
+msgid "Sequence number of the step to execute when the expression is falsy."
+msgstr "표현식이 거짓일 때 실행할 스텝의 순서 번호."
+
+#: ../../ai-agent/workflows.md:168
+#, python-brace-format
+msgid ""
+"The expression is evaluated against a Python dict where every context key"
+" is a top-level variable.  For example, if the context contains "
+"`{\"score\": 85}`, use `score >= 80` (not `context['score'] >= 80`)."
+msgstr ""
+"표현식은 컨텍스트의 모든 키가 최상위 변수로 노출된 Python 딕셔너리를 대상으로 평가됩니다. "
+"예를 들어 컨텍스트에 `{\"score\": 85}`가 있다면 `score >= 80`으로 작성합니다 "
+"(`context['score'] >= 80`이 아님)."
+
+#: ../../ai-agent/workflows.md:173
+msgid "3.6 Notify (`notify`)"
+msgstr "3.6 알림 (`notify`)"
+
+#: ../../ai-agent/workflows.md:175
+msgid "Sends a Discuss message to partners or a channel."
+msgstr "파트너 또는 채널로 Discuss 메시지를 전송합니다."
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Partners**"
+msgstr "**파트너**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "List of `res.partner` records to notify."
+msgstr "알림을 보낼 `res.partner` 레코드 목록."
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Channel**"
+msgstr "**채널**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Optional `discuss.channel` to post the message to."
+msgstr "메시지를 게시할 선택적 `discuss.channel`."
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Message Template**"
+msgstr "**메시지 템플릿**"
+
+#: ../../ai-agent/workflows.md:167
+#, python-brace-format
+msgid "Message text.  Supports `{key}` placeholders from context."
+msgstr "메시지 텍스트. 컨텍스트의 `{key}` 플레이스홀더를 지원합니다."
+
+#: ../../ai-agent/workflows.md:185
+msgid "4. Triggers"
+msgstr "4. 트리거"
+
+#: ../../ai-agent/workflows.md:187
+msgid "4.1 Manual"
+msgstr "4.1 수동"
+
+#: ../../ai-agent/workflows.md:189
+msgid "Set **Trigger Type** to `Manual`.  Run the workflow by:"
+msgstr "**트리거 유형**을 `수동`으로 설정합니다. 다음 방법으로 워크플로를 실행합니다:"
+
+#: ../../ai-agent/workflows.md:191
+msgid "Opening the workflow form and clicking **Run** in the action menu."
+msgstr "워크플로 폼을 열고 액션 메뉴에서 **실행**을 클릭합니다."
+
+#: ../../ai-agent/workflows.md:192
+#, python-brace-format
+msgid ""
+"Calling `workflow.action_run_manual(context_json={\"key\": \"value\"})` "
+"from Python to pass an initial context."
+msgstr ""
+"Python에서 `workflow.action_run_manual(context_json={\"key\": \"value\"})`를 호출하여 "
+"초기 컨텍스트를 전달합니다."
+
+#: ../../ai-agent/workflows.md:195
+msgid "4.2 Scheduled (Cron)"
+msgstr "4.2 예약 (Cron)"
+
+#: ../../ai-agent/workflows.md:197
+msgid ""
+"Set **Trigger Type** to `Scheduled (Cron)`.  An `ir.cron` record is "
+"created automatically.  Configure the schedule on the cron record at "
+"**Settings → Technical → Automation → Scheduled Actions**."
+msgstr ""
+"**트리거 유형**을 `예약(Cron)`으로 설정합니다. `ir.cron` 레코드가 자동으로 생성됩니다. "
+"**설정 → 기술 → 자동화 → 예약 작업**에서 일정을 구성합니다."
+
+#: ../../ai-agent/workflows.md:201
+msgid "4.3 Database Event (Automation)"
+msgstr "4.3 데이터베이스 이벤트 (자동화)"
+
+#: ../../ai-agent/workflows.md:203
+msgid ""
+"Set **Trigger Type** to `Database Event`, then add an event hook in the "
+"**Hooks** tab.  The hook creates a `base.automation` rule that fires the "
+"workflow when a database event occurs."
+msgstr ""
+"**트리거 유형**을 `데이터베이스 이벤트`로 설정한 후 **훅** 탭에서 이벤트 훅을 추가합니다. "
+"훅은 데이터베이스 이벤트 발생 시 워크플로를 실행하는 `base.automation` 규칙을 생성합니다."
+
+#: ../../ai-agent/workflows.md:207
+msgid "Event hook fields"
+msgstr "이벤트 훅 필드"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Hook Type**"
+msgstr "**훅 유형**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`Record Created`, `Record Updated`, or `Field Changed`"
+msgstr "`레코드 생성됨`, `레코드 업데이트됨`, `필드 변경됨`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Model**"
+msgstr "**모델**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Odoo model to watch (e.g., `sale.order`)"
+msgstr "감시할 Odoo 모델 (예: `sale.order`)"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Filter Domain**"
+msgstr "**필터 도메인**"
+
+#: ../../ai-agent/workflows.md:167
+msgid ""
+"Optional JSON domain to limit which records trigger the workflow (e.g., "
+"`[[\"state\",\"=\",\"sale\"]]`)"
+msgstr ""
+"워크플로를 트리거할 레코드를 제한하는 선택적 JSON 도메인 "
+"(예: `[[\"state\",\"=\",\"sale\"]]`)"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Watched Fields**"
+msgstr "**감시 필드**"
+
+#: ../../ai-agent/workflows.md:167
+msgid ""
+"For `Field Changed` only — the specific fields that must change to fire "
+"the hook"
+msgstr "`필드 변경됨`에만 해당 — 훅을 실행하기 위해 변경되어야 하는 특정 필드"
+
+#: ../../ai-agent/workflows.md:218
+msgid "5. Monitoring Runs"
+msgstr "5. 실행 모니터링"
+
+#: ../../ai-agent/workflows.md:220
+msgid ""
+"Navigate to **AI → Workflows → Runs** to browse all execution records "
+"(`lu.ai.workflow.state`)."
+msgstr "**AI → 워크플로 → 실행**으로 이동하여 모든 실행 기록(`lu.ai.workflow.state`)을 확인합니다."
+
+#: ../../ai-agent/workflows.md:223
+msgid "Run states"
+msgstr "실행 상태"
+
+#: ../../ai-agent/workflows.md:167
+msgid "State"
+msgstr "상태"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Meaning"
+msgstr "의미"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`pending`"
+msgstr "`pending`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Queued but not yet started"
+msgstr "대기 중이지만 아직 시작되지 않음"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`running`"
+msgstr "`running`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Actively executing steps"
+msgstr "스텝을 활발히 실행 중"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`waiting_approval`"
+msgstr "`waiting_approval`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Paused at a Human Approval step"
+msgstr "사람의 승인 스텝에서 일시 중단됨"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`done`"
+msgstr "`done`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Completed successfully"
+msgstr "성공적으로 완료됨"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`error`"
+msgstr "`error`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Stopped due to an unhandled exception"
+msgstr "처리되지 않은 예외로 인해 중단됨"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`timeout`"
+msgstr "`timeout`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Wall-clock limit exceeded"
+msgstr "실시간 제한 시간 초과"
+
+#: ../../ai-agent/workflows.md:167
+msgid "`cancelled`"
+msgstr "`cancelled`"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Manually cancelled or rejected at an approval step"
+msgstr "수동으로 취소되었거나 승인 스텝에서 거부됨"
+
+#: ../../ai-agent/workflows.md:235
+msgid "Step logs"
+msgstr "스텝 로그"
+
+#: ../../ai-agent/workflows.md:237
+msgid ""
+"Open a run record and expand the **Step Logs** tab to see an immutable "
+"audit trail for every executed step."
+msgstr "실행 기록을 열고 **스텝 로그** 탭을 펼쳐 실행된 모든 스텝의 변경 불가능한 감사 이력을 확인합니다."
+
+#: ../../ai-agent/workflows.md:167
+msgid "Column"
+msgstr "컬럼"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Step**"
+msgstr "**스텝**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Step name and type"
+msgstr "스텝 이름 및 유형"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Duration (ms)**"
+msgstr "**소요 시간(ms)**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Execution time in milliseconds"
+msgstr "밀리초 단위 실행 시간"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Tokens In / Out**"
+msgstr "**입력 / 출력 토큰**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "LLM input and output token counts (LLM steps only)"
+msgstr "LLM 입력 및 출력 토큰 수 (LLM 스텝에만 해당)"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Output**"
+msgstr "**출력**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "JSON output stored by the step"
+msgstr "스텝이 저장한 JSON 출력"
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Error**"
+msgstr "**오류**"
+
+#: ../../ai-agent/workflows.md:167
+msgid "Exception message if the step failed"
+msgstr "스텝 실패 시의 예외 메시지"
+
+#: ../../ai-agent/workflows.md:249
+msgid ""
+"Use the **Dashboard** view (**AI → Workflows → Dashboard**) for "
+"aggregated KPIs: total runs, success rate, average duration, and pending "
+"approvals over a rolling 30-day window."
+msgstr ""
+"**대시보드** 화면(**AI → 워크플로 → 대시보드**)에서 집계된 KPI를 확인합니다: "
+"총 실행 수, 성공률, 평균 소요 시간, 최근 30일 기준 대기 중인 승인."
+
+#: ../../ai-agent/workflows.md:256
+msgid "6. Async LLM"
+msgstr "6. 비동기 LLM"
+
+#: ../../ai-agent/workflows.md:258
+msgid ""
+"By default, LLM Call steps execute synchronously — the engine waits for "
+"the model to respond before proceeding.  For slow models or high-"
+"concurrency deployments, enable **Async LLM** on a step."
+msgstr ""
+"기본적으로 LLM 호출 스텝은 동기 방식으로 실행됩니다 — 엔진이 모델 응답을 기다린 후 다음 단계로 진행합니다. "
+"응답이 느린 모델이나 높은 동시성 환경에서는 스텝에서 **비동기 LLM**을 활성화하세요."
+
+#: ../../ai-agent/workflows.md:262
+msgid "Async execution flow"
+msgstr "비동기 실행 흐름"
+
+#: ../../ai-agent/workflows.md:280
+msgid "When to use Async LLM"
+msgstr "비동기 LLM 사용 시점"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Scenario"
+msgstr "시나리오"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Recommendation"
+msgstr "권장 사항"
+
+#: ../../ai-agent/workflows.md:264
+msgid "LLM response time > 30 s"
+msgstr "LLM 응답 시간 > 30초"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Enable Async LLM to free up the Odoo worker process"
+msgstr "비동기 LLM을 활성화하여 Odoo 워커 프로세스를 확보합니다"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Many concurrent workflows"
+msgstr "동시 워크플로 수가 많은 경우"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Async queuing prevents worker exhaustion"
+msgstr "비동기 큐잉으로 워커 고갈을 방지합니다"
+
+#: ../../ai-agent/workflows.md:264
+msgid "Priority-sensitive workloads"
+msgstr "우선순위가 중요한 작업"
+
+#: ../../ai-agent/workflows.md:264
+msgid ""
+"Set request **Priority** (`low`, `normal`, `high`) to control processing "
+"order"
+msgstr "요청 **우선순위**(`low`, `normal`, `high`)를 설정하여 처리 순서를 제어합니다"
+
+#: ../../ai-agent/workflows.md:289
+msgid ""
+"The `AsyncLlmWorker` cron job must be active for async requests to be "
+"processed.  Verify at **Settings → Technical → Automation → Scheduled "
+"Actions** — look for the action named **AI: Process Async LLM Queue**."
+msgstr ""
+"비동기 요청이 처리되려면 `AsyncLlmWorker` cron 작업이 활성화되어 있어야 합니다. "
+"**설정 → 기술 → 자동화 → 예약 작업**에서 **AI: Process Async LLM Queue** 항목을 확인하세요."
+
+#: ../../ai-agent/workflows.md:296
+msgid "7. Lifecycle Hooks"
+msgstr "7. 라이프사이클 훅"
+
+#: ../../ai-agent/workflows.md:298
+msgid ""
+"Hooks let you intercept execution at specific points or react to database"
+" events.  Add hooks in the **Hooks** tab of the workflow form."
+msgstr ""
+"훅을 사용하면 특정 지점에서 실행을 가로채거나 데이터베이스 이벤트에 반응할 수 있습니다. "
+"워크플로 폼의 **훅** 탭에서 훅을 추가합니다."
+
+#: ../../ai-agent/workflows.md:301
+msgid "Hook types"
+msgstr "훅 유형"
+
+#: ../../ai-agent/workflows.md:303
+msgid "Event trigger hooks"
+msgstr "이벤트 트리거 훅"
+
+#: ../../ai-agent/workflows.md:305
+msgid ""
+"These fire the workflow when a database change occurs (see [section "
+"4.3](#43-database-event-automation))."
+msgstr "데이터베이스 변경이 발생할 때 워크플로를 실행합니다 ([4.3절](#43-database-event-automation) 참고)."
+
+#: ../../ai-agent/workflows.md:288
+msgid "Hook Type"
+msgstr "훅 유형"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Fires when"
+msgstr "실행 시점"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`record_created`"
+msgstr "`record_created`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "A matching record is created"
+msgstr "해당 조건의 레코드가 생성될 때"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`record_updated`"
+msgstr "`record_updated`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "A matching record is updated"
+msgstr "해당 조건의 레코드가 업데이트될 때"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`field_changed`"
+msgstr "`field_changed`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "A watched field on a matching record changes"
+msgstr "해당 조건의 레코드에서 감시 필드가 변경될 때"
+
+#: ../../ai-agent/workflows.md:313
+msgid "Execution interceptor hooks"
+msgstr "실행 인터셉터 훅"
+
+#: ../../ai-agent/workflows.md:315
+msgid "These run inside the engine loop and can inspect or modify execution."
+msgstr "엔진 루프 내부에서 실행되며 실행을 검사하거나 수정할 수 있습니다."
+
+#: ../../ai-agent/workflows.md:288
+msgid "Called when"
+msgstr "호출 시점"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`pre_step`"
+msgstr "`pre_step`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Before any step executes"
+msgstr "스텝 실행 전"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`post_step`"
+msgstr "`post_step`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "After any step completes"
+msgstr "스텝 완료 후"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`pre_tool` / `post_tool`"
+msgstr "`pre_tool` / `post_tool`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Before/after a tool is invoked by an LLM step"
+msgstr "LLM 스텝에서 툴을 호출하기 전/후"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`on_complete`"
+msgstr "`on_complete`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "When the run reaches a terminal state (done / error / timeout / cancelled)"
+msgstr "실행이 종료 상태(done / error / timeout / cancelled)에 도달할 때"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`on_approve` / `on_reject`"
+msgstr "`on_approve` / `on_reject`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "When a Human Approval step is decided"
+msgstr "사람의 승인 스텝에서 결정이 내려질 때"
+
+#: ../../ai-agent/workflows.md:325
+msgid "Hook output"
+msgstr "훅 출력"
+
+#: ../../ai-agent/workflows.md:327
+msgid ""
+"An interceptor hook's server action can return a `HookOutput` dict with "
+"the following optional keys:"
+msgstr "인터셉터 훅의 서버 액션은 다음과 같은 선택적 키를 포함한 `HookOutput` 딕셔너리를 반환할 수 있습니다:"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Key"
+msgstr "키"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Type"
+msgstr "유형"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Effect"
+msgstr "효과"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`decision`"
+msgstr "`decision`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`\"allow\"` or `\"deny\"`"
+msgstr "`\"allow\"` 또는 `\"deny\"`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`deny` aborts the current step with a `StepDeniedError`"
+msgstr "`deny`는 `StepDeniedError`를 발생시켜 현재 스텝을 중단합니다"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`reason`"
+msgstr "`reason`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "string"
+msgstr "string"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Reason logged when decision is `deny`"
+msgstr "decision이 `deny`일 때 기록되는 이유"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`inject_context`"
+msgstr "`inject_context`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "dict"
+msgstr "dict"
+
+#: ../../ai-agent/workflows.md:288
+msgid "Merged into the workflow context after the step"
+msgstr "스텝 이후 워크플로 컨텍스트에 병합됨"
+
+#: ../../ai-agent/workflows.md:288
+msgid "`stop`"
+msgstr "`stop`"
+
+#: ../../ai-agent/workflows.md:288
+msgid "bool"
+msgstr "bool"
+
+#: ../../ai-agent/workflows.md:288
+msgid "If `True`, marks the run as `done` immediately after the step"
+msgstr "`True`이면 스텝 직후 실행을 `done`으로 표시합니다"
+
+#: ../../ai-agent/workflows.md:338
+msgid ""
+"Installing the optional `lu_ai_edge` module activates three advanced "
+"engine-level hooks on the workflow model:"
+msgstr ""
+"선택적 `lu_ai_edge` 모듈을 설치하면 워크플로 모델에 세 가지 고급 엔진 수준 훅이 활성화됩니다:"
+
+#: ../../ai-agent/workflows.md:341
+msgid ""
+"`_handle_step_error` — automatic error recovery with configurable retry "
+"strategies"
+msgstr "`_handle_step_error` — 설정 가능한 재시도 전략을 통한 자동 오류 복구"
+
+#: ../../ai-agent/workflows.md:342
+msgid ""
+"`_evaluate_step_result` — LLM-based quality assessment of step outputs "
+"(retries up to 3×)"
+msgstr "`_evaluate_step_result` — 스텝 출력에 대한 LLM 기반 품질 평가 (최대 3회 재시도)"
+
+#: ../../ai-agent/workflows.md:343
+msgid "`_plan_execution` — LLM-driven dynamic step reordering at runtime"
+msgstr "`_plan_execution` — 런타임 시 LLM 기반 동적 스텝 순서 재배치"
+
+#: ../../ai-agent/workflows.md:348
+msgid "8. Security and Sandbox"
+msgstr "8. 보안 및 샌드박스"
+
+#: ../../ai-agent/workflows.md:350
+msgid "Permission groups"
+msgstr "권한 그룹"
+
+#: ../../ai-agent/workflows.md:337
+msgid "Group"
+msgstr "그룹"
+
+#: ../../ai-agent/workflows.md:337
+msgid "Permissions"
+msgstr "권한"
+
+#: ../../ai-agent/workflows.md:337
+msgid "**System** (`base.group_system`)"
+msgstr "**시스템** (`base.group_system`)"
+
+#: ../../ai-agent/workflows.md:337
+msgid "Full access — create, edit, delete all workflow objects"
+msgstr "전체 접근 권한 — 모든 워크플로 객체 생성, 수정, 삭제"
+
+#: ../../ai-agent/workflows.md:337
+msgid "**Workflow Manager** (`lu_ai_workflow.group_workflow_manager`)"
+msgstr "**워크플로 관리자** (`lu_ai_workflow.group_workflow_manager`)"
+
+#: ../../ai-agent/workflows.md:337
+msgid "Create and edit workflows, steps, hooks, and runs; cannot delete"
+msgstr "워크플로, 스텝, 훅, 실행 기록 생성 및 수정 가능; 삭제 불가"
+
+#: ../../ai-agent/workflows.md:337
+msgid "**User** (`base.group_user`)"
+msgstr "**사용자** (`base.group_user`)"
+
+#: ../../ai-agent/workflows.md:337
+msgid "Read-only access to all workflow objects"
+msgstr "모든 워크플로 객체에 대한 읽기 전용 접근"
+
+#: ../../ai-agent/workflows.md:358
+msgid "Security sandbox"
+msgstr "보안 샌드박스"
+
+#: ../../ai-agent/workflows.md:360
+msgid ""
+"Attach a `lu.ai.security.sandbox` record to a workflow via the **Security"
+" Sandbox** field to restrict which Odoo models and fields the execution "
+"engine may access.  The sandbox policy is enforced by the "
+"`lu.ai.security.mixin` during execution and prevents unauthorised "
+"`sudo()` escalation."
+msgstr ""
+"**보안 샌드박스** 필드를 통해 워크플로에 `lu.ai.security.sandbox` 레코드를 연결하면 "
+"실행 엔진이 접근할 수 있는 Odoo 모델과 필드를 제한합니다. "
+"샌드박스 정책은 실행 중 `lu.ai.security.mixin`에 의해 적용되며 "
+"허가되지 않은 `sudo()` 권한 상승을 방지합니다."
+
+#: ../../ai-agent/workflows.md:366
+msgid ""
+"Workflows that call server actions with broad `sudo()` access can bypass "
+"sandbox restrictions defined at the workflow level.  Always review server"
+" actions linked to `odoo_action` steps before activating a workflow in "
+"production."
+msgstr ""
+"광범위한 `sudo()` 접근 권한을 가진 서버 액션을 호출하는 워크플로는 워크플로 수준에서 "
+"정의된 샌드박스 제한을 우회할 수 있습니다. 프로덕션에서 워크플로를 활성화하기 전에 "
+"`odoo_action` 스텝에 연결된 서버 액션을 반드시 검토하세요."
+
+#: ../../ai-agent/workflows.md:374
+msgid "Troubleshooting"
+msgstr "문제 해결"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Symptom"
+msgstr "증상"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Likely cause"
+msgstr "예상 원인"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Fix"
+msgstr "해결 방법"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run stuck in `running`"
+msgstr "실행이 `running` 상태에서 멈춤"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Infinite loop between condition branches"
+msgstr "조건 분기 간 무한 루프"
+
+#: ../../ai-agent/workflows.md:365
+msgid ""
+"Check that `condition_next_true` and `condition_next_false` do not form a"
+" cycle; verify the expression eventually produces a different result"
+msgstr ""
+"`condition_next_true`와 `condition_next_false`가 순환을 형성하지 않는지 확인합니다. "
+"표현식이 결국 다른 결과를 반환하는지 검증합니다"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run moves to `timeout`"
+msgstr "실행이 `timeout`으로 전환됨"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Step processing exceeds `timeout_seconds`"
+msgstr "스텝 처리가 `timeout_seconds`를 초과"
+
+#: ../../ai-agent/workflows.md:365
+msgid ""
+"Increase **Timeout** on the workflow, or enable **Async LLM** on slow LLM"
+" Call steps"
+msgstr "워크플로의 **제한 시간**을 늘리거나, 느린 LLM 호출 스텝에서 **비동기 LLM**을 활성화합니다"
+
+#: ../../ai-agent/workflows.md:365
+msgid "HITL approval notification not received"
+msgstr "HITL 승인 알림이 수신되지 않음"
+
+#: ../../ai-agent/workflows.md:365
+msgid "`approval_group_id` not set or group has no members"
+msgstr "`approval_group_id`가 설정되지 않았거나 그룹에 구성원이 없음"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Set a valid group on the Approval step; ensure group members exist"
+msgstr "승인 스텝에 유효한 그룹을 설정하고 그룹 구성원이 존재하는지 확인합니다"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Async LLM step never resumes"
+msgstr "비동기 LLM 스텝이 재개되지 않음"
+
+#: ../../ai-agent/workflows.md:365
+msgid "`AsyncLlmWorker` cron is inactive"
+msgstr "`AsyncLlmWorker` cron이 비활성 상태"
+
+#: ../../ai-agent/workflows.md:365
+msgid ""
+"Go to **Settings → Technical → Automation → Scheduled Actions** and "
+"activate **AI: Process Async LLM Queue**"
+msgstr ""
+"**설정 → 기술 → 자동화 → 예약 작업**으로 이동하여 "
+"**AI: Process Async LLM Queue**를 활성화합니다"
+
+#: ../../ai-agent/workflows.md:365
+msgid "`condition_next_true` jumps to wrong step"
+msgstr "`condition_next_true`가 잘못된 스텝으로 이동"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Sequence number does not match any existing step"
+msgstr "순서 번호가 기존 스텝과 일치하지 않음"
+
+#: ../../ai-agent/workflows.md:365
+msgid ""
+"Open the Steps tab and verify the sequence numbers referenced in the "
+"condition"
+msgstr "스텝 탭을 열고 조건에서 참조하는 순서 번호를 확인합니다"
+
+#: ../../ai-agent/workflows.md:365
+#, python-brace-format
+msgid "`{key}` not replaced in prompt template"
+msgstr "프롬프트 템플릿에서 `{key}`가 치환되지 않음"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Context key not yet set when step runs"
+msgstr "스텝 실행 시 컨텍스트 키가 아직 설정되지 않음"
+
+#: ../../ai-agent/workflows.md:365
+#, python-brace-format
+msgid ""
+"Check that the step producing `Save Output As = \"key\"` runs before the "
+"step consuming `{key}`"
+msgstr ""
+"`출력 저장 키 = \"key\"`로 설정된 스텝이 `{key}`를 사용하는 스텝보다 먼저 실행되는지 확인합니다"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run count not increasing after trigger"
+msgstr "트리거 후 실행 횟수가 증가하지 않음"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Workflow still in `Draft` state"
+msgstr "워크플로가 여전히 `초안` 상태"
+
+#: ../../ai-agent/workflows.md:365
+msgid "Click **Activate** on the workflow form"
+msgstr "워크플로 폼에서 **활성화**를 클릭합니다"
+
+#: ../../ai-agent/workflows.md:388
+msgid "Next Steps"
+msgstr "다음 단계"
+
+#: ../../ai-agent/workflows.md:390
+msgid "[Proactive Alerts & Admin](proactive-alerts.md)"
+msgstr "[프로액티브 알림 및 관리](proactive-alerts.md)"
+
+#: ../../ai-agent/workflows.md:391
+msgid "[Architecture Overview](architecture.md)"
+msgstr "[아키텍처 개요](architecture.md)"

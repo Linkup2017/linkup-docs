@@ -1,0 +1,1045 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 13:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../ai-agent/workflows.md:1
+msgid "Workflows"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:3
+msgid "**Module:** `lu_ai_workflow`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:5
+msgid "Workflows let you define multi-step automation sequences that AI agents execute inside Odoo — calling LLMs, running server actions, branching on conditions, requesting human approval, and sending notifications — all in a stateful, auditable loop."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:10
+msgid "For agent and model setup, see [Configuration](configuration.md). For routing messages to domain agents, see [Domain Routing](domain-routing.md)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:15
+msgid "1. What Is a Workflow?"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:17
+msgid "A **workflow** is a sequence of typed steps executed by the `lu_ai_workflow` engine. The engine maintains a shared **context** (a JSON dictionary) across all steps — each step can read prior outputs and write its own result back, giving the workflow a persistent memory throughout the run."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:39
+msgid "Core components"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Model"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Purpose"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Workflow definition — trigger, agent, safety guards, steps"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.step`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Individual execution unit — LLM call, action, approval, condition, notification"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.state`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Single run record — context, progress, step logs, final state"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.workflow.hook`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Event trigger or lifecycle interceptor"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.llm.request`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Async LLM queue entry for background processing"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`lu.ai.security.sandbox`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Optional model/field access policy for execution"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:52
+msgid "2. Creating a Workflow"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:54
+msgid "Navigate to **AI → Workflows → Workflows** and click **New**."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:56
+msgid "Workflow fields"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+#: ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100
+#: ../../ai-agent/workflows.md:124
+#: ../../ai-agent/workflows.md:145
+#: ../../ai-agent/workflows.md:167
+msgid "Field"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+#: ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100
+#: ../../ai-agent/workflows.md:124
+#: ../../ai-agent/workflows.md:145
+#: ../../ai-agent/workflows.md:167
+msgid "Description"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Name**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Display name of the workflow"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**State**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "`Draft` → `Active` → `Archived`.  Only Active workflows can be triggered."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Trigger Type**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "How the workflow is started — `Manual`, `Scheduled (Cron)`, or `Database Event`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Default Agent**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "LLM agent used by steps that do not override the agent individually"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Max Steps Guard**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Hard cap on step iterations per run.  Prevents infinite loops in branching workflows. Default: `50`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Timeout (seconds)**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Wall-clock limit for the entire run.  The engine marks timed-out runs as `timeout`. Default: `300`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Max Concurrent Runs**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Maximum number of simultaneous active runs.  `0` = unlimited."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Security Sandbox**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Optional `lu.ai.security.sandbox` policy restricting which models and fields the workflow can access"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "**Description**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:22
+msgid "Internal documentation — not used in execution"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:70
+msgid "Activating a workflow"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:72
+msgid "Fill in all required fields and add at least one step."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:73
+msgid "Click **Activate** — the state changes from `Draft` to `Active`."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:74
+msgid "To disable without deleting, click **Archive**."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:77
+msgid "A workflow in `Draft` state cannot be triggered manually or by automation. Always activate before testing."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:83
+msgid "3. Step Types"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:85
+msgid "Add steps in the **Steps** tab of the workflow form.  Steps execute in ascending **Sequence** order by default.  Set `Active = False` on a step to skip it without deleting it."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:89
+msgid "3.1 LLM Call (`llm_call`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:91
+msgid "Sends a prompt to an LLM agent and stores the response in the workflow context."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "**Prompt Template**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "Text sent to the LLM.  Use `{key}` placeholders to inject values from the current context (e.g., `{customer_name}`, `{analysis}`)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100
+msgid "**Save Output As**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "Context key under which the LLM response is stored.  Subsequent steps can reference it with `{key}`."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+#: ../../ai-agent/workflows.md:100
+msgid "**Agent**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "Override the workflow-level default agent for this step only."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "**Async LLM**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:76
+msgid "If enabled, the LLM call is queued in the background and the run suspends until the worker processes it.  See [section 6](#6-async-llm)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:101
+msgid "Output chaining example: a step with `Save Output As = \"analysis\"` stores the LLM response under the key `analysis`.  A later step can use `{analysis}` in its prompt template to include that output."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:106
+msgid "3.2 Agent Delegate (`agent_delegate`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:108
+msgid "Delegates the current context to a sub-agent and stores its response."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "The target sub-agent to delegate to."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "**Delegate Context Keys**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "Comma-separated list of context keys to forward.  Leave blank to forward the full context."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "Context key for the sub-agent response."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:116
+msgid "3.3 Odoo Action (`odoo_action`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:118
+msgid "Executes an existing **Server Action** (`ir.actions.server`)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "**Server Action**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:100
+msgid "The `ir.actions.server` record to execute."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:125
+msgid "Use Odoo Action steps to write records, send emails, or call Python business logic without writing custom code in the workflow itself."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:129
+msgid "3.4 Human Approval (`approval`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:131
+msgid "Pauses the workflow and requests a human decision before continuing."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:124
+msgid "**Approval Group**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:124
+msgid "User group notified when the workflow reaches this step.  Group members receive an activity in their inbox."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:124
+msgid "**Approval Timeout (hours)**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:124
+msgid "If no decision is made within this window, the run moves to `cancelled`."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:138
+msgid "**Flow:**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:140
+msgid "Engine sets run state to `waiting_approval` and creates a `mail.activity`."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:141
+msgid "An authorised user opens the run and clicks **Approve** or **Reject**."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:142
+msgid "On **Approve** → execution continues from the next step."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:143
+msgid "On **Reject** → run moves to `cancelled` with the rejection reason recorded."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:146
+msgid "If **Approval Timeout** elapses without a decision, the run is automatically cancelled by the `_cron_check_timeouts` scheduled action.  Ensure the group members are aware of pending approvals."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:151
+msgid "3.5 Condition Branch (`condition`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:153
+msgid "Evaluates a Python expression and jumps to a different step based on the result."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Condition Expression**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "A Python expression evaluated with `safe_eval` against the current context dict.  Must return a truthy or falsy value (e.g., `context.get('score', 0) >= 80`)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Next Step if True**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "Sequence number of the step to execute when the expression is truthy."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "**Next Step if False**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:145
+msgid "Sequence number of the step to execute when the expression is falsy."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:168
+msgid "The expression is evaluated against a Python dict where every context key is a top-level variable.  For example, if the context contains `{\"score\": 85}`, use `score >= 80` (not `context['score'] >= 80`)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:173
+msgid "3.6 Notify (`notify`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:175
+msgid "Sends a Discuss message to partners or a channel."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Partners**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "List of `res.partner` records to notify."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Channel**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Optional `discuss.channel` to post the message to."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Message Template**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Message text.  Supports `{key}` placeholders from context."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:185
+msgid "4. Triggers"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:187
+msgid "4.1 Manual"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:189
+msgid "Set **Trigger Type** to `Manual`.  Run the workflow by:"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:191
+msgid "Opening the workflow form and clicking **Run** in the action menu."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:192
+msgid "Calling `workflow.action_run_manual(context_json={\"key\": \"value\"})` from Python to pass an initial context."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:195
+msgid "4.2 Scheduled (Cron)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:197
+msgid "Set **Trigger Type** to `Scheduled (Cron)`.  An `ir.cron` record is created automatically.  Configure the schedule on the cron record at **Settings → Technical → Automation → Scheduled Actions**."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:201
+msgid "4.3 Database Event (Automation)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:203
+msgid "Set **Trigger Type** to `Database Event`, then add an event hook in the **Hooks** tab.  The hook creates a `base.automation` rule that fires the workflow when a database event occurs."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:207
+msgid "Event hook fields"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Hook Type**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`Record Created`, `Record Updated`, or `Field Changed`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Model**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Odoo model to watch (e.g., `sale.order`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Filter Domain**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Optional JSON domain to limit which records trigger the workflow (e.g., `[[\"state\",\"=\",\"sale\"]]`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Watched Fields**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "For `Field Changed` only — the specific fields that must change to fire the hook"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:218
+msgid "5. Monitoring Runs"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:220
+msgid "Navigate to **AI → Workflows → Runs** to browse all execution records (`lu.ai.workflow.state`)."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:223
+msgid "Run states"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "State"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Meaning"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`pending`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Queued but not yet started"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`running`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Actively executing steps"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`waiting_approval`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Paused at a Human Approval step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`done`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Completed successfully"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`error`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Stopped due to an unhandled exception"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`timeout`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Wall-clock limit exceeded"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "`cancelled`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Manually cancelled or rejected at an approval step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:235
+msgid "Step logs"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:237
+msgid "Open a run record and expand the **Step Logs** tab to see an immutable audit trail for every executed step."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Column"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Step**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Step name and type"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Duration (ms)**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Execution time in milliseconds"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Tokens In / Out**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "LLM input and output token counts (LLM steps only)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Output**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "JSON output stored by the step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "**Error**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:167
+msgid "Exception message if the step failed"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:249
+msgid "Use the **Dashboard** view (**AI → Workflows → Dashboard**) for aggregated KPIs: total runs, success rate, average duration, and pending approvals over a rolling 30-day window."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:256
+msgid "6. Async LLM"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:258
+msgid "By default, LLM Call steps execute synchronously — the engine waits for the model to respond before proceeding.  For slow models or high-concurrency deployments, enable **Async LLM** on a step."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:262
+msgid "Async execution flow"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:280
+msgid "When to use Async LLM"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Scenario"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Recommendation"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "LLM response time > 30 s"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Enable Async LLM to free up the Odoo worker process"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Many concurrent workflows"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Async queuing prevents worker exhaustion"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Priority-sensitive workloads"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:264
+msgid "Set request **Priority** (`low`, `normal`, `high`) to control processing order"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:289
+msgid "The `AsyncLlmWorker` cron job must be active for async requests to be processed.  Verify at **Settings → Technical → Automation → Scheduled Actions** — look for the action named **AI: Process Async LLM Queue**."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:296
+msgid "7. Lifecycle Hooks"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:298
+msgid "Hooks let you intercept execution at specific points or react to database events.  Add hooks in the **Hooks** tab of the workflow form."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:301
+msgid "Hook types"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:303
+msgid "Event trigger hooks"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:305
+msgid "These fire the workflow when a database change occurs (see [section 4.3](#43-database-event-automation))."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Hook Type"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Fires when"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`record_created`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "A matching record is created"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`record_updated`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "A matching record is updated"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`field_changed`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "A watched field on a matching record changes"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:313
+msgid "Execution interceptor hooks"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:315
+msgid "These run inside the engine loop and can inspect or modify execution."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Called when"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`pre_step`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Before any step executes"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`post_step`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "After any step completes"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`pre_tool` / `post_tool`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Before/after a tool is invoked by an LLM step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`on_complete`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "When the run reaches a terminal state (done / error / timeout / cancelled)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`on_approve` / `on_reject`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "When a Human Approval step is decided"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:325
+msgid "Hook output"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:327
+msgid "An interceptor hook's server action can return a `HookOutput` dict with the following optional keys:"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Key"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Type"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Effect"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`decision`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`\"allow\"` or `\"deny\"`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`deny` aborts the current step with a `StepDeniedError`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`reason`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "string"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Reason logged when decision is `deny`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`inject_context`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "dict"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "Merged into the workflow context after the step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "`stop`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "bool"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:288
+msgid "If `True`, marks the run as `done` immediately after the step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:338
+msgid "Installing the optional `lu_ai_edge` module activates three advanced engine-level hooks on the workflow model:"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:341
+msgid "`_handle_step_error` — automatic error recovery with configurable retry strategies"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:342
+msgid "`_evaluate_step_result` — LLM-based quality assessment of step outputs (retries up to 3×)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:343
+msgid "`_plan_execution` — LLM-driven dynamic step reordering at runtime"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:348
+msgid "8. Security and Sandbox"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:350
+msgid "Permission groups"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "Group"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "Permissions"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "**System** (`base.group_system`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "Full access — create, edit, delete all workflow objects"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "**Workflow Manager** (`lu_ai_workflow.group_workflow_manager`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "Create and edit workflows, steps, hooks, and runs; cannot delete"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "**User** (`base.group_user`)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:337
+msgid "Read-only access to all workflow objects"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:358
+msgid "Security sandbox"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:360
+msgid "Attach a `lu.ai.security.sandbox` record to a workflow via the **Security Sandbox** field to restrict which Odoo models and fields the execution engine may access.  The sandbox policy is enforced by the `lu.ai.security.mixin` during execution and prevents unauthorised `sudo()` escalation."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:366
+msgid "Workflows that call server actions with broad `sudo()` access can bypass sandbox restrictions defined at the workflow level.  Always review server actions linked to `odoo_action` steps before activating a workflow in production."
+msgstr ""
+
+#: ../../ai-agent/workflows.md:374
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Symptom"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Likely cause"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Fix"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run stuck in `running`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Infinite loop between condition branches"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Check that `condition_next_true` and `condition_next_false` do not form a cycle; verify the expression eventually produces a different result"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run moves to `timeout`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Step processing exceeds `timeout_seconds`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Increase **Timeout** on the workflow, or enable **Async LLM** on slow LLM Call steps"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "HITL approval notification not received"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "`approval_group_id` not set or group has no members"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Set a valid group on the Approval step; ensure group members exist"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Async LLM step never resumes"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "`AsyncLlmWorker` cron is inactive"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Go to **Settings → Technical → Automation → Scheduled Actions** and activate **AI: Process Async LLM Queue**"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "`condition_next_true` jumps to wrong step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Sequence number does not match any existing step"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Open the Steps tab and verify the sequence numbers referenced in the condition"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "`{key}` not replaced in prompt template"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Context key not yet set when step runs"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Check that the step producing `Save Output As = \"key\"` runs before the step consuming `{key}`"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Run count not increasing after trigger"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Workflow still in `Draft` state"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:365
+msgid "Click **Activate** on the workflow form"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:388
+msgid "Next Steps"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:390
+msgid "[Proactive Alerts & Admin](proactive-alerts.md)"
+msgstr ""
+
+#: ../../ai-agent/workflows.md:391
+msgid "[Architecture Overview](architecture.md)"
+msgstr ""
