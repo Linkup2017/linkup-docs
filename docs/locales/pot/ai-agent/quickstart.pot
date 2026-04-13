@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 09:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../ai-agent/quickstart.md:1
+msgid "Quick Start"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:3
+msgid "Get an AI assistant running in your Odoo instance in under 10 minutes."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:5
+msgid "Linkup AI Agent connects Odoo to a local Ollama LLM, an Anthropic Claude cloud LLM, or both simultaneously — giving you a slide-out side panel that can query your ERP data using natural language. Complete Steps 1–4 below to finish your first conversation."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:10
+msgid "Odoo 19.0 **Enterprise** edition is required. The `ai_app` module is not available in Community edition, and installation will fail without it."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:14
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:16
+msgid "Odoo 19.0 Enterprise"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:17
+msgid "A running instance with administrator access."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:19
+msgid "Ollama (for local LLM)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:20
+msgid "Install and start Ollama from [ollama.com/download](https://ollama.com/download), then pull a model:"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:28
+msgid "Anthropic API key (for Claude)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:29
+msgid "Generate one at <https://console.anthropic.com/>."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:31
+msgid "Administrator account"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:32
+msgid "Required to access the Settings menu."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:35
+msgid "You can configure both Ollama and Claude at the same time and assign a different provider to each agent (hybrid setup)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:39
+msgid "Step 1 — Install the Modules"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:41
+msgid "Go to the **Apps** menu."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:42
+msgid "Search for **\"Linkup AI\"**."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:43
+msgid "Install **Linkup AI Side Panel** (`lu_ai_ui`). The required base modules (`ai_app`, `web_enterprise`) are installed automatically."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:45
+msgid "Install at least one **provider connector**:"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:46
+msgid "**Linkup AI Ollama** (`lu_ai_ollama`) — local LLM via Ollama"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:47
+msgid "**Linkup AI Claude** (`lu_ai_claude`) — cloud LLM via Anthropic Claude"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:48
+msgid "Both can be installed simultaneously for a hybrid setup."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:51
+msgid "`lu_ai_ui` auto-installs `ai_app` and `web_enterprise`. The provider connectors (`lu_ai_ollama`, `lu_ai_claude`) must be installed separately — install one or both."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:55
+msgid "Linkup AI Side Panel and Linkup AI Claude in the Apps list"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:55
+msgid ".. image:: /_static/img/ai-agent/qs-install-modules.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:60
+msgid "Step 2 — Configure Your LLM Provider"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:63
+msgid "Ollama and Claude are configured on **separate Settings pages**. Setting up both providers lets you choose a provider per agent in Step 3."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:67
+msgid "Option A: Ollama (Local LLM)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:69
+msgid "Go to **Settings → Integrations**."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:70
+msgid "Enable the **\"Use local Ollama models\"** toggle."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:71
+msgid "Enter your Ollama server address in the URL field (placeholder: `http://localhost:11434`). If Ollama is running locally, leave the default value as-is."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:73
+msgid "*(Optional)* API key field (placeholder: `API Key (optional for local setup)`) — only required for remote or authenticated endpoints. Leave blank for local installs."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:75
+#: ../../ai-agent/quickstart.md:95
+#: ../../ai-agent/quickstart.md:121
+msgid "Click **Save**."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:78
+msgid "The fields have no visible labels — only placeholder text. Refer to the screenshot below to locate them."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:82
+msgid "Settings → Integrations — \"Use local Ollama models\" section"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:82
+msgid ".. image:: /_static/img/ai-agent/qs-settings-ollama.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:87
+msgid "Option B: Claude (Cloud LLM)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:89
+msgid "Go to **Settings → AI** (Providers section)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:90
+msgid "Find the **\"Use your own Anthropic Claude account\"** section and enter your API key. The provider is activated automatically once a key is entered."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:92
+msgid "*(Optional)* **Max Output Tokens** — default 16,384. The Odoo UI accepts up to 128,000, but actual limits depend on the model (Opus: 128k, Sonnet/Haiku: 64k). Values above the model limit are automatically capped at the API level."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:98
+msgid "The settings page may display RAG/embedding-related options. These are outside the scope of Quick Start and are covered in the [Configuration](configuration.md) guide."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:102
+msgid "Settings → AI — \"Use your own Anthropic Claude account\" section"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:102
+msgid ".. image:: /_static/img/ai-agent/qs-settings-claude.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:108
+msgid "For advanced parameter tuning and RAG (document retrieval) setup, see the [Configuration](configuration.md) guide."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:112
+msgid "Step 3 — Create an AI Agent"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:114
+msgid "Go to **AI → Agents → Agents** (Kanban view by default)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:115
+msgid "Click **Create**."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:116
+msgid "Enter an agent name (e.g., `Sales Assistant`)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:117
+msgid "Select a model from the **LLM Model** dropdown:"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:118
+msgid "Ollama: `qwen3.5:9b` (recommended) or `qwen3.5:35b` (high performance)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:119
+msgid "Claude: `Claude Sonnet 4.6` (balanced) or `Claude Opus 4.6` (highest capability)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:120
+msgid "*(Optional)* Configure System Prompt, Topics, etc. — keep the defaults for Quick Start."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:124
+msgid "For testing, `qwen3.5:9b` (local, free) or `Claude Haiku 4.5` (cloud, low cost) are good starting points. For production, `qwen3.5:35b` or `Claude Sonnet 4.6` provide higher tool-call accuracy. The available model list is populated automatically based on your provider configuration."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:130
+msgid "AI → Agents → Agents — agent creation form with LLM Model selector"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:130
+msgid ".. image:: /_static/img/ai-agent/qs-create-agent.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:135
+msgid "Step 4 — Start Your First Chat"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:137
+msgid "Click the **AI button** in the Odoo **systray** (top-right)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:138
+msgid "A **side panel** opens on the right side of the screen (purple header, 240–480 px, resizable)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:140
+msgid "If you have multiple agents, select one from the **agent selector** in the header."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:141
+msgid "Click **\"+\"** to start a new conversation."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:142
+msgid "Type a message in the input field at the bottom and press **Enter**."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:144
+msgid "The AI Agent supports both English and Korean:"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:146
+msgid "Example (full LLM tool-calling — queries live ERP data):"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:147
+msgid "*\"Show me the top 5 products by revenue this month\"*"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:148
+msgid "Example (shortcut — instant response):"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:149
+msgid "*\"이번 달 매출 총액은?\"*"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:151
+msgid "Conversation names are set automatically from the first message. Previous conversations are accessible via the **history button** in the header (up to 50 recent conversations)."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:156
+msgid "Built-in shortcut queries cover major domains: Sales, Finance, Inventory, HR, and CRM. Frequently asked questions bypass the LLM entirely for faster responses."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:160
+msgid "Side panel showing a sample conversation"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:160
+msgid ".. image:: /_static/img/ai-agent/qs-first-chat.png"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:165
+msgid "What You Just Set Up"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:175
+msgid "In a hybrid setup, each agent can use a different provider — run latency-sensitive agents on local Ollama and complex analysis on Claude."
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:179
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Symptom"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Cause"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Fix"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "\"Module not found: ai_app\" during install"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Community edition in use"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Switch to Enterprise edition"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "\"Connection refused\" or no response"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Ollama server not running"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Run `ollama serve`; verify the Base URL"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "\"No API key set for Anthropic Claude\""
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Claude API key not configured"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Enter the key at **Settings → AI → Providers**"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "\"429 Too Many Requests\" or \"Invalid API key\""
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Claude rate limit exceeded or wrong key"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Check limits at console.anthropic.com; regenerate key"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Side panel does not appear"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Browser cache"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:167
+msgid "Hard-refresh with Ctrl+Shift+R"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:189
+msgid "Next Steps"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:191
+msgid "**[Configuration](configuration.md)** — Ollama parameter tuning (`num_ctx`, `num_predict`, `keep_alive`), Claude token limits, RAG setup, multi-model configuration"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:193
+msgid "**[Domain Routing](domain-routing.md)** — per-domain agent routing (Sales, HR, Finance, and more)"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:194
+msgid "**Workflows** — AI-driven multi-step automation"
+msgstr ""
+
+#: ../../ai-agent/quickstart.md:195
+msgid "**Proactive Alerts** — automatic detection of ERP anomalies such as low stock or overdue receivables"
+msgstr ""

@@ -1,0 +1,899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 09:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../ai-agent/domain-routing.md:1
+msgid "Domain Routing"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:3
+msgid "**Module:** `lu_ai_orchestrator`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:5
+msgid "Domain Routing lets a single *Orchestrator* agent dispatch user messages to specialised domain agents — Sales, Finance, HR, Inventory, and more — based on keyword rules, with a configurable fallback when no rule matches."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:9
+msgid "For installation prerequisites and first-chat setup, see [Quick Start](quickstart.md). For agent and model configuration, see [Configuration](configuration.md)."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:15
+msgid "1. What Is an Orchestrator?"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:17
+msgid "A regular AI agent receives a prompt and generates a response directly using its own LLM model and system prompt.  An **Orchestrator** agent sits in front of one or more domain agents and decides which one should handle each prompt."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:21
+msgid "Orchestrator dispatching to domain agents"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:21
+msgid ".. image:: /_static/img/ai-agent/domain-routing-overview.png"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:26
+msgid "Enabling the **Is Orchestrator** toggle on an agent form activates the routing layer.  The orchestrator itself may still hold an LLM model — it is used for LLM-based fallback classification and for direct responses when no rule matches."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:30
+msgid "Routing flow"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:50
+msgid "2. Built-in Domains"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:52
+msgid "`lu_ai_orchestrator` ships five pre-built domain system prompts.  Each domain agent receives one of these prompts automatically when the orchestrator delegates to it."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Domain key"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Display name"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Odoo models in scope"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`sales`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Sales & CRM"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`sale.order`, `crm.lead`, `res.partner`, `sale.report`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`finance`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Finance & Accounting"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`account.move`, `account.payment`, `account.journal`, `account.analytic.line`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`inventory`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Inventory & Procurement"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`stock.picking`, `stock.quant`, `purchase.order`, `product.product`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`hr`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Human Resources"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`hr.employee`, `hr.attendance`, `hr.payslip`, `hr.leave`, `hr.applicant`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`crm`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "Customer Relations"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:32
+msgid "`res.partner`, `mail.message`, `crm.lead`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:64
+msgid "Each domain prompt instructs the agent to stay strictly within its scope.  If a user question falls outside the domain, the agent responds with a short out-of-scope message (e.g., *\"This is outside my finance domain.\"*) rather than hallucinating an answer."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:70
+msgid "The domain key is matched against the **Domain** field of the routing rule (case-insensitive).  Routing rules named `\"Sales\"`, `\"sales\"`, or `\"SALES\"` all resolve to the `sales` system prompt.  Custom rule names that do not match any built-in key receive an empty system prompt — provide a custom one in the target agent's own system prompt field."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:79
+msgid "3. Setting Up an Orchestrator Agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:81
+msgid "Step 1 — Create the orchestrator agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:83
+msgid "Go to **AI → Agents → Agents**."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:84
+msgid "Click **New**."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:85
+msgid "In the **General** tab:"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:86
+msgid "Set a name (e.g., `\"Main Orchestrator\"`)."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:87
+msgid "Assign an LLM model.  This model is used for LLM-based fallback classification (section 5.3) and direct responses when no rule matches."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:89
+msgid "Enable the **Is Orchestrator** toggle."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:90
+#: ../../ai-agent/domain-routing.md:104
+#: ../../ai-agent/domain-routing.md:263
+msgid "Save."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Agent form with Is Orchestrator toggle enabled"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid ".. image:: /_static/img/ai-agent/domain-routing-orchestrator-form.png"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:97
+msgid "Step 2 — Add routing rules"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:99
+msgid "After enabling **Is Orchestrator**, a **Routing Rules** tab appears."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:101
+msgid "In the **Routing Rules** tab, click **Add a line**."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:102
+msgid "Fill in each rule (see field reference below)."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:103
+msgid "Repeat for every domain."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:106
+msgid "Routing rule fields"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+#: ../../ai-agent/domain-routing.md:196
+msgid "Field"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Required"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+#: ../../ai-agent/domain-routing.md:196
+msgid "Description"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Sequence**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+#: ../../ai-agent/domain-routing.md:117
+msgid "—"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Determines evaluation order.  Lower = higher priority.  Default: `10`."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Domain**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+#: ../../ai-agent/domain-routing.md:244
+msgid "Yes"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Name of the domain (e.g., `Sales`, `Finance`).  Used to look up the built-in system prompt."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Keywords**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Comma-separated list of trigger words.  Case-insensitive substring match.  Leave blank to create a catch-all rule."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Target Agent**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "The specialised agent to delegate to when this rule matches."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Active**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Uncheck to disable the rule without deleting it."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "**Description**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:92
+msgid "Internal note.  Not used in routing logic."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:118
+msgid "Use **Sequence** to set priority between overlapping rules.  For example, a general \"CRM\" rule at sequence 20 and a more specific \"VIP customer\" rule at sequence 5 — the VIP rule is evaluated first and takes precedence."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:125
+msgid "4. Keyword Matching"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:127
+msgid "When a user message arrives, the orchestrator:"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:129
+msgid "Converts the message to lower-case."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:130
+msgid "**Strips agent-addressing prefixes** — phrases like `\"sales agent야,\"`, `\"finance agent,\"`, or `\"재무 담당자,\"` are removed before keyword matching. This prevents a false negative when the user addresses a specific agent by name but asks about a different domain."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:134
+msgid "Iterates over active routing rules in **sequence order**."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:135
+msgid "For each rule, checks whether any keyword in the comma-separated list is a **substring** of the cleaned prompt."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:137
+msgid "Returns the first matching rule's target agent."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:139
+msgid "Keyword design tips"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Tip"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Example"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Use root forms so prefixes/suffixes match"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`invoice` matches `invoices`, `invoicing`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Add Korean equivalents for bilingual workspaces"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`invoice,인보이스,청구서`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Keep keywords distinct across rules to avoid overlap"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Avoid `order` in both Sales and Purchase rules — prefer `sales order` vs `purchase order`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Avoid very short keywords"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`hr` will match `\"where\"`, `\"other\"` — use `hr leave`, `payslip`, `employee` instead"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:148
+msgid "Address-stripping patterns"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:150
+msgid "The following prefixes are automatically removed before keyword matching. They work in both English and Korean with optional grammatical particles."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "Prefix pattern"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`sales agent` / `영업 에이전트` / `영업 담당자`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`\"Sales agent, show me Q3 revenue\"` → `\"show me Q3 revenue\"`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`finance agent` / `재무 에이전트` / `재무 담당자`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`\"재무 담당자야, 청구서 목록 보여줘\"` → `\"청구서 목록 보여줘\"`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`inventory agent` / `재고 에이전트`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`hr agent` / `인사 에이전트`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`crm agent` / `고객지원 담당자`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:117
+msgid "`helpdesk agent` / `헬프데스크 에이전트`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:164
+msgid "5. Fallback Behavior"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:166
+msgid "When no keyword rule matches, the orchestrator applies the **Fallback Behavior** setting.  Configure it on the orchestrator agent form (General tab)."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:169
+msgid "5.1 Handle directly (`self`)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:171
+msgid "The orchestrator responds using its own LLM model and system prompt. `miss_count` is incremented on each miss so you can track how often no rule matched (see section 6)."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:175
+msgid "**Use when:** You want the orchestrator to act as a general-purpose assistant for queries that fall outside defined domains."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:178
+msgid "5.2 Route to first active agent (`first`)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:180
+msgid "The orchestrator always delegates to the **first** routing rule (lowest sequence number) regardless of keyword content."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:183
+msgid "**Use when:** You have a single primary domain agent and want all unmatched traffic to reach it."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:186
+msgid "5.3 LLM Intent Classification (`llm`)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:188
+msgid "The orchestrator calls its own LLM with a classification prompt listing all active routing rules and their keywords.  The LLM returns the single best domain name.  If the returned name matches a rule, that rule's target agent handles the message; otherwise, the orchestrator falls back to direct handling."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:193
+msgid "**Use when:** Keyword coverage is incomplete and you want semantics-based routing for edge cases."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:197
+msgid "LLM classification adds a full inference round-trip before the target agent responds.  This roughly doubles end-to-end latency for unmatched prompts. Use it only when keyword rules cannot be tuned to sufficient coverage."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:202
+msgid "Fallback comparison"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Fallback"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Latency impact"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "When to use"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "`self`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "None"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "General-purpose orchestrator with a capable LLM"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "`first`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Single primary domain, simple setup"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "`llm`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "+1 LLM call for unmatched prompts"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Semantic routing when keyword coverage is insufficient"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:212
+msgid "6. Routing Statistics"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:214
+msgid "The orchestrator collects statistics automatically.  No configuration is needed."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:216
+msgid "Per-rule statistics"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:218
+msgid "Navigate to **AI → Agents → Agents → (open orchestrator) → Routing Rules** tab."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Column"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "**Match Count**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Total number of times this rule was selected.  Updated atomically — safe under concurrent requests."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "**Last Matched**"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "UTC timestamp of the most recent trigger."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:225
+msgid "Orchestrator-level statistics"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "**Unmatched Requests** (`miss_count`)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:196
+msgid "Number of requests where no keyword rule matched and the orchestrator handled directly (fallback = `self`).  Visible on the agent form."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:231
+msgid "Using statistics to tune routing rules"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:233
+msgid "A high `miss_count` means prompts are reaching the orchestrator without matching any rule.  To investigate:"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:236
+msgid "Enable Odoo server logging at `DEBUG` level for the `lu_ai_orchestrator` module."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:238
+msgid "Search logs for `[Orchestrator:…] No rule matched` — the full prompt is logged at this point."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:240
+msgid "Identify recurring unmatched themes."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:241
+msgid "Add the relevant terms to existing rule keyword lists, or create a new routing rule."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:245
+msgid "Review routing statistics weekly during the first month after deployment. `miss_count` typically drops to near-zero after two or three rounds of keyword tuning."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:252
+msgid "7. Ask AI Integration"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:254
+msgid "When the user clicks the **Ask AI** button in Odoo's list and form views, the system selects the most appropriate agent automatically.  If an orchestrator is configured as the Ask AI agent, it takes precedence over domain agents — ensuring that the routing layer is always invoked first."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:259
+msgid "To make an orchestrator the Ask AI agent:"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:261
+msgid "Open the orchestrator agent form."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:262
+msgid "Enable the **Ask AI Agent** toggle."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:265
+msgid "Domain agents should **not** have the Ask AI toggle enabled when an orchestrator is present.  Doing so would bypass the routing layer for Ask AI interactions."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:270
+msgid "8. Multi-Domain Example"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:272
+msgid "The following example sets up three domain agents behind a single orchestrator."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:274
+msgid "Agents to create"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "LLM"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Is Orchestrator"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Notes"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`Main Orchestrator`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`qwen3.5:9b`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Entry point for all user messages"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`Sales Agent`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "No"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Handles sales orders, CRM pipeline"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`Finance Agent`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`claude-sonnet-4-6`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Handles invoices, payments"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`HR Agent`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Handles leaves, payroll, attendance"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:283
+msgid "Routing rules on Main Orchestrator"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Seq"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Domain"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Keywords"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Target agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "10"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Sales"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`sale order, quotation, opportunity, lead, revenue, 견적, 영업`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Sales Agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "20"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Finance"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`invoice, payment, journal, budget, 청구서, 지급, 회계`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Finance Agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "30"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "HR"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`employee, leave, payroll, attendance, contract, 직원, 휴가, 급여`"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "HR Agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:291
+msgid "**Fallback behavior:** `self` — the orchestrator answers general ERP questions that do not belong to any specific domain."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:296
+msgid "9. Advanced: Multi-layer Prompts (lu_ai_edge)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:298
+msgid "Installing the optional `lu_ai_edge` module extends the routing layer with additional prompt assembly capabilities."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:301
+msgid "Chain-of-Thought (CoT) instructions"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:303
+msgid "Each domain rule gains a CoT instruction block appended after the base system prompt.  These instructions guide the domain agent to reason step-by-step before producing an answer — particularly useful for complex financial or inventory calculations."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:308
+msgid "Few-shot examples"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:310
+msgid "Domain-specific few-shot examples can be stored in `ir.config_parameter` and injected into the system prompt at routing time.  This improves consistency for structured outputs such as tables, formatted reports, or JSON payloads."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:314
+msgid "MMR RAG reranking"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:316
+msgid "When a domain agent uses RAG (document retrieval), `lu_ai_edge` replaces the default similarity-only reranking with **Maximal Marginal Relevance (MMR)**. MMR balances relevance with diversity, reducing redundant chunks when multiple documents cover similar content."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:321
+msgid "The MMR lambda parameter (`ai.edge.mmr_lambda`, default `0.5`) controls the relevance-diversity trade-off:"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:324
+msgid "`1.0` — pure relevance (same as the default ranker)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:325
+msgid "`0.0` — pure diversity"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:326
+msgid "`0.5` — balanced (recommended starting point)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:328
+msgid "Set it at **Settings → Technical → Parameters → System Parameters**."
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:332
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Symptom"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Likely cause"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Fix"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "All messages handled by orchestrator, no routing"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`is_orchestrator` not enabled"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Enable **Is Orchestrator** toggle on agent form"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Rule never matches despite correct keywords"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Keyword has leading/trailing whitespace"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Check the **Keywords** field — remove extra spaces around commas"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Korean prompts not matching"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Missing Korean keyword variants"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Add Korean translations to the keyword list (e.g., `invoice,청구서`)"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "LLM fallback classification returns wrong domain"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Ambiguous domain names"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Make domain names more distinct; add descriptive keywords"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "`miss_count` keeps rising"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Prompts use vocabulary not covered by any rule"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Review server logs, identify recurring unmatched patterns, add keywords"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Domain agent uses wrong system prompt"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Domain name in rule does not match a built-in key"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Check spelling (`sales`, `finance`, `inventory`, `hr`, `crm`) or add a custom system prompt to the target agent"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Ask AI does not route through orchestrator"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Domain agent has **Ask AI Agent** enabled"
+msgstr ""
+
+#: ../../ai-agent/domain-routing.md:244
+msgid "Disable **Ask AI Agent** on all domain agents; enable only on the orchestrator"
+msgstr ""

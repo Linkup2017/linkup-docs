@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 09:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../marketing/index.rst:2
+msgid "Marketing"
+msgstr ""
+
+#: ../../marketing/index.rst:4
+msgid "Email and SMS marketing campaign tools for Odoo."
+msgstr ""
+
+#: ../../marketing/index.rst:10
+msgid "Repository"
+msgstr ""
+
+#: ../../marketing/index.rst:11
+msgid "Description"
+msgstr ""
+
+#: ../../marketing/index.rst:12
+msgid "``lu_marketing``"
+msgstr ""
+
+#: ../../marketing/index.rst:13
+msgid "Marketing automation — email campaigns, SMS blasts, audience segmentation"
+msgstr ""
+
+#: ../../marketing/index.rst:17
+msgid ""
+"Detailed documentation for Marketing modules is planned for Phase 2 "
+"(W11+)."
+msgstr ""
+
