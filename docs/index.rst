@@ -56,6 +56,13 @@ Package Categories
 
       PG payment gateways and external API connectors.
 
+   .. grid-item-card:: MCP Server
+      :link: mcp/index
+      :link-type: doc
+
+      Model Context Protocol server — 74 tools exposing Odoo data to
+      Claude Desktop, claude.ai, and any MCP-compatible AI client.
+
 
 .. toctree::
    :maxdepth: 2
@@ -98,3 +105,10 @@ Package Categories
    :caption: Integrations
 
    integrations/index
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: MCP Server
+
+   mcp/index
