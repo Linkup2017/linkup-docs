@@ -184,6 +184,41 @@ msgstr ""
 
 #: ../../ai-agent/domain-routing.md:70
 msgid ""
+"`crm.lead` appears in both the `sales` and `crm` domain prompts by design "
+"— each domain uses the model from a different perspective:"
+msgstr ""
+"`crm.lead`은 설계상 `sales`와 `crm` 도메인 프롬프트 모두에 등장합니다 — "
+"각 도메인은 동일한 모델을 서로 다른 관점으로 활용합니다:"
+
+#: ../../ai-agent/domain-routing.md:73
+msgid ""
+"**`sales`** — treats `crm.lead` as a pipeline object: lead qualification, "
+"opportunity conversion, revenue forecasting, and sales-stage progression."
+msgstr ""
+"**`sales`** — `crm.lead`을 파이프라인 객체로 다룹니다: 리드 검증, "
+"영업 기회 전환, 매출 예측, 영업 단계 진행."
+
+#: ../../ai-agent/domain-routing.md:75
+msgid ""
+"**`crm`** — treats `crm.lead` as a customer-relationship artefact: "
+"interaction history, partner linkage, and communication context."
+msgstr ""
+"**`crm`** — `crm.lead`을 고객 관계 아티팩트로 다룹니다: "
+"상호작용 이력, 파트너 연결, 커뮤니케이션 컨텍스트."
+
+#: ../../ai-agent/domain-routing.md:78
+msgid ""
+"When a routing rule is named `sales`, the agent focuses on pipeline and "
+"conversion; when named `crm`, it focuses on the customer account and "
+"contact history.  Both are correct — the distinction is driven by the "
+"agent's domain scope, not by the underlying model."
+msgstr ""
+"라우팅 규칙 이름이 `sales`이면 에이전트는 파이프라인과 전환에 집중하고, "
+"`crm`이면 고객 계정과 연락처 이력에 집중합니다. "
+"둘 다 정확합니다 — 구분은 기반 모델이 아니라 에이전트의 도메인 범위에 의해 결정됩니다."
+
+#: ../../ai-agent/domain-routing.md:84
+msgid ""
 "The domain key is matched against the **Domain** field of the routing "
 "rule (case-insensitive).  Routing rules named `\"Sales\"`, `\"sales\"`, "
 "or `\"SALES\"` all resolve to the `sales` system prompt.  Custom rule "
