@@ -180,7 +180,7 @@ regenerated at [console.anthropic.com](https://console.anthropic.com/).
 
 ## 4. AI Agent Configuration
 
-**Module:** `lu_ai_orchestrator`
+**Module:** `lu_ai_orch`
 
 ### Creating an agent
 
@@ -238,66 +238,87 @@ domain and how to customise routing, see [Domain Routing](domain-routing.md).
 
 **Module:** `lu_ai_rag`
 
-RAG (Retrieval-Augmented Generation) attaches relevant documents to the prompt
-at query time, letting the agent answer questions about your company's internal
-knowledge base without retraining the model.
+RAG (Retrieval-Augmented Generation) indexes files from your file servers and
+injects the most relevant chunks into the prompt at query time, letting agents
+answer questions about internal documents without retraining the model.
+
+```{note}
+The RAG pipeline menu is restricted to **System Administrators**
+(`Settings → Users & Companies → Users → Technical` group).
+```
 
 ### How it works
 
-1. Documents are chunked and embedded into a vector index when a knowledge
-   source is attached to an agent.
-2. At query time, the user's message is embedded and the top-N most similar
-   chunks are retrieved.
-3. The retrieved chunks are injected into the prompt before the LLM generates a
-   response.
+1. A **File Source** defines a file server mount or network share to watch,
+   along with which agents it feeds.
+2. A scheduled job polls each active File Source at a configurable interval,
+   detects new or modified files by SHA-256 checksum, and queues them for
+   processing.
+3. Each queued file goes through a state machine:
+   **Pending → Extracting Text → Generating Embeddings → Done** (or **Error**).
+4. At query time, the user's message is embedded and the top-N most similar
+   chunks are retrieved and injected into the prompt before the LLM responds.
 
-### Accessing knowledge source settings
+### Accessing the RAG settings
 
-Go to **AI → Configuration → Knowledge Sources**.
+Go to **AI → Configuration → RAG Pipeline**. Two sub-menus are available:
 
-### Supported source types
+| Sub-menu | Description |
+|----------|-------------|
+| **File Sources** | Define file server connections and assign target agents. |
+| **Embedding Documents** | Monitor per-file processing status and retry failed documents. |
 
-| Type | Description |
-|------|-------------|
-| **Odoo Attachments** | PDF, DOCX, TXT files attached to any Odoo record. |
-| **External URL** | Publicly accessible URL (HTML page or plain text). Fetched and indexed at setup time. |
+### File Source fields
 
-### Embedding model selection
+| Field | Default | Description |
+|-------|---------|-------------|
+| **Name** | — | Display label for this file server connection. |
+| **Protocol** | Local / Mounted Path | Connection type: `Local / Mounted Path`, `SMB / Windows Share`, `NFS`, or `HTTP / REST API`. |
+| **Root Path** | — | Local path (e.g. `/mnt/fileserver`) or UNC path for SMB (e.g. `//server/share`). |
+| **SMB Username / Password / Domain** | — | Required only when Protocol is `SMB / Windows Share`. |
+| **File Extensions** | `pdf,docx,xlsx,txt,csv` | Comma-separated list of extensions to index (no leading dots). |
+| **Poll Interval (minutes)** | `60` | How often the scheduler scans for new or modified files. |
+| **Domain Code** | `general` | RAG partition key used to filter embeddings per agent domain (e.g. `sales`, `hr`). Set automatically by domain sub-modules (`lu_ai_rag_*`). |
+| **Target Agents** | — | Embeddings from this source will be injected into conversations with the selected agents. |
 
-Go to **Settings → AI → Embedding Model**. Supported options:
+### Linking a File Source to agents
 
-| Option | Provider | Notes |
-|--------|----------|-------|
-| `nomic-embed-text` | Ollama (local) | Free, runs on CPU, ~270 MB |
-| `mxbai-embed-large` | Ollama (local) | Higher accuracy, ~670 MB |
-| `text-embedding-3-small` | OpenAI | Requires OpenAI API key |
+Agents are assigned directly on the File Source form, not on the agent form:
 
-```{note}
-For fully on-premise deployments, use an Ollama embedding model. The local
-options produce comparable retrieval quality to cloud models for most business
-document types.
-```
+1. Go to **AI → Configuration → RAG Pipeline → File Sources**.
+2. Open (or create) a File Source.
+3. In the **Target Agents** field, add the agents that should use this source.
+4. Save. The scheduler will pick up new files on the next poll cycle, or click
+   **Poll Now** to trigger an immediate scan.
 
-### Attaching a knowledge source to an agent
+### Monitoring embedding status
 
-1. Open the agent form (**AI → Agents → Agents → (open agent)**).
-2. Go to the **Knowledge** tab.
-3. Click **Add a line** and select an existing knowledge source, or click
-   **Create and edit** to define a new one.
-4. Save the agent. The knowledge source index is built automatically in the
-   background (progress visible in the chatter).
+Go to **AI → Configuration → RAG Pipeline → Embedding Documents** to see
+the processing state of every discovered file.
 
-### When to use RAG vs. system prompt
+| Status | Meaning |
+|--------|---------|
+| **Pending** | File detected; waiting for the next processing run. |
+| **Extracting Text** | Text is being extracted from the file. |
+| **Generating Embeddings** | Chunks are being embedded by the embedding model. |
+| **Done** | File successfully indexed. |
+| **Error** | Processing failed. See **Error Details** for the cause. |
+
+Click **Retry** on an error record to reset it to **Pending** so the next
+scheduled run re-processes it.
+
+### When to use RAG vs. other context sources
 
 | Use case | Recommendation |
 |----------|---------------|
 | Static instructions, persona, output format | System prompt |
-| Company policies, product catalogues, FAQs (updated periodically) | RAG knowledge source |
+| Company policies, product catalogues, FAQs (updated periodically) | RAG File Source |
 | Real-time ERP data (orders, inventory, HR records) | Domain context injection (see [Domain Routing](domain-routing.md)) |
 
 ```{tip}
-RAG is most effective when documents are well-structured (clear headings,
-consistent terminology). Scanned PDFs without OCR produce poor retrieval quality.
+RAG retrieval quality depends on document structure. Well-formatted files with
+clear headings and consistent terminology produce significantly better results
+than scanned PDFs without OCR or heavily formatted spreadsheets.
 ```
 
 ---
@@ -385,4 +406,6 @@ the local server is unavailable) and cross-domain routing logic are covered in
 | "401 Unauthorized" (Claude) | Invalid or expired API key | Regenerate key at console.anthropic.com |
 | "429 Too Many Requests" (Claude) | Rate limit or quota exceeded | Check usage limits at console.anthropic.com |
 | RAG returns irrelevant chunks | Poor document structure or wrong embedding model | Re-index after improving document formatting; try a different embedding model |
+| File Source status stays "Polling" | Poll job hung or crashed | Restart the Odoo worker; check server logs for the `lu.ai.file.source` cron job |
+| Embedding Document stuck in "Error" | File parse failure or embedding server unavailable | Check **Error Details** on the document record; click **Retry** after fixing the root cause |
 | Agent not visible in side panel | Agent marked inactive or group restriction | Check **Active** checkbox and **Allowed Groups** on the agent form |
