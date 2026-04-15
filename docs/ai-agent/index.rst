@@ -112,7 +112,9 @@ Getting Started
 .. toctree::
    :maxdepth: 2
 
+   architecture
    quickstart
    configuration
    domain-routing
    workflows
+   proactive-alerts
