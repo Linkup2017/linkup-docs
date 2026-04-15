@@ -1,6 +1,6 @@
 # Domain Routing
 
-**Module:** `lu_ai_orchestrator`
+**Module:** `lu_ai_orch`
 
 Domain Routing lets a single *Orchestrator* agent dispatch user messages to
 specialised domain agents — Sales, Finance, HR, Inventory, and more — based on
@@ -49,7 +49,7 @@ flowchart TD
 
 ## 2. Built-in Domains
 
-`lu_ai_orchestrator` ships five pre-built domain system prompts.  Each domain
+`lu_ai_orch` ships five pre-built domain system prompts.  Each domain
 agent receives one of these prompts automatically when the orchestrator delegates
 to it.
 
@@ -249,7 +249,7 @@ A high `miss_count` means prompts are reaching the orchestrator without
 matching any rule.  To investigate:
 
 1. Enable Odoo server logging at `DEBUG` level for the
-   `lu_ai_orchestrator` module.
+   `lu_ai_orch` module.
 2. Search logs for `[Orchestrator:…] No rule matched` — the full prompt is
    logged at this point.
 3. Identify recurring unmatched themes.

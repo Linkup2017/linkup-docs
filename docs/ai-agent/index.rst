@@ -29,13 +29,13 @@ Modules
    * - ``lu_ai_rag``
      - File-server RAG — local Ollama embeddings, zero external data transfer
      - |check|
-   * - ``lu_ai_orchestrator``
+   * - ``lu_ai_orch``
      - Orchestrator — domain routing, system prompts, context injection
      - |check|
    * - ``lu_ai_workflow``
      - Workflow engine — multi-step automation, triggers, conditions
      - |check|
-   * - ``lu_ai_proactive``
+   * - ``lu_ai_pro``
      - Proactive alerts — scheduled checks, threshold notifications
      - |check|
    * - ``lu_ai_admin``
@@ -76,33 +76,33 @@ Domain Extension Modules
    * - ``lu_ai_rag_sales``
      - Sales domain RAG partitioning
      - rag
-   * - ``lu_ai_orchestrator_account``
+   * - ``lu_ai_orch_account``
      - Finance/Accounting domain agent (invoices, payments, budgets)
-     - orchestrator
-   * - ``lu_ai_orchestrator_crm``
+     - orch
+   * - ``lu_ai_orch_crm``
      - CRM domain agent (leads, opportunities, pipeline)
-     - orchestrator
-   * - ``lu_ai_orchestrator_helpdesk``
+     - orch
+   * - ``lu_ai_orch_helpdesk``
      - Helpdesk domain agent (tickets, SLA, customer support)
-     - orchestrator
-   * - ``lu_ai_orchestrator_hr``
+     - orch
+   * - ``lu_ai_orch_hr``
      - HR domain agent (employees, attendance, payroll, leaves)
-     - orchestrator
-   * - ``lu_ai_orchestrator_sale``
+     - orch
+   * - ``lu_ai_orch_sale``
      - Sales domain agent (sale orders, quotations, revenue)
-     - orchestrator
-   * - ``lu_ai_orchestrator_stock``
+     - orch
+   * - ``lu_ai_orch_stock``
      - Inventory domain agent (stock, transfers, purchase orders)
-     - orchestrator
-   * - ``lu_ai_proactive_crm``
+     - orch
+   * - ``lu_ai_pro_crm``
      - CRM proactive alerts — lead stagnation detection, at-risk scoring
-     - proactive
-   * - ``lu_ai_proactive_helpdesk``
+     - pro
+   * - ``lu_ai_pro_helpdesk``
      - Helpdesk proactive alerts — SLA breach detection, ticket nudge
-     - proactive
-   * - ``lu_ai_proactive_stock``
+     - pro
+   * - ``lu_ai_pro_stock``
      - Stock proactive alerts — shortage detection, autonomous PO suggestion
-     - proactive
+     - pro
 
 .. |check| unicode:: U+2705
 

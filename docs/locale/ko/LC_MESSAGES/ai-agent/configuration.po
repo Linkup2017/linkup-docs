@@ -570,8 +570,8 @@ msgid "4. AI Agent Configuration"
 msgstr "4. AI 에이전트 설정"
 
 #: ../../ai-agent/configuration.md:183
-msgid "**Module:** `lu_ai_orchestrator`"
-msgstr "**모듈:** `lu_ai_orchestrator`"
+msgid "**Module:** `lu_ai_orch`"
+msgstr "**모듈:** `lu_ai_orch`"
 
 #: ../../ai-agent/configuration.md:239
 msgid "**Module:** `lu_ai_rag`"

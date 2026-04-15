@@ -22,8 +22,8 @@ msgid "Domain Routing"
 msgstr "도메인 라우팅"
 
 #: ../../ai-agent/domain-routing.md:3
-msgid "**Module:** `lu_ai_orchestrator`"
-msgstr "**모듈:** `lu_ai_orchestrator`"
+msgid "**Module:** `lu_ai_orch`"
+msgstr "**모듈:** `lu_ai_orch`"
 
 #: ../../ai-agent/domain-routing.md:5
 msgid ""
@@ -88,11 +88,11 @@ msgstr "2. 기본 제공 도메인"
 
 #: ../../ai-agent/domain-routing.md:52
 msgid ""
-"`lu_ai_orchestrator` ships five pre-built domain system prompts.  Each "
+"`lu_ai_orch` ships five pre-built domain system prompts.  Each "
 "domain agent receives one of these prompts automatically when the "
 "orchestrator delegates to it."
 msgstr ""
-"`lu_ai_orchestrator`는 5가지 기본 도메인 시스템 프롬프트를 제공합니다. "
+"`lu_ai_orch`는 5가지 기본 도메인 시스템 프롬프트를 제공합니다. "
 "오케스트레이터가 도메인 에이전트로 위임할 때 해당 프롬프트가 자동으로 적용됩니다."
 
 #: ../../ai-agent/domain-routing.md:32
@@ -731,9 +731,9 @@ msgstr ""
 
 #: ../../ai-agent/domain-routing.md:236
 msgid ""
-"Enable Odoo server logging at `DEBUG` level for the `lu_ai_orchestrator` "
+"Enable Odoo server logging at `DEBUG` level for the `lu_ai_orch` "
 "module."
-msgstr "`lu_ai_orchestrator` 모듈의 Odoo 서버 로그를 `DEBUG` 수준으로 활성화합니다."
+msgstr "`lu_ai_orch` 모듈의 Odoo 서버 로그를 `DEBUG` 수준으로 활성화합니다."
 
 #: ../../ai-agent/domain-routing.md:238
 msgid ""

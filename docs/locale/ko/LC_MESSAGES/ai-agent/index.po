@@ -90,8 +90,8 @@ msgid "File-server RAG — local Ollama embeddings, zero external data transfer"
 msgstr "파일 서버 RAG — 로컬 Ollama 임베딩, 외부 데이터 전송 없음"
 
 #: ../../ai-agent/index.rst:32
-msgid "``lu_ai_orchestrator``"
-msgstr "``lu_ai_orchestrator``"
+msgid "``lu_ai_orch``"
+msgstr "``lu_ai_orch``"
 
 #: ../../ai-agent/index.rst:33
 msgid "Orchestrator — domain routing, system prompts, context injection"
@@ -106,8 +106,8 @@ msgid "Workflow engine — multi-step automation, triggers, conditions"
 msgstr "워크플로우 엔진 — 멀티스텝 자동화, 트리거, 조건"
 
 #: ../../ai-agent/index.rst:38
-msgid "``lu_ai_proactive``"
-msgstr "``lu_ai_proactive``"
+msgid "``lu_ai_pro``"
+msgstr "``lu_ai_pro``"
 
 #: ../../ai-agent/index.rst:39
 msgid "Proactive alerts — scheduled checks, threshold notifications"
@@ -202,8 +202,8 @@ msgid "Sales domain RAG partitioning"
 msgstr "영업 도메인 RAG 파티셔닝"
 
 #: ../../ai-agent/index.rst:79
-msgid "``lu_ai_orchestrator_account``"
-msgstr "``lu_ai_orchestrator_account``"
+msgid "``lu_ai_orch_account``"
+msgstr "``lu_ai_orch_account``"
 
 #: ../../ai-agent/index.rst:80
 msgid "Finance/Accounting domain agent (invoices, payments, budgets)"
@@ -214,48 +214,48 @@ msgid "orchestrator"
 msgstr "orchestrator"
 
 #: ../../ai-agent/index.rst:82
-msgid "``lu_ai_orchestrator_crm``"
-msgstr "``lu_ai_orchestrator_crm``"
+msgid "``lu_ai_orch_crm``"
+msgstr "``lu_ai_orch_crm``"
 
 #: ../../ai-agent/index.rst:83
 msgid "CRM domain agent (leads, opportunities, pipeline)"
 msgstr "CRM 도메인 에이전트 (리드, 영업 기회, 파이프라인)"
 
 #: ../../ai-agent/index.rst:85
-msgid "``lu_ai_orchestrator_helpdesk``"
-msgstr "``lu_ai_orchestrator_helpdesk``"
+msgid "``lu_ai_orch_helpdesk``"
+msgstr "``lu_ai_orch_helpdesk``"
 
 #: ../../ai-agent/index.rst:86
 msgid "Helpdesk domain agent (tickets, SLA, customer support)"
 msgstr "헬프데스크 도메인 에이전트 (티켓, SLA, 고객 지원)"
 
 #: ../../ai-agent/index.rst:88
-msgid "``lu_ai_orchestrator_hr``"
-msgstr "``lu_ai_orchestrator_hr``"
+msgid "``lu_ai_orch_hr``"
+msgstr "``lu_ai_orch_hr``"
 
 #: ../../ai-agent/index.rst:89
 msgid "HR domain agent (employees, attendance, payroll, leaves)"
 msgstr "인사 도메인 에이전트 (직원, 근태, 급여, 휴가)"
 
 #: ../../ai-agent/index.rst:91
-msgid "``lu_ai_orchestrator_sale``"
-msgstr "``lu_ai_orchestrator_sale``"
+msgid "``lu_ai_orch_sale``"
+msgstr "``lu_ai_orch_sale``"
 
 #: ../../ai-agent/index.rst:92
 msgid "Sales domain agent (sale orders, quotations, revenue)"
 msgstr "영업 도메인 에이전트 (판매 주문, 견적, 매출)"
 
 #: ../../ai-agent/index.rst:94
-msgid "``lu_ai_orchestrator_stock``"
-msgstr "``lu_ai_orchestrator_stock``"
+msgid "``lu_ai_orch_stock``"
+msgstr "``lu_ai_orch_stock``"
 
 #: ../../ai-agent/index.rst:95
 msgid "Inventory domain agent (stock, transfers, purchase orders)"
 msgstr "재고 도메인 에이전트 (재고, 이전, 구매 주문)"
 
 #: ../../ai-agent/index.rst:97
-msgid "``lu_ai_proactive_crm``"
-msgstr "``lu_ai_proactive_crm``"
+msgid "``lu_ai_pro_crm``"
+msgstr "``lu_ai_pro_crm``"
 
 #: ../../ai-agent/index.rst:98
 msgid "CRM proactive alerts — lead stagnation detection, at-risk scoring"
@@ -266,16 +266,16 @@ msgid "proactive"
 msgstr "proactive"
 
 #: ../../ai-agent/index.rst:100
-msgid "``lu_ai_proactive_helpdesk``"
-msgstr "``lu_ai_proactive_helpdesk``"
+msgid "``lu_ai_pro_helpdesk``"
+msgstr "``lu_ai_pro_helpdesk``"
 
 #: ../../ai-agent/index.rst:101
 msgid "Helpdesk proactive alerts — SLA breach detection, ticket nudge"
 msgstr "헬프데스크 프로액티브 알림 — SLA 위반 감지, 티켓 독촉"
 
 #: ../../ai-agent/index.rst:103
-msgid "``lu_ai_proactive_stock``"
-msgstr "``lu_ai_proactive_stock``"
+msgid "``lu_ai_pro_stock``"
+msgstr "``lu_ai_pro_stock``"
 
 #: ../../ai-agent/index.rst:104
 msgid "Stock proactive alerts — shortage detection, autonomous PO suggestion"
