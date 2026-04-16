@@ -788,17 +788,24 @@ msgstr "데이터 격리"
 
 #: ../../ai-agent/architecture.md:328
 msgid ""
-"- RAG embeddings are domain-partitioned; a CRM query cannot retrieve "
-"Finance embeddings.\n"
-"- Field-level masking is configured per domain agent — sensitive fields "
-"(e.g., salary data) are excluded from prompt context automatically.\n"
-"- Every AI interaction is written to an audit log (`ai.security.log`) "
+"RAG embeddings are domain-partitioned; a CRM query cannot retrieve "
+"Finance embeddings."
+msgstr "RAG 임베딩은 도메인으로 분할됩니다. CRM 쿼리는 재무 임베딩을 검색할 수 없습니다."
+
+#: ../../ai-agent/architecture.md:329
+msgid ""
+"Field-level masking is configured per domain agent — sensitive fields "
+"(e.g., salary data) are excluded from prompt context automatically."
+msgstr ""
+"필드 레벨 마스킹은 도메인 에이전트별로 구성됩니다. "
+"민감한 필드(예: 급여 데이터)는 프롬프트 컨텍스트에서 자동으로 제외됩니다."
+
+#: ../../ai-agent/architecture.md:330
+msgid ""
+"Every AI interaction is written to an audit log (`ai.security.log`) "
 "accessible from the admin dashboard."
 msgstr ""
-"- RAG 임베딩은 도메인으로 분할됩니다. CRM 쿼리는 재무 임베딩을 검색할 수 없습니다.\n"
-"- 필드 레벨 마스킹은 도메인 에이전트별로 구성됩니다. "
-"민감한 필드(예: 급여 데이터)는 프롬프트 컨텍스트에서 자동으로 제외됩니다.\n"
-"- 모든 AI 상호작용은 관리자 대시보드에서 접근 가능한 감사 로그(`ai.security.log`)에 기록됩니다."
+"모든 AI 상호작용은 관리자 대시보드에서 접근 가능한 감사 로그(`ai.security.log`)에 기록됩니다."
 
 #: ../../ai-agent/architecture.md:334
 msgid "Performance & Optimization"
@@ -868,17 +875,23 @@ msgstr "캐싱 & 연결 풀링"
 
 #: ../../ai-agent/architecture.md:349
 msgid ""
-"- **Embedding vectors** are stored per-chunk in `ai.embedding` and reused "
-"across queries.\n"
-"- **Prompt templates** are cached in `data/prompt_templates.xml` (loaded by "
-"`lu_ai_edge`).\n"
-"- The Ollama client maintains persistent HTTP connections; avoid setting a "
+"**Embedding vectors** are stored per-chunk in `ai.embedding` and reused "
+"across queries."
+msgstr "**임베딩 벡터**는 청크별로 `ai.embedding`에 저장되고 쿼리 전체에서 재사용됩니다."
+
+#: ../../ai-agent/architecture.md:350
+msgid ""
+"**Prompt templates** are cached in `data/prompt_templates.xml` (loaded by "
+"`lu_ai_edge`)."
+msgstr "**프롬프트 템플릿**은 `data/prompt_templates.xml`에 캐시됩니다(`lu_ai_edge`에서 로드)."
+
+#: ../../ai-agent/architecture.md:351
+msgid ""
+"The Ollama client maintains persistent HTTP connections; avoid setting a "
 "very short `OLLAMA_KEEP_ALIVE` on the server side to benefit from model "
 "keep-warm."
 msgstr ""
-"- **임베딩 벡터**는 청크별로 `ai.embedding`에 저장되고 쿼리 전체에서 재사용됩니다.\n"
-"- **프롬프트 템플릿**은 `data/prompt_templates.xml`에 캐시됩니다(`lu_ai_edge`에서 로드).\n"
-"- Ollama 클라이언트는 지속적인 HTTP 연결을 유지합니다. "
+"Ollama 클라이언트는 지속적인 HTTP 연결을 유지합니다. "
 "모델 keep-warm의 이점을 얻으려면 서버 측에서 매우 짧은 `OLLAMA_KEEP_ALIVE`를 설정하지 마세요."
 
 #: ../../ai-agent/architecture.md:355
