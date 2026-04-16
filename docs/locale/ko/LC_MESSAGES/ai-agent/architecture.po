@@ -360,37 +360,37 @@ msgstr "임베딩 파이프라인"
 
 #: ../../ai-agent/architecture.md:177
 msgid ""
-"1. **File Source Registration** — An administrator registers one or more "
+"**File Source Registration** — An administrator registers one or more "
 "network file sources (SMB share, local path) in the *AI → RAG → File "
 "Sources* view."
 msgstr ""
-"1. **파일 소스 등록** — 관리자가 *AI → RAG → 파일 소스* "
+"**파일 소스 등록** — 관리자가 *AI → RAG → 파일 소스* "
 "보기에서 하나 이상의 네트워크 파일 소스(SMB 공유, 로컬 경로)를 등록합니다."
 
 #: ../../ai-agent/architecture.md:178
 msgid ""
-"2. **Polling Cron** — `ir.cron` (`ir_cron.xml`) polls each source on a "
+"**Polling Cron** — `ir.cron` (`ir_cron.xml`) polls each source on a "
 "configurable schedule, detects new or changed files, and queues them for "
 "embedding."
 msgstr ""
-"2. **폴링 Cron** — `ir.cron`(`ir_cron.xml`)이 설정 가능한 일정에 따라 "
+"**폴링 Cron** — `ir.cron`(`ir_cron.xml`)이 설정 가능한 일정에 따라 "
 "각 소스를 폴링하고 신규 또는 변경된 파일을 감지하여 임베딩을 위해 큐에 추가합니다."
 
 #: ../../ai-agent/architecture.md:179
 msgid ""
-"3. **Embedding** — Changed files are chunked and sent to the Ollama "
+"**Embedding** — Changed files are chunked and sent to the Ollama "
 "embedding API. Resulting vectors are stored in `ai.embedding` records."
 msgstr ""
-"3. **임베딩** — 변경된 파일은 청크로 분할되어 Ollama 임베딩 API로 전송됩니다. "
+"**임베딩** — 변경된 파일은 청크로 분할되어 Ollama 임베딩 API로 전송됩니다. "
 "결과 벡터는 `ai.embedding` 레코드에 저장됩니다."
 
 #: ../../ai-agent/architecture.md:180
 msgid ""
-"4. **Retrieval** — At query time, the user's prompt is embedded and a "
+"**Retrieval** — At query time, the user's prompt is embedded and a "
 "cosine-similarity search retrieves the top-k chunks. These are injected "
 "into the assembled prompt before the LLM call."
 msgstr ""
-"4. **검색** — 쿼리 시 사용자의 프롬프트가 임베딩되고 코사인 유사도 검색이 "
+"**검색** — 쿼리 시 사용자의 프롬프트가 임베딩되고 코사인 유사도 검색이 "
 "상위 k개 청크를 검색합니다. 이들은 LLM 호출 전에 조립된 프롬프트에 주입됩니다."
 
 #: ../../ai-agent/architecture.md:182
@@ -426,64 +426,69 @@ msgid "Step-by-Step: User Query → LLM Response"
 msgstr "단계별: 사용자 쿼리 → LLM 응답"
 
 #: ../../ai-agent/architecture.md:196
-msgid ""
-"1. **User sends a message** in the side panel (`lu_ai_sidepanel`)."
-msgstr ""
-"1. **사용자가 메시지를 전송합니다** (사이드 패널 `lu_ai_sidepanel`에서)."
+msgid "**User sends a message** in the side panel (`lu_ai_sidepanel`)."
+msgstr "**사용자가 메시지를 전송합니다** (사이드 패널 `lu_ai_sidepanel`에서)."
 
 #: ../../ai-agent/architecture.md:197
 msgid ""
-"2. **Orchestrator receives the request** (`lu_ai_orch`), identifies the "
+"**Orchestrator receives the request** (`lu_ai_orch`), identifies the "
 "active agent and its assigned provider (Ollama or Claude)."
 msgstr ""
-"2. **오케스트레이터가 요청을 수신합니다**(`lu_ai_orch`). "
+"**오케스트레이터가 요청을 수신합니다**(`lu_ai_orch`). "
 "활성 에이전트와 할당된 공급자(Ollama 또는 Claude)를 식별합니다."
 
 #: ../../ai-agent/architecture.md:198
 msgid ""
-"3. **Domain routing** — The orchestrator matches the query against "
+"**Domain routing** — The orchestrator matches the query against "
 "registered routes (`lu.ai.orchestrator.route`) and selects the best-fit "
 "domain agent."
 msgstr ""
-"3. **도메인 라우팅** — 오케스트레이터가 쿼리를 등록된 라우트(`lu.ai.orchestrator.route`)와 "
+"**도메인 라우팅** — 오케스트레이터가 쿼리를 등록된 라우트(`lu.ai.orchestrator.route`)와 "
 "비교하여 가장 적합한 도메인 에이전트를 선택합니다."
 
 #: ../../ai-agent/architecture.md:199
+msgid "**Context assembly**:"
+msgstr "**컨텍스트 조립**:"
+
+#: ../../ai-agent/architecture.md:200
+msgid "Domain-specific system prompt is loaded from the route record."
+msgstr "도메인별 시스템 프롬프트가 라우트 레코드에서 로드됩니다."
+
+#: ../../ai-agent/architecture.md:201
+msgid "RAG retrieval runs against domain-filtered embeddings (`lu_ai_rag`)."
+msgstr "RAG 검색이 도메인 필터링된 임베딩(`lu_ai_rag`)에 대해 실행됩니다."
+
+#: ../../ai-agent/architecture.md:202
+msgid "Retrieved chunks are appended to the prompt context."
+msgstr "검색된 청크가 프롬프트 컨텍스트에 추가됩니다."
+
+#: ../../ai-agent/architecture.md:203
 msgid ""
-"4. **Context assembly**:\n"
-"   - Domain-specific system prompt is loaded from the route record.\n"
-"   - RAG retrieval runs against domain-filtered embeddings (`lu_ai_rag`).\n"
-"   - Retrieved chunks are appended to the prompt context.\n"
-"   - Runtime context is injected (user language, company name — see `lu_ai_edge`)."
-msgstr ""
-"4. **컨텍스트 조립**:\n"
-"   - 도메인별 시스템 프롬프트가 라우트 레코드에서 로드됩니다.\n"
-"   - RAG 검색이 도메인 필터링된 임베딩(`lu_ai_rag`)에 대해 실행됩니다.\n"
-"   - 검색된 청크가 프롬프트 컨텍스트에 추가됩니다.\n"
-"   - 런타임 컨텍스트가 주입됩니다 (사용자 언어, 회사명 — `lu_ai_edge` 참고)."
+"Runtime context is injected (user language, company name — see "
+"`lu_ai_edge`)."
+msgstr "런타임 컨텍스트가 주입됩니다 (사용자 언어, 회사명 — `lu_ai_edge` 참고)."
 
 #: ../../ai-agent/architecture.md:204
 msgid ""
-"5. **LLM inference** — The assembled prompt is streamed to Ollama or the "
+"**LLM inference** — The assembled prompt is streamed to Ollama or the "
 "Anthropic API. Responses stream back token by token."
 msgstr ""
-"5. **LLM 추론** — 조립된 프롬프트가 Ollama 또는 Anthropic API로 스트리밍됩니다. "
+"**LLM 추론** — 조립된 프롬프트가 Ollama 또는 Anthropic API로 스트리밍됩니다. "
 "응답은 토큰 단위로 다시 스트리밍됩니다."
 
 #: ../../ai-agent/architecture.md:205
 msgid ""
-"6. **Post-processing** — The response is formatted, linked to the originating"
+"**Post-processing** — The response is formatted, linked to the originating"
 " Odoo record (chatter thread), and persisted."
-msgstr ""
-"6. **후처리** — 응답이 형식화되어 원본 Odoo 레코드(Chatter 스레드)에 연결되고 저장됩니다."
+msgstr "**후처리** — 응답이 형식화되어 원본 Odoo 레코드(Chatter 스레드)에 연결되고 저장됩니다."
 
 #: ../../ai-agent/architecture.md:206
 msgid ""
-"7. **State update** — If the query triggered a write action (e.g., \"update "
+"**State update** — If the query triggered a write action (e.g., \"update "
 "this lead's stage\"), the result is applied to the Odoo model and an audit "
 "log entry is written."
 msgstr ""
-"7. **상태 업데이트** — 쿼리가 쓰기 작업을 트리거한 경우(예: \"이 기회의 단계 업데이트\"), "
+"**상태 업데이트** — 쿼리가 쓰기 작업을 트리거한 경우(예: \"이 기회의 단계 업데이트\"), "
 "결과가 Odoo 모델에 적용되고 감사 로그 항목이 기록됩니다."
 
 #: ../../ai-agent/architecture.md:208
