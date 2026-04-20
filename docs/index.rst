@@ -57,6 +57,13 @@ Package Categories
 
       Email and SMS marketing campaign tools.
 
+   .. grid-item-card:: CxFlow
+      :link: cxflow/index
+      :link-type: doc
+
+      Markdown-native project document management — CPS, deliverables,
+      gate reviews, Git sync, and AI-assisted authoring.
+
    .. grid-item-card:: Integrations
       :link: integrations/index
       :link-type: doc
@@ -69,6 +76,13 @@ Package Categories
    :caption: AI Agent
 
    ai-agent/index
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: CxFlow
+
+   cxflow/index
 
 .. toctree::
    :maxdepth: 2
