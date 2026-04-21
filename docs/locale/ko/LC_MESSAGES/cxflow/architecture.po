@@ -1,0 +1,512 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/architecture.md:1
+msgid "Architecture Overview"
+msgstr "아키텍처 개요"
+
+#: ../../cxflow/architecture.md:3
+msgid ""
+"This chapter gives system integrators and technical evaluators a "
+"bird's-eye view of CxFlow — its module layout, dependency graph, and data"
+" flow."
+msgstr ""
+"이 장에서는 시스템 통합자와 기술 평가자에게 CxFlow의 전체적인 조감도 — "
+"모듈 레이아웃, 의존성 그래프, 데이터 흐름을 제공합니다."
+
+#: ../../cxflow/architecture.md:6
+msgid "Module Dependency Map"
+msgstr "모듈 의존성 맵"
+
+#: ../../cxflow/architecture.md:45
+msgid ""
+"**Blue** = core modules, **Green** = extension modules, **Grey** = Odoo /"
+" external dependencies."
+msgstr ""
+"**파란색** = 코어 모듈, **초록색** = 확장 모듈, **회색** = Odoo / "
+"외부 의존성."
+
+#: ../../cxflow/architecture.md:47
+msgid "Layer Architecture"
+msgstr "계층 아키텍처"
+
+#: ../../cxflow/architecture.md:49
+msgid "CxFlow follows a three-layer design:"
+msgstr "CxFlow는 3계층 설계를 따릅니다:"
+
+#: ../../cxflow/architecture.md:8
+msgid "Layer"
+msgstr "계층"
+
+#: ../../cxflow/architecture.md:8
+msgid "Modules"
+msgstr "모듈"
+
+#: ../../cxflow/architecture.md:8
+msgid "Responsibility"
+msgstr "책임"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Data Layer**"
+msgstr "**데이터 계층**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu_cxflow_docs`, `lu_cxflow_registry`"
+msgstr "`lu_cxflow_docs`, `lu_cxflow_registry`"
+
+#: ../../cxflow/architecture.md:8
+msgid ""
+"Document storage (Markdown SSOT), version snapshots, 9 registry models, "
+"cross-document references"
+msgstr ""
+"문서 저장소 (Markdown SSOT), 버전 스냅샷, 9개 레지스트리 모델, "
+"문서 간 참조"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Logic Layer**"
+msgstr "**로직 계층**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu_cxflow_engine`, `lu_cxflow_parse`"
+msgstr "`lu_cxflow_engine`, `lu_cxflow_parse`"
+
+#: ../../cxflow/architecture.md:8
+msgid ""
+"Template rendering (Jinja2), validation rules, gate checks, source code "
+"parsing"
+msgstr ""
+"템플릿 렌더링 (Jinja2), 검증 규칙, 게이트 검사, 소스 코드 파싱"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Presentation Layer**"
+msgstr "**프레젠테이션 계층**"
+
+#: ../../cxflow/architecture.md:8
+msgid ""
+"`lu_cxflow_portal`, `lu_cxflow_publisher`, `lu_mcp_cxflow`, "
+"`lu_cxflow_git_sync`"
+msgstr ""
+"`lu_cxflow_portal`, `lu_cxflow_publisher`, `lu_mcp_cxflow`, "
+"`lu_cxflow_git_sync`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Portal viewer, PDF/DOCX export, MCP tool API, Git bidirectional sync"
+msgstr "포탈 뷰어, PDF/DOCX 내보내기, MCP 도구 API, Git 양방향 동기화"
+
+#: ../../cxflow/architecture.md:57
+msgid "Document Types"
+msgstr "문서 유형"
+
+#: ../../cxflow/architecture.md:59
+msgid "CxFlow manages four document types, all sharing a common `doc_mixin`:"
+msgstr "CxFlow는 공통 `doc_mixin`을 공유하는 네 가지 문서 유형을 관리합니다:"
+
+#: ../../cxflow/architecture.md:8
+msgid "Type"
+msgstr "유형"
+
+#: ../../cxflow/architecture.md:8
+msgid "Model"
+msgstr "모델"
+
+#: ../../cxflow/architecture.md:8
+msgid "Purpose"
+msgstr "용도"
+
+#: ../../cxflow/architecture.md:8
+msgid "Workflow"
+msgstr "워크플로우"
+
+#: ../../cxflow/architecture.md:8
+msgid "**CPS**"
+msgstr "**CPS**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.cps`"
+msgstr "`lu.cxflow.cps`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Context / Problem / Solution — project root document"
+msgstr "Context / Problem / Solution — 프로젝트 루트 문서"
+
+#: ../../cxflow/architecture.md:8
+msgid "5-state (draft → review → approval → approved → revised)"
+msgstr "5단계 (draft → review → approval → approved → revised)"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Deliverable**"
+msgstr "**산출물**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.deliverable`"
+msgstr "`lu.cxflow.deliverable`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Template-based project deliverables (34 templates)"
+msgstr "템플릿 기반 프로젝트 산출물 (34개 템플릿)"
+
+#: ../../cxflow/architecture.md:8
+msgid "5-state + gate assignment (G1 / G2 / G3)"
+msgstr "5단계 + 게이트 할당 (G1 / G2 / G3)"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Report**"
+msgstr "**보고서**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.report`"
+msgstr "`lu.cxflow.report`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Weekly, gate check, custom reports"
+msgstr "주간, 게이트 체크, 커스텀 보고서"
+
+#: ../../cxflow/architecture.md:8
+msgid "2-state (draft → approved)"
+msgstr "2단계 (draft → approved)"
+
+#: ../../cxflow/architecture.md:8
+msgid "**Note**"
+msgstr "**노트**"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.note`"
+msgstr "`lu.cxflow.note`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Meeting, interview, reference, freeform notes"
+msgstr "회의, 인터뷰, 참조, 자유형식 노트"
+
+#: ../../cxflow/architecture.md:8
+msgid "2-state (draft → archived)"
+msgstr "2단계 (draft → archived)"
+
+#: ../../cxflow/architecture.md:68
+msgid "Doc Mixin — Shared Foundation"
+msgstr "Doc Mixin — 공유 기반"
+
+#: ../../cxflow/architecture.md:70
+msgid "All document types inherit from `lu.cxflow.doc.mixin`, which provides:"
+msgstr "모든 문서 유형은 `lu.cxflow.doc.mixin`을 상속하며, 다음을 제공합니다:"
+
+#: ../../cxflow/architecture.md:72
+msgid ""
+"**Markdown SSOT** — `md_source` stores raw Markdown; `html_cache` is "
+"computed on-the-fly"
+msgstr ""
+"**Markdown SSOT** — `md_source`에 원본 Markdown 저장; `html_cache`는 "
+"실시간으로 계산"
+
+#: ../../cxflow/architecture.md:73
+msgid ""
+"**Optimistic Locking** — `version` counter prevents concurrent edit "
+"conflicts"
+msgstr ""
+"**낙관적 잠금** — `version` 카운터로 동시 편집 충돌 방지"
+
+#: ../../cxflow/architecture.md:74
+msgid ""
+"**Workflow State Machine** — configurable transition policy with "
+"group/author checks"
+msgstr ""
+"**워크플로우 상태 머신** — 그룹/작성자 검사를 포함한 설정 가능한 전환 정책"
+
+#: ../../cxflow/architecture.md:75
+msgid "**Visibility Control** — `internal` / `portal_customer` / `public` scopes"
+msgstr "**공개 범위 제어** — `internal` / `portal_customer` / `public` 범위"
+
+#: ../../cxflow/architecture.md:76
+msgid ""
+"**Version Snapshots** — immutable history with restore and pin "
+"capabilities"
+msgstr ""
+"**버전 스냅샷** — 복원 및 고정 기능을 갖춘 불변 이력"
+
+#: ../../cxflow/architecture.md:77
+msgid ""
+"**Cross-Document References** — `[[cps:123]]` syntax tracked in "
+"`lu.cxflow.doc.reference`"
+msgstr ""
+"**문서 간 참조** — `[[cps:123]]` 구문을 `lu.cxflow.doc.reference`에서 추적"
+
+#: ../../cxflow/architecture.md:78
+msgid "**Tagging** — `lu.cxflow.doc.tag` for flexible categorization"
+msgstr "**태깅** — `lu.cxflow.doc.tag`를 통한 유연한 분류"
+
+#: ../../cxflow/architecture.md:80
+msgid "9 Registry Models"
+msgstr "9개 레지스트리 모델"
+
+#: ../../cxflow/architecture.md:82
+msgid ""
+"The `lu_cxflow_registry` module provides structured metadata via "
+"`registry_mixin`:"
+msgstr ""
+"`lu_cxflow_registry` 모듈은 `registry_mixin`을 통해 구조화된 메타데이터를 "
+"제공합니다:"
+
+#: ../../cxflow/architecture.md:8
+msgid "#"
+msgstr "#"
+
+#: ../../cxflow/architecture.md:8
+msgid "1"
+msgstr "1"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.project`"
+msgstr "`lu.cxflow.project`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Project metadata hub — links to `project.project`"
+msgstr "프로젝트 메타데이터 허브 — `project.project`에 연결"
+
+#: ../../cxflow/architecture.md:8
+msgid "2"
+msgstr "2"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.module`"
+msgstr "`lu.cxflow.module`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Odoo modules in scope (planning → production)"
+msgstr "범위 내 Odoo 모듈 (planning → production)"
+
+#: ../../cxflow/architecture.md:8
+msgid "3"
+msgstr "3"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.requirement`"
+msgstr "`lu.cxflow.requirement`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Functional / non-functional / data / integration requirements"
+msgstr "기능적 / 비기능적 / 데이터 / 통합 요구사항"
+
+#: ../../cxflow/architecture.md:8
+msgid "4"
+msgstr "4"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.process`"
+msgstr "`lu.cxflow.process`"
+
+#: ../../cxflow/architecture.md:8
+msgid "As-is / to-be / gap / pain-point analysis"
+msgstr "As-is / To-be / 갭 / 페인포인트 분석"
+
+#: ../../cxflow/architecture.md:8
+msgid "5"
+msgstr "5"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.integration`"
+msgstr "`lu.cxflow.integration`"
+
+#: ../../cxflow/architecture.md:8
+msgid "External system integration catalog"
+msgstr "외부 시스템 연동 카탈로그"
+
+#: ../../cxflow/architecture.md:8
+msgid "6"
+msgstr "6"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.issue`"
+msgstr "`lu.cxflow.issue`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Issues, risks, change requests, defects"
+msgstr "이슈, 리스크, 변경 요청, 결함"
+
+#: ../../cxflow/architecture.md:8
+msgid "7"
+msgstr "7"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.testcase`"
+msgstr "`lu.cxflow.testcase`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Test cases linked to requirements (RTM)"
+msgstr "요구사항에 연결된 테스트 케이스 (RTM)"
+
+#: ../../cxflow/architecture.md:8
+msgid "8"
+msgstr "8"
+
+#: ../../cxflow/architecture.md:8
+msgid "`lu.cxflow.decision`"
+msgstr "`lu.cxflow.decision`"
+
+#: ../../cxflow/architecture.md:8
+msgid "Decision log with meeting note references"
+msgstr "회의 노트 참조가 포함된 의사결정 로그"
+
+#: ../../cxflow/architecture.md:8
+msgid "9"
+msgstr "9"
+
+#: ../../cxflow/architecture.md:8
+msgid "`project.task` (ext)"
+msgstr "`project.task` (확장)"
+
+#: ../../cxflow/architecture.md:8
+msgid "Extended with CxFlow deliverable / issue links"
+msgstr "CxFlow 산출물 / 이슈 링크로 확장"
+
+#: ../../cxflow/architecture.md:96
+msgid "Data Flow"
+msgstr "데이터 흐름"
+
+#: ../../cxflow/architecture.md:127
+msgid "Access Control"
+msgstr "접근 제어"
+
+#: ../../cxflow/architecture.md:129
+msgid "CxFlow uses two user groups:"
+msgstr "CxFlow는 두 가지 사용자 그룹을 사용합니다:"
+
+#: ../../cxflow/architecture.md:98
+msgid "Group"
+msgstr "그룹"
+
+#: ../../cxflow/architecture.md:98
+msgid "Inherits"
+msgstr "상속"
+
+#: ../../cxflow/architecture.md:98
+msgid "Capabilities"
+msgstr "권한"
+
+#: ../../cxflow/architecture.md:98
+msgid "**CxFlow User**"
+msgstr "**CxFlow User**"
+
+#: ../../cxflow/architecture.md:98
+msgid "`project.group_project_user`"
+msgstr "`project.group_project_user`"
+
+#: ../../cxflow/architecture.md:98
+msgid "Create, read, update documents; submit for review"
+msgstr "문서 생성, 읽기, 수정; 검토 제출"
+
+#: ../../cxflow/architecture.md:98
+msgid "**CxFlow Manager**"
+msgstr "**CxFlow Manager**"
+
+#: ../../cxflow/architecture.md:98
+msgid "CxFlow User"
+msgstr "CxFlow User"
+
+#: ../../cxflow/architecture.md:98
+msgid "Approve, reject, revise; manage tags; delete documents"
+msgstr "승인, 거부, 수정; 태그 관리; 문서 삭제"
+
+#: ../../cxflow/architecture.md:136
+msgid "Record rules enforce:"
+msgstr "레코드 규칙 적용:"
+
+#: ../../cxflow/architecture.md:138
+msgid "**Internal users** see only documents in projects they manage or follow"
+msgstr "**내부 사용자**는 자신이 관리하거나 팔로우하는 프로젝트의 문서만 볼 수 있음"
+
+#: ../../cxflow/architecture.md:139
+msgid ""
+"**Portal users** see only `portal_customer` or `public` visibility "
+"documents (read-only)"
+msgstr ""
+"**포탈 사용자**는 `portal_customer` 또는 `public` 공개 범위 문서만 "
+"볼 수 있음 (읽기 전용)"
+
+#: ../../cxflow/architecture.md:140
+msgid "**Public users** see only `public` visibility documents (read-only)"
+msgstr "**공개 사용자**는 `public` 공개 범위 문서만 볼 수 있음 (읽기 전용)"
+
+#: ../../cxflow/architecture.md:142
+msgid "Technology Stack"
+msgstr "기술 스택"
+
+#: ../../cxflow/architecture.md:98
+msgid "Component"
+msgstr "구성요소"
+
+#: ../../cxflow/architecture.md:98
+msgid "Technology"
+msgstr "기술"
+
+#: ../../cxflow/architecture.md:98
+msgid "Markdown parsing"
+msgstr "Markdown 파싱"
+
+#: ../../cxflow/architecture.md:98
+msgid "`markdown-it-py`"
+msgstr "`markdown-it-py`"
+
+#: ../../cxflow/architecture.md:98
+msgid "HTML sanitization"
+msgstr "HTML 새니타이제이션"
+
+#: ../../cxflow/architecture.md:98
+msgid "`bleach`"
+msgstr "`bleach`"
+
+#: ../../cxflow/architecture.md:98
+msgid "Template rendering"
+msgstr "템플릿 렌더링"
+
+#: ../../cxflow/architecture.md:98
+msgid "Jinja2 (sandboxed)"
+msgstr "Jinja2 (샌드박스)"
+
+#: ../../cxflow/architecture.md:98
+msgid "Markdown editor"
+msgstr "Markdown 편집기"
+
+#: ../../cxflow/architecture.md:98
+msgid "CodeMirror 6"
+msgstr "CodeMirror 6"
+
+#: ../../cxflow/architecture.md:98
+msgid "PDF generation"
+msgstr "PDF 생성"
+
+#: ../../cxflow/architecture.md:98
+msgid "wkhtmltopdf"
+msgstr "wkhtmltopdf"
+
+#: ../../cxflow/architecture.md:98
+msgid "DOCX generation"
+msgstr "DOCX 생성"
+
+#: ../../cxflow/architecture.md:98
+msgid "python-docx"
+msgstr "python-docx"
+
+#: ../../cxflow/architecture.md:98
+msgid "Git integration"
+msgstr "Git 연동"
+
+#: ../../cxflow/architecture.md:98
+msgid "PyYAML + git CLI"
+msgstr "PyYAML + git CLI"

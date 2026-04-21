@@ -14,37 +14,26 @@ Modules
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 50 20
+   :widths: 30 70
 
    * - Module
      - Description
-     - Apps Store
    * - ``lu_cxflow_docs``
      - Markdown document management — CPS, Deliverables, Reports, Notes
-     - |check|
    * - ``lu_cxflow_registry``
      - 9 registry models for structured project metadata
-     - |check|
    * - ``lu_cxflow_engine``
      - Rendering, validation & gate-checking engine
-     - |check|
    * - ``lu_cxflow_portal``
      - GitBook-style document viewer (Portal + Public)
-     - |check|
    * - ``lu_cxflow_publisher``
      - PDF / DOCX document publishing
-     - |check|
    * - ``lu_cxflow_git_sync``
      - Bidirectional Git repository synchronization
-     - |check|
    * - ``lu_cxflow_parse``
      - Odoo module source code parser
-     - |check|
    * - ``lu_mcp_cxflow``
      - 12 MCP tools for AI-assisted document CRUD
-     - |check|
-
-.. |check| unicode:: U+2705
 
 Getting Started
 ---------------

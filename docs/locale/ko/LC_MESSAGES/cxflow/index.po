@@ -1,0 +1,126 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/index.rst:2
+msgid "CxFlow"
+msgstr "CxFlow"
+
+#: ../../cxflow/index.rst:4
+msgid ""
+"**Linkup CxFlow** is a Markdown-native project document management suite "
+"for Odoo 19.0. It replaces scattered spreadsheets and Word files with a "
+"structured, version-controlled document ecosystem — all inside your Odoo "
+"instance."
+msgstr ""
+"**Linkup CxFlow**는 Odoo 19.0용 Markdown 네이티브 프로젝트 문서 관리 "
+"스위트입니다. 흩어진 스프레드시트와 Word 파일을 체계적이고 버전 관리되는 "
+"문서 생태계로 대체합니다 — 모두 Odoo 인스턴스 안에서."
+
+#: ../../cxflow/index.rst:8
+msgid ""
+"CxFlow covers the full software delivery lifecycle: requirements "
+"gathering, process analysis, deliverable authoring, gate reviews, and "
+"final publishing — with Git sync, a customer portal, and MCP-based AI "
+"integration."
+msgstr ""
+"CxFlow는 소프트웨어 전달 라이프사이클 전체를 다룹니다: 요구사항 수집, "
+"프로세스 분석, 산출물 작성, 게이트 리뷰, 최종 배포 — Git 동기화, 고객 "
+"포탈, MCP 기반 AI 연동까지."
+
+#: ../../cxflow/index.rst:13
+msgid "Modules"
+msgstr "모듈"
+
+#: ../../cxflow/index.rst:19
+msgid "Module"
+msgstr "모듈"
+
+#: ../../cxflow/index.rst:20
+msgid "Description"
+msgstr "설명"
+
+#: ../../cxflow/index.rst:21
+msgid "``lu_cxflow_docs``"
+msgstr "``lu_cxflow_docs``"
+
+#: ../../cxflow/index.rst:22
+msgid "Markdown document management — CPS, Deliverables, Reports, Notes"
+msgstr "Markdown 문서 관리 — CPS, 산출물, 보고서, 노트"
+
+#: ../../cxflow/index.rst:23
+msgid "``lu_cxflow_registry``"
+msgstr "``lu_cxflow_registry``"
+
+#: ../../cxflow/index.rst:24
+msgid "9 registry models for structured project metadata"
+msgstr "구조화된 프로젝트 메타데이터를 위한 9개 레지스트리 모델"
+
+#: ../../cxflow/index.rst:25
+msgid "``lu_cxflow_engine``"
+msgstr "``lu_cxflow_engine``"
+
+#: ../../cxflow/index.rst:26
+msgid "Rendering, validation & gate-checking engine"
+msgstr "렌더링, 검증 및 게이트 체크 엔진"
+
+#: ../../cxflow/index.rst:27
+msgid "``lu_cxflow_portal``"
+msgstr "``lu_cxflow_portal``"
+
+#: ../../cxflow/index.rst:28
+msgid "GitBook-style document viewer (Portal + Public)"
+msgstr "GitBook 스타일 문서 뷰어 (포탈 + 공개)"
+
+#: ../../cxflow/index.rst:29
+msgid "``lu_cxflow_publisher``"
+msgstr "``lu_cxflow_publisher``"
+
+#: ../../cxflow/index.rst:30
+msgid "PDF / DOCX document publishing"
+msgstr "PDF / DOCX 문서 배포"
+
+#: ../../cxflow/index.rst:31
+msgid "``lu_cxflow_git_sync``"
+msgstr "``lu_cxflow_git_sync``"
+
+#: ../../cxflow/index.rst:32
+msgid "Bidirectional Git repository synchronization"
+msgstr "양방향 Git 저장소 동기화"
+
+#: ../../cxflow/index.rst:33
+msgid "``lu_cxflow_parse``"
+msgstr "``lu_cxflow_parse``"
+
+#: ../../cxflow/index.rst:34
+msgid "Odoo module source code parser"
+msgstr "Odoo 모듈 소스 코드 파서"
+
+#: ../../cxflow/index.rst:35
+msgid "``lu_mcp_cxflow``"
+msgstr "``lu_mcp_cxflow``"
+
+#: ../../cxflow/index.rst:36
+msgid "12 MCP tools for AI-assisted document CRUD"
+msgstr "AI 지원 문서 CRUD를 위한 12개 MCP 도구"
+
+#: ../../cxflow/index.rst:39
+msgid "Getting Started"
+msgstr "시작하기"

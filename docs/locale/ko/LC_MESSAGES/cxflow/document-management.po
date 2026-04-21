@@ -1,0 +1,555 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/document-management.md:1
+msgid "Document Management"
+msgstr "문서 관리"
+
+#: ../../cxflow/document-management.md:3
+msgid ""
+"This chapter covers the four document types, the shared doc mixin, "
+"versioning, cross-document references, and tagging."
+msgstr ""
+"이 장에서는 네 가지 문서 유형, 공유 doc mixin, 버전 관리, 문서 간 참조, "
+"태깅을 다룹니다."
+
+#: ../../cxflow/document-management.md:6
+msgid "Document Types at a Glance"
+msgstr "문서 유형 한눈에 보기"
+
+#: ../../cxflow/document-management.md ../../cxflow/document-management.md:42
+msgid "Type"
+msgstr "유형"
+
+#: ../../cxflow/document-management.md
+msgid "Model"
+msgstr "모델"
+
+#: ../../cxflow/document-management.md
+msgid "One-per-project?"
+msgstr "프로젝트당 하나?"
+
+#: ../../cxflow/document-management.md
+msgid "Workflow"
+msgstr "워크플로우"
+
+#: ../../cxflow/document-management.md
+msgid "Use Case"
+msgstr "활용 사례"
+
+#: ../../cxflow/document-management.md
+msgid "**CPS**"
+msgstr "**CPS**"
+
+#: ../../cxflow/document-management.md
+msgid "`lu.cxflow.cps`"
+msgstr "`lu.cxflow.cps`"
+
+#: ../../cxflow/document-management.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../cxflow/document-management.md
+msgid "5-state"
+msgstr "5단계"
+
+#: ../../cxflow/document-management.md
+msgid "Project root — Context / Problem / Solution"
+msgstr "프로젝트 루트 — Context / Problem / Solution"
+
+#: ../../cxflow/document-management.md
+msgid "**CPS Section**"
+msgstr "**CPS 섹션**"
+
+#: ../../cxflow/document-management.md
+msgid "`lu.cxflow.cps.section`"
+msgstr "`lu.cxflow.cps.section`"
+
+#: ../../cxflow/document-management.md
+msgid "No (hierarchical)"
+msgstr "아니오 (계층적)"
+
+#: ../../cxflow/document-management.md
+msgid "Nested sections under CPS"
+msgstr "CPS 아래 중첩 섹션"
+
+#: ../../cxflow/document-management.md
+msgid "**Deliverable**"
+msgstr "**산출물**"
+
+#: ../../cxflow/document-management.md
+msgid "`lu.cxflow.deliverable`"
+msgstr "`lu.cxflow.deliverable`"
+
+#: ../../cxflow/document-management.md
+msgid "No"
+msgstr "아니오"
+
+#: ../../cxflow/document-management.md
+msgid "5-state + gate"
+msgstr "5단계 + 게이트"
+
+#: ../../cxflow/document-management.md
+msgid "Template-based project documents"
+msgstr "템플릿 기반 프로젝트 문서"
+
+#: ../../cxflow/document-management.md
+msgid "**Report**"
+msgstr "**보고서**"
+
+#: ../../cxflow/document-management.md
+msgid "`lu.cxflow.report`"
+msgstr "`lu.cxflow.report`"
+
+#: ../../cxflow/document-management.md
+msgid "2-state"
+msgstr "2단계"
+
+#: ../../cxflow/document-management.md
+msgid "Weekly, gate check, custom reports"
+msgstr "주간, 게이트 체크, 커스텀 보고서"
+
+#: ../../cxflow/document-management.md
+msgid "**Note**"
+msgstr "**노트**"
+
+#: ../../cxflow/document-management.md
+msgid "`lu.cxflow.note`"
+msgstr "`lu.cxflow.note`"
+
+#: ../../cxflow/document-management.md
+msgid "Meeting, interview, reference, freeform"
+msgstr "회의, 인터뷰, 참조, 자유형식"
+
+#: ../../cxflow/document-management.md:16
+msgid "CPS — Context / Problem / Solution"
+msgstr "CPS — Context / Problem / Solution"
+
+#: ../../cxflow/document-management.md:18
+msgid ""
+"The CPS is the root document for a project. Each project has exactly one "
+"CPS."
+msgstr ""
+"CPS는 프로젝트의 루트 문서입니다. 각 프로젝트에는 정확히 하나의 CPS가 "
+"있습니다."
+
+#: ../../cxflow/document-management.md:20
+msgid "CPS Sections"
+msgstr "CPS 섹션"
+
+#: ../../cxflow/document-management.md:22
+msgid ""
+"Sections form a hierarchy with `parent_id` and `parent_path`. Each "
+"section has:"
+msgstr ""
+"섹션은 `parent_id`와 `parent_path`로 계층 구조를 형성합니다. 각 섹션에는 "
+"다음이 있습니다:"
+
+#: ../../cxflow/document-management.md:24
+msgid "**section_type** — `context`, `problem`, or `solution`"
+msgstr "**section_type** — `context`, `problem` 또는 `solution`"
+
+#: ../../cxflow/document-management.md:25
+msgid "**sequence** — drag to reorder within a parent"
+msgstr "**sequence** — 부모 내에서 드래그하여 순서 변경"
+
+#: ../../cxflow/document-management.md:26
+msgid "**child_ids** — nested sub-sections"
+msgstr "**child_ids** — 중첩된 하위 섹션"
+
+#: ../../cxflow/document-management.md:28
+msgid ""
+"Sections support recursive serialization to Markdown via "
+"`action_serialize_to_md()`, which produces a depth-based heading "
+"structure."
+msgstr ""
+"섹션은 `action_serialize_to_md()`를 통해 Markdown으로 재귀적 직렬화를 "
+"지원하며, 깊이 기반 헤딩 구조를 생성합니다."
+
+#: ../../cxflow/document-management.md:31
+msgid "Deliverables"
+msgstr "산출물"
+
+#: ../../cxflow/document-management.md:33
+msgid "Deliverables are template-based documents tied to project gates:"
+msgstr "산출물은 프로젝트 게이트에 연결된 템플릿 기반 문서입니다:"
+
+#: ../../cxflow/document-management.md:35
+msgid "**template_code** — unique identifier per project (e.g., `PM01`, `AN03`)"
+msgstr "**template_code** — 프로젝트별 고유 식별자 (예: `PM01`, `AN03`)"
+
+#: ../../cxflow/document-management.md:36
+msgid "**gate_no** — `G1` (Analysis), `G2` (Design), `G3` (Go-Live)"
+msgstr "**gate_no** — `G1` (분석), `G2` (설계), `G3` (Go-Live)"
+
+#: ../../cxflow/document-management.md:37
+msgid "**auto_level** — controls how templates fill content:"
+msgstr "**auto_level** — 템플릿이 콘텐츠를 채우는 방식을 제어합니다:"
+
+#: ../../cxflow/document-management.md:38
+msgid "`A` — Fully automatic (replace all content)"
+msgstr "`A` — 완전 자동 (모든 콘텐츠 교체)"
+
+#: ../../cxflow/document-management.md:39
+msgid "`B` — Marker blocks only (selective replacement)"
+msgstr "`B` — 마커 블록만 (선택적 교체)"
+
+#: ../../cxflow/document-management.md:40
+msgid "`C` — Manual (no auto-fill)"
+msgstr "`C` — 수동 (자동 채우기 없음)"
+
+#: ../../cxflow/document-management.md:43
+#, python-brace-format
+msgid ""
+"The engine module (`lu_cxflow_engine`) provides 34 pre-built templates "
+"across 8 project phases. See {doc}`engine` for details."
+msgstr ""
+"엔진 모듈 (`lu_cxflow_engine`)은 8개 프로젝트 단계에 걸쳐 34개 사전 구축 "
+"템플릿을 제공합니다. 자세한 내용은 {doc}`engine`을 참조하세요."
+
+#: ../../cxflow/document-management.md:47
+msgid "Reports"
+msgstr "보고서"
+
+#: ../../cxflow/document-management.md:49
+msgid "Reports track project progress with three types:"
+msgstr "보고서는 세 가지 유형으로 프로젝트 진행 상황을 추적합니다:"
+
+#: ../../cxflow/document-management.md:42
+msgid "Purpose"
+msgstr "용도"
+
+#: ../../cxflow/document-management.md:42
+msgid "`weekly`"
+msgstr "`weekly`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Weekly status updates"
+msgstr "주간 상태 업데이트"
+
+#: ../../cxflow/document-management.md:42
+msgid "`gate_check`"
+msgstr "`gate_check`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Gate review results (linked to G1 / G2 / G3)"
+msgstr "게이트 리뷰 결과 (G1 / G2 / G3에 연결)"
+
+#: ../../cxflow/document-management.md:42
+msgid "`custom`"
+msgstr "`custom`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Free-form reports"
+msgstr "자유형식 보고서"
+
+#: ../../cxflow/document-management.md:57
+msgid ""
+"Reports use a simplified 2-state workflow: **Draft → Approved**. A CxFlow"
+" User can directly approve their own reports (the author restriction is "
+"relaxed)."
+msgstr ""
+"보고서는 단순화된 2단계 워크플로우를 사용합니다: **Draft → Approved**. "
+"CxFlow User는 자신의 보고서를 직접 승인할 수 있습니다 (작성자 제한이 "
+"완화됨)."
+
+#: ../../cxflow/document-management.md:60
+#: ../../cxflow/document-management.md:79
+msgid "Key fields:"
+msgstr "주요 필드:"
+
+#: ../../cxflow/document-management.md:62
+msgid "**period_start** / **period_end** — reporting period"
+msgstr "**period_start** / **period_end** — 보고 기간"
+
+#: ../../cxflow/document-management.md:63
+msgid "**auto_generated** — flag for system-generated reports"
+msgstr "**auto_generated** — 시스템 생성 보고서 플래그"
+
+#: ../../cxflow/document-management.md:65
+msgid "Notes"
+msgstr "노트"
+
+#: ../../cxflow/document-management.md:67
+msgid "Notes capture informal knowledge with four types:"
+msgstr "노트는 네 가지 유형으로 비공식 지식을 기록합니다:"
+
+#: ../../cxflow/document-management.md:42
+msgid "`meeting`"
+msgstr "`meeting`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Meeting minutes with date and participants"
+msgstr "날짜와 참석자가 포함된 회의록"
+
+#: ../../cxflow/document-management.md:42
+msgid "`interview`"
+msgstr "`interview`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Stakeholder interview records"
+msgstr "이해관계자 인터뷰 기록"
+
+#: ../../cxflow/document-management.md:42
+msgid "`reference`"
+msgstr "`reference`"
+
+#: ../../cxflow/document-management.md:42
+msgid "External reference material"
+msgstr "외부 참조 자료"
+
+#: ../../cxflow/document-management.md:42
+msgid "`freeform`"
+msgstr "`freeform`"
+
+#: ../../cxflow/document-management.md:42
+msgid "Anything else"
+msgstr "기타"
+
+#: ../../cxflow/document-management.md:76
+msgid ""
+"Notes use a 2-state workflow: **Draft → Archived**. Both transitions "
+"allow the author."
+msgstr ""
+"노트는 2단계 워크플로우를 사용합니다: **Draft → Archived**. 두 전환 모두 "
+"작성자에게 허용됩니다."
+
+#: ../../cxflow/document-management.md:81
+msgid "**meeting_date** — date of the event"
+msgstr "**meeting_date** — 이벤트 날짜"
+
+#: ../../cxflow/document-management.md:82
+msgid "**participant_ids** — linked `res.partner` records"
+msgstr "**participant_ids** — 연결된 `res.partner` 레코드"
+
+#: ../../cxflow/document-management.md:83
+msgid "**external_url** — link to external resources"
+msgstr "**external_url** — 외부 리소스 링크"
+
+#: ../../cxflow/document-management.md:85
+msgid "Doc Mixin — Common Features"
+msgstr "Doc Mixin — 공통 기능"
+
+#: ../../cxflow/document-management.md:87
+msgid "All document types inherit from `lu.cxflow.doc.mixin`, which provides:"
+msgstr "모든 문서 유형은 `lu.cxflow.doc.mixin`을 상속하며, 다음을 제공합니다:"
+
+#: ../../cxflow/document-management.md:89
+msgid "Markdown as SSOT"
+msgstr "Markdown을 단일 진실 공급원(SSOT)으로"
+
+#: ../../cxflow/document-management.md:91
+msgid ""
+"The `md_source` field stores raw Markdown. The `html_cache` field is "
+"computed on-the-fly using `markdown-it-py` and sanitized with `bleach`. "
+"You never store or edit HTML."
+msgstr ""
+"`md_source` 필드에 원본 Markdown을 저장합니다. `html_cache` 필드는 "
+"`markdown-it-py`를 사용하여 실시간으로 계산되고 `bleach`로 새니타이즈됩니다. "
+"HTML을 직접 저장하거나 편집할 필요가 없습니다."
+
+#: ../../cxflow/document-management.md:95
+msgid "Slug Generation"
+msgstr "슬러그 생성"
+
+#: ../../cxflow/document-management.md:97
+msgid ""
+"Each document gets a URL-safe `slug` generated from the title after "
+"creation. Slugs are unique per model and used for portal URLs."
+msgstr ""
+"각 문서는 생성 후 제목에서 URL 안전 `slug`가 생성됩니다. 슬러그는 모델별로 "
+"고유하며 포탈 URL에 사용됩니다."
+
+#: ../../cxflow/document-management.md:100
+msgid "Workflow State Machine"
+msgstr "워크플로우 상태 머신"
+
+#: ../../cxflow/document-management.md:102
+msgid "The mixin defines a configurable transition policy:"
+msgstr "믹스인은 설정 가능한 전환 정책을 정의합니다:"
+
+#: ../../cxflow/document-management.md:115
+msgid "Reports and Notes override this with simplified 2-state policies."
+msgstr "보고서와 노트는 이를 단순화된 2단계 정책으로 재정의합니다."
+
+#: ../../cxflow/document-management.md:118
+msgid "Visibility Control"
+msgstr "공개 범위 제어"
+
+#: ../../cxflow/document-management.md:120
+msgid "Each document has a `visibility` field:"
+msgstr "각 문서에는 `visibility` 필드가 있습니다:"
+
+#: ../../cxflow/document-management.md:114
+msgid "Value"
+msgstr "값"
+
+#: ../../cxflow/document-management.md:114
+msgid "Who Can See"
+msgstr "조회 가능 대상"
+
+#: ../../cxflow/document-management.md:114
+msgid "`internal`"
+msgstr "`internal`"
+
+#: ../../cxflow/document-management.md:114
+msgid "CxFlow Users and Managers only"
+msgstr "CxFlow User 및 Manager만"
+
+#: ../../cxflow/document-management.md:114
+msgid "`portal_customer`"
+msgstr "`portal_customer`"
+
+#: ../../cxflow/document-management.md:114
+msgid "Internal users + portal customers of the project"
+msgstr "내부 사용자 + 프로젝트의 포탈 고객"
+
+#: ../../cxflow/document-management.md:114
+msgid "`public`"
+msgstr "`public`"
+
+#: ../../cxflow/document-management.md:114
+msgid "Everyone, including unauthenticated users"
+msgstr "인증되지 않은 사용자를 포함한 모든 사람"
+
+#: ../../cxflow/document-management.md:129
+msgid ""
+"Public documents must be in `approved` state. The system enforces this "
+"with a constraint."
+msgstr ""
+"공개 문서는 반드시 `approved` 상태여야 합니다. 시스템이 제약 조건으로 이를 "
+"강제합니다."
+
+#: ../../cxflow/document-management.md:133
+msgid "Version Snapshots"
+msgstr "버전 스냅샷"
+
+#: ../../cxflow/document-management.md:135
+msgid ""
+"Every time `md_source` is saved, the version counter increments and a "
+"snapshot is created. Each snapshot stores:"
+msgstr ""
+"`md_source`가 저장될 때마다 버전 카운터가 증가하고 스냅샷이 생성됩니다. "
+"각 스냅샷에는 다음이 저장됩니다:"
+
+#: ../../cxflow/document-management.md:138
+msgid "**md_source_snapshot** — immutable copy of the content"
+msgstr "**md_source_snapshot** — 콘텐츠의 불변 사본"
+
+#: ../../cxflow/document-management.md:139
+msgid "**version_number** — sequential counter"
+msgstr "**version_number** — 순차 카운터"
+
+#: ../../cxflow/document-management.md:140
+msgid "**name** / **state** — document metadata at the time of snapshot"
+msgstr "**name** / **state** — 스냅샷 시점의 문서 메타데이터"
+
+#: ../../cxflow/document-management.md:141
+msgid "**is_pinned** — pinned versions are never auto-archived"
+msgstr "**is_pinned** — 고정된 버전은 자동 보관되지 않음"
+
+#: ../../cxflow/document-management.md:143
+msgid "Restoring a Version"
+msgstr "버전 복원"
+
+#: ../../cxflow/document-management.md:145
+msgid ""
+"Click the version count badge → select a version → **Restore**. This "
+"writes the snapshot's Markdown back to `md_source` and bumps the version "
+"counter (optimistic lock aware)."
+msgstr ""
+"버전 카운트 배지를 클릭 → 버전 선택 → **Restore**. 스냅샷의 Markdown을 "
+"`md_source`에 다시 쓰고 버전 카운터를 증가시킵니다 (낙관적 잠금 인식)."
+
+#: ../../cxflow/document-management.md:149
+msgid "Automatic Cleanup"
+msgstr "자동 정리"
+
+#: ../../cxflow/document-management.md:151
+msgid "A daily cron job archives old versions beyond the configured limit:"
+msgstr "일일 크론 작업이 설정된 제한을 초과하는 이전 버전을 보관합니다:"
+
+#: ../../cxflow/document-management.md:153
+msgid ""
+"**Config parameter**: `lu_cxflow_docs.max_versions_per_doc` (default: "
+"`50`)"
+msgstr ""
+"**설정 파라미터**: `lu_cxflow_docs.max_versions_per_doc` (기본값: `50`)"
+
+#: ../../cxflow/document-management.md:154
+msgid "Pinned versions are always kept"
+msgstr "고정된 버전은 항상 유지됩니다"
+
+#: ../../cxflow/document-management.md:155
+msgid "Versions older than 6 months are eligible for deletion"
+msgstr "6개월 이상된 버전은 삭제 대상입니다"
+
+#: ../../cxflow/document-management.md:157
+msgid "Cross-Document References"
+msgstr "문서 간 참조"
+
+#: ../../cxflow/document-management.md:159
+msgid ""
+"Use the `[[type:id]]` syntax to create inline references between "
+"documents:"
+msgstr ""
+"문서 간 인라인 참조를 생성하려면 `[[type:id]]` 구문을 사용하세요:"
+
+#: ../../cxflow/document-management.md:166
+msgid "Supported types: `cps`, `cps.section`, `deliverable`, `report`, `note`."
+msgstr "지원되는 유형: `cps`, `cps.section`, `deliverable`, `report`, `note`."
+
+#: ../../cxflow/document-management.md:168
+msgid "References are tracked in `lu.cxflow.doc.reference` with:"
+msgstr "참조는 `lu.cxflow.doc.reference`에서 다음과 함께 추적됩니다:"
+
+#: ../../cxflow/document-management.md:170
+msgid "**ref_type** — `inline_link`, `related_doc`, `cited`, `attachment`"
+msgstr "**ref_type** — `inline_link`, `related_doc`, `cited`, `attachment`"
+
+#: ../../cxflow/document-management.md:171
+msgid "Back-references are computed so each document shows what links to it"
+msgstr "역참조가 계산되어 각 문서에 해당 문서를 링크하는 항목이 표시됩니다"
+
+#: ../../cxflow/document-management.md:173
+msgid "Tagging"
+msgstr "태깅"
+
+#: ../../cxflow/document-management.md:175
+msgid ""
+"`lu.cxflow.doc.tag` provides colored tags shared across all document "
+"types. Tags are managed under **CxFlow → Configuration → Tags** (CxFlow "
+"Manager only)."
+msgstr ""
+"`lu.cxflow.doc.tag`는 모든 문서 유형에서 공유되는 색상 태그를 제공합니다. "
+"태그는 **CxFlow → Configuration → Tags**에서 관리됩니다 (CxFlow Manager "
+"전용)."
+
+#: ../../cxflow/document-management.md:178
+msgid ""
+"Each document type uses its own Many2many relation table for tag "
+"assignment."
+msgstr ""
+"각 문서 유형은 태그 할당을 위해 자체 Many2many 관계 테이블을 사용합니다."
+
+#: ../../cxflow/document-management.md:180
+msgid "Menu Structure"
+msgstr "메뉴 구조"

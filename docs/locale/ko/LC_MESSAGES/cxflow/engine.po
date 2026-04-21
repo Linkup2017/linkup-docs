@@ -1,0 +1,660 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/engine.md:1
+msgid "Engine — Validation & Gates"
+msgstr "엔진 — 검증 및 게이트"
+
+#: ../../cxflow/engine.md:3
+msgid ""
+"The **CxFlow Engine** (`lu_cxflow_engine`) adds template-based document "
+"generation, validation rules, and a three-tier gate system to CxFlow."
+msgstr ""
+"**CxFlow Engine** (`lu_cxflow_engine`)은 CxFlow에 템플릿 기반 문서 생성, "
+"검증 규칙, 3단계 게이트 시스템을 추가합니다."
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:6
+msgid "Templates"
+msgstr "템플릿"
+
+#: ../../cxflow/engine.md:8
+msgid ""
+"CxFlow ships with **34 deliverable templates** organized across 8 project"
+" phases:"
+msgstr ""
+"CxFlow는 8개 프로젝트 단계에 걸쳐 구성된 **34개 산출물 템플릿**을 "
+"제공합니다:"
+
+#: ../../cxflow/engine.md
+msgid "Phase"
+msgstr "단계"
+
+#: ../../cxflow/engine.md
+msgid "Code Prefix"
+msgstr "코드 접두사"
+
+#: ../../cxflow/engine.md
+msgid "Examples"
+msgstr "예시"
+
+#: ../../cxflow/engine.md
+msgid "Project Management"
+msgstr "프로젝트 관리"
+
+#: ../../cxflow/engine.md
+msgid "`PM`"
+msgstr "`PM`"
+
+#: ../../cxflow/engine.md
+msgid "PM01 Project Charter, PM02 WBS, PM04 Weekly Report"
+msgstr "PM01 프로젝트 헌장, PM02 WBS, PM04 주간 보고서"
+
+#: ../../cxflow/engine.md
+msgid "Analysis"
+msgstr "분석"
+
+#: ../../cxflow/engine.md
+msgid "`AN`"
+msgstr "`AN`"
+
+#: ../../cxflow/engine.md
+msgid "AN01 Requirements Spec, AN02 As-Is Process, AN03 Gap Analysis"
+msgstr "AN01 요구사항 명세, AN02 As-Is 프로세스, AN03 갭 분석"
+
+#: ../../cxflow/engine.md
+msgid "Design"
+msgstr "설계"
+
+#: ../../cxflow/engine.md
+msgid "`DS`"
+msgstr "`DS`"
+
+#: ../../cxflow/engine.md
+msgid "DS01 To-Be Process, DS02 Data Migration Plan"
+msgstr "DS01 To-Be 프로세스, DS02 데이터 마이그레이션 계획"
+
+#: ../../cxflow/engine.md
+msgid "Development"
+msgstr "개발"
+
+#: ../../cxflow/engine.md
+msgid "`DV`"
+msgstr "`DV`"
+
+#: ../../cxflow/engine.md
+msgid "DV01 Customization Spec, DV02 Integration Spec"
+msgstr "DV01 커스터마이제이션 명세, DV02 연동 명세"
+
+#: ../../cxflow/engine.md
+msgid "Testing"
+msgstr "테스트"
+
+#: ../../cxflow/engine.md
+msgid "`TS`"
+msgstr "`TS`"
+
+#: ../../cxflow/engine.md
+msgid "TS01 Test Plan, TS02 Test Cases, TS03 Test Report"
+msgstr "TS01 테스트 계획, TS02 테스트 케이스, TS03 테스트 보고서"
+
+#: ../../cxflow/engine.md
+msgid "Training"
+msgstr "교육"
+
+#: ../../cxflow/engine.md
+msgid "`TR`"
+msgstr "`TR`"
+
+#: ../../cxflow/engine.md
+msgid "TR01 Training Plan, TR02 Training Material"
+msgstr "TR01 교육 계획, TR02 교육 자료"
+
+#: ../../cxflow/engine.md
+msgid "Deployment"
+msgstr "배포"
+
+#: ../../cxflow/engine.md
+msgid "`DP`"
+msgstr "`DP`"
+
+#: ../../cxflow/engine.md
+msgid "DP01 Deployment Plan, DP02 Go-Live Checklist"
+msgstr "DP01 배포 계획, DP02 Go-Live 체크리스트"
+
+#: ../../cxflow/engine.md
+msgid "Closure"
+msgstr "종료"
+
+#: ../../cxflow/engine.md
+msgid "`CL`"
+msgstr "`CL`"
+
+#: ../../cxflow/engine.md
+msgid "CL01 Closure Report, CL02 Lessons Learned"
+msgstr "CL01 종료 보고서, CL02 교훈"
+
+#: ../../cxflow/engine.md:22
+msgid "Template Structure"
+msgstr "템플릿 구조"
+
+#: ../../cxflow/engine.md:24
+msgid "Each template (`lu.cxflow.template`) contains:"
+msgstr "각 템플릿 (`lu.cxflow.template`)에는 다음이 포함됩니다:"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Field"
+msgstr "필드"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Type"
+msgstr "타입"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Description"
+msgstr "설명"
+
+#: ../../cxflow/engine.md
+msgid "`code`"
+msgstr "`code`"
+
+#: ../../cxflow/engine.md
+msgid "Char"
+msgstr "Char"
+
+#: ../../cxflow/engine.md
+msgid "Unique template code (e.g., `AN01`)"
+msgstr "고유 템플릿 코드 (예: `AN01`)"
+
+#: ../../cxflow/engine.md
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../cxflow/engine.md
+msgid "Template display name"
+msgstr "템플릿 표시명"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "`gate_no`"
+msgstr "`gate_no`"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Selection"
+msgstr "Selection"
+
+#: ../../cxflow/engine.md
+msgid "Required gate: G1, G2, or G3"
+msgstr "필수 게이트: G1, G2 또는 G3"
+
+#: ../../cxflow/engine.md
+msgid "`phase`"
+msgstr "`phase`"
+
+#: ../../cxflow/engine.md
+msgid "Project phase"
+msgstr "프로젝트 단계"
+
+#: ../../cxflow/engine.md
+msgid "`jinja_source`"
+msgstr "`jinja_source`"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Text"
+msgstr "Text"
+
+#: ../../cxflow/engine.md
+msgid "Jinja2 template for Markdown generation"
+msgstr "Markdown 생성을 위한 Jinja2 템플릿"
+
+#: ../../cxflow/engine.md
+msgid "`default_auto_level`"
+msgstr "`default_auto_level`"
+
+#: ../../cxflow/engine.md
+msgid "Default automation level (A / B / C)"
+msgstr "기본 자동화 레벨 (A / B / C)"
+
+#: ../../cxflow/engine.md:35
+msgid "Rendering"
+msgstr "렌더링"
+
+#: ../../cxflow/engine.md:37
+msgid "Templates use **Jinja2 sandboxed rendering** with a rich context:"
+msgstr "템플릿은 풍부한 컨텍스트와 함께 **Jinja2 샌드박스 렌더링**을 사용합니다:"
+
+#: ../../cxflow/engine.md:53
+msgid "Rendering respects the deliverable's `auto_level`:"
+msgstr "렌더링은 산출물의 `auto_level`을 따릅니다:"
+
+#: ../../cxflow/engine.md:55
+msgid "**A (Fully Auto)** — replaces entire `md_source`"
+msgstr "**A (완전 자동)** — 전체 `md_source` 교체"
+
+#: ../../cxflow/engine.md:56
+msgid ""
+"**B (Marker Blocks)** — replaces only `<!-- AUTO:START -->...<!-- "
+"AUTO:END -->` blocks"
+msgstr ""
+"**B (마커 블록)** — `<!-- AUTO:START -->...<!-- AUTO:END -->` 블록만 교체"
+
+#: ../../cxflow/engine.md:57
+msgid "**C (Manual)** — no automatic changes"
+msgstr "**C (수동)** — 자동 변경 없음"
+
+#: ../../cxflow/engine.md:59
+msgid "Validation Rules"
+msgstr "검증 규칙"
+
+#: ../../cxflow/engine.md:61
+msgid ""
+"The engine defines **11 validation rules** that check project "
+"completeness:"
+msgstr ""
+"엔진은 프로젝트 완성도를 검사하는 **11개 검증 규칙**을 정의합니다:"
+
+#: ../../cxflow/engine.md
+msgid "Rule"
+msgstr "규칙"
+
+#: ../../cxflow/engine.md
+msgid "Check"
+msgstr "검사"
+
+#: ../../cxflow/engine.md
+msgid "R01"
+msgstr "R01"
+
+#: ../../cxflow/engine.md
+msgid "Structure"
+msgstr "구조"
+
+#: ../../cxflow/engine.md
+msgid "All modules have at least one requirement"
+msgstr "모든 모듈에 최소 하나의 요구사항이 있음"
+
+#: ../../cxflow/engine.md
+msgid "R02"
+msgstr "R02"
+
+#: ../../cxflow/engine.md
+msgid "Completeness"
+msgstr "완성도"
+
+#: ../../cxflow/engine.md
+msgid "All required templates have deliverables"
+msgstr "모든 필수 템플릿에 산출물이 있음"
+
+#: ../../cxflow/engine.md
+msgid "R03"
+msgstr "R03"
+
+#: ../../cxflow/engine.md
+msgid "Deliverable template codes match known templates"
+msgstr "산출물 템플릿 코드가 알려진 템플릿과 일치"
+
+#: ../../cxflow/engine.md
+msgid "R04"
+msgstr "R04"
+
+#: ../../cxflow/engine.md
+msgid "CPS"
+msgstr "CPS"
+
+#: ../../cxflow/engine.md
+msgid "CPS document exists and is approved"
+msgstr "CPS 문서가 존재하고 승인됨"
+
+#: ../../cxflow/engine.md
+msgid "R05"
+msgstr "R05"
+
+#: ../../cxflow/engine.md
+msgid "G1 Dependencies"
+msgstr "G1 의존성"
+
+#: ../../cxflow/engine.md
+msgid "G1 prerequisites are met before G2"
+msgstr "G2 전에 G1 전제 조건이 충족됨"
+
+#: ../../cxflow/engine.md
+msgid "R06"
+msgstr "R06"
+
+#: ../../cxflow/engine.md
+msgid "G2 Dependencies"
+msgstr "G2 의존성"
+
+#: ../../cxflow/engine.md
+msgid "G2 prerequisites are met before G3"
+msgstr "G3 전에 G2 전제 조건이 충족됨"
+
+#: ../../cxflow/engine.md
+msgid "R07"
+msgstr "R07"
+
+#: ../../cxflow/engine.md
+msgid "Gate Chain"
+msgstr "게이트 체인"
+
+#: ../../cxflow/engine.md
+msgid "Prerequisite gates are passed"
+msgstr "전제 조건 게이트가 통과됨"
+
+#: ../../cxflow/engine.md
+msgid "R08"
+msgstr "R08"
+
+#: ../../cxflow/engine.md
+msgid "Coverage"
+msgstr "커버리지"
+
+#: ../../cxflow/engine.md
+msgid "Requirements have linked test cases"
+msgstr "요구사항에 연결된 테스트 케이스가 있음"
+
+#: ../../cxflow/engine.md
+msgid "R09"
+msgstr "R09"
+
+#: ../../cxflow/engine.md
+msgid "Processes"
+msgstr "프로세스"
+
+#: ../../cxflow/engine.md
+msgid "Modules have process documentation"
+msgstr "모듈에 프로세스 문서가 있음"
+
+#: ../../cxflow/engine.md
+msgid "R10"
+msgstr "R10"
+
+#: ../../cxflow/engine.md
+msgid "Integrations"
+msgstr "연동"
+
+#: ../../cxflow/engine.md
+msgid "Integration entries have endpoint details"
+msgstr "연동 항목에 엔드포인트 상세가 있음"
+
+#: ../../cxflow/engine.md
+msgid "R11"
+msgstr "R11"
+
+#: ../../cxflow/engine.md
+msgid "Markers"
+msgstr "마커"
+
+#: ../../cxflow/engine.md
+msgid "AUTO marker pairs in deliverables are consistent"
+msgstr "산출물의 AUTO 마커 쌍이 일관됨"
+
+#: ../../cxflow/engine.md:77
+msgid "Validation results are stored in `lu.cxflow.validation.result`:"
+msgstr "검증 결과는 `lu.cxflow.validation.result`에 저장됩니다:"
+
+#: ../../cxflow/engine.md
+msgid "`rule_code`"
+msgstr "`rule_code`"
+
+#: ../../cxflow/engine.md
+msgid "Rule identifier (R01–R11)"
+msgstr "규칙 식별자 (R01–R11)"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../cxflow/engine.md
+msgid "`pass`, `fail`, `warning`"
+msgstr "`pass`, `fail`, `warning`"
+
+#: ../../cxflow/engine.md
+msgid "`message`"
+msgstr "`message`"
+
+#: ../../cxflow/engine.md
+msgid "Human-readable result"
+msgstr "사람이 읽을 수 있는 결과"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "`project_id`"
+msgstr "`project_id`"
+
+#: ../../cxflow/engine.md ../../cxflow/engine.md:90
+msgid "Many2one"
+msgstr "Many2one"
+
+#: ../../cxflow/engine.md
+msgid "Checked project"
+msgstr "검사된 프로젝트"
+
+#: ../../cxflow/engine.md:86
+msgid "Gate System"
+msgstr "게이트 시스템"
+
+#: ../../cxflow/engine.md:88
+msgid "CxFlow uses a three-tier gate review process:"
+msgstr "CxFlow는 3단계 게이트 리뷰 프로세스를 사용합니다:"
+
+#: ../../cxflow/engine.md:96
+msgid "Gate Status (`lu.cxflow.gate.status`)"
+msgstr "게이트 상태 (`lu.cxflow.gate.status`)"
+
+#: ../../cxflow/engine.md:90
+msgid "Project"
+msgstr "프로젝트"
+
+#: ../../cxflow/engine.md:90
+msgid "G1, G2, or G3"
+msgstr "G1, G2 또는 G3"
+
+#: ../../cxflow/engine.md:90
+msgid "`pending`, `passed`, `blocked`"
+msgstr "`pending`, `passed`, `blocked`"
+
+#: ../../cxflow/engine.md:90
+msgid "`blocking_reasons`"
+msgstr "`blocking_reasons`"
+
+#: ../../cxflow/engine.md:90
+msgid "Collected reasons for blocking"
+msgstr "차단 사유 모음"
+
+#: ../../cxflow/engine.md:105
+msgid "Gate Check Process"
+msgstr "게이트 검사 프로세스"
+
+#: ../../cxflow/engine.md:107
+msgid "When a gate check is triggered:"
+msgstr "게이트 검사가 트리거되면:"
+
+#: ../../cxflow/engine.md:109
+msgid "**Collect deliverables** assigned to the gate"
+msgstr "게이트에 할당된 **산출물 수집**"
+
+#: ../../cxflow/engine.md:110
+msgid "**Verify all are approved** — if any are not, the gate is blocked"
+msgstr "**모두 승인되었는지 확인** — 미승인 항목이 있으면 게이트 차단"
+
+#: ../../cxflow/engine.md:111
+msgid ""
+"**Check prerequisite gates** — G2 requires G1 passed, G3 requires G2 "
+"passed"
+msgstr ""
+"**전제 조건 게이트 확인** — G2는 G1 통과 필요, G3는 G2 통과 필요"
+
+#: ../../cxflow/engine.md:112
+msgid "**Run relevant validation rules** (R05–R07)"
+msgstr "**관련 검증 규칙 실행** (R05–R07)"
+
+#: ../../cxflow/engine.md:113
+msgid "**Record result** — update gate status with pass/block and reasons"
+msgstr "**결과 기록** — 통과/차단 및 사유로 게이트 상태 업데이트"
+
+#: ../../cxflow/engine.md:116
+msgid ""
+"Deliverables hook into the gate system via "
+"`_hook_gate_check_on_approve()`. When a deliverable is approved, the "
+"engine automatically re-checks its assigned gate."
+msgstr ""
+"산출물은 `_hook_gate_check_on_approve()`를 통해 게이트 시스템에 연결됩니다. "
+"산출물이 승인되면 엔진이 자동으로 할당된 게이트를 재검사합니다."
+
+#: ../../cxflow/engine.md:121
+msgid "WBS Mapping"
+msgstr "WBS 매핑"
+
+#: ../../cxflow/engine.md:123
+msgid ""
+"The engine maps project task stages to deliverable templates using a "
+"JSON-based configuration. When a task moves to a new stage, the engine "
+"can automatically create the corresponding deliverable."
+msgstr ""
+"엔진은 JSON 기반 설정을 사용하여 프로젝트 태스크 단계를 산출물 템플릿에 "
+"매핑합니다. 태스크가 새 단계로 이동하면 엔진이 자동으로 해당 산출물을 "
+"생성할 수 있습니다."
+
+#: ../../cxflow/engine.md:127
+msgid ""
+"8 project phases are pre-configured with bilingual names (Korean / "
+"English)."
+msgstr ""
+"8개 프로젝트 단계가 이중 언어 이름(한국어 / 영어)으로 사전 구성되어 "
+"있습니다."
+
+#: ../../cxflow/engine.md:129
+msgid "Automation"
+msgstr "자동화"
+
+#: ../../cxflow/engine.md:131
+msgid "Cascade Rules (5)"
+msgstr "캐스케이드 규칙 (5)"
+
+#: ../../cxflow/engine.md:133
+msgid ""
+"When registry data changes, the engine can auto-regenerate affected "
+"deliverables:"
+msgstr ""
+"레지스트리 데이터가 변경되면 엔진이 영향받는 산출물을 자동으로 "
+"재생성할 수 있습니다:"
+
+#: ../../cxflow/engine.md:115
+msgid "Trigger"
+msgstr "트리거"
+
+#: ../../cxflow/engine.md:115
+msgid "Effect"
+msgstr "효과"
+
+#: ../../cxflow/engine.md:115
+msgid "Requirement created / updated"
+msgstr "요구사항 생성 / 수정"
+
+#: ../../cxflow/engine.md:115
+msgid "Re-render affected deliverables (auto_level A/B)"
+msgstr "영향받는 산출물 재렌더링 (auto_level A/B)"
+
+#: ../../cxflow/engine.md:115
+msgid "Test case created / updated"
+msgstr "테스트 케이스 생성 / 수정"
+
+#: ../../cxflow/engine.md:115
+msgid "Re-render test-related deliverables"
+msgstr "테스트 관련 산출물 재렌더링"
+
+#: ../../cxflow/engine.md:115
+msgid "Issue created / updated"
+msgstr "이슈 생성 / 수정"
+
+#: ../../cxflow/engine.md:115
+msgid "Re-render issue-related deliverables"
+msgstr "이슈 관련 산출물 재렌더링"
+
+#: ../../cxflow/engine.md:115
+msgid "CPS section updated"
+msgstr "CPS 섹션 수정"
+
+#: ../../cxflow/engine.md:115
+msgid "Re-render CPS-dependent deliverables"
+msgstr "CPS 의존 산출물 재렌더링"
+
+#: ../../cxflow/engine.md:115
+msgid "Test case fails"
+msgstr "테스트 케이스 실패"
+
+#: ../../cxflow/engine.md:115
+msgid "Auto-create defect issue"
+msgstr "결함 이슈 자동 생성"
+
+#: ../../cxflow/engine.md:143
+msgid "Cron Jobs (3)"
+msgstr "크론 작업 (3)"
+
+#: ../../cxflow/engine.md:115
+msgid "Cron"
+msgstr "크론"
+
+#: ../../cxflow/engine.md:115
+msgid "Schedule"
+msgstr "스케줄"
+
+#: ../../cxflow/engine.md:115
+msgid "Purpose"
+msgstr "용도"
+
+#: ../../cxflow/engine.md:115
+msgid "Weekly validation"
+msgstr "주간 검증"
+
+#: ../../cxflow/engine.md:115
+msgid "Weekly"
+msgstr "주간"
+
+#: ../../cxflow/engine.md:115
+msgid "Run all 11 validation rules on active projects"
+msgstr "활성 프로젝트에 11개 검증 규칙 모두 실행"
+
+#: ../../cxflow/engine.md:115
+msgid "PM04 generation"
+msgstr "PM04 생성"
+
+#: ../../cxflow/engine.md:115
+msgid "Auto-generate weekly status report (PM04)"
+msgstr "주간 상태 보고서 자동 생성 (PM04)"
+
+#: ../../cxflow/engine.md:115
+msgid "Garbage collection"
+msgstr "가비지 컬렉션"
+
+#: ../../cxflow/engine.md:115
+msgid "Daily"
+msgstr "일간"
+
+#: ../../cxflow/engine.md:115
+msgid "Clean up orphaned validation results"
+msgstr "고아 검증 결과 정리"
+
+#: ../../cxflow/engine.md:151
+msgid "Menu Structure"
+msgstr "메뉴 구조"
+
+#: ../../cxflow/engine.md:153
+msgid "Engine features are integrated into the existing CxFlow menu:"
+msgstr "엔진 기능은 기존 CxFlow 메뉴에 통합되어 있습니다:"

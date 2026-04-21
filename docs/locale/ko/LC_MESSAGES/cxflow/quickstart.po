@@ -1,0 +1,302 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/quickstart.md:1
+msgid "Quick Start"
+msgstr "빠른 시작"
+
+#: ../../cxflow/quickstart.md:3
+msgid ""
+"Get CxFlow up and running in your Odoo 19.0 instance — from installation "
+"to your first document in under 10 minutes."
+msgstr ""
+"Odoo 19.0 인스턴스에서 CxFlow를 설치하고 실행하세요 — 설치부터 첫 번째 "
+"문서 작성까지 10분 이내."
+
+#: ../../cxflow/quickstart.md:6
+msgid "Prerequisites"
+msgstr "사전 요구사항"
+
+#: ../../cxflow/quickstart.md:8
+msgid "Odoo 19.0 Enterprise with **Project** app installed"
+msgstr "**프로젝트** 앱이 설치된 Odoo 19.0 Enterprise"
+
+#: ../../cxflow/quickstart.md:9
+msgid "Python packages: `markdown-it-py`, `bleach`"
+msgstr "Python 패키지: `markdown-it-py`, `bleach`"
+
+#: ../../cxflow/quickstart.md:10
+msgid "Admin access to install modules"
+msgstr "모듈 설치를 위한 관리자 접근 권한"
+
+#: ../../cxflow/quickstart.md:12
+msgid "Step 1 — Install the Base Module"
+msgstr "1단계 — 기본 모듈 설치"
+
+#: ../../cxflow/quickstart.md:14
+msgid "Install **Linkup CxFlow Docs** (`lu_cxflow_docs`) from the Apps menu."
+msgstr "앱 메뉴에서 **Linkup CxFlow Docs** (`lu_cxflow_docs`)를 설치합니다."
+
+#: ../../cxflow/quickstart.md:20
+msgid "This creates the **CxFlow** top-level menu with:"
+msgstr "이렇게 하면 다음을 포함하는 **CxFlow** 최상위 메뉴가 생성됩니다:"
+
+#: ../../cxflow/quickstart.md:22
+msgid "**Workspace** — 3-panel document editor"
+msgstr "**Workspace** — 3패널 문서 편집기"
+
+#: ../../cxflow/quickstart.md:23
+msgid "**Documents** — CPS, Deliverables, Reports, Notes"
+msgstr "**Documents** — CPS, 산출물, 보고서, 노트"
+
+#: ../../cxflow/quickstart.md:24
+msgid "**Configuration** — Tags (manager only)"
+msgstr "**Configuration** — 태그 (관리자 전용)"
+
+#: ../../cxflow/quickstart.md:27
+msgid ""
+"Install `lu_cxflow_registry` next if you need structured metadata "
+"(requirements, processes, test cases). The other modules can be added "
+"later as needed."
+msgstr ""
+"구조화된 메타데이터(요구사항, 프로세스, 테스트 케이스)가 필요하면 "
+"`lu_cxflow_registry`를 다음으로 설치하세요. 다른 모듈은 필요에 따라 "
+"나중에 추가할 수 있습니다."
+
+#: ../../cxflow/quickstart.md:31
+msgid "Step 2 — Create a Project"
+msgstr "2단계 — 프로젝트 생성"
+
+#: ../../cxflow/quickstart.md:33
+msgid ""
+"CxFlow documents are scoped to Odoo projects. Create or select an "
+"existing project:"
+msgstr ""
+"CxFlow 문서는 Odoo 프로젝트에 범위가 지정됩니다. 기존 프로젝트를 선택하거나 "
+"새로 생성하세요:"
+
+#: ../../cxflow/quickstart.md:40
+msgid "Step 3 — Open the Workspace"
+msgstr "3단계 — Workspace 열기"
+
+#: ../../cxflow/quickstart.md:42
+msgid ""
+"Navigate to **CxFlow → Workspace** and select your project. The workspace"
+" provides a 3-panel layout:"
+msgstr ""
+"**CxFlow → Workspace**로 이동하여 프로젝트를 선택합니다. Workspace는 "
+"3패널 레이아웃을 제공합니다:"
+
+#: ../../cxflow/quickstart.md:26
+msgid "Panel"
+msgstr "패널"
+
+#: ../../cxflow/quickstart.md:26
+msgid "Purpose"
+msgstr "용도"
+
+#: ../../cxflow/quickstart.md:26
+msgid "**Left** — Doc Tree"
+msgstr "**왼쪽** — 문서 트리"
+
+#: ../../cxflow/quickstart.md:26
+msgid "Browse CPS, deliverables, reports, notes in a folder structure"
+msgstr "폴더 구조로 CPS, 산출물, 보고서, 노트 탐색"
+
+#: ../../cxflow/quickstart.md:26
+msgid "**Center** — Editor"
+msgstr "**가운데** — 편집기"
+
+#: ../../cxflow/quickstart.md:26
+msgid "Markdown editor (CodeMirror 6) with live preview"
+msgstr "실시간 미리보기를 지원하는 Markdown 편집기 (CodeMirror 6)"
+
+#: ../../cxflow/quickstart.md:26
+msgid "**Right** — TOC & Meta"
+msgstr "**오른쪽** — 목차 및 메타"
+
+#: ../../cxflow/quickstart.md:26
+msgid "Table of contents, tags, version info, workflow buttons"
+msgstr "목차, 태그, 버전 정보, 워크플로우 버튼"
+
+#: ../../cxflow/quickstart.md:51
+msgid "Step 4 — Create a CPS Document"
+msgstr "4단계 — CPS 문서 생성"
+
+#: ../../cxflow/quickstart.md:53
+msgid ""
+"The CPS (Context / Problem / Solution) is the root document for your "
+"project. Only one CPS per project is allowed."
+msgstr ""
+"CPS (Context / Problem / Solution)는 프로젝트의 루트 문서입니다. "
+"프로젝트당 하나의 CPS만 허용됩니다."
+
+#: ../../cxflow/quickstart.md:56
+msgid "In the Workspace, click **+ New CPS**"
+msgstr "Workspace에서 **+ New CPS** 클릭"
+
+#: ../../cxflow/quickstart.md:57
+msgid "Enter a title (e.g., \"ERP Migration Project\")"
+msgstr "제목을 입력 (예: \"ERP Migration Project\")"
+
+#: ../../cxflow/quickstart.md:58
+msgid "Write your project context in Markdown:"
+msgstr "프로젝트 컨텍스트를 Markdown으로 작성:"
+
+#: ../../cxflow/quickstart.md:77
+msgid "Click **Save**"
+msgstr "**Save** 클릭"
+
+#: ../../cxflow/quickstart.md:80
+msgid ""
+"CxFlow stores Markdown as the single source of truth (`md_source`). The "
+"HTML preview is computed on-the-fly — you never edit HTML directly."
+msgstr ""
+"CxFlow는 Markdown을 단일 진실 공급원(`md_source`)으로 저장합니다. "
+"HTML 미리보기는 실시간으로 계산되며 — HTML을 직접 편집할 필요가 없습니다."
+
+#: ../../cxflow/quickstart.md:84
+msgid "Step 5 — Add Sections"
+msgstr "5단계 — 섹션 추가"
+
+#: ../../cxflow/quickstart.md:86
+msgid "CPS supports hierarchical sections with type annotations:"
+msgstr "CPS는 타입 어노테이션을 가진 계층적 섹션을 지원합니다:"
+
+#: ../../cxflow/quickstart.md:88
+msgid "Click **+ Section** under your CPS"
+msgstr "CPS 아래에서 **+ Section** 클릭"
+
+#: ../../cxflow/quickstart.md:89
+msgid "Set **Section Type** to `context`, `problem`, or `solution`"
+msgstr "**Section Type**을 `context`, `problem` 또는 `solution`으로 설정"
+
+#: ../../cxflow/quickstart.md:90
+msgid "Write the section content in Markdown"
+msgstr "Markdown으로 섹션 내용을 작성"
+
+#: ../../cxflow/quickstart.md:91
+msgid "Drag sections to reorder using the sequence handle"
+msgstr "시퀀스 핸들을 사용하여 섹션을 드래그하여 순서 변경"
+
+#: ../../cxflow/quickstart.md:93
+msgid "Step 6 — Submit for Review"
+msgstr "6단계 — 검토 제출"
+
+#: ../../cxflow/quickstart.md:95
+msgid "When your CPS is ready:"
+msgstr "CPS가 준비되면:"
+
+#: ../../cxflow/quickstart.md:97
+msgid "Click **Submit for Review** in the header"
+msgstr "헤더에서 **Submit for Review** 클릭"
+
+#: ../../cxflow/quickstart.md:98
+msgid "A reviewer (another CxFlow User) reviews and clicks **Request Approval**"
+msgstr "리뷰어(다른 CxFlow 사용자)가 검토 후 **Request Approval** 클릭"
+
+#: ../../cxflow/quickstart.md:99
+msgid "A CxFlow Manager clicks **Approve**"
+msgstr "CxFlow Manager가 **Approve** 클릭"
+
+#: ../../cxflow/quickstart.md:102
+msgid ""
+"The full workflow is: **Draft → Review → Approval → Approved**. Reports "
+"use a simpler 2-state flow (Draft → Approved), and Notes use Draft → "
+"Archived."
+msgstr ""
+"전체 워크플로우는: **Draft → Review → Approval → Approved**입니다. "
+"보고서는 더 단순한 2단계 흐름(Draft → Approved)을 사용하고, "
+"노트는 Draft → Archived를 사용합니다."
+
+#: ../../cxflow/quickstart.md:107
+msgid "What's Next?"
+msgstr "다음 단계"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Goal"
+msgstr "목표"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Chapter"
+msgstr "챕터"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Learn all document types and versioning"
+msgstr "모든 문서 유형과 버전 관리 학습"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`document-management`"
+msgstr "{doc}`document-management`"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Set up structured metadata (requirements, test cases)"
+msgstr "구조화된 메타데이터 설정 (요구사항, 테스트 케이스)"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`registry`"
+msgstr "{doc}`registry`"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Use templates and gate reviews"
+msgstr "템플릿 및 게이트 리뷰 사용"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`engine`"
+msgstr "{doc}`engine`"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Publish documents as PDF / DOCX"
+msgstr "PDF / DOCX로 문서 배포"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`portal-publishing`"
+msgstr "{doc}`portal-publishing`"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Sync documents with Git"
+msgstr "Git과 문서 동기화"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`git-sync`"
+msgstr "{doc}`git-sync`"
+
+#: ../../cxflow/quickstart.md:101
+msgid "Connect AI agents via MCP"
+msgstr "MCP를 통한 AI 에이전트 연결"
+
+#: ../../cxflow/quickstart.md:101
+#, python-brace-format
+msgid "{doc}`mcp-integration`"
+msgstr "{doc}`mcp-integration`"
+
+#: ../../cxflow/quickstart.md:118
+msgid "Recommended Install Order"
+msgstr "권장 설치 순서"
+
+#: ../../cxflow/quickstart.md:131
+msgid "Install `lu_cxflow_docs` first, then add modules as your needs grow."
+msgstr "`lu_cxflow_docs`를 먼저 설치한 후 필요에 따라 모듈을 추가하세요."

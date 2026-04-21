@@ -1,0 +1,411 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/mcp-integration.md:1
+msgid "MCP Integration"
+msgstr "MCP 연동"
+
+#: ../../cxflow/mcp-integration.md:3
+msgid ""
+"The **Linkup MCP — CxFlow** (`lu_mcp_cxflow`) module exposes 12 MCP tools"
+" for AI-assisted document management. It follows the **Markdown SSOT** "
+"principle — zero HTML↔MD conversion since `md_source` is already "
+"Markdown."
+msgstr ""
+"**Linkup MCP — CxFlow** (`lu_mcp_cxflow`) 모듈은 AI 지원 문서 관리를 위한 "
+"12개 MCP 도구를 제공합니다. **Markdown SSOT** 원칙을 따르며 — `md_source`가 "
+"이미 Markdown이므로 HTML↔MD 변환이 불필요합니다."
+
+#: ../../cxflow/mcp-integration.md:7
+msgid "Prerequisites"
+msgstr "사전 요구사항"
+
+#: ../../cxflow/mcp-integration.md:9
+msgid "`lu_mcp_server` module installed and configured"
+msgstr "`lu_mcp_server` 모듈 설치 및 설정 완료"
+
+#: ../../cxflow/mcp-integration.md:10
+msgid "`lu_cxflow_docs` module installed"
+msgstr "`lu_cxflow_docs` 모듈 설치 완료"
+
+#: ../../cxflow/mcp-integration.md:11
+msgid "Optional: `lu_cxflow_engine` for template rendering and gate tools"
+msgstr "선택: 템플릿 렌더링 및 게이트 도구를 위한 `lu_cxflow_engine`"
+
+#: ../../cxflow/mcp-integration.md:13
+msgid "Tool Reference"
+msgstr "도구 레퍼런스"
+
+#: ../../cxflow/mcp-integration.md:15
+msgid "Document CRUD"
+msgstr "문서 CRUD"
+
+#: ../../cxflow/mcp-integration.md:17
+msgid "`cxflow/list_projects`"
+msgstr "`cxflow/list_projects`"
+
+#: ../../cxflow/mcp-integration.md:19
+msgid ""
+"Lists all projects that have CxFlow documents, with per-model document "
+"counts."
+msgstr ""
+"CxFlow 문서가 있는 모든 프로젝트를 모델별 문서 수와 함께 조회합니다."
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Parameter"
+msgstr "파라미터"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Type"
+msgstr "타입"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Required"
+msgstr "필수"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Default"
+msgstr "기본값"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "`limit`"
+msgstr "`limit`"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Integer"
+msgstr "Integer"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "No"
+msgstr "아니오"
+
+#: ../../cxflow/mcp-integration.md
+msgid "50"
+msgstr "50"
+
+#: ../../cxflow/mcp-integration.md:25
+msgid "`cxflow/list_docs`"
+msgstr "`cxflow/list_docs`"
+
+#: ../../cxflow/mcp-integration.md:27
+msgid "Lists documents by kind, project, and state."
+msgstr "종류, 프로젝트, 상태별로 문서를 조회합니다."
+
+#: ../../cxflow/mcp-integration.md
+msgid "`doc_kind`"
+msgstr "`doc_kind`"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "String"
+msgstr "String"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "Yes"
+msgstr "예"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "—"
+msgstr "—"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "`project_id`"
+msgstr "`project_id`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "all"
+msgstr "all"
+
+#: ../../cxflow/mcp-integration.md:36
+msgid "**doc_kind values**: `cps`, `section`, `deliverable`, `report`, `note`"
+msgstr "**doc_kind 값**: `cps`, `section`, `deliverable`, `report`, `note`"
+
+#: ../../cxflow/mcp-integration.md:38
+msgid "`cxflow/read_doc`"
+msgstr "`cxflow/read_doc`"
+
+#: ../../cxflow/mcp-integration.md:40
+msgid "Reads a single document — returns metadata header + raw Markdown body."
+msgstr "단일 문서를 읽습니다 — 메타데이터 헤더 + 원본 Markdown 본문을 반환합니다."
+
+#: ../../cxflow/mcp-integration.md
+msgid "`doc_id`"
+msgstr "`doc_id`"
+
+#: ../../cxflow/mcp-integration.md:47
+msgid "Response format:"
+msgstr "응답 형식:"
+
+#: ../../cxflow/mcp-integration.md:62
+msgid "`cxflow/create_doc`"
+msgstr "`cxflow/create_doc`"
+
+#: ../../cxflow/mcp-integration.md:64
+msgid "Creates a new document with kind-specific fields."
+msgstr "종류별 필드를 포함하여 새 문서를 생성합니다."
+
+#: ../../cxflow/mcp-integration.md
+msgid "Notes"
+msgstr "비고"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "`name`"
+msgstr "`name`"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "`md_source`"
+msgstr "`md_source`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "Initial Markdown content"
+msgstr "초기 Markdown 콘텐츠"
+
+#: ../../cxflow/mcp-integration.md
+msgid "`template_code`"
+msgstr "`template_code`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "Deliverables only"
+msgstr "산출물 전용"
+
+#: ../../cxflow/mcp-integration.md
+msgid "`gate_no`"
+msgstr "`gate_no`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "`report_type`"
+msgstr "`report_type`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "Reports only"
+msgstr "보고서 전용"
+
+#: ../../cxflow/mcp-integration.md ../../cxflow/mcp-integration.md:89
+msgid "`note_type`"
+msgstr "`note_type`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "Notes only"
+msgstr "노트 전용"
+
+#: ../../cxflow/mcp-integration.md:77
+msgid "`cxflow/update_doc`"
+msgstr "`cxflow/update_doc`"
+
+#: ../../cxflow/mcp-integration.md:79
+msgid "Updates a document with optimistic locking."
+msgstr "낙관적 잠금을 사용하여 문서를 업데이트합니다."
+
+#: ../../cxflow/mcp-integration.md
+msgid "`expected_version`"
+msgstr "`expected_version`"
+
+#: ../../cxflow/mcp-integration.md
+msgid "Prevents race conditions"
+msgstr "경합 조건 방지"
+
+#: ../../cxflow/mcp-integration.md:90
+msgid ""
+"Always pass `expected_version` when updating `md_source` to detect "
+"concurrent edits. If the version has changed since you last read the "
+"document, the update will fail with a conflict error."
+msgstr ""
+"`md_source`를 업데이트할 때 동시 편집을 감지하려면 항상 "
+"`expected_version`을 전달하세요. 마지막으로 문서를 읽은 이후 버전이 "
+"변경되었으면 충돌 오류와 함께 업데이트가 실패합니다."
+
+#: ../../cxflow/mcp-integration.md:95
+msgid "`cxflow/create_note`"
+msgstr "`cxflow/create_note`"
+
+#: ../../cxflow/mcp-integration.md:97
+msgid "Shortcut for creating notes with participant matching."
+msgstr "참여자 매칭을 포함한 노트 생성 단축 도구입니다."
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`meeting`"
+msgstr "`meeting`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`meeting_date`"
+msgstr "`meeting_date`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`participant_names`"
+msgstr "`participant_names`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "List"
+msgstr "List"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "Fuzzy-matched to `res.partner`"
+msgstr "`res.partner`에 유사 매칭"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`external_url`"
+msgstr "`external_url`"
+
+#: ../../cxflow/mcp-integration.md:109
+msgid "Search & Navigation"
+msgstr "검색 및 탐색"
+
+#: ../../cxflow/mcp-integration.md:111
+msgid "`cxflow/search_docs`"
+msgstr "`cxflow/search_docs`"
+
+#: ../../cxflow/mcp-integration.md:113
+msgid "Searches across all 5 document models by name and content."
+msgstr "이름과 콘텐츠로 5개 문서 모델 전체를 검색합니다."
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`query`"
+msgstr "`query`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "all projects"
+msgstr "전체 프로젝트"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "20"
+msgstr "20"
+
+#: ../../cxflow/mcp-integration.md:121
+msgid "`cxflow/get_doc_tree`"
+msgstr "`cxflow/get_doc_tree`"
+
+#: ../../cxflow/mcp-integration.md:123
+msgid ""
+"Returns the full workspace tree for a project — CPS hierarchy + folder-"
+"grouped areas."
+msgstr ""
+"프로젝트의 전체 워크스페이스 트리를 반환합니다 — CPS 계층 구조 + 폴더 "
+"그룹 영역."
+
+#: ../../cxflow/mcp-integration.md:130
+msgid "Cross-References"
+msgstr "상호 참조"
+
+#: ../../cxflow/mcp-integration.md:132
+msgid "`cxflow/link_docs`"
+msgstr "`cxflow/link_docs`"
+
+#: ../../cxflow/mcp-integration.md:134
+msgid "Creates a cross-document reference in `lu.cxflow.doc.reference`."
+msgstr "`lu.cxflow.doc.reference`에 문서 간 참조를 생성합니다."
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`source_kind`"
+msgstr "`source_kind`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`source_id`"
+msgstr "`source_id`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`target_kind`"
+msgstr "`target_kind`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`target_id`"
+msgstr "`target_id`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`ref_type`"
+msgstr "`ref_type`"
+
+#: ../../cxflow/mcp-integration.md:89
+msgid "`related_doc`"
+msgstr "`related_doc`"
+
+#: ../../cxflow/mcp-integration.md:144
+msgid "**ref_type values**: `inline_link`, `related_doc`, `cited`, `attachment`"
+msgstr "**ref_type 값**: `inline_link`, `related_doc`, `cited`, `attachment`"
+
+#: ../../cxflow/mcp-integration.md:146
+msgid "Engine Tools (Conditional)"
+msgstr "엔진 도구 (조건부)"
+
+#: ../../cxflow/mcp-integration.md:148
+msgid "These tools are only available when `lu_cxflow_engine` is installed."
+msgstr "이 도구들은 `lu_cxflow_engine`이 설치된 경우에만 사용할 수 있습니다."
+
+#: ../../cxflow/mcp-integration.md:150
+msgid "`cxflow/render_from_template`"
+msgstr "`cxflow/render_from_template`"
+
+#: ../../cxflow/mcp-integration.md:152
+msgid ""
+"Renders a deliverable from its Jinja2 template, respecting the auto_level"
+" setting."
+msgstr ""
+"auto_level 설정을 준수하여 Jinja2 템플릿에서 산출물을 렌더링합니다."
+
+#: ../../cxflow/mcp-integration.md:155
+msgid "`cxflow/advance_gate`"
+msgstr "`cxflow/advance_gate`"
+
+#: ../../cxflow/mcp-integration.md:157
+msgid "Triggers a gate check, pass, or override for a project gate (G1/G2/G3)."
+msgstr "프로젝트 게이트(G1/G2/G3)의 게이트 체크, 통과 또는 재정의를 트리거합니다."
+
+#: ../../cxflow/mcp-integration.md:159
+msgid "`cxflow/aggregate_summary`"
+msgstr "`cxflow/aggregate_summary`"
+
+#: ../../cxflow/mcp-integration.md:161
+msgid "Regenerates a deliverable's summary section from aggregated project data."
+msgstr "집계된 프로젝트 데이터에서 산출물의 요약 섹션을 재생성합니다."
+
+#: ../../cxflow/mcp-integration.md:163
+msgid "Response Format"
+msgstr "응답 형식"
+
+#: ../../cxflow/mcp-integration.md:165
+msgid ""
+"All tools return **Markdown strings** (not JSON). This makes responses "
+"directly readable by both humans and AI agents."
+msgstr ""
+"모든 도구는 **Markdown 문자열**(JSON이 아님)을 반환합니다. 이를 통해 "
+"사람과 AI 에이전트 모두 응답을 직접 읽을 수 있습니다."
+
+#: ../../cxflow/mcp-integration.md:168
+msgid "**Metadata header**: document name, ID, state, version, project info"
+msgstr "**메타데이터 헤더**: 문서명, ID, 상태, 버전, 프로젝트 정보"
+
+#: ../../cxflow/mcp-integration.md:169
+msgid "**Separator**: `---` between metadata and content"
+msgstr "**구분자**: 메타데이터와 콘텐츠 사이의 `---`"
+
+#: ../../cxflow/mcp-integration.md:170
+msgid "**Tables**: used for list and search results"
+msgstr "**테이블**: 목록 및 검색 결과에 사용"
+
+#: ../../cxflow/mcp-integration.md:172
+msgid "AI Agent Workflow Example"
+msgstr "AI 에이전트 워크플로우 예시"
+
+#: ../../cxflow/mcp-integration.md:174
+msgid "A typical AI agent session using CxFlow MCP tools:"
+msgstr "CxFlow MCP 도구를 사용하는 일반적인 AI 에이전트 세션:"

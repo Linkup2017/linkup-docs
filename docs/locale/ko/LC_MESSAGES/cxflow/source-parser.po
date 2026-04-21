@@ -1,0 +1,311 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/source-parser.md:1
+msgid "Source Parser"
+msgstr "소스 파서"
+
+#: ../../cxflow/source-parser.md:3
+msgid ""
+"The **CxFlow Source Parser** (`lu_cxflow_parse`) scans Odoo module source"
+" code and auto-populates the CxFlow registry with extracted metadata."
+msgstr ""
+"**CxFlow 소스 파서** (`lu_cxflow_parse`)는 Odoo 모듈 소스 코드를 스캔하여 "
+"추출된 메타데이터로 CxFlow 레지스트리를 자동으로 채웁니다."
+
+#: ../../cxflow/source-parser.md:6
+msgid "Overview"
+msgstr "개요"
+
+#: ../../cxflow/source-parser.md:8
+msgid "The parser reads Odoo addon directories and extracts:"
+msgstr "파서는 Odoo 애드온 디렉토리를 읽고 다음을 추출합니다:"
+
+#: ../../cxflow/source-parser.md:10
+msgid "**Manifests** — module name, version, dependencies, description"
+msgstr "**매니페스트** — 모듈명, 버전, 의존성, 설명"
+
+#: ../../cxflow/source-parser.md:11
+msgid "**Models** — model names, fields, field types"
+msgstr "**모델** — 모델명, 필드, 필드 타입"
+
+#: ../../cxflow/source-parser.md:12
+msgid "**Views** — XML view definitions and types"
+msgstr "**뷰** — XML 뷰 정의 및 타입"
+
+#: ../../cxflow/source-parser.md:13
+msgid "**Security** — groups, ACL rules, record rules"
+msgstr "**보안** — 그룹, ACL 규칙, 레코드 규칙"
+
+#: ../../cxflow/source-parser.md:15
+msgid ""
+"Extracted data is stored as **parse artifacts** and optionally synced to "
+"the CxFlow registry."
+msgstr ""
+"추출된 데이터는 **파싱 아티팩트**로 저장되며, 선택적으로 CxFlow 레지스트리에 "
+"동기화됩니다."
+
+#: ../../cxflow/source-parser.md:18
+msgid "Running a Parse Job"
+msgstr "파싱 작업 실행"
+
+#: ../../cxflow/source-parser.md:20
+msgid "Navigate to **CxFlow → Parser → Jobs** and create a new job."
+msgstr "**CxFlow → Parser → Jobs**로 이동하여 새 작업을 생성합니다."
+
+#: ../../cxflow/source-parser.md:22
+msgid "Job Configuration"
+msgstr "작업 설정"
+
+#: ../../cxflow/source-parser.md ../../cxflow/source-parser.md:53
+msgid "Field"
+msgstr "필드"
+
+#: ../../cxflow/source-parser.md ../../cxflow/source-parser.md:53
+msgid "Description"
+msgstr "설명"
+
+#: ../../cxflow/source-parser.md
+msgid "Required"
+msgstr "필수"
+
+#: ../../cxflow/source-parser.md
+msgid "**Source Path**"
+msgstr "**소스 경로**"
+
+#: ../../cxflow/source-parser.md
+msgid "Absolute path to addon directory on the server"
+msgstr "서버의 애드온 디렉토리 절대 경로"
+
+#: ../../cxflow/source-parser.md
+msgid "Yes"
+msgstr "예"
+
+#: ../../cxflow/source-parser.md
+msgid "**Module Filter**"
+msgstr "**모듈 필터**"
+
+#: ../../cxflow/source-parser.md
+msgid "Comma-separated module names (blank = all)"
+msgstr "쉼표로 구분된 모듈명 (빈칸 = 전체)"
+
+#: ../../cxflow/source-parser.md
+msgid "No"
+msgstr "아니오"
+
+#: ../../cxflow/source-parser.md
+msgid "**Populate Registry**"
+msgstr "**레지스트리 채우기**"
+
+#: ../../cxflow/source-parser.md
+msgid "Auto-sync parsed data to CxFlow registry"
+msgstr "파싱된 데이터를 CxFlow 레지스트리에 자동 동기화"
+
+#: ../../cxflow/source-parser.md
+msgid "No (default: Yes)"
+msgstr "아니오 (기본값: 예)"
+
+#: ../../cxflow/source-parser.md:30
+msgid "Path Validation"
+msgstr "경로 검증"
+
+#: ../../cxflow/source-parser.md:32
+msgid "The parser validates the source path for security:"
+msgstr "파서는 보안을 위해 소스 경로를 검증합니다:"
+
+#: ../../cxflow/source-parser.md:34
+msgid "Must be an absolute path"
+msgstr "절대 경로여야 합니다"
+
+#: ../../cxflow/source-parser.md:35
+msgid "No `..` directory traversal allowed"
+msgstr "`..` 디렉토리 순회가 허용되지 않습니다"
+
+#: ../../cxflow/source-parser.md:36
+msgid "Must be an existing directory"
+msgstr "존재하는 디렉토리여야 합니다"
+
+#: ../../cxflow/source-parser.md:37
+msgid "Must contain at least one `__manifest__.py` in immediate subdirectories"
+msgstr "직속 하위 디렉토리에 최소 하나의 `__manifest__.py`가 있어야 합니다"
+
+#: ../../cxflow/source-parser.md:39
+msgid "Running"
+msgstr "실행"
+
+#: ../../cxflow/source-parser.md:41
+msgid "Click **Run Parse** to start. The job transitions through:"
+msgstr "**Run Parse**를 클릭하여 시작합니다. 작업은 다음 상태를 거칩니다:"
+
+#: ../../cxflow/source-parser.md:54
+msgid ""
+"Only one parse job can run per project at a time. Concurrent runs are "
+"blocked."
+msgstr ""
+"프로젝트당 한 번에 하나의 파싱 작업만 실행할 수 있습니다. 동시 실행은 "
+"차단됩니다."
+
+#: ../../cxflow/source-parser.md:57
+msgid "Parse Artifacts"
+msgstr "파싱 아티팩트"
+
+#: ../../cxflow/source-parser.md:59
+msgid "Each discovered item is stored as a `lu.cxflow.parse.artifact`:"
+msgstr "발견된 각 항목은 `lu.cxflow.parse.artifact`로 저장됩니다:"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`module_name`"
+msgstr "`module_name`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Source module name"
+msgstr "소스 모듈명"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`artifact_type`"
+msgstr "`artifact_type`"
+
+#: ../../cxflow/source-parser.md:53
+msgid ""
+"`manifest`, `model`, `view`, `security_group`, `security_acl`, "
+"`security_rule`"
+msgstr ""
+"`manifest`, `model`, `view`, `security_group`, `security_acl`, "
+"`security_rule`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`file_path`"
+msgstr "`file_path`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Source file location"
+msgstr "소스 파일 위치"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`content_json`"
+msgstr "`content_json`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Structured parsed data (JSON)"
+msgstr "구조화된 파싱 데이터 (JSON)"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`line_count`"
+msgstr "`line_count`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Lines in source file"
+msgstr "소스 파일 라인 수"
+
+#: ../../cxflow/source-parser.md:53
+msgid "`parse_warnings`"
+msgstr "`parse_warnings`"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Any warnings during parsing"
+msgstr "파싱 중 발생한 경고"
+
+#: ../../cxflow/source-parser.md:70
+msgid "Registry Population"
+msgstr "레지스트리 채우기"
+
+#: ../../cxflow/source-parser.md:72
+msgid "When `populate_registry` is enabled, the parser syncs extracted data to:"
+msgstr "`populate_registry`가 활성화되면 파서는 추출된 데이터를 다음에 동기화합니다:"
+
+#: ../../cxflow/source-parser.md:74
+msgid "**`lu.cxflow.module`** — creates or updates module entries with:"
+msgstr "**`lu.cxflow.module`** — 다음 정보로 모듈 항목을 생성 또는 업데이트합니다:"
+
+#: ../../cxflow/source-parser.md:75
+msgid "`last_parsed_at` — timestamp"
+msgstr "`last_parsed_at` — 타임스탬프"
+
+#: ../../cxflow/source-parser.md:76
+msgid "`parsed_model_count` — number of models found"
+msgstr "`parsed_model_count` — 발견된 모델 수"
+
+#: ../../cxflow/source-parser.md:77
+msgid "`parsed_field_count` — number of fields found"
+msgstr "`parsed_field_count` — 발견된 필드 수"
+
+#: ../../cxflow/source-parser.md:78
+msgid "`parsed_view_count` — number of views found"
+msgstr "`parsed_view_count` — 발견된 뷰 수"
+
+#: ../../cxflow/source-parser.md:79
+msgid "`parsed_depends` — comma-separated dependency list"
+msgstr "`parsed_depends` — 쉼표로 구분된 의존성 목록"
+
+#: ../../cxflow/source-parser.md:81
+msgid ""
+"This connects the source code reality to the registry's project metadata,"
+" ensuring documentation stays aligned with the actual codebase."
+msgstr ""
+"이를 통해 소스 코드의 실제 상태와 레지스트리의 프로젝트 메타데이터가 "
+"연결되어 문서가 실제 코드베이스와 일치하게 유지됩니다."
+
+#: ../../cxflow/source-parser.md:84
+msgid "Use Cases"
+msgstr "활용 사례"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Scenario"
+msgstr "시나리오"
+
+#: ../../cxflow/source-parser.md:53
+msgid "How"
+msgstr "방법"
+
+#: ../../cxflow/source-parser.md:53
+msgid "**Initial project setup**"
+msgstr "**초기 프로젝트 설정**"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Parse the addon directory to auto-create module entries in the registry"
+msgstr "애드온 디렉토리를 파싱하여 레지스트리에 모듈 항목을 자동 생성"
+
+#: ../../cxflow/source-parser.md:53
+msgid "**Post-development audit**"
+msgstr "**개발 후 감사**"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Re-parse to verify all models and views are documented"
+msgstr "재파싱하여 모든 모델과 뷰가 문서화되었는지 확인"
+
+#: ../../cxflow/source-parser.md:53
+msgid "**Documentation generation**"
+msgstr "**문서 생성**"
+
+#: ../../cxflow/source-parser.md:53
+msgid "Use parsed artifacts as input for template rendering in the engine"
+msgstr "파싱 아티팩트를 엔진의 템플릿 렌더링 입력으로 활용"
+
+#: ../../cxflow/source-parser.md:92
+msgid "Dependencies"
+msgstr "의존성"
+
+#: ../../cxflow/source-parser.md:94
+msgid ""
+"No external dependencies — the parser uses pure Python AST and XML "
+"parsing."
+msgstr ""
+"외부 의존성 없음 — 파서는 순수 Python AST와 XML 파싱을 사용합니다."

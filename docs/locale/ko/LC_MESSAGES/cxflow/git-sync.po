@@ -1,0 +1,398 @@
+# CxFlow Documentation Korean Translation.
+# Copyright (C) 2026, Linkup Infotech Co., Ltd.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
+# Jiyeon Kim <jiyeon@link-up.co.kr>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linkup Infotech Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"PO-Revision-Date: 2026-04-21 12:00+0900\n"
+"Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../cxflow/git-sync.md:1
+msgid "Git Sync"
+msgstr "Git 동기화"
+
+#: ../../cxflow/git-sync.md:3
+msgid ""
+"The **CxFlow Git Sync** (`lu_cxflow_git_sync`) module enables "
+"bidirectional synchronization between CxFlow documents and Git "
+"repositories."
+msgstr ""
+"**CxFlow Git Sync** (`lu_cxflow_git_sync`) 모듈은 CxFlow 문서와 Git "
+"저장소 간의 양방향 동기화를 지원합니다."
+
+#: ../../cxflow/git-sync.md:6
+msgid "Overview"
+msgstr "개요"
+
+#: ../../cxflow/git-sync.md:14
+msgid ""
+"Documents are stored as Markdown files in the Git repository, preserving "
+"the SSOT principle — what you see in CxFlow is what you get in Git."
+msgstr ""
+"문서는 Git 저장소에 Markdown 파일로 저장되어 SSOT 원칙을 유지합니다 — "
+"CxFlow에서 보는 것이 Git에서도 동일합니다."
+
+#: ../../cxflow/git-sync.md:17
+msgid "Setting Up a Git Repository"
+msgstr "Git 저장소 설정"
+
+#: ../../cxflow/git-sync.md:19
+msgid "Navigate to **CxFlow → Git Sync → Repositories** and create a new record."
+msgstr "**CxFlow → Git Sync → Repositories**로 이동하여 새 레코드를 생성합니다."
+
+#: ../../cxflow/git-sync.md:21
+msgid "Configuration Fields"
+msgstr "설정 필드"
+
+#: ../../cxflow/git-sync.md:8 ../../cxflow/git-sync.md:59
+#: ../../cxflow/git-sync.md:83
+msgid "Field"
+msgstr "필드"
+
+#: ../../cxflow/git-sync.md:8 ../../cxflow/git-sync.md:59
+#: ../../cxflow/git-sync.md:83
+msgid "Description"
+msgstr "설명"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Required"
+msgstr "필수"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Repository URL**"
+msgstr "**저장소 URL**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "HTTPS or SSH URL"
+msgstr "HTTPS 또는 SSH URL"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Yes"
+msgstr "예"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Branch**"
+msgstr "**브랜치**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Target branch (default: `main`)"
+msgstr "대상 브랜치 (기본값: `main`)"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Auth Method**"
+msgstr "**인증 방식**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "`none`, `pat` (Personal Access Token), `ssh`"
+msgstr "`none`, `pat` (Personal Access Token), `ssh`"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Access Token**"
+msgstr "**액세스 토큰**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Token for HTTPS auth"
+msgstr "HTTPS 인증용 토큰"
+
+#: ../../cxflow/git-sync.md:8
+msgid "If PAT"
+msgstr "PAT인 경우"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**SSH Key Path**"
+msgstr "**SSH 키 경로**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Server path to SSH key"
+msgstr "서버의 SSH 키 경로"
+
+#: ../../cxflow/git-sync.md:8
+msgid "If SSH"
+msgstr "SSH인 경우"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Auto Push**"
+msgstr "**자동 Push**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Push to Git on every document save"
+msgstr "문서 저장 시마다 Git에 Push"
+
+#: ../../cxflow/git-sync.md:8
+msgid "No"
+msgstr "아니오"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Auto Pull (Cron)**"
+msgstr "**자동 Pull (Cron)**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "Periodically pull from Git"
+msgstr "주기적으로 Git에서 Pull"
+
+#: ../../cxflow/git-sync.md:8
+msgid "**Sync Scope**"
+msgstr "**동기화 범위**"
+
+#: ../../cxflow/git-sync.md:8
+msgid "`all`, `cps`, `deliverable`, `report`, `note`"
+msgstr "`all`, `cps`, `deliverable`, `report`, `note`"
+
+#: ../../cxflow/git-sync.md:35
+msgid ""
+"Auto Push and Auto Pull are mutually exclusive — enable one or the other "
+"to avoid sync conflicts."
+msgstr ""
+"Auto Push와 Auto Pull은 상호 배타적입니다 — 동기화 충돌을 방지하려면 "
+"둘 중 하나만 활성화하세요."
+
+#: ../../cxflow/git-sync.md:39
+msgid "Constraint"
+msgstr "제약 조건"
+
+#: ../../cxflow/git-sync.md:41
+msgid "Only one Git repository can be configured per project."
+msgstr "프로젝트당 하나의 Git 저장소만 설정할 수 있습니다."
+
+#: ../../cxflow/git-sync.md:43
+msgid "Sync Operations"
+msgstr "동기화 작업"
+
+#: ../../cxflow/git-sync.md:45
+msgid "Test Connection"
+msgstr "연결 테스트"
+
+#: ../../cxflow/git-sync.md:47
+msgid ""
+"Click **Test Connection** to validate credentials and confirm the "
+"repository is accessible. This clones the repo to a temporary directory."
+msgstr ""
+"**Test Connection**을 클릭하여 자격 증명을 검증하고 저장소 접근 가능 여부를 "
+"확인합니다. 임시 디렉토리에 저장소를 클론합니다."
+
+#: ../../cxflow/git-sync.md:50
+msgid "Full Export"
+msgstr "전체 내보내기"
+
+#: ../../cxflow/git-sync.md:52
+msgid ""
+"**Full Export** pushes all project documents (filtered by sync scope) to "
+"the Git repository in a single operation. Use this for initial setup."
+msgstr ""
+"**전체 내보내기**는 모든 프로젝트 문서(동기화 범위로 필터링)를 한 번의 "
+"작업으로 Git 저장소에 Push합니다. 초기 설정에 사용하세요."
+
+#: ../../cxflow/git-sync.md:55
+msgid "Full Import"
+msgstr "전체 가져오기"
+
+#: ../../cxflow/git-sync.md:57
+msgid "**Full Import** pulls all documents from Git and overwrites local content."
+msgstr "**전체 가져오기**는 Git에서 모든 문서를 Pull하여 로컬 콘텐츠를 덮어씁니다."
+
+#: ../../cxflow/git-sync.md:60
+msgid ""
+"Full Import overwrites local `md_source`. Use with caution — consider "
+"exporting first as a backup."
+msgstr ""
+"전체 가져오기는 로컬 `md_source`를 덮어씁니다. 주의해서 사용하세요 — "
+"백업으로 먼저 내보내기를 고려하세요."
+
+#: ../../cxflow/git-sync.md:64
+msgid "Auto Push"
+msgstr "자동 Push"
+
+#: ../../cxflow/git-sync.md:66
+msgid ""
+"When `auto_push` is enabled, every document save triggers an automatic "
+"Git push for that document. The mixin extension tracks:"
+msgstr ""
+"`auto_push`가 활성화되면 문서 저장 시마다 해당 문서에 대한 자동 Git Push가 "
+"트리거됩니다. 믹스인 확장은 다음을 추적합니다:"
+
+#: ../../cxflow/git-sync.md:59
+msgid "`git_sync_path`"
+msgstr "`git_sync_path`"
+
+#: ../../cxflow/git-sync.md:59
+msgid "File path in the repository"
+msgstr "저장소 내 파일 경로"
+
+#: ../../cxflow/git-sync.md:59
+msgid "`git_sync_sha`"
+msgstr "`git_sync_sha`"
+
+#: ../../cxflow/git-sync.md:59
+msgid "SHA-256 hash (first 16 chars) of `md_source`"
+msgstr "`md_source`의 SHA-256 해시 (앞 16자)"
+
+#: ../../cxflow/git-sync.md:59
+msgid "`git_last_synced_at`"
+msgstr "`git_last_synced_at`"
+
+#: ../../cxflow/git-sync.md:59
+msgid "Timestamp of last sync"
+msgstr "마지막 동기화 타임스탬프"
+
+#: ../../cxflow/git-sync.md:59
+msgid "`git_last_synced_version`"
+msgstr "`git_last_synced_version`"
+
+#: ../../cxflow/git-sync.md:59
+msgid "Document version at last sync"
+msgstr "마지막 동기화 시 문서 버전"
+
+#: ../../cxflow/git-sync.md:76
+msgid "Auto Pull (Cron)"
+msgstr "자동 Pull (Cron)"
+
+#: ../../cxflow/git-sync.md:78
+msgid ""
+"When `auto_pull_cron` is enabled, the hourly cron job automatically pulls"
+" changes from the repository."
+msgstr ""
+"`auto_pull_cron`이 활성화되면 매시간 크론 작업이 자동으로 저장소에서 "
+"변경사항을 Pull합니다."
+
+#: ../../cxflow/git-sync.md:81
+msgid "State Machine"
+msgstr "상태 머신"
+
+#: ../../cxflow/git-sync.md:93
+msgid ""
+"The cron job also recovers stuck repositories — if a repo has been in "
+"`syncing` state for more than 10 minutes, it is automatically reset."
+msgstr ""
+"크론 작업은 중단된 저장소도 복구합니다 — 저장소가 10분 이상 `syncing` "
+"상태에 있으면 자동으로 초기화됩니다."
+
+#: ../../cxflow/git-sync.md:96
+msgid "Sync Log"
+msgstr "동기화 로그"
+
+#: ../../cxflow/git-sync.md:98
+msgid "Every sync operation creates a log entry in `lu.cxflow.git.sync.log`:"
+msgstr "모든 동기화 작업은 `lu.cxflow.git.sync.log`에 로그 항목을 생성합니다:"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`direction`"
+msgstr "`direction`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`export` or `import`"
+msgstr "`export` 또는 `import`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`success`, `conflict`, `error`"
+msgstr "`success`, `conflict`, `error`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`doc_model` / `doc_id`"
+msgstr "`doc_model` / `doc_id`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Affected document"
+msgstr "영향받은 문서"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`file_path`"
+msgstr "`file_path`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Path in Git repository"
+msgstr "Git 저장소 내 경로"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`commit_sha`"
+msgstr "`commit_sha`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Git commit hash"
+msgstr "Git 커밋 해시"
+
+#: ../../cxflow/git-sync.md:83
+msgid "`db_version`"
+msgstr "`db_version`"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Document version at sync time"
+msgstr "동기화 시 문서 버전"
+
+#: ../../cxflow/git-sync.md:109
+msgid ""
+"Use the log to diagnose sync issues and track document change history "
+"across both systems."
+msgstr ""
+"로그를 사용하여 동기화 문제를 진단하고 양쪽 시스템에 걸친 문서 변경 이력을 "
+"추적합니다."
+
+#: ../../cxflow/git-sync.md:112
+msgid "Cron Job"
+msgstr "크론 작업"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Cron"
+msgstr "크론"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Schedule"
+msgstr "스케줄"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Default State"
+msgstr "기본 상태"
+
+#: ../../cxflow/git-sync.md:83
+msgid "CxFlow Git Auto Sync"
+msgstr "CxFlow Git 자동 동기화"
+
+#: ../../cxflow/git-sync.md:83
+msgid "Every 1 hour"
+msgstr "매 1시간"
+
+#: ../../cxflow/git-sync.md:83
+msgid "**Inactive** (enable manually)"
+msgstr "**비활성** (수동으로 활성화)"
+
+#: ../../cxflow/git-sync.md:118
+msgid "The cron performs two tasks:"
+msgstr "크론은 두 가지 작업을 수행합니다:"
+
+#: ../../cxflow/git-sync.md:120
+msgid "Recovers stuck repos (syncing > 10 min)"
+msgstr "중단된 저장소 복구 (syncing 상태 > 10분)"
+
+#: ../../cxflow/git-sync.md:121
+msgid ""
+"Pulls from repos with `auto_pull_cron=True` that are in `ready` or "
+"`error` state"
+msgstr ""
+"`ready` 또는 `error` 상태인 `auto_pull_cron=True` 저장소에서 Pull"
+
+#: ../../cxflow/git-sync.md:123
+msgid "Dependencies"
+msgstr "의존성"
+
+#: ../../cxflow/git-sync.md:125
+msgid "**Python**: `PyYAML`"
+msgstr "**Python**: `PyYAML`"
+
+#: ../../cxflow/git-sync.md:126
+msgid "**System**: `git` binary must be available on the server"
+msgstr "**시스템**: 서버에 `git` 바이너리가 설치되어 있어야 합니다"
