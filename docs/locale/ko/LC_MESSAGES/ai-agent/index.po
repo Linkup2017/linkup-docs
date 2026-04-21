@@ -1,12 +1,13 @@
 # Korean translation for Linkup Infotech Docs — AI Agent index
 # Copyright (C) 2026, Linkup Infotech Co., Ltd.
-# This file is distributed under the same license as the Linkup Infotech Docs package.
+# This file is distributed under the same license as the Linkup Infotech
+# Docs package.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 05:40+0900\n"
+"POT-Creation-Date: 2026-04-21 09:07+0900\n"
 "PO-Revision-Date: 2026-04-14 09:00+0900\n"
 "Last-Translator: Linkup Infotech <docs@link-up.co.kr>\n"
 "Language: ko\n"
@@ -29,20 +30,20 @@ msgid ""
 "via Anthropic Claude — letting you assign a different LLM provider to "
 "each agent for cost and performance flexibility."
 msgstr ""
-"**Linkup AI Agent**\ 는 Odoo 19.0 Enterprise 인스턴스 내에서 직접 실행되는 하이브리드 LLM "
-"AI 어시스턴트입니다. `Ollama <https://ollama.com>`_\ 를 통한 온프레미스 추론과 "
-"Anthropic Claude를 통한 클라우드 추론을 모두 지원하며, 비용과 성능에 맞게 에이전트별로 "
-"다른 LLM Provider를 지정할 수 있습니다."
+"**Linkup AI Agent**\\ 는 Odoo 19.0 Enterprise 인스턴스 내에서 직접 실행되는 하이브리드 LLM "
+"AI 어시스턴트입니다. `Ollama <https://ollama.com>`_\\ 를 통한 온프레미스 추론과 Anthropic "
+"Claude를 통한 클라우드 추론을 모두 지원하며, 비용과 성능에 맞게 에이전트별로 다른 LLM Provider를 지정할 수 "
+"있습니다."
 
 #: ../../ai-agent/index.rst:11
 msgid "Modules"
 msgstr "모듈"
 
-#: ../../ai-agent/index.rst:17
+#: ../../ai-agent/index.rst:17 ../../ai-agent/index.rst:55
 msgid "Module"
 msgstr "모듈"
 
-#: ../../ai-agent/index.rst:18
+#: ../../ai-agent/index.rst:18 ../../ai-agent/index.rst:56
 msgid "Description"
 msgstr "설명"
 
@@ -133,11 +134,11 @@ msgstr "Enterprise 확장 — 고급 훅, 커스텀 스텝 타입"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: ../../ai-agent/index.rst:48
+#: ../../ai-agent/index.rst:49
 msgid "Domain Extension Modules"
 msgstr "도메인 익스텐션 모듈"
 
-#: ../../ai-agent/index.rst:55
+#: ../../ai-agent/index.rst:57
 msgid "Base"
 msgstr "기반 모듈"
 
@@ -149,7 +150,10 @@ msgstr "``lu_ai_rag_crm``"
 msgid "CRM domain RAG partitioning"
 msgstr "CRM 도메인 RAG 파티셔닝"
 
-#: ../../ai-agent/index.rst:60
+#: ../../ai-agent/index.rst:60 ../../ai-agent/index.rst:63
+#: ../../ai-agent/index.rst:66 ../../ai-agent/index.rst:69
+#: ../../ai-agent/index.rst:72 ../../ai-agent/index.rst:75
+#: ../../ai-agent/index.rst:78
 msgid "rag"
 msgstr "rag"
 
@@ -209,9 +213,11 @@ msgstr "``lu_ai_orch_account``"
 msgid "Finance/Accounting domain agent (invoices, payments, budgets)"
 msgstr "재무/회계 도메인 에이전트 (인보이스, 결제, 예산)"
 
-#: ../../ai-agent/index.rst:81
-msgid "orchestrator"
-msgstr "orchestrator"
+#: ../../ai-agent/index.rst:81 ../../ai-agent/index.rst:84
+#: ../../ai-agent/index.rst:87 ../../ai-agent/index.rst:90
+#: ../../ai-agent/index.rst:93 ../../ai-agent/index.rst:96
+msgid "orch"
+msgstr ""
 
 #: ../../ai-agent/index.rst:82
 msgid "``lu_ai_orch_crm``"
@@ -261,9 +267,10 @@ msgstr "``lu_ai_pro_crm``"
 msgid "CRM proactive alerts — lead stagnation detection, at-risk scoring"
 msgstr "CRM 프로액티브 알림 — 리드 정체 감지, 위험 점수 산정"
 
-#: ../../ai-agent/index.rst:99
-msgid "proactive"
-msgstr "proactive"
+#: ../../ai-agent/index.rst:99 ../../ai-agent/index.rst:102
+#: ../../ai-agent/index.rst:105
+msgid "pro"
+msgstr ""
 
 #: ../../ai-agent/index.rst:100
 msgid "``lu_ai_pro_helpdesk``"
@@ -281,6 +288,13 @@ msgstr "``lu_ai_pro_stock``"
 msgid "Stock proactive alerts — shortage detection, autonomous PO suggestion"
 msgstr "재고 프로액티브 알림 — 부족 감지, 구매 주문 자동 제안"
 
-#: ../../ai-agent/index.rst:109
+#: ../../ai-agent/index.rst:110
 msgid "Getting Started"
 msgstr "시작하기"
+
+#~ msgid "orchestrator"
+#~ msgstr "orchestrator"
+
+#~ msgid "proactive"
+#~ msgstr "proactive"
+
