@@ -28,11 +28,27 @@ The root metadata hub — one per Odoo project.
 
 | Field | Type | Description |
 |---|---|---|
-| `partner_id` | Many2one → `res.partner` | Customer account |
+| `code` | Char | Unique project code |
+| `project_type` | Selection | `A` (SI Build), `B` (Consulting), `C` (Simple) |
+| `industry` | Selection | `retail`, `manufacturing`, `service`, `it`, `other` |
+| `scale` | Selection | `small` (~50), `medium` (50–200), `large` (200+) |
+| `duration_weeks` | Integer | Planned duration in weeks |
+| `start_date` | Date | Project start date |
+| `end_date` | Date | Planned end date |
+| `partner_id` | Many2one → `res.partner` | Customer account (related from `project.project`) |
+| `sale_order_id` | Many2one | Sales order (related, requires `sale_project`) |
+| `user_id` | Many2one | PM (related from `project.project`) |
+| `team_ids` | Many2many → `res.users` | Project team members |
 | `cps_id` | Many2one → `lu.cxflow.cps` | Link to the CPS document |
+| `state` | Selection | `draft` → `active` → `gate1` → `gate2` → `gate3` → `closed` |
+| `requirement_count` | Integer (computed) | Total requirements in this project |
+| `issue_open_count` | Integer (computed) | Open issues (not resolved/closed) |
+| `module_count` | Integer (computed) | Modules in scope |
 
 ```{note}
 A unique constraint ensures only one `lu.cxflow.project` per `project.project`.
+The `project_type` determines which WBS tasks are mandatory — see
+{doc}`engine` for the WBS task library.
 ```
 
 ### 2. Module (`lu.cxflow.module`)
@@ -55,12 +71,20 @@ Functional and non-functional requirements with traceability.
 
 | Field | Type | Description |
 |---|---|---|
+| `code` | Char | Unique code per project — format: `REQ-F-001`, `REQ-NF-001`, `REQ-D-001`, `REQ-I-001` |
 | `req_type` | Selection | `functional`, `non_functional`, `data`, `integration` |
 | `priority` | Selection | `low`, `medium`, `high`, `critical` |
-| `module_id` | Many2one | Parent module |
-| `state` | Selection | `new` → `analyzed` → `approved` → `implemented` → `tested` → `closed` |
+| `module_id` | Many2one | Parent module (required) |
+| `source` | Char | Origin reference (e.g., `인터뷰_04-17_홍길동`, `CPS_2.2`) |
+| `state` | Selection | `draft` → `confirmed` → `rework` → `closed` |
 | `testcase_ids` | One2many | Linked test cases (RTM) |
+| `testcase_count` | Integer (stored) | Number of linked test cases |
 | `issue_ids` | One2many | Related issues |
+
+```{note}
+The `code` field enforces the format `REQ-(F|NF|D|I)-\d{3,}` via a database
+constraint. Codes must be unique within the same project.
+```
 
 ### 4. Process (`lu.cxflow.process`)
 
@@ -85,11 +109,12 @@ External system integration catalog.
 
 ### 6. Issue (`lu.cxflow.issue`)
 
-Issues, risks, change requests, and defects — with a CR approval workflow.
+Issues, risks, change requests, defects, and pain points — with a CR
+approval workflow.
 
 | Field | Type | Description |
 |---|---|---|
-| `issue_type` | Selection | `issue`, `risk`, `change_request`, `defect` |
+| `issue_type` | Selection | `issue`, `risk`, `cr` (Change Request), `defect`, `problem` (Pain Point) |
 | `severity` | Selection | `low`, `medium`, `high`, `critical` |
 | `state` | Selection | `new` → `assigned` → `in_progress` → `resolved` → `closed` |
 | `approval_state` | Selection | `draft` → `pending` → `approved` / `rejected` (CRs only) |
@@ -98,6 +123,9 @@ Issues, risks, change requests, and defects — with a CR approval workflow.
 | `module_id` | Many2one | Affected module |
 | `requirement_id` | Many2one | Related requirement |
 | `testcase_ids` | Many2many | Associated test cases |
+| `resolution` | Text | Resolution details (all types) |
+| `defect_step` | Text | Reproduction steps (defect only) |
+| `defect_environment` | Char | Reproduction environment (defect only) |
 
 **Change Request workflow:**
 
