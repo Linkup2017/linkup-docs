@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linkup Infotech Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 09:07+0900\n"
+"POT-Creation-Date: 2026-04-27 05:03+0900\n"
 "PO-Revision-Date: 2026-04-21 12:00+0900\n"
 "Last-Translator: Jiyeon Kim <jiyeon@link-up.co.kr>\n"
 "Language: ko\n"
@@ -29,9 +29,8 @@ msgid ""
 "metadata models for project governance. It turns informal project "
 "knowledge into traceable, auditable records."
 msgstr ""
-"**CxFlow Registry** (`lu_cxflow_registry`)는 프로젝트 거버넌스를 위한 "
-"9개의 구조화된 메타데이터 모델을 제공합니다. 비공식 프로젝트 지식을 "
-"추적 가능하고 감사 가능한 레코드로 변환합니다."
+"**CxFlow Registry** (`lu_cxflow_registry`)는 프로젝트 거버넌스를 위한 9개의 구조화된 메타데이터 "
+"모델을 제공합니다. 비공식 프로젝트 지식을 추적 가능하고 감사 가능한 레코드로 변환합니다."
 
 #: ../../cxflow/registry.md:7
 msgid "Registry Mixin"
@@ -41,22 +40,20 @@ msgstr "레지스트리 Mixin"
 msgid ""
 "All registry models inherit from `lu.cxflow.registry.mixin` (abstract), "
 "which provides:"
-msgstr ""
-"모든 레지스트리 모델은 `lu.cxflow.registry.mixin` (추상)을 상속하며, "
-"다음을 제공합니다:"
+msgstr "모든 레지스트리 모델은 `lu.cxflow.registry.mixin` (추상)을 상속하며, 다음을 제공합니다:"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Field"
 msgstr "필드"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Type"
 msgstr "타입"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Description"
 msgstr "설명"
 
@@ -64,8 +61,8 @@ msgstr "설명"
 msgid "`name`"
 msgstr "`name`"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Char"
 msgstr "Char"
 
@@ -77,8 +74,8 @@ msgstr "엔티티명 (추적됨)"
 msgid "`project_id`"
 msgstr "`project_id`"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Many2one"
 msgstr "Many2one"
 
@@ -110,8 +107,8 @@ msgstr "소프트 삭제 지원"
 msgid "`description`"
 msgstr "`description`"
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:84
+#: ../../cxflow/registry.md:132
 msgid "Text"
 msgstr "Text"
 
@@ -125,8 +122,8 @@ msgid ""
 "models, so every registry entry supports comments, followers, and "
 "scheduled activities."
 msgstr ""
-"믹스인은 모든 모델에 `mail.thread`와 `mail.activity.mixin`도 활성화하여, "
-"모든 레지스트리 항목이 댓글, 팔로워, 예약된 활동을 지원합니다."
+"믹스인은 모든 모델에 `mail.thread`와 `mail.activity.mixin`도 활성화하여, 모든 레지스트리 항목이 댓글,"
+" 팔로워, 예약된 활동을 지원합니다."
 
 #: ../../cxflow/registry.md:23
 msgid "Model Reference"
@@ -140,7 +137,80 @@ msgstr "1. 프로젝트 (`lu.cxflow.project`)"
 msgid "The root metadata hub — one per Odoo project."
 msgstr "루트 메타데이터 허브 — Odoo 프로젝트당 하나."
 
-#: ../../cxflow/registry.md ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+msgid "`code`"
+msgstr "`code`"
+
+#: ../../cxflow/registry.md
+msgid "Unique project code"
+msgstr "고유 프로젝트 코드"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`project_type`"
+msgstr "`process_type`"
+
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
+msgid "Selection"
+msgstr "Selection"
+
+#: ../../cxflow/registry.md
+msgid "`A` (SI Build), `B` (Consulting), `C` (Simple)"
+msgstr "`A` (SI 구축), `B` (컨설팅), `C` (간단)"
+
+#: ../../cxflow/registry.md
+msgid "`industry`"
+msgstr "`industry`"
+
+#: ../../cxflow/registry.md
+msgid "`retail`, `manufacturing`, `service`, `it`, `other`"
+msgstr "`retail`, `manufacturing`, `service`, `it`, `other`"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`scale`"
+msgstr "`state`"
+
+#: ../../cxflow/registry.md
+msgid "`small` (~50), `medium` (50–200), `large` (200+)"
+msgstr "`small` (~50명), `medium` (50–200명), `large` (200명+)"
+
+#: ../../cxflow/registry.md
+msgid "`duration_weeks`"
+msgstr "`duration_weeks`"
+
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+msgid "Integer"
+msgstr "Integer"
+
+#: ../../cxflow/registry.md
+msgid "Planned duration in weeks"
+msgstr "계획 기간 (주 단위)"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`start_date`"
+msgstr "`state`"
+
+#: ../../cxflow/registry.md ../../cxflow/registry.md:132
+msgid "Date"
+msgstr "Date"
+
+#: ../../cxflow/registry.md
+msgid "Project start date"
+msgstr "프로젝트 시작일"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`end_date`"
+msgstr "`decided_date`"
+
+#: ../../cxflow/registry.md
+msgid "Planned end date"
+msgstr "계획 종료일"
+
+#: ../../cxflow/registry.md ../../cxflow/registry.md:84
 msgid "`partner_id`"
 msgstr "`partner_id`"
 
@@ -149,8 +219,42 @@ msgid "Many2one → `res.partner`"
 msgstr "Many2one → `res.partner`"
 
 #: ../../cxflow/registry.md
-msgid "Customer account"
-msgstr "고객 계정"
+#, fuzzy
+msgid "Customer account (related from `project.project`)"
+msgstr "프로젝트에서 자동 채움"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`sale_order_id`"
+msgstr "`partner_id`"
+
+#: ../../cxflow/registry.md
+msgid "Sales order (related, requires `sale_project`)"
+msgstr "판매 주문 (연결된 필드, `sale_project` 필요)"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`user_id`"
+msgstr "`cps_id`"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "PM (related from `project.project`)"
+msgstr "프로젝트에서 자동 채움"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`team_ids`"
+msgstr "`testcase_ids`"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "Many2many → `res.users`"
+msgstr "Many2one → `res.users`"
+
+#: ../../cxflow/registry.md
+msgid "Project team members"
+msgstr "프로젝트 팀 멤버"
 
 #: ../../cxflow/registry.md
 msgid "`cps_id`"
@@ -164,473 +268,580 @@ msgstr "Many2one → `lu.cxflow.cps`"
 msgid "Link to the CPS document"
 msgstr "CPS 문서에 연결"
 
-#: ../../cxflow/registry.md:35
-msgid ""
-"A unique constraint ensures only one `lu.cxflow.project` per "
-"`project.project`."
-msgstr ""
-"고유 제약 조건으로 `project.project`당 하나의 `lu.cxflow.project`만 "
-"보장합니다."
-
-#: ../../cxflow/registry.md:38
-msgid "2. Module (`lu.cxflow.module`)"
-msgstr "2. 모듈 (`lu.cxflow.module`)"
-
-#: ../../cxflow/registry.md:40
-msgid "Tracks Odoo modules in scope for the project."
-msgstr "프로젝트 범위 내 Odoo 모듈을 추적합니다."
-
-#: ../../cxflow/registry.md:34
-msgid "`technical_name`"
-msgstr "`technical_name`"
-
-#: ../../cxflow/registry.md:34
-msgid "Module identifier (e.g., `sale_custom`)"
-msgstr "모듈 식별자 (예: `sale_custom`)"
-
-#: ../../cxflow/registry.md:34
-msgid "`module_id`"
-msgstr "`module_id`"
-
-#: ../../cxflow/registry.md:34
-msgid "Many2one → `ir.module.module`"
-msgstr "Many2one → `ir.module.module`"
-
-#: ../../cxflow/registry.md:34
-msgid "Link to installed Odoo module"
-msgstr "설치된 Odoo 모듈에 연결"
-
-#: ../../cxflow/registry.md:34
-msgid "`responsible_id`"
-msgstr "`responsible_id`"
-
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
-msgid "Many2one → `res.users`"
-msgstr "Many2one → `res.users`"
-
-#: ../../cxflow/registry.md:34
-msgid "Module owner"
-msgstr "모듈 담당자"
-
-#: ../../cxflow/registry.md:34
-msgid "`status`"
-msgstr "`status`"
-
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
-msgid "Selection"
-msgstr "Selection"
-
-#: ../../cxflow/registry.md:34
-msgid ""
-"`planning` → `design` → `development` → `testing` → `deployment` → "
-"`production`"
-msgstr ""
-"`planning` → `design` → `development` → `testing` → `deployment` → "
-"`production`"
-
-#: ../../cxflow/registry.md:34
-msgid "`sequence`"
-msgstr "`sequence`"
-
-#: ../../cxflow/registry.md:34
-msgid "Integer"
-msgstr "Integer"
-
-#: ../../cxflow/registry.md:34
-msgid "Display order"
-msgstr "표시 순서"
-
-#: ../../cxflow/registry.md:34
-msgid "`requirement_ids`"
-msgstr "`requirement_ids`"
-
-#: ../../cxflow/registry.md:34
-msgid "One2many"
-msgstr "One2many"
-
-#: ../../cxflow/registry.md:34
-msgid "Child requirements"
-msgstr "하위 요구사항"
-
-#: ../../cxflow/registry.md:34
-msgid "`process_ids`"
-msgstr "`process_ids`"
-
-#: ../../cxflow/registry.md:34
-msgid "Child processes"
-msgstr "하위 프로세스"
-
-#: ../../cxflow/registry.md:52
-msgid "3. Requirement (`lu.cxflow.requirement`)"
-msgstr "3. 요구사항 (`lu.cxflow.requirement`)"
-
-#: ../../cxflow/registry.md:54
-msgid "Functional and non-functional requirements with traceability."
-msgstr "추적성을 갖춘 기능적 및 비기능적 요구사항."
-
-#: ../../cxflow/registry.md:34
-msgid "`req_type`"
-msgstr "`req_type`"
-
-#: ../../cxflow/registry.md:34
-msgid "`functional`, `non_functional`, `data`, `integration`"
-msgstr "`functional`, `non_functional`, `data`, `integration`"
-
-#: ../../cxflow/registry.md:34
-msgid "`priority`"
-msgstr "`priority`"
-
-#: ../../cxflow/registry.md:34
-msgid "`low`, `medium`, `high`, `critical`"
-msgstr "`low`, `medium`, `high`, `critical`"
-
-#: ../../cxflow/registry.md:34
-msgid "Parent module"
-msgstr "상위 모듈"
-
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md ../../cxflow/registry.md:48
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "`state`"
 msgstr "`state`"
 
-#: ../../cxflow/registry.md:34
-msgid "`new` → `analyzed` → `approved` → `implemented` → `tested` → `closed`"
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`draft` → `active` → `gate1` → `gate2` → `gate3` → `closed`"
 msgstr "`new` → `analyzed` → `approved` → `implemented` → `tested` → `closed`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`requirement_count`"
+msgstr "`requirement_id`"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "Integer (computed)"
+msgstr "Selection (계산됨)"
+
+#: ../../cxflow/registry.md
+msgid "Total requirements in this project"
+msgstr "이 프로젝트의 전체 요구사항 수"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`issue_open_count`"
+msgstr "`issue_type`"
+
+#: ../../cxflow/registry.md
+msgid "Open issues (not resolved/closed)"
+msgstr "미해결 이슈 수 (해결됨/종료 제외)"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "`module_count`"
+msgstr "`module_id`"
+
+#: ../../cxflow/registry.md
+#, fuzzy
+msgid "Modules in scope"
+msgstr "모듈 담당자"
+
+#: ../../cxflow/registry.md:49
+#, python-brace-format
+msgid ""
+"A unique constraint ensures only one `lu.cxflow.project` per "
+"`project.project`. The `project_type` determines which WBS tasks are "
+"mandatory — see {doc}`engine` for the WBS task library."
+msgstr "단일 제약 조건으로 `project.project`당 `lu.cxflow.project`가 하나만 존재합니다. `project_type`에 따라 WBS 필수 작업이 결정됩니다 — WBS 작업 라이브러리는 {doc}`engine`를 참조하세요."
+
+#: ../../cxflow/registry.md:54
+msgid "2. Module (`lu.cxflow.module`)"
+msgstr "2. 모듈 (`lu.cxflow.module`)"
+
+#: ../../cxflow/registry.md:56
+msgid "Tracks Odoo modules in scope for the project."
+msgstr "프로젝트 범위 내 Odoo 모듈을 추적합니다."
+
+#: ../../cxflow/registry.md:48
+msgid "`technical_name`"
+msgstr "`technical_name`"
+
+#: ../../cxflow/registry.md:48
+msgid "Module identifier (e.g., `sale_custom`)"
+msgstr "모듈 식별자 (예: `sale_custom`)"
+
+#: ../../cxflow/registry.md:48 ../../cxflow/registry.md:84
+msgid "`module_id`"
+msgstr "`module_id`"
+
+#: ../../cxflow/registry.md:48
+msgid "Many2one → `ir.module.module`"
+msgstr "Many2one → `ir.module.module`"
+
+#: ../../cxflow/registry.md:48
+msgid "Link to installed Odoo module"
+msgstr "설치된 Odoo 모듈에 연결"
+
+#: ../../cxflow/registry.md:48
+msgid "`responsible_id`"
+msgstr "`responsible_id`"
+
+#: ../../cxflow/registry.md:48 ../../cxflow/registry.md:132
+msgid "Many2one → `res.users`"
+msgstr "Many2one → `res.users`"
+
+#: ../../cxflow/registry.md:48
+msgid "Module owner"
+msgstr "모듈 담당자"
+
+#: ../../cxflow/registry.md:48
+msgid "`status`"
+msgstr "`status`"
+
+#: ../../cxflow/registry.md:48
+msgid ""
+"`planning` → `design` → `development` → `testing` → `deployment` → "
+"`production`"
+msgstr ""
+"`planning` → `design` → `development` → `testing` → `deployment` → "
+"`production`"
+
+#: ../../cxflow/registry.md:48
+msgid "`sequence`"
+msgstr "`sequence`"
+
+#: ../../cxflow/registry.md:48
+msgid "Display order"
+msgstr "표시 순서"
+
+#: ../../cxflow/registry.md:48
+msgid "`requirement_ids`"
+msgstr "`requirement_ids`"
+
+#: ../../cxflow/registry.md:48
+msgid "One2many"
+msgstr "One2many"
+
+#: ../../cxflow/registry.md:48
+msgid "Child requirements"
+msgstr "하위 요구사항"
+
+#: ../../cxflow/registry.md:48
+msgid "`process_ids`"
+msgstr "`process_ids`"
+
+#: ../../cxflow/registry.md:48
+msgid "Child processes"
+msgstr "하위 프로세스"
+
+#: ../../cxflow/registry.md:68
+msgid "3. Requirement (`lu.cxflow.requirement`)"
+msgstr "3. 요구사항 (`lu.cxflow.requirement`)"
+
+#: ../../cxflow/registry.md:70
+msgid "Functional and non-functional requirements with traceability."
+msgstr "추적성을 갖춘 기능적 및 비기능적 요구사항."
+
+#: ../../cxflow/registry.md:48
+msgid ""
+"Unique code per project — format: `REQ-F-001`, `REQ-NF-001`, `REQ-D-001`,"
+" `REQ-I-001`"
+msgstr "프로젝트별 고유 코드 — 형식: `REQ-F-001`, `REQ-NF-001`, `REQ-D-001`, `REQ-I-001`"
+
+#: ../../cxflow/registry.md:48
+msgid "`req_type`"
+msgstr "`req_type`"
+
+#: ../../cxflow/registry.md:48
+msgid "`functional`, `non_functional`, `data`, `integration`"
+msgstr "`functional`, `non_functional`, `data`, `integration`"
+
+#: ../../cxflow/registry.md:48
+msgid "`priority`"
+msgstr "`priority`"
+
+#: ../../cxflow/registry.md:48 ../../cxflow/registry.md:84
+msgid "`low`, `medium`, `high`, `critical`"
+msgstr "`low`, `medium`, `high`, `critical`"
+
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "Parent module (required)"
+msgstr "상위 모듈"
+
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "`source`"
+msgstr "`sequence`"
+
+#: ../../cxflow/registry.md:48
+msgid "Origin reference (e.g., `인터뷰_04-17_홍길동`, `CPS_2.2`)"
+msgstr "출처 참조 (예: `인터뷰_04-17_홍길동`, `CPS_2.2`)"
+
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "`draft` → `confirmed` → `rework` → `closed`"
+msgstr "`draft` → `ready` → `executed` → `closed`"
+
+#: ../../cxflow/registry.md:48 ../../cxflow/registry.md:84
 msgid "`testcase_ids`"
 msgstr "`testcase_ids`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:48
 msgid "Linked test cases (RTM)"
 msgstr "연결된 테스트 케이스 (RTM)"
 
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "`testcase_count`"
+msgstr "`testcase_ids`"
+
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "Integer (stored)"
+msgstr "Integer"
+
+#: ../../cxflow/registry.md:48
+#, fuzzy
+msgid "Number of linked test cases"
+msgstr "연결된 테스트 케이스 (RTM)"
+
+#: ../../cxflow/registry.md:48 ../../cxflow/registry.md:132
 msgid "`issue_ids`"
 msgstr "`issue_ids`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:48
 msgid "Related issues"
 msgstr "관련 이슈"
 
-#: ../../cxflow/registry.md:65
+#: ../../cxflow/registry.md:85
+#, python-brace-format
+msgid ""
+"The `code` field enforces the format `REQ-(F|NF|D|I)-\\d{3,}` via a "
+"database constraint. Codes must be unique within the same project."
+msgstr ""
+"`code` 필드는 데이터베이스 제약 조건으로 `REQ-(F|NF|D|I)-\\d{3,}` 형식을 강제합니다. 코드는 동일 프로젝트 내에서 고유해야 합니다."
+
+#: ../../cxflow/registry.md:89
 msgid "4. Process (`lu.cxflow.process`)"
 msgstr "4. 프로세스 (`lu.cxflow.process`)"
 
-#: ../../cxflow/registry.md:67
+#: ../../cxflow/registry.md:91
 msgid "Business process documentation for gap analysis."
 msgstr "갭 분석을 위한 비즈니스 프로세스 문서화."
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`process_type`"
 msgstr "`process_type`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`as_is`, `to_be`, `gap`, `pain_point`"
 msgstr "`as_is`, `to_be`, `gap`, `pain_point`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
+msgid "Parent module"
+msgstr "상위 모듈"
+
+#: ../../cxflow/registry.md:84
 msgid "`process_flow`"
 msgstr "`process_flow`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Detailed process steps"
 msgstr "상세 프로세스 단계"
 
-#: ../../cxflow/registry.md:75
+#: ../../cxflow/registry.md:99
 msgid "5. Integration (`lu.cxflow.integration`)"
 msgstr "5. 연동 (`lu.cxflow.integration`)"
 
-#: ../../cxflow/registry.md:77
+#: ../../cxflow/registry.md:101
 msgid "External system integration catalog."
 msgstr "외부 시스템 연동 카탈로그."
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`system_name`"
 msgstr "`system_name`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "External system identifier"
 msgstr "외부 시스템 식별자"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`api_type`"
 msgstr "`api_type`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`rest`, `soap`, `rpc`, `webhook`, `file_transfer`, `database`, `other`"
 msgstr "`rest`, `soap`, `rpc`, `webhook`, `file_transfer`, `database`, `other`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`auth_method`"
 msgstr "`auth_method`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`none`, `basic`, `bearer`, `api_key`, `oauth2`, `jwt`"
 msgstr "`none`, `basic`, `bearer`, `api_key`, `oauth2`, `jwt`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`endpoint_url`"
 msgstr "`endpoint_url`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "API endpoint URL"
 msgstr "API 엔드포인트 URL"
 
-#: ../../cxflow/registry.md:86
+#: ../../cxflow/registry.md:110
 msgid "6. Issue (`lu.cxflow.issue`)"
 msgstr "6. 이슈 (`lu.cxflow.issue`)"
 
-#: ../../cxflow/registry.md:88
-msgid "Issues, risks, change requests, and defects — with a CR approval workflow."
+#: ../../cxflow/registry.md:112
+#, fuzzy
+msgid ""
+"Issues, risks, change requests, defects, and pain points — with a CR "
+"approval workflow."
 msgstr "이슈, 리스크, 변경 요청, 결함 — CR 승인 워크플로우 포함."
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`issue_type`"
 msgstr "`issue_type`"
 
-#: ../../cxflow/registry.md:34
-msgid "`issue`, `risk`, `change_request`, `defect`"
+#: ../../cxflow/registry.md:84
+#, fuzzy
+msgid "`issue`, `risk`, `cr` (Change Request), `defect`, `problem` (Pain Point)"
 msgstr "`issue`, `risk`, `change_request`, `defect`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`severity`"
 msgstr "`severity`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`new` → `assigned` → `in_progress` → `resolved` → `closed`"
 msgstr "`new` → `assigned` → `in_progress` → `resolved` → `closed`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`approval_state`"
 msgstr "`approval_state`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`draft` → `pending` → `approved` / `rejected` (CRs only)"
 msgstr "`draft` → `pending` → `approved` / `rejected` (CR만 해당)"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "`approver_id`"
 msgstr "`approver_id`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Internal approver"
 msgstr "내부 승인자"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Customer who approves CR via portal"
 msgstr "포탈에서 CR을 승인하는 고객"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Affected module"
 msgstr "영향받는 모듈"
 
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "`requirement_id`"
 msgstr "`requirement_id`"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Related requirement"
 msgstr "관련 요구사항"
 
-#: ../../cxflow/registry.md:34 ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:84 ../../cxflow/registry.md:132
 msgid "Many2many"
 msgstr "Many2many"
 
-#: ../../cxflow/registry.md:34
+#: ../../cxflow/registry.md:84
 msgid "Associated test cases"
 msgstr "연관된 테스트 케이스"
 
-#: ../../cxflow/registry.md:102
+#: ../../cxflow/registry.md:84
+#, fuzzy
+msgid "`resolution`"
+msgstr "`description`"
+
+#: ../../cxflow/registry.md:84
+msgid "Resolution details (all types)"
+msgstr "해결 내용 (모든 유형)"
+
+#: ../../cxflow/registry.md:84
+#, fuzzy
+msgid "`defect_step`"
+msgstr "`steps`"
+
+#: ../../cxflow/registry.md:84
+msgid "Reproduction steps (defect only)"
+msgstr "재현 단계 (결함만 해당)"
+
+#: ../../cxflow/registry.md:84
+msgid "`defect_environment`"
+msgstr "`defect_environment`"
+
+#: ../../cxflow/registry.md:84
+msgid "Reproduction environment (defect only)"
+msgstr "재현 환경 (결함만 해당)"
+
+#: ../../cxflow/registry.md:130
 msgid "**Change Request workflow:**"
 msgstr "**변경 요청 워크플로우:**"
 
-#: ../../cxflow/registry.md:112
+#: ../../cxflow/registry.md:140
 msgid "7. Test Case (`lu.cxflow.testcase`)"
 msgstr "7. 테스트 케이스 (`lu.cxflow.testcase`)"
 
-#: ../../cxflow/registry.md:114
+#: ../../cxflow/registry.md:142
 msgid ""
 "Test cases mapped to requirements for the Requirements Traceability "
 "Matrix (RTM)."
-msgstr ""
-"요구사항 추적 매트릭스(RTM)를 위해 요구사항에 매핑된 테스트 케이스."
+msgstr "요구사항 추적 매트릭스(RTM)를 위해 요구사항에 매핑된 테스트 케이스."
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`scenario`"
 msgstr "`scenario`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Scenario label"
 msgstr "시나리오 라벨"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`steps`"
 msgstr "`steps`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Step-by-step instructions"
 msgstr "단계별 지침"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`expected_result`"
 msgstr "`expected_result`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Expected behavior"
 msgstr "기대 동작"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`actual_result`"
 msgstr "`actual_result`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Observed result"
 msgstr "관찰된 결과"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`last_result`"
 msgstr "`last_result`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`pass`, `fail`, `blocked`"
 msgstr "`pass`, `fail`, `blocked`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`executed_date`"
 msgstr "`executed_date`"
 
-#: ../../cxflow/registry.md:104
-msgid "Date"
-msgstr "Date"
-
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Last execution date"
 msgstr "마지막 실행 날짜"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Parent requirement"
 msgstr "상위 요구사항"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Linked issues / defects"
 msgstr "연결된 이슈 / 결함"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`draft` → `ready` → `executed` → `closed`"
 msgstr "`draft` → `ready` → `executed` → `closed`"
 
-#: ../../cxflow/registry.md:128
+#: ../../cxflow/registry.md:156
 msgid "8. Decision (`lu.cxflow.decision`)"
 msgstr "8. 의사결정 (`lu.cxflow.decision`)"
 
-#: ../../cxflow/registry.md:130
+#: ../../cxflow/registry.md:158
 msgid "Audit trail of project decisions."
 msgstr "프로젝트 의사결정의 감사 추적."
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`decision_text`"
 msgstr "`decision_text`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Decision details"
 msgstr "의사결정 상세"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`meeting_note_id`"
 msgstr "`meeting_note_id`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Many2one → `lu.cxflow.note`"
 msgstr "Many2one → `lu.cxflow.note`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Meeting where the decision was made"
 msgstr "의사결정이 이루어진 회의"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`decided_date`"
 msgstr "`decided_date`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Decision date"
 msgstr "의사결정 날짜"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`decided_by`"
 msgstr "`decided_by`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Decision maker"
 msgstr "의사결정자"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`active`, `superseded`, `archived`"
 msgstr "`active`, `superseded`, `archived`"
 
-#: ../../cxflow/registry.md:140
+#: ../../cxflow/registry.md:168
 msgid "9. Project Task Extension (`project.task`)"
 msgstr "9. 프로젝트 태스크 확장 (`project.task`)"
 
-#: ../../cxflow/registry.md:142
+#: ../../cxflow/registry.md:170
 msgid "Standard Odoo tasks are extended with CxFlow fields:"
 msgstr "표준 Odoo 태스크가 CxFlow 필드로 확장됩니다:"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`cxflow_project_id`"
 msgstr "`cxflow_project_id`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Associated CxFlow project"
 msgstr "연관된 CxFlow 프로젝트"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`cxflow_deliverable_ids`"
 msgstr "`cxflow_deliverable_ids`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Linked deliverables"
 msgstr "연결된 산출물"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`cxflow_issue_ids`"
 msgstr "`cxflow_issue_ids`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Linked issues"
 msgstr "연결된 이슈"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`cxflow_doc_status`"
 msgstr "`cxflow_doc_status`"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "Selection (computed)"
 msgstr "Selection (계산됨)"
 
-#: ../../cxflow/registry.md:104
+#: ../../cxflow/registry.md:132
 msgid "`not_applicable`, `pending`, `partially_approved`, `all_approved`"
 msgstr "`not_applicable`, `pending`, `partially_approved`, `all_approved`"
 
-#: ../../cxflow/registry.md:151
+#: ../../cxflow/registry.md:179
 msgid ""
 "The `cxflow_doc_status` field auto-computes from the approval state of "
 "linked deliverables — useful for task kanban views and gate reviews."
 msgstr ""
-"`cxflow_doc_status` 필드는 연결된 산출물의 승인 상태에서 자동 계산됩니다 — "
-"태스크 칸반 뷰와 게이트 리뷰에 유용합니다."
+"`cxflow_doc_status` 필드는 연결된 산출물의 승인 상태에서 자동 계산됩니다 — 태스크 칸반 뷰와 게이트 리뷰에 "
+"유용합니다."
 
-#: ../../cxflow/registry.md:155
+#: ../../cxflow/registry.md:183
 msgid ""
 "Cross-project assignments are prevented by constraints. Deliverables and "
 "issues linked to a task must belong to the same project."
-msgstr ""
-"제약 조건에 의해 교차 프로젝트 할당이 방지됩니다. 태스크에 연결된 산출물과 "
-"이슈는 동일한 프로젝트에 속해야 합니다."
+msgstr "제약 조건에 의해 교차 프로젝트 할당이 방지됩니다. 태스크에 연결된 산출물과 이슈는 동일한 프로젝트에 속해야 합니다."
 
-#: ../../cxflow/registry.md:159
+#: ../../cxflow/registry.md:187
 msgid "Menu Structure"
 msgstr "메뉴 구조"
 
-#: ../../cxflow/registry.md:161
+#: ../../cxflow/registry.md:189
 msgid "All registry menus live under **CxFlow → Registry**:"
 msgstr "모든 레지스트리 메뉴는 **CxFlow → Registry** 아래에 있습니다:"
+
+#~ msgid "Customer account"
+#~ msgstr "고객 계정"
+
+#~ msgid ""
+#~ "A unique constraint ensures only one "
+#~ "`lu.cxflow.project` per `project.project`."
+#~ msgstr "고유 제약 조건으로 `project.project`당 하나의 `lu.cxflow.project`만 보장합니다."
+
